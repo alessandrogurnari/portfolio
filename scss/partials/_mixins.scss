@@ -63,7 +63,7 @@
 // MEDIA QUERIES - DOWN (MAX-WIDTH) - 2025
 // ========================================
 
-// Extra Small and down - ≤ 575px (Mobile only) - UTILIZZATO
+// Extra Small and down - ≤ 479px (Mobile only) - UTILIZZATO
 @mixin xs-down {
   @media (max-width: #{$breakpoint-sm - 1px}) {
     @content;

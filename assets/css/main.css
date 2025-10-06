@@ -40,7 +40,7 @@ body {
 }
 
 html {
-  font-size: 1rem;
+  font-size: 0.875rem;
   scroll-behavior: smooth;
 }
 
@@ -129,33 +129,33 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 
 h2 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 }
 
 h3 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 600;
   line-height: 1.5;
   color: #2A2E34;
@@ -208,14 +208,14 @@ li {
 
 .section-title {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 }
 .section-title {
@@ -243,7 +243,7 @@ li {
   min-width: 0;
   overflow-wrap: break-word;
 }
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .container {
     padding: 0 2rem;
   }
@@ -518,7 +518,7 @@ html {
   scrollbar-width: thin;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -710,7 +710,7 @@ html {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .btn-lg {
     padding: 0.5rem 1rem;
     font-size: 1.125rem;
@@ -739,7 +739,7 @@ html {
 .home .hero .hero-buttons .btn.btn-primary:first-child:hover::after {
   color: #2A2E34;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .home .hero .hero-buttons .btn.btn-primary:first-child {
     height: 48px;
     padding: 0.5rem 1.5rem;
@@ -785,7 +785,7 @@ html {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .home .cta-actions .btn {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -821,7 +821,7 @@ html {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .btn.btn-primary.btn-portfolio-primary {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -852,7 +852,7 @@ html {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .btn.btn-secondary.btn-portfolio-secondary {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -877,30 +877,30 @@ html {
 
 .navbar .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   height: 36px;
   border-radius: 0.25rem;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .navbar .btn {
     height: 32px;
     padding: 0.25rem 0.25rem;
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar .btn {
     height: 34px;
     padding: 0.25rem 0.5rem;
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 1024px) {
   .navbar .btn {
     height: 36px;
     padding: 0.25rem 0.5rem;
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -1074,7 +1074,7 @@ a:active {
 
 .project-link {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   text-decoration: none;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   display: inline-block;
@@ -1185,7 +1185,7 @@ a:active {
   justify-content: flex-end;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .social-link {
     width: 44px;
     height: 44px;
@@ -1222,7 +1222,7 @@ a:active {
   min-width: 0;
   overflow-wrap: break-word;
 }
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .nav-container {
     padding: 0 2rem;
   }
@@ -1528,7 +1528,7 @@ a:active {
 .about-content--reverse {
   flex-direction: row-reverse;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .about-content--reverse {
     flex-direction: column;
   }
@@ -1550,7 +1550,7 @@ a:active {
   font-size: 1.125rem;
 }
 .about-text--small p {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 
 .about .about-content {
@@ -1616,7 +1616,7 @@ a:active {
   margin-right: 0.5rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .about {
     padding: 3rem 2rem;
   }
@@ -1693,7 +1693,7 @@ a:active {
     margin-bottom: 1.5rem;
   }
 }
-@media (max-width: 1023px) and (max-width: 575px) {
+@media (max-width: 1023px) and (max-width: 479px) {
   .ultimi-progetti .projects-grid .project-card {
     flex: 0 0 330px;
     min-width: 330px;
@@ -1765,7 +1765,7 @@ a:active {
   color: #2A2E34;
   margin-bottom: 1rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .ultimi-progetti .project-content h3 {
     font-size: 1.25rem;
   }
@@ -1777,9 +1777,9 @@ a:active {
   margin-bottom: 0;
   flex: 1;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .ultimi-progetti .project-content p {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 .ultimi-progetti .project-tags {
@@ -1808,7 +1808,7 @@ a:active {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .ultimi-progetti .projects-cta .btn {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -1853,7 +1853,7 @@ a:active {
   min-width: 0;
   overflow-wrap: break-word;
 }
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .hero-container {
     padding: 0 2rem;
   }
@@ -1898,7 +1898,7 @@ a:active {
 .hero-content:nth-child(6) {
   animation-delay: 0.6s;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -1918,14 +1918,14 @@ a:active {
   margin-bottom: 1.5rem;
   color: #2A2E34;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 .hero-text h1 .highlight {
@@ -1986,7 +1986,7 @@ a:active {
 .hero-description:nth-child(6) {
   animation-delay: 0.6s;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero-description {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2023,7 +2023,7 @@ a:active {
     padding-right: 2rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .home .about {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2034,7 +2034,7 @@ a:active {
   padding: 6rem 0;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .home .hero-text {
     max-width: 100%;
   }
@@ -2047,7 +2047,7 @@ a:active {
     padding: 4rem 0;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero {
     padding: 3rem 0;
     padding-top: calc(64px + 3rem);
@@ -2074,16 +2074,16 @@ a:active {
 }
 .footer p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #4A5568;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .footer {
     padding: 1.5rem 0;
   }
   .footer p {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 .portfolio .hero-content {
@@ -2108,7 +2108,7 @@ a:active {
 .hero.portfolio-hero {
   min-height: 100vh;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero.portfolio-hero {
     min-height: 100vh;
   }
@@ -2138,14 +2138,14 @@ a:active {
 }
 .hero.portfolio-hero .hero-text h1 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero.portfolio-hero .hero-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 .hero.portfolio-hero .hero-text h1 {
@@ -2198,7 +2198,7 @@ a:active {
   padding: 6rem 0;
   overflow-x: visible;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .clients {
     padding: 4rem 0;
   }
@@ -2238,7 +2238,7 @@ a:active {
   justify-content: center;
   overflow-x: hidden;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .clients .clients-grid {
     gap: 3rem;
     padding: 1rem 0;
@@ -2274,7 +2274,7 @@ a:active {
   filter: grayscale(100%) opacity(0.7);
   transition: filter 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .clients .client-item .client-logo-img {
     max-height: 30px;
   }
@@ -2381,7 +2381,7 @@ a:active {
   }
 }
 .client-works-header .client-works-arrow i {
-  font-size: 1rem;
+  font-size: 0.875rem;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .client-works-header .client-works-arrow.active {
@@ -2392,7 +2392,7 @@ a:active {
 .client-works-header .client-works-arrow.active i {
   transform: rotate(-180deg);
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .client-works-header {
     flex-direction: row;
     text-align: left;
@@ -2424,7 +2424,7 @@ a:active {
     margin-right: 0.5rem;
   }
   .client-works-header .client-works-arrow i {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -2454,7 +2454,7 @@ a:active {
     margin-right: 0.5rem;
   }
   .client-works-header .client-works-arrow i {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -2518,7 +2518,7 @@ a:active {
     display: none;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .projects-navigation {
     display: none;
   }
@@ -2627,7 +2627,7 @@ a:active {
   color: #2A2E34;
   margin-bottom: 1rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .project-card .project-content h4 {
     font-size: 1.375rem;
   }
@@ -2705,7 +2705,7 @@ a:active {
     letter-spacing: 0.4px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .about-stats {
     flex-direction: row;
     gap: 1rem;
@@ -2801,7 +2801,7 @@ a:active {
 .hero.contact-hero {
   min-height: 100vh;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero.contact-hero {
     min-height: 100vh;
   }
@@ -2835,14 +2835,14 @@ a:active {
 }
 .hero.contact-hero .hero-text h1 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero.contact-hero .hero-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 .hero.contact-hero .hero-text h1 {
@@ -2881,7 +2881,7 @@ a:active {
 .contact {
   padding: 6rem 0;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .contact {
     padding: 4rem 0;
   }
@@ -2926,7 +2926,7 @@ a:active {
 .contact .card-body:nth-child(6) {
   animation-delay: 0.6s;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .contact .card-body {
     padding: 2rem;
   }
@@ -2988,7 +2988,7 @@ a:active {
   padding: 1rem 1.25rem;
   min-height: 120px;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .contact textarea.form-control {
     padding: 0.875rem 1rem;
   }
@@ -3015,28 +3015,28 @@ a:active {
 }
 .contact .invalid-feedback {
   color: #e63946;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   margin-top: 0.25rem;
   display: none;
   animation: fadeInUp 0.3s ease-out;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .contact .invalid-feedback {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 .contact .valid-feedback {
   color: #2e7d32;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   margin-top: 0.25rem;
   display: none;
   animation: fadeInUp 0.3s ease-out;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .contact .valid-feedback {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 .contact .form-control.is-invalid + .invalid-feedback {
@@ -3076,23 +3076,23 @@ a:active {
     font-size: 1.375rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .popup-title {
     font-size: 1.25rem;
   }
 }
 
 .popup-message {
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .popup-message {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .popup-message {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -3168,7 +3168,7 @@ a:active {
   gap: 0.5rem;
 }
 .contattami .cta-actions .social-links .social-label {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #4A5568;
   font-weight: 500;
 }
@@ -3201,7 +3201,7 @@ a:active {
     font-size: 1rem;
   }
   .contattami .cta-actions .social-links .social-label {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   .contattami .cta-actions .social-links .social-link {
     width: 40px;
@@ -3211,7 +3211,7 @@ a:active {
     font-size: 1.05rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .contattami .cta-actions {
     flex-direction: column;
     gap: 1.5rem;
@@ -3229,7 +3229,7 @@ a:active {
     justify-content: center;
   }
   .contattami .cta-actions .social-links .social-label {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   .contattami .cta-actions .social-links .social-link {
     width: 38px;
@@ -3271,7 +3271,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .home .contact-info h3 {
     margin-bottom: 1.25rem;
   }
@@ -3327,7 +3327,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .home .cta-actions {
     gap: 3rem;
   }
@@ -3397,7 +3397,7 @@ a:active {
     font-size: 1.6rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .social-link--homepage {
     width: 48px;
     height: 48px;
@@ -3432,7 +3432,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .portfolio .contact-info h3 {
     margin-bottom: 1.25rem;
   }
@@ -3470,7 +3470,7 @@ a:active {
     white-space: nowrap;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .portfolio .cta-actions {
     gap: 1.25rem;
   }
@@ -3508,7 +3508,7 @@ a:active {
   text-align: center;
   font-style: italic;
 }
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .cv-summary {
     padding: 1.5rem;
     margin: 2rem 0;
@@ -3526,7 +3526,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-summary {
     padding: 1rem;
     margin: 1.5rem 0;
@@ -3539,7 +3539,7 @@ a:active {
 .hero.cv-hero {
   min-height: 100vh;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero.cv-hero {
     min-height: 100vh;
   }
@@ -3569,14 +3569,14 @@ a:active {
 }
 .hero.cv-hero .hero-text h1 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .hero.cv-hero .hero-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 .hero.cv-hero .hero-text h1 {
@@ -3714,7 +3714,7 @@ a:active {
     padding-right: 3rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-container {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -3776,7 +3776,7 @@ a:active {
   align-items: flex-start;
   gap: 4rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-header-content {
     flex-direction: column;
     align-items: center;
@@ -3800,7 +3800,7 @@ a:active {
 .cv-photo-container {
   flex-shrink: 0;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-photo-container {
     order: 1;
   }
@@ -3827,13 +3827,13 @@ a:active {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-photo {
     width: 210px;
     height: 210px;
   }
 }
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .cv-photo {
     width: 210px;
     height: 210px;
@@ -3858,7 +3858,7 @@ a:active {
   flex-direction: column;
   gap: 1.5rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-info-container {
     order: 2;
     align-items: center;
@@ -3878,7 +3878,7 @@ a:active {
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-info h1 {
     font-size: 2rem;
   }
@@ -3899,7 +3899,7 @@ a:active {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-info h2 {
     font-size: 1.3rem;
   }
@@ -3915,7 +3915,7 @@ a:active {
   flex-direction: column;
   gap: 0.5rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-contact {
     align-items: center;
     flex-direction: row;
@@ -3923,7 +3923,7 @@ a:active {
     gap: 2rem;
   }
 }
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 480px) and (max-width: 767px) {
   .cv-contact {
     align-items: center;
     flex-direction: row;
@@ -3977,7 +3977,7 @@ a:active {
 .contact-item:nth-child(1) span {
   font-size: 1rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .contact-item:nth-child(1) span {
     font-size: 1.2rem;
   }
@@ -4022,7 +4022,7 @@ a:active {
   color: inherit;
   transition: color 0.1s ease;
 }
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .contact-item:nth-child(1) {
     display: flex;
     align-items: center;
@@ -4112,7 +4112,7 @@ a:active {
     gap: 0.5rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .contact-item:nth-child(2) .social-link--homepage, .contact-item:nth-child(3) .social-link--homepage {
     padding: 0;
   }
@@ -4125,7 +4125,7 @@ a:active {
 .cv-section {
   margin-bottom: 3rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-section {
     margin-bottom: 2rem;
   }
@@ -4179,7 +4179,7 @@ a:active {
   font-size: 1.125rem;
   color: #06b6d4;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-section h3.cv-section-title {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -4198,7 +4198,7 @@ a:active {
 .cv-item:last-child {
   border-bottom: none;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-item {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
@@ -4210,7 +4210,7 @@ a:active {
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-item-header {
     flex-direction: column;
     gap: 0.25rem;
@@ -4222,7 +4222,7 @@ a:active {
   color: #2A2E34;
   margin: 0;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-item-header h4 {
     font-size: 1.1rem;
     line-height: 1.3;
@@ -4234,7 +4234,7 @@ a:active {
   font-weight: 400;
   white-space: nowrap;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-item-header .cv-date {
     font-size: 1.1rem;
     align-self: flex-start;
@@ -4247,7 +4247,7 @@ a:active {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-company {
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
@@ -4265,7 +4265,7 @@ a:active {
   line-height: 1.75;
   font-size: 1rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv-list li {
     padding-left: 1.25rem;
     margin-bottom: 0.4rem;
@@ -4289,7 +4289,7 @@ a:active {
   color: #2A2E34;
   margin-bottom: 1rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .skills-category h4 {
     font-size: 1.1rem;
   }
@@ -4300,7 +4300,7 @@ a:active {
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .skill-tags {
     gap: 0.4rem;
   }
@@ -4315,7 +4315,7 @@ a:active {
   font-weight: 400;
   border: 0.5px solid #D0D0D0;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .skill-tags .skill-tag {
     font-size: 1rem;
     padding: 0.2rem 0.6rem;
@@ -4335,7 +4335,7 @@ a:active {
   margin-bottom: 1rem;
   gap: 1rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .language-item {
     gap: 0.5rem;
   }
@@ -4345,7 +4345,7 @@ a:active {
   text-align: left;
   font-size: 1rem;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .language-item .language-name {
     font-size: 1rem;
   }
@@ -4355,7 +4355,7 @@ a:active {
   gap: 0.25rem;
   justify-content: center;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .language-item .language-level {
     gap: 0.2rem;
   }
@@ -4366,7 +4366,7 @@ a:active {
   border-radius: 9999px;
   background-color: #4A5568;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .language-item .language-level span {
     width: 8px;
     height: 8px;
@@ -4380,7 +4380,7 @@ a:active {
   font-size: 1rem;
   text-align: right;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .language-item .language-proficiency {
     font-size: 1rem;
   }
@@ -4389,7 +4389,7 @@ a:active {
 .cv .contact {
   padding: 4rem 0;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv .contact {
     padding: 4rem 0;
   }
@@ -4421,7 +4421,7 @@ a:active {
     margin-bottom: 2.25rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv .contact-info h3 {
     margin-bottom: 1.25rem;
   }
@@ -4442,7 +4442,7 @@ a:active {
   align-items: stretch;
   margin-bottom: 0;
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv .cta-actions .hero-buttons {
     flex-direction: row;
     gap: 1rem;
@@ -4462,7 +4462,7 @@ a:active {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv .cta-actions .btn {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -4484,7 +4484,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 479px) {
   .cv .cta-actions .btn {
     min-width: 200px;
   }
