@@ -139,6 +139,11 @@ h1 {
     font-size: 2rem;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
 
 h2 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -150,6 +155,11 @@ h2 {
 @media (max-width: 479px) {
   h2 {
     font-size: 1.375rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  h2 {
+    font-size: 1.5rem;
   }
 }
 
@@ -184,6 +194,11 @@ p {
   color: #2A2E34;
   margin-bottom: 1rem;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  p {
+    font-size: 0.875rem;
+  }
+}
 
 ul, ol {
   margin-bottom: 1rem;
@@ -216,6 +231,11 @@ li {
 @media (max-width: 479px) {
   .section-title {
     font-size: 1.375rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .section-title {
+    font-size: 1.5rem;
   }
 }
 .section-title {
@@ -793,6 +813,14 @@ html {
     flex: 1;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .home .cta-actions .btn {
+    height: 40px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+  }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .home .cta-actions .btn {
     height: 46px;
@@ -829,6 +857,14 @@ html {
     flex: 1;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .btn.btn-primary.btn-portfolio-primary {
+    height: 40px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+  }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .btn.btn-primary.btn-portfolio-primary {
     height: 46px;
@@ -858,6 +894,14 @@ html {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     flex: 1;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .btn.btn-secondary.btn-portfolio-secondary {
+    height: 40px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1546,6 +1590,11 @@ a:active {
   margin-bottom: 1.5rem;
   line-height: 1.75;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .about-text p {
+    font-size: 0.875rem;
+  }
+}
 .about-text--large p {
   font-size: 1.125rem;
 }
@@ -1620,23 +1669,25 @@ a:active {
   .about {
     padding: 3rem 2rem;
   }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .about {
+    padding: 2rem 0.25rem !important;
+  }
   .about-content {
-    gap: 4rem;
-  }
-  .contact-info p {
-    font-size: 1rem;
-  }
-  .about-stats {
-    gap: 1.5rem;
+    gap: 2rem !important;
   }
   .about-text p {
-    font-size: 1rem;
+    font-size: 1.125rem !important;
+    line-height: 1.5 !important;
   }
   .about-text h3 {
-    font-size: 1.375rem;
+    font-size: 1.25rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.5rem !important;
   }
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1703,6 +1754,16 @@ a:active {
     margin-bottom: 1.5rem;
   }
 }
+@media (max-width: 1023px) and (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .projects-grid .project-card {
+    flex: 0 0 280px !important;
+    min-width: 280px !important;
+    max-width: 300px !important;
+    padding-bottom: 15px !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
 .ultimi-progetti .project-card {
   background-color: #fafafa;
   border-radius: 0.75rem;
@@ -1754,6 +1815,7 @@ a:active {
 }
 .ultimi-progetti .project-content {
   padding: 2rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1763,6 +1825,7 @@ a:active {
   font-size: 1.25rem;
   font-weight: 600;
   color: #2A2E34;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 @media (max-width: 479px) {
@@ -1770,16 +1833,37 @@ a:active {
     font-size: 1.25rem;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .project-content h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
 .ultimi-progetti .project-content p {
   color: #4A5568;
-  font-size: 1rem;
+  font-size: 1.125rem !important;
   line-height: 1.75;
   margin-bottom: 0;
   flex: 1;
 }
 @media (max-width: 479px) {
   .ultimi-progetti .project-content p {
-    font-size: 0.875rem;
+    font-size: 0.875rem !important;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .project-content p {
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .project-content {
+    padding: 0.5rem !important;
   }
 }
 .ultimi-progetti .project-tags {
@@ -1796,6 +1880,12 @@ a:active {
   border-radius: 0.5rem;
   font-size: 0.75rem;
   font-weight: 500;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .project-tags {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 }
 .ultimi-progetti .projects-cta {
   text-align: center;
@@ -1814,6 +1904,14 @@ a:active {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     flex: 1;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .projects-cta .btn {
+    height: 40px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -1928,6 +2026,11 @@ a:active {
     font-size: 2rem;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+}
 .hero-text h1 .highlight {
   color: #06b6d4;
 }
@@ -2006,6 +2109,23 @@ a:active {
 
 .home .hero .hero-buttons {
   justify-content: center;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .home .hero .hero-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .home .hero .hero-buttons .btn {
+    width: auto !important;
+    min-width: 200px !important;
+    max-width: 280px !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child {
+    min-width: 200px !important;
+    width: auto !important;
+    max-width: 280px !important;
+  }
 }
 
 .home .about {
@@ -2146,6 +2266,11 @@ a:active {
 @media (max-width: 479px) {
   .hero.portfolio-hero .hero-text h1 {
     font-size: 2rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.portfolio-hero .hero-text h1 {
+    font-size: 1.75rem;
   }
 }
 .hero.portfolio-hero .hero-text h1 {
@@ -2427,6 +2552,45 @@ a:active {
     font-size: 0.875rem;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .client-works-header {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1rem !important;
+    padding: 1.5rem !important;
+    min-height: auto !important;
+  }
+  .client-works-header .client-works-logo {
+    max-width: 100px !important;
+    height: 60px !important;
+    padding: 0.5rem !important;
+    margin: 0 auto 0.5rem auto !important;
+    align-self: center !important;
+  }
+  .client-works-header .client-works-info {
+    text-align: center !important;
+  }
+  .client-works-header .client-works-info h3 {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.3 !important;
+  }
+  .client-works-header .client-works-info p {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+  }
+  .client-works-header .client-works-arrow {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0.5rem auto 0 auto !important;
+    align-self: center !important;
+  }
+  .client-works-header .client-works-arrow i {
+    font-size: 0.8125rem !important;
+  }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .client-works-header {
     padding: 1.5rem;
@@ -2498,6 +2662,16 @@ a:active {
     padding-bottom: 20px;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 1023px) and (max-width: 480px) and (orientation: portrait) {
+  .projects-grid .project-card {
+    flex: 0 0 280px !important;
+    min-width: 280px !important;
+    max-width: 300px !important;
+    padding-bottom: 15px !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.5rem !important;
   }
 }
 
@@ -2616,6 +2790,7 @@ a:active {
 }
 .project-card .project-content {
   padding: 2rem;
+  padding-top: 4rem;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -2625,6 +2800,7 @@ a:active {
   font-size: 1.25rem;
   font-weight: 600;
   color: #2A2E34;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 @media (max-width: 479px) {
@@ -2632,12 +2808,33 @@ a:active {
     font-size: 1.375rem;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .project-card .project-content h4 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
 .project-card .project-content p {
   color: #4A5568;
-  font-size: 1.125rem;
+  font-size: 1.25rem !important;
   line-height: 1.75;
   margin-bottom: 0;
   flex: 1;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .project-card .project-content p {
+    font-size: 1rem !important;
+    line-height: 1.4 !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .project-card .project-content {
+    padding: 0.5rem !important;
+  }
 }
 .project-card .project-tags {
   display: flex;
@@ -2653,6 +2850,12 @@ a:active {
   border-radius: 0.5rem;
   font-size: 0.75rem;
   font-weight: 500;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .project-card .project-tags {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
 }
 
 .about-stats {
@@ -2716,6 +2919,20 @@ a:active {
   .about-stats > div p {
     font-size: 14px;
     letter-spacing: 0.4px;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .about-stats {
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+  }
+  .about-stats > div h3 {
+    font-size: 1.125rem !important;
+  }
+  .about-stats > div p {
+    padding-top: 0.5rem !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.3px !important;
   }
 }
 .about-stats--grid {
@@ -2845,6 +3062,11 @@ a:active {
     font-size: 2rem;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.contact-hero .hero-text h1 {
+    font-size: 1.75rem;
+  }
+}
 .hero.contact-hero .hero-text h1 {
   margin-bottom: 1.5rem;
 }
@@ -2889,6 +3111,33 @@ a:active {
 @media (min-width: 768px) and (max-width: 1023px) {
   .contact {
     padding: 6rem 0;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact {
+    padding: 3rem 0.25rem !important;
+  }
+  .contact .container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .contact .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .contact .col-12 {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .contact .card {
+    margin: 0 !important;
+  }
+  .contact .card-body {
+    padding: 1.5rem 1.5rem !important;
+  }
+  .contact .card-body .text-muted {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
   }
 }
 .contact .card {
@@ -3577,6 +3826,11 @@ a:active {
 @media (max-width: 479px) {
   .hero.cv-hero .hero-text h1 {
     font-size: 2rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.cv-hero .hero-text h1 {
+    font-size: 1.75rem;
   }
 }
 .hero.cv-hero .hero-text h1 {
@@ -4468,6 +4722,14 @@ a:active {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     flex: 1;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .cv .cta-actions .btn {
+    height: 40px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {

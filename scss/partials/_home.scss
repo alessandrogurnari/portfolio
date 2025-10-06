@@ -121,6 +121,25 @@
 // HOME PAGE: Bottoni centrati nella sezione hero
 .home .hero .hero-buttons {
   justify-content: center; // Centra i bottoni su tutte le risoluzioni
+  
+  @include smartphone {
+    flex-direction: column; // Stack verticale su smartphone
+    gap: $spacing-sm; // Gap ridotto per smartphone
+    align-items: center; // Centra i bottoni
+    
+    .btn {
+      width: auto !important; // Larghezza automatica invece di 100%
+      min-width: 200px !important; // Larghezza minima per touch
+      max-width: 280px !important; // Larghezza massima per estetica
+    }
+    
+    // Sovrascrive regole specifiche per btn-primary:first-child
+    .btn.btn-primary:first-child {
+      min-width: 200px !important; // Sovrascrive la regola 400px
+      width: auto !important;
+      max-width: 280px !important;
+    }
+  }
 }
 
 // ========================================

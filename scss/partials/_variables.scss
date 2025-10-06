@@ -41,6 +41,17 @@ $font-size-3xl: 1.75rem;   // 28px (ridotto per mobile)
 $font-size-4xl: 2rem;      // 32px (ridotto per mobile)
 $font-size-5xl: 2.5rem;    // 40px (ridotto per mobile)
 
+// Font-size specifici per smartphone (viewport width < 480px)
+$font-size-smartphone-xs: 0.75rem;   // 12px
+$font-size-smartphone-sm: 0.8125rem; // 13px
+$font-size-smartphone-base: 0.875rem; // 14px
+$font-size-smartphone-lg: 1rem;      // 16px
+$font-size-smartphone-xl: 1.125rem;  // 18px
+$font-size-smartphone-2xl: 1.25rem;  // 20px
+$font-size-smartphone-3xl: 1.5rem;   // 24px
+$font-size-smartphone-4xl: 1.75rem;  // 28px
+$font-size-smartphone-5xl: 2rem;     // 32px
+
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 500;

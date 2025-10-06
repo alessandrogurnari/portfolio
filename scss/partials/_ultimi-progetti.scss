@@ -63,6 +63,16 @@
           margin-top: $spacing-sm;
           margin-bottom: $spacing-lg; // Margine destro per mobile
         }
+        
+        // Ottimizzazione specifica per smartphone
+        @include smartphone {
+          flex: 0 0 280px !important; // Larghezza ridotta per smartphone
+          min-width: 280px !important; // Larghezza minima ridotta
+          max-width: 300px !important; // Larghezza massima ridotta
+          padding-bottom: 15px !important; // Padding ridotto
+          margin-top: $spacing-xs !important; // Margine ridotto
+          margin-bottom: $spacing-md !important; // Margine ridotto
+        }
       }
     }
   }
@@ -133,6 +143,7 @@
   
   .project-content {
     padding: $spacing-xl;
+    padding-top: $spacing-3xl; // Aumenta ulteriormente la distanza dall'immagine
     display: flex;
     flex-direction: column;
     justify-content: space-between; // Distribuisce lo spazio tra contenuto e tag
@@ -142,25 +153,47 @@
       font-size: $font-size-xl;
       font-weight: $font-weight-semibold;
       color: $text-color;
+      margin-top: $spacing-lg; // Aumenta la distanza dall'immagine
       margin-bottom: $spacing-md; // Aumentato da sm a md per più spazio
       
       // Titolo più grande su mobile per gerarchia più marcata
       @include mobile {
         font-size: $font-size-xl; // 20px su mobile
       }
+      
+      // Ottimizzazione per smartphone
+      @include smartphone {
+        font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+        margin-bottom: $spacing-sm !important; // Margine ridotto
+        padding-left: $spacing-sm !important; // Padding sinistro aumentato
+        padding-right: $spacing-sm !important; // Padding destro aumentato
+      }
     }
     
     p {
       color: $text-light;
-      font-size: $font-size-base; // 18px ridotto per card più compatte
+      font-size: $font-size-lg !important; // 18px aumentato per migliore leggibilità
       line-height: $line-height-relaxed;
       margin-bottom: 0; // Rimosso per avvicinare i tag
       flex: 1; // Il paragrafo si espande per riempire lo spazio disponibile
       
       // Font-size ridotto su mobile
       @include mobile {
-        font-size: $font-size-xs; // 16px su mobile
+        font-size: $font-size-sm !important; // 18px su mobile (aumentato da 16px)
       }
+      
+      // Ottimizzazione per smartphone
+      @include smartphone {
+        font-size: $font-size-smartphone-base !important; // 14px per smartphone (aumentato da 13px)
+        line-height: 1.4 !important; // Line-height ridotto
+        padding-left: $spacing-sm !important; // Padding sinistro aumentato
+        padding-right: $spacing-sm !important; // Padding destro aumentato
+      }
+    }
+    
+    // Padding ridotto per smartphone
+    @include smartphone {
+      padding: $spacing-sm !important; // Padding ridotto per smartphone
     }
   }
   
@@ -178,6 +211,12 @@
       border-radius: $border-radius-lg; // Border-radius 8px per tag compatti
       font-size: 0.75rem; // 12px - tag più piccoli per elementi secondari
       font-weight: $font-weight-medium;
+    }
+    
+    // Ottimizzazione per smartphone
+    @include smartphone {
+      padding-left: $spacing-sm !important; // Padding sinistro aumentato
+      padding-right: $spacing-sm !important; // Padding destro aumentato
     }
   }
   

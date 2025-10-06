@@ -70,6 +70,13 @@
   }
 }
 
+// Mixin specifico per smartphone reali (viewport width)
+@mixin smartphone {
+  @media (max-width: 480px) and (orientation: portrait) {
+    @content;
+  }
+}
+
 // Small and down - ≤ 767px (Mobile + Mobile Large) - UTILIZZATO
 @mixin sm-down {
   @media (max-width: #{$breakpoint-md - 1px}) {
@@ -301,6 +308,13 @@
     flex: 1;
   }
   
+  @include smartphone {
+    height: 40px;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-smartphone-base; // 14px per smartphone
+    border-radius: $border-radius-sm;
+  }
+  
   @include tablet {
     height: 46px;
     padding: $spacing-sm $spacing-lg;
@@ -360,6 +374,10 @@
   @include mobile {
     font-size: $font-size-4xl; // Aumentato da 3xl a 4xl per mobile
   }
+  
+  @include smartphone {
+    font-size: $font-size-smartphone-4xl; // 28px per smartphone
+  }
 }
 
 @mixin heading-2 {
@@ -371,6 +389,10 @@
   
   @include mobile {
     font-size: $font-size-2xl;
+  }
+  
+  @include smartphone {
+    font-size: $font-size-smartphone-3xl; // 24px per smartphone
   }
 }
 
@@ -388,6 +410,10 @@
   font-weight: $font-weight-normal;
   line-height: $line-height-relaxed;
   color: $text-color;
+  
+  @include smartphone {
+    font-size: $font-size-smartphone-base; // 14px per smartphone
+  }
 }
 
 // Animation Mixins

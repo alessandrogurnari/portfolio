@@ -156,6 +156,40 @@
     padding: $spacing-4xl 0;
   }
   
+  // Smartphone: riduci spazi laterali del form
+  @include smartphone {
+    padding: $spacing-2xl $spacing-xs !important; // Riduci spazi laterali per smartphone
+    
+    .container {
+      padding-left: $spacing-sm !important; // Riduci padding container
+      padding-right: $spacing-sm !important; // Riduci padding container
+    }
+    
+    .row {
+      margin-left: 0 !important; // Rimuovi margini Bootstrap
+      margin-right: 0 !important; // Rimuovi margini Bootstrap
+    }
+    
+    .col-12 {
+      padding-left: $spacing-sm !important; // Riduci padding colonne
+      padding-right: $spacing-sm !important; // Riduci padding colonne
+    }
+    
+    .card {
+      margin: 0 !important; // Rimuovi margini card
+    }
+    
+    .card-body {
+      padding: $spacing-lg $spacing-lg !important; // Aumenta padding laterale interno card
+      
+      // Aumenta font-size del sottotitolo per smartphone
+      .text-muted {
+        font-size: $font-size-smartphone-lg !important; // 16px per smartphone (aumentato)
+        line-height: 1.5 !important;
+      }
+    }
+  }
+  
   
   // Card del form
   .card {
