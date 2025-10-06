@@ -1,0 +1,381 @@
+// ========================================
+// LINKS - COMPONENTE LINK
+// ========================================
+// Gestisce tutti gli stili dei link del sito
+// Ottimizzato per navbar, hover effects e accessibilità
+// Include: nav-link, social-link, project-link, footer-link
+
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'sass:color';
+
+// ========================================
+// LINK BASE
+// ========================================
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all $transition-normal;
+  
+  &:hover {
+    color: color.adjust($primary-color, $lightness: -10%);
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  
+  &:active {
+    color: color.adjust($primary-color, $lightness: -20%);
+  }
+}
+
+// ========================================
+// LINK NAVIGAZIONE
+// ========================================
+.nav-link {
+  font-weight: $font-weight-medium;
+  text-decoration: none;
+  transition: all $transition-normal;
+  position: relative;
+  padding: $spacing-sm $spacing-md;
+  border-radius: 8px;
+  display: flex;
+  align-items: center; // Centra verticalmente il testo del link
+  @include fade-in-up-sequential($animation-delay-1);
+  
+  // Rimuovi outline di focus e effetti di selezione
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-focus-ring-color: transparent;
+  -moz-outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  
+  // Sottolineatura animata per hover/active
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: $primary-color;
+    border-radius: 1px;
+    transition: width $transition-fast;
+  }
+  
+  // Hover effect con animazione
+  &:hover:not(.active) {
+    color: $primary-color;
+    
+    &::before {
+      width: 100%;
+    }
+  }
+  
+  // Focus per accessibilità (solo per navigazione da tastiera) - DISABILITATO per rimuovere rettangolo
+  // &:focus:not(:active) {
+  //   outline: 2px solid $primary-color;
+  //   outline-offset: 2px;
+  // }
+  
+  // Rimuovi outline quando attivo (click/touch)
+  &:focus:active,
+  &:active {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-focus-ring-color: transparent;
+    -moz-outline: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+  }
+  
+  // Link attivo - pagina corrente
+  &.active {
+    color: $primary-color;
+    
+    &::before {
+      width: 100%;
+      height: 3px; // underline più visibile per lo stato attivo
+    }
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  // Stile mobile
+  @include sm-down {
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-lg;
+    text-align: center;
+    border-radius: 12px;
+    margin: $spacing-xs 0;
+    
+    // Touch feedback
+    &:active {
+      transform: scale(0.98);
+      background-color: transparent;
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-focus-ring-color: transparent;
+      -moz-outline: none;
+    }
+    
+    // Prevenzione selezione testo su mobile
+    &::selection,
+    &::-moz-selection,
+    &::-webkit-selection {
+      background: transparent;
+      color: inherit;
+    }
+    
+    // Rimuovi outline su tutti gli stati - MOBILE
+    &:focus,
+    &:focus:active,
+    &:active,
+    &:focus-visible {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-focus-ring-color: transparent;
+      -moz-outline: none;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+    }
+    
+    // Prevenzione specifica per pressione prolungata - MOBILE
+    &[onclick],
+    &[href] {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+  
+}
+
+// Navbar: underline segue il colore corrente e spessore attivo
+.navbar .nav-link {
+  &::before { background: currentColor; }
+  &.active::before { height: 2px; }
+}
+
+// Regole consolidate per nav-link (gestite nel selettore principale sopra)
+
+// ========================================
+// LINK SOCIAL
+// ========================================
+.social-link {
+  @include flex-center;
+  width: 50px;
+  height: 50px;
+  background-color: $background-light;
+  border-radius: 50%;
+  color: $text-color;
+  text-decoration: none;
+  transition: all $transition-normal;
+  border: 1px solid $border-color;
+  
+  &:hover {
+    background-color: $brand-accent;
+    color: white;
+    box-shadow: 0 8px 25px rgba($brand-accent, 0.3);
+    border-color: $brand-accent;
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+  
+  i, svg {
+    font-size: $font-size-lg;
+  }
+  
+  // Variazioni per piattaforme
+  &--github:hover {
+    background-color: #333;
+    box-shadow: 0 8px 25px rgba(51, 51, 51, 0.3);
+  }
+  
+}
+
+// ========================================
+// LINK PROGETTI
+// ========================================
+.project-link {
+  color: white;
+  font-size: $font-size-2xl;
+  text-decoration: none;
+  transition: all $transition-normal;
+  display: inline-block;
+  
+  &:hover {
+    color: $accent-color;
+  }
+  
+  &:focus {
+    outline: 2px solid $accent-color;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
+
+// ========================================
+// LINK FOOTER
+// ========================================
+.footer-link {
+  color: white;
+  text-decoration: none;
+  transition: color $transition-fast;
+  position: relative;
+  
+  &:hover {
+    color: $accent-color;
+  }
+  
+  &:focus {
+    outline: 2px solid $accent-color;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  
+  // Underline effect
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $accent-color;
+    transition: width $transition-normal;
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+// ========================================
+// LINK LOGO
+// ========================================
+.logo-link {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $text-color;
+  text-decoration: none;
+  transition: color $transition-fast;
+  
+  &:hover {
+    color: $primary-color;
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+// ========================================
+// LINK UTILITY
+// ========================================
+.link {
+  &-primary {
+    color: $primary-color;
+    
+    &:hover {
+      color: color.adjust($primary-color, $lightness: -10%);
+    }
+  }
+  
+  &-secondary {
+    color: $text-light;
+    
+    &:hover {
+      color: $text-color;
+    }
+  }
+  
+  &-accent {
+    color: $accent-color;
+    
+    &:hover {
+      color: color.adjust($accent-color, $lightness: -10%);
+    }
+  }
+  
+  &-white {
+    color: white;
+    
+    &:hover {
+      color: $accent-color;
+    }
+  }
+  
+  &-underline {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  &-no-underline {
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ========================================
+// LINK GRUPPI
+// ========================================
+.link-group {
+  display: flex;
+  gap: $spacing-lg;
+  align-items: center;
+  
+  &-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  &-center {
+    justify-content: center;
+  }
+  
+  &-end {
+    justify-content: flex-end;
+  }
+}
+
+// ========================================
+// RESPONSIVE LINKS
+// ========================================
+@include mobile {
+  .social-link {
+    width: 44px;
+    height: 44px;
+    
+    i, svg {
+      font-size: $font-size-base;
+    }
+  }
+  
+}

@@ -1,0 +1,124 @@
+// ========================================
+// HAMBURGER MENU - COMPONENTE MOBILE
+// ========================================
+// Menu hamburger responsive con X simmetrica
+// Transizioni smooth e stato persistente
+
+@use 'mixins' as *;
+@use 'variables' as *;
+
+// ========================================
+// PULSANTE HAMBURGER
+// ========================================
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  transition: all $transition-normal;
+  @include fade-in-up;
+  
+  // Rimuovi outline di focus e ripple effect
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  @media (max-width: 1023px) {
+    display: flex;
+  }
+  
+  @media (min-width: 1024px) {
+    display: none;
+  }
+  
+  &.resizing {
+    transition: none;
+    
+    .bar {
+      transition: none;
+    }
+  }
+  
+  &:focus {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+  
+  // ========================================
+  // BARRE X (PSEUDO-ELEMENTI)
+  // ========================================
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: $background-color; // X dello stesso colore dello sfondo delle pagine
+    border-radius: 1px;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: opacity $transition-normal, 
+                transform $transition-normal,
+                background-color $transition-normal; // Aggiungo transizione per il colore
+  }
+  
+  // ========================================
+  // BARRE ORIGINALI (3 LINEE)
+  // ========================================
+  .bar {
+    width: 30px;
+    height: 2px;
+    background-color: $background-color; // Stesso colore dello sfondo delle pagine
+    margin: 3px 0;
+    border-radius: 1px;
+    transition: opacity $transition-normal, 
+                background-color $transition-normal;
+    transform-origin: center;
+    
+  }
+
+  // Hover effect per le barre normali (menu chiuso)
+  &:hover .bar {
+    background-color: $brand-accent; // Hover come i link navbar
+  }
+
+  // Hover effect per le barre X (::before e ::after)
+  &:hover::before,
+  &:hover::after {
+    background-color: $brand-accent; // Hover come i link navbar
+  }
+
+  // ========================================
+  // STATO ATTIVO (X VISIBILE)
+  // ========================================
+  &.active {
+    // Nasconde le 3 barre originali
+    .bar {
+      opacity: 0;
+    }
+    
+    // Mostra la X perfettamente simmetrica
+    &::before {
+      transform: rotate(45deg);
+      opacity: 1;
+      transition-delay: $transition-fast;
+    }
+    
+    &::after {
+      transform: rotate(-45deg);
+      opacity: 1;
+      transition-delay: $transition-fast;
+    }
+  }
+}
+

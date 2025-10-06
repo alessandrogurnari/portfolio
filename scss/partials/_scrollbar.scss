@@ -1,0 +1,85 @@
+// ========================================
+// SCROLLBAR - SCROLLBAR PERSONALIZZATA
+// ========================================
+// Questo partial contiene gli stili per la scrollbar:
+// - Webkit scrollbar (Chrome, Safari, Edge)
+// - Firefox scrollbar (scrollbar-color, scrollbar-width)
+// - Responsive scrollbar
+
+// Import variabili e mixins
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// ========================================
+// WEBKIT SCROLLBAR (Chrome, Safari, Edge)
+// ========================================
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $background-light;
+  border-radius: $border-radius-full;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $border-color;
+  border-radius: $border-radius-full;
+  border: 2px solid $background-light;
+  
+  &:hover {
+    background: $text-light;
+  }
+  
+  &:active {
+    background: $primary-color;
+  }
+}
+
+::-webkit-scrollbar-corner {
+  background: $background-light;
+}
+
+// ========================================
+// FIREFOX SCROLLBAR
+// ========================================
+html {
+  scrollbar-color: $border-color $background-light;
+  scrollbar-width: thin;
+}
+
+// ========================================
+// RESPONSIVE SCROLLBAR
+// ========================================
+@include mobile {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border: 1px solid $background-light;
+  }
+}
+
+// ========================================
+// CUSTOM SCROLLBAR FOR SPECIFIC ELEMENTS
+// ========================================
+.custom-scrollbar {
+  scrollbar-color: $primary-color $background-light;
+  scrollbar-width: thin;
+  
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: $border-radius-full;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $background-light;
+  }
+}

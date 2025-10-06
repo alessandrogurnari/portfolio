@@ -1,0 +1,154 @@
+// ========================================
+// FILE SCSS PRINCIPALE - PORTFOLIO ALESSANDRO GURNARI
+// ========================================
+// Questo file importa tutti i file parziali e definisce gli stili specifici
+// per le animazioni e le interazioni del sito
+
+// Import dei file parziali Sass (organizzati nella cartella partials/)
+// Utilizzo @use invece di @import per compatibilità con Sass 3.0+
+
+// ========================================
+// FOUNDATION & BASE
+// ========================================
+@use 'partials/variables' as *;    // Variabili CSS (colori, dimensioni, breakpoints)
+@use 'partials/mixins' as *;       // Mixins riutilizzabili (animazioni, media queries)
+@use 'partials/foundation' as *;   // Fondamenta del sito (reset, base HTML/body)
+@use 'partials/typography' as *;   // Tipografia (headings, text, lists)
+@use 'partials/utilities' as *;    // Classi utility (spacing, display, position)
+// @use 'partials/accessibility' as *; // RIMOSSO - file non utilizzato
+@use 'partials/scrollbar' as *;    // Scrollbar personalizzata
+
+// ========================================
+// COMPONENTS
+// ========================================
+@use 'partials/buttons' as *;      // Componente bottoni (tutti i tipi di bottoni)
+@use 'partials/links' as *;        // Componente link (tutti i tipi di link)
+@use 'partials/navbar' as *;       // Componente navbar (navigazione principale)
+@use 'partials/hamburger' as *;    // Componente hamburger (menu mobile)
+
+// ========================================
+// SECTIONS
+// ========================================
+@use 'partials/about' as *;        // Sezione about (chi sono, statistiche)
+@use 'partials/ultimi-progetti' as *; // Sezione ultimi progetti (homepage)
+@use 'partials/home' as *;         // Pagina home (hero + regole specifiche home page)
+// @use 'partials/skills' as *;       // RIMOSSO - file non utilizzato
+@use 'partials/footer' as *;       // Footer (informazioni, link, social)
+@use 'partials/portfolio' as *;    // Pagina portfolio (hero + progetti, layout, animazioni)
+@use 'partials/contact' as *;      // Pagina contattami (hero + form, FAQ, layout)
+@use 'partials/cv' as *;           // Pagina CV (hero + layout, animazioni)
+
+// Font Google Fonts (Inter) - Importato nel CSS compilato
+
+// ========================================
+// OTTIMIZZAZIONI PERFORMANCE - SENZA INTERFERIRE CON ANIMAZIONI CSS
+// ========================================
+
+// Ottimizza le performance del body durante lo scroll
+body {
+  -webkit-overflow-scrolling: touch; // Smooth scrolling su iOS
+}
+
+// Ottimizza le performance durante lo scroll
+* {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+// Ottimizza le performance per elementi animati
+.animate-ready,
+.animate-in {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+// Ottimizza le performance per elementi con animazioni CSS
+[class*="animation"],
+[class*="fade"],
+[class*="slide"] {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+// ========================================
+// STILI SPECIFICI DELLE PAGINE
+// ========================================
+// Questa sezione contiene animazioni e stili specifici
+// per le diverse pagine del portfolio
+
+// Animazioni della sezione Hero (homepage) - Gestite in _hero.scss
+
+// Animazioni dei titoli delle sezioni
+.about,
+.contact {
+  .section-title {
+    @include fade-in-up;
+  }
+}
+
+// Animazioni per le sezioni FAQ
+.faq-section {
+  .faq-title {
+    @include fade-in-up;
+  }
+  
+  .faq-item {
+    @include fade-in-up-sequential($animation-delay-1);
+  }
+  
+  .accordion-button {
+    @include fade-in-up-sequential($animation-delay-1);
+  }
+  
+  .accordion-body {
+    @include fade-in-up-sequential($animation-delay-1);
+  }
+}
+
+
+
+// Animazioni delle barre delle competenze rimosse - non utilizzate
+
+// ========================================
+// COMPORTAMENTI GLOBALI
+// ========================================
+
+// Scrolling fluido per i link di ancoraggio
+// (Gestito in _foundation.scss - scroll-behavior: smooth)
+
+// ========================================
+// STILI PER LA STAMPA
+// ========================================
+@media print {
+  // Nasconde elementi non necessari per la stampa
+  .navbar,
+  .hero-buttons,
+  .contact-form,
+  .footer {
+    display: none;
+  }
+  
+  // Ottimizza la sezione hero per la stampa
+  .hero {
+    min-height: auto;
+    padding: $spacing-lg 0;
+  }
+  
+  // Rimuove decorazioni non necessarie
+  .section-title::after {
+    display: none;
+  }
+  
+  // Forza colori in bianco e nero per la stampa
+  * {
+    color: black !important;
+    background: white !important;
+  }
+}
+

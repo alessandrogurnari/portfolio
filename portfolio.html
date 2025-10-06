@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scroll-restoration" content="manual">
+    <title>Portfolio - Alessandro Gurnari</title>
+    <meta name="description" content="Portfolio di progetti di Alessandro Gurnari - Sviluppatore Web e Designer UX/UI">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio - Alessandro Gurnari">
+    <meta property="og:description" content="Portfolio di progetti di Alessandro Gurnari - Sviluppatore Web e Designer UX/UI">
+    <meta property="og:image" content="./assets/images/alessandro-gurnari-profile.jpg">
+    <meta property="og:url" content="https://alessandrogurnari.com/portfolio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alessandro Gurnari Portfolio">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:see_also" content="https://github.com/alessandrogurnari">
+    <meta property="og:see_also" content="https://instagram.com/alessandrogurnari">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/site.webmanifest">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css?v=1014">
+    
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="portfolio">
+    <!-- Header con menu sticky -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Alessandro Gurnari</a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="portfolio.html" class="nav-link active" aria-current="page">Portfolio</a>
+                    <a href="cv.html" class="nav-link">CV</a>
+                    <a href="contattami.html" class="nav-link">Contattami</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle" aria-label="Apri menu di navigazione" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sezione Hero Portfolio -->
+    <section class="hero portfolio-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Il Mio <span class="highlight">Portfolio</span></h1>
+                    <p class="hero-subtitle">Progetti che dimostrano le mie competenze</p>
+                    <p class="hero-description">
+                        Scopri i progetti che ho realizzato, dalla progettazione UX/UI allo sviluppo frontend. <br class="desktop-only">
+                        Ogni progetto rappresenta un'opportunità di crescita e apprendimento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Clienti -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <h2 class="section-title">I Miei Clienti</h2>
+            <p class="section-subtitle">Esplora i lavori completati per ogni cliente</p>
+            
+            <!-- 
+            ========================================
+            SEZIONE CLIENTI - SISTEMA ACCORDION
+            ========================================
+            
+            STRUTTURA:
+            - Ogni cliente ha una sezione con ID univoco (es: "nomecliente-works")
+            - Header cliccabile con logo, info e freccia animata
+            - Grid di progetti che si apre/chiude con animazioni fluide
+            
+            FUNZIONALITÀ:
+            - Accordion: solo un cliente aperto alla volta
+            - Altezza uniforme: tutte le card del cliente hanno la stessa altezza
+            - Animazioni: fade per apertura/chiusura
+            - Responsive: funziona su tutti i dispositivi
+            
+            COME AGGIUNGERE UN NUOVO CLIENTE:
+            1. Copia la struttura di start2impact-works
+            2. Cambia l'ID (es: "nuovocliente-works")
+            3. Aggiorna logo, nome, descrizione
+            4. Aggiungi i progetti nel projects-grid
+            5. Il sistema funzionerà automaticamente!
+            -->
+            
+            <!-- Lavori per Start2Impact -->
+            <div id="start2impact-works" class="client-works-section">
+                <!-- 
+                HEADER CLIENTE - CLICCABILE E ANIMATO
+                ========================================
+                
+                COMPONENTI:
+                - Logo: immagine del cliente (adattiva per proporzioni)
+                - Info: nome e descrizione del cliente
+                - Freccia: indica stato aperto/chiuso, ruota 180° quando attivo
+                
+                COMPORTAMENTO:
+                - Click su tutto l'header apre/chiude i progetti
+                - Hover: background leggermente colorato + freccia diventa blu
+                - Animazioni: transizioni smooth per tutti gli stati
+                - Responsive: layout si adatta a mobile/tablet/desktop
+                
+                CSS CLASSES:
+                - .client-works-header: container principale
+                - .client-works-logo: logo adattivo con ombra
+                - .client-works-info: testo del cliente
+                - .client-works-arrow: freccia animata
+                -->
+                <div class="client-works-header" role="button" tabindex="0" aria-expanded="false" aria-label="Espandi progetti Start2Impact">
+                    <img src="./assets/images/clients/start2impact.png" alt="Start2Impact" class="client-works-logo">
+                    <div class="client-works-info">
+                        <h3>Start2Impact</h3>
+                        <p>Piattaforma di formazione online per sviluppatori e designer</p>
+                    </div>
+                    <div class="client-works-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                
+                <!-- 
+                GRID PROGETTI - ALTEZZA UNIFORME AUTOMATICA
+                ============================================
+                
+                FUNZIONALITÀ:
+                - Grid responsive: 1 colonna mobile, 2 tablet, 3 desktop
+                - Altezza uniforme: JavaScript calcola automaticamente l'altezza massima
+                - Animazioni: fade per apertura/chiusura
+                - Hover: card si solleva leggermente
+                
+                STRUTTURA CARD:
+                - Immagine: copertina del progetto con overlay
+                - Overlay: bottone download PDF (appare su hover)
+                - Contenuto: titolo, descrizione, tag tecnologici
+                
+                JAVASCRIPT:
+                - uniformCardHeights(): calcola e applica altezza uniforme
+                - Si attiva automaticamente quando i progetti si aprono
+                - Si ricalcola al resize della finestra
+                
+                CSS CLASSES:
+                - .projects-grid: container grid responsive
+                - .project-card: singola card progetto
+                - .project-image: immagine con overlay
+                - .project-overlay: overlay con bottone download
+                - .project-content: contenuto testuale
+                - .project-tags: tag tecnologici
+                -->
+                <div class="projects-grid" id="projects-grid-start2impact">
+                    <!-- Progetto 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_1_copertina.jpg" alt="Progetto Grafica">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_1.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto Grafica</h4>
+                            <p>Ho immaginato di essere il fondatore di un brand di beachwear sostenibile e ho progettato la grafica per il lancio del servizio sul mercato.</p>
+                            <div class="project-tags">
+                                <span class="tag">Grafica</span>
+                                <span class="tag">Branding</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_2_copertina.jpg" alt="Progetto Copywriting">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_2.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto Copywriting</h4>
+                            <p>Ho redatto un articolo per il blog di una startup impegnata nella lotta allo spreco alimentare, curando tono di voce e messaggio.</p>
+                            <div class="project-tags">
+                                <span class="tag">Copywriting</span>
+                                <span class="tag">Content</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_3_copertina.jpg" alt="Progetto Discovery 1">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_3.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto Discovery 1</h4>
+                            <p>Ho selezionato il cliente di riferimento per tutti i progetti UX/UI successivi, avviando la fase di discovery per garantire coerenza e continuità nel percorso progettuale.</p>
+                            <div class="project-tags">
+                                <span class="tag">Discovery</span>
+                                <span class="tag">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 4 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_4_copertina.jpg" alt="Progetto Discovery 2">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_4.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto Discovery 2</h4>
+                            <p>Ho riepilogato l'analisi svolta nella fase di discovery, aggiornando gli obiettivi sulla base degli insight emersi dalle interviste agli utenti.</p>
+                            <div class="project-tags">
+                                <span class="tag">Discovery</span>
+                                <span class="tag">Analisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 5 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_5_copertina.jpg" alt="Progetto Accessibilità 1">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_5.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto Accessibilità 1</h4>
+                            <p>Ho integrato le competenze di accessibilità creando personas con disabilità, ipotizzando scenari d'uso e ridefinendo le user journey per individuare nuove opportunità di miglioramento.</p>
+                            <div class="project-tags">
+                                <span class="tag">Accessibilità</span>
+                                <span class="tag">Personas</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 6 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_6_copertina.jpg" alt="Progetto Accessibilità 2">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_6.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto Accessibilità 2</h4>
+                            <p>Ho analizzato 5 pagine del sito individuando problemi di accessibilità e proponendo soluzioni concrete per il redesign, con una sintesi delle criticità riscontrate.</p>
+                            <div class="project-tags">
+                                <span class="tag">Accessibilità</span>
+                                <span class="tag">Analisi</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 7 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_7_copertina.jpg" alt="Progetto Wireframing 1">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_7.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto Wireframing 1</h4>
+                            <p>Ho realizzato 5 wireframe desktop (high-fidelity) con le migliorie progettuali, spiegando le scelte fatte e riorganizzando la struttura del sito dove necessario. Ho incluso uno screen flow e, se utile, una nuova architettura dell'informazione.</p>
+                            <div class="project-tags">
+                                <span class="tag">Wireframing</span>
+                                <span class="tag">Desktop</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 8 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_8_copertina.jpg" alt="Progetto Wireframing 2">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_8.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto Wireframing 2</h4>
+                            <p>Ho progettato e caricato i 5 wireframe nella versione mobile, valutando l'adattamento del sito su dispositivi differenti e specificando le griglie utilizzate.</p>
+                            <div class="project-tags">
+                                <span class="tag">Wireframing</span>
+                                <span class="tag">Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 9 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_9_copertina.jpg" alt="Progetto User Interface 1">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_9.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto User Interface 1</h4>
+                            <p>Ho trasformato i wireframe desktop in un prototipo UI completo, studiando colori, accessibilità, interazioni e animazioni, e prototipando il flusso utente da testare.</p>
+                            <div class="project-tags">
+                                <span class="tag">UI Design</span>
+                                <span class="tag">Desktop</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 10 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_10_copertina.jpg" alt="Progetto User Interface 2">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_10.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto User Interface 2</h4>
+                            <p>Ho realizzato il prototipo UI mobile a partire dai 5 layout mobile, curando l'adattamento grafico e funzionale per dispositivi mobili e specificando le griglie di progetto.</p>
+                            <div class="project-tags">
+                                <span class="tag">UI Design</span>
+                                <span class="tag">Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Progetto 11 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/start2impact/progetto_11_copertina.jpg" alt="Progetto 11">
+                            <div class="project-overlay">
+                                <a href="./assets/projects/start2impact/progetto_11.pdf" target="_blank" class="btn btn-primary">
+                                    Apri PDF
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4>Progetto User Test 1</h4>
+                            <p>Ho progettato un test di usabilità sul prototipo mobile, definendo obiettivi, target e criteri di recruiting, con uno script mirato a raccogliere feedback sull'esperienza di navigazione.</p>
+                            <div class="project-tags">
+                                <span class="tag">User Testing</span>
+                                <span class="tag">Usabilità</span>
+                                <span class="tag">Research</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Navigazione progetti (solo desktop) -->
+                <div class="projects-navigation">
+                    <button class="nav-arrow" id="prev-projects-start2impact">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-arrow" id="next-projects-start2impact">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Sezione Processo di Lavoro -->
+    <section id="process" class="about">
+        <div class="container">
+            <h2 class="section-title">Il Mio Processo di Lavoro</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-step="1.">Analisi e Ricerca</h3>
+                    <p>
+                        <strong>Come lavoro:</strong> Studio il cliente e i suoi utenti<br>
+                        <strong>Strumenti:</strong> Ricerca online, analisi competitor, brainstorming<br>
+                        <strong>Risultato:</strong> Comprensione chiara degli obiettivi e delle esigenze
+                    </p>
+                    <p>
+                        Inizio ogni progetto studiando a fondo il cliente, il suo business 
+                        e i suoi utenti. Analizzo i competitor per capire cosa funziona 
+                        e identifico le opportunità di miglioramento.
+                    </p>
+                    
+                    <h3 data-step="2.">Struttura e Organizzazione</h3>
+                    <p>
+                        <strong>Come lavoro:</strong> Organizzo i contenuti in modo logico<br>
+                        <strong>Strumenti:</strong> Carta e penna, Figma, mappe mentali<br>
+                        <strong>Risultato:</strong> Struttura chiara e navigazione intuitiva
+                    </p>
+                    <p>
+                        Organizzo i contenuti in modo che l'utente possa trovare facilmente 
+                        quello che cerca. Creo una struttura logica e definisco i percorsi 
+                        di navigazione più efficaci.
+                    </p>
+                    
+                    <h3 data-step="3.">Design e Prototipi</h3>
+                    <p>
+                        <strong>Come lavoro:</strong> Creo design funzionali e user-friendly<br>
+                        <strong>Strumenti:</strong> Figma, test con utenti<br>
+                        <strong>Risultato:</strong> Design finale e prototipi interattivi
+                    </p>
+                    <p>
+                        Trasformo le idee in design concreti. Creo interfacce 
+                        funzionali e accessibili. Sviluppo prototipi per testare 
+                        l'esperienza utente prima dello sviluppo finale.
+                    </p>
+                    
+                    <h3 data-step="4.">Sviluppo e Consegna</h3>
+                    <p>
+                        <strong>Come lavoro:</strong> Collaboro con gli sviluppatori<br>
+                        <strong>Strumenti:</strong> Figma, documentazione, test del sito<br>
+                        <strong>Risultato:</strong> Progetto finale funzionante e ottimizzato
+                    </p>
+                    <p>
+                        Lavoro a stretto contatto con il team di sviluppo per assicurarmi 
+                        che il design venga implementato correttamente. Testo il risultato 
+                        finale e ottimizzo per garantire la migliore esperienza utente.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>10+</h3>
+                        <p>Progetti UX/UI Completati</p>
+                    </div>
+                    <div class="stat">
+                        <h3>WCAG 2.1 AAA</h3>
+                        <p>Standard Accessibilità</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Design System</h3>
+                        <p>Componenti Scalabili</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sezione CTA -->
+    <section id="cta" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Sei interessato ai miei lavori?</h3>
+                    <p>
+                        Se ti piacciono i miei progetti e vorresti collaborare, non esitare a contattarmi. Sono sempre disponibile per nuove sfide!
+                    </p>
+                    <div class="cta-actions">
+                    <div class="hero-buttons">
+                            <a href="contattami.html" class="btn btn-primary btn-portfolio-primary">Inizia un Progetto</a>
+                            <a href="cv.html" class="btn btn-secondary btn-portfolio-secondary">Vai al CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Alessandro Gurnari. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/project-tracker.js"></script>
+    <script src="./assets/js/projects-navigation.js"></script>
+    <script src="./assets/js/client-header-manager.js"></script>
+    
+    <!-- JavaScript per sistema accordion clienti -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const clientHeaders = document.querySelectorAll('.client-works-header');
+            
+            clientHeaders.forEach(header => {
+                const arrow = header.querySelector('.client-works-arrow');
+                const clientSection = header.closest('.client-works-section');
+                const projectsGrid = clientSection.querySelector('.projects-grid');
+                
+                header.addEventListener('click', function() {
+                    const isCurrentlyOpen = projectsGrid.style.display === 'grid';
+                    
+                    // Chiudi altri header aperti
+                    clientHeaders.forEach(otherHeader => {
+                        if (otherHeader !== header) {
+                            const otherArrow = otherHeader.querySelector('.client-works-arrow');
+                            const otherProjectsGrid = otherHeader.closest('.client-works-section').querySelector('.projects-grid');
+                            
+                            if (otherProjectsGrid.style.display === 'grid') {
+                                otherArrow.classList.remove('active');
+                                otherProjectsGrid.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                                otherProjectsGrid.style.opacity = '0';
+                                otherProjectsGrid.style.transform = 'scale(0.95)';
+                                
+                                requestAnimationFrame(() => {
+                                    setTimeout(() => {
+                                        otherProjectsGrid.style.setProperty('display', 'none', 'important');
+                                        otherProjectsGrid.style.transform = 'none';
+                                        if (window.projectsNavigation) {
+                                            window.projectsNavigation.toggleGridNavigation(otherProjectsGrid.id, false);
+                                        }
+                                    }, 300);
+                                });
+                            }
+                        }
+                    });
+                    
+                    // Gestisci header corrente
+                    if (isCurrentlyOpen) {
+                        arrow.classList.remove('active');
+                        projectsGrid.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                        projectsGrid.style.opacity = '0';
+                        projectsGrid.style.transform = 'scale(0.95)';
+                        
+                        requestAnimationFrame(() => {
+                            setTimeout(() => {
+                                projectsGrid.style.setProperty('display', 'none', 'important');
+                                projectsGrid.style.transform = 'none';
+                                if (window.projectsNavigation) {
+                                    window.projectsNavigation.toggleGridNavigation(projectsGrid.id, false);
+                                }
+                            }, 300);
+                        });
+                    } else {
+                        arrow.classList.add('active');
+                        projectsGrid.style.display = 'grid';
+                        projectsGrid.style.opacity = '0';
+                        projectsGrid.style.transform = 'scale(0.95)';
+                        projectsGrid.style.transition = 'opacity 0.4s ease-out, transform 0.4s ease-out';
+                        
+                        requestAnimationFrame(() => {
+                            setTimeout(() => {
+                                projectsGrid.style.opacity = '1';
+                                projectsGrid.style.transform = 'scale(1)';
+                                if (window.projectsNavigation) {
+                                    window.projectsNavigation.toggleGridNavigation(projectsGrid.id, true);
+                                }
+                            }, 50);
+                        });
+                    }
+                });
+                
+                projectsGrid.style.setProperty('display', 'none', 'important');
+            });
+            
+            // Funzione per altezze dinamiche delle card - MIGLIORATA
+            // Calcola l'altezza massima considerando tutto il contenuto visibile
+            window.setDynamicCardHeights = function() {
+                const clientSections = document.querySelectorAll('.client-works-section');
+                
+                clientSections.forEach(section => {
+                    const projectCards = section.querySelectorAll('.project-card');
+                    if (projectCards.length === 0) return;
+                    
+                    // Calcola l'altezza massima tra tutte le card dello stesso cliente
+                    let maxHeight = 0;
+                    projectCards.forEach(card => {
+                        // Salva l'altezza corrente se è già impostata
+                        const currentHeight = card.style.height;
+                        
+                        // Temporaneamente rimuove l'altezza per calcolare quella naturale
+                        card.style.height = 'auto';
+                        card.style.minHeight = 'auto';
+                        
+                        // Forza il reflow per assicurarsi che il contenuto sia renderizzato
+                        card.offsetHeight;
+                        
+                        // Calcola l'altezza naturale includendo tutto il contenuto
+                        const naturalHeight = card.offsetHeight;
+                        
+                        // Ripristina l'altezza precedente se esisteva
+                        if (currentHeight) {
+                            card.style.height = currentHeight;
+                        }
+                        
+                        // Usa l'altezza naturale per il calcolo del massimo
+                        if (naturalHeight > maxHeight) {
+                            maxHeight = naturalHeight;
+                        }
+                    });
+                    
+                    // Se non abbiamo ancora un'altezza valida, aspetta un frame
+                    if (maxHeight === 0) {
+                        requestAnimationFrame(() => {
+                            setDynamicCardHeights();
+                        });
+                        return;
+                    }
+                    
+                    // DISABILITATO: Altezze uniformi per permettere adattamento al contenuto
+                    // Le card ora si adattano naturalmente al contenuto senza forzare altezze uniformi
+                    projectCards.forEach(card => {
+                        card.style.height = 'auto';
+                        card.style.minHeight = 'auto';
+                        card.style.maxHeight = 'none';
+                    });
+                });
+            }
+            
+            // Event listeners per altezze uniformi
+            clientHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const projectsGrid = this.closest('.client-works-section').querySelector('.projects-grid');
+                    // Calcola le altezze immediatamente per evitare scatti
+                    if (projectsGrid.style.display === 'grid') {
+                        setDynamicCardHeights();
+                        if (projectsGrid.toggleNavigation) {
+                            projectsGrid.toggleNavigation(true);
+                        }
+                    } else {
+                        if (projectsGrid.toggleNavigation) {
+                            projectsGrid.toggleNavigation(false);
+                        }
+                    }
+                });
+            });
+            
+            // Ricalcola altezze al resize
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const openProjects = document.querySelectorAll('.projects-grid[style*="display: grid"]');
+                    if (openProjects.length > 0) {
+                        setDynamicCardHeights();
+                    }
+                }, 250);
+            });
+            
+            // Calcola altezze iniziali per le card già visibili
+            setTimeout(() => {
+                setDynamicCardHeights();
+            }, 100);
+        });
+    </script>
+</body>
+</html>

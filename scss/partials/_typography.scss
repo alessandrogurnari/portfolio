@@ -1,0 +1,111 @@
+// ========================================
+// TYPOGRAPHY - STILI DI TESTO
+// ========================================
+// Questo partial contiene tutti gli stili di testo:
+// - Heading styles (h1-h6)
+// - Body text e paragrafi
+// - Lists (ul, ol, li)
+// - Text alignment utilities
+// - Section titles
+
+// Import mixins e variabili
+@use 'mixins' as *;
+@use 'variables' as *;
+
+// ========================================
+// HEADINGS
+// ========================================
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  color: $text-color;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  @include heading-1;
+}
+
+h2 {
+  @include heading-2;
+}
+
+h3 {
+  @include heading-3;
+}
+
+h4 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+}
+
+h5 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+}
+
+h6 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+}
+
+// ========================================
+// BODY TEXT
+// ========================================
+p {
+  @include body-text;
+  margin-bottom: $spacing-md;
+}
+
+// ========================================
+// LISTS
+// ========================================
+ul, ol {
+  margin-bottom: $spacing-md;
+  padding-left: $spacing-lg;
+}
+
+li {
+  margin-bottom: $spacing-xs;
+}
+
+// ========================================
+// TEXT ALIGNMENT UTILITIES
+// ========================================
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// ========================================
+// SECTION TITLE
+// ========================================
+.section-title {
+  @include heading-2;
+  
+  & {
+    text-align: center;
+    margin-bottom: $spacing-3xl;
+    position: relative;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -$spacing-md;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: $brand-accent;
+    border-radius: $border-radius-full;
+  }
+}

@@ -1,0 +1,200 @@
+// ========================================
+// HOME PAGE - PAGINA HOME 2025
+// ========================================
+// Stili specifici per la pagina home
+// Include: hero section home, layout generale, regole specifiche home
+// Ogni pagina ha la sua hero - questa è quella della home
+
+// Import mixins e variabili
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'buttons' as *;
+
+// ========================================
+// HERO HOME PAGE
+// ========================================
+.hero {
+  padding: $spacing-4xl 0;
+  // Sfondo rimosso - eredita dal body
+  min-height: 100vh;
+  @include flex-center;
+  position: relative;
+  overflow: hidden;
+  
+  // Variante di altezza utilizzata
+  &--full {
+    min-height: 100vh;
+  }
+}
+
+// ========================================
+// CONTAINER HERO HOME
+// ========================================
+.hero-container {
+  width: 100%;
+  @include container;
+}
+
+// ========================================
+// CONTENUTO HERO HOME
+// ========================================
+.hero-content {
+  @include flex-between;
+  align-items: center;
+  gap: $spacing-3xl;
+  @include fade-in-up;
+  @include sequential-animation($animation-delay-1);
+  
+  @include mobile {
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-2xl;
+  }
+  
+  // Variante di layout utilizzata
+  &--centered {
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-2xl;
+  }
+}
+
+// ========================================
+// TESTO HERO HOME
+// ========================================
+.hero-text {
+  flex: 1;
+  
+  h1 {
+    margin-bottom: $spacing-lg; // Aumentato da md a lg per più spazio tra titolo e sottotitolo
+    color: $text-color;
+    @include heading-1;
+    
+    .highlight {
+      color: $brand-accent; // Alessandro in brand accent
+    }
+  }
+}
+
+.hero-subtitle {
+  font-size: $font-size-xl;
+  color: $text-color; // Cambiato da $text-light per migliore contrasto con background brand accent
+  margin-bottom: $spacing-lg;
+  font-weight: $font-weight-normal; // Ridotto da medium a normal per look più leggero
+  @include fade-in-up;
+  @include sequential-animation($animation-delay-1);
+}
+
+.hero-description {
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+  margin-bottom: $spacing-2xl;
+  color: $text-color; // Cambiato da $text-light per migliore contrasto con background brand accent
+  font-weight: $font-weight-light; // Aggiunto font-weight leggero per descrizione
+  @include fade-in-up;
+  @include sequential-animation($animation-delay-1);
+  
+  // Più aria laterale su mobile
+  @include mobile {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+// ========================================
+// BOTTONI HERO HOME
+// ========================================
+.hero-buttons {
+  @include flex-center;
+  gap: $spacing-lg;
+}
+
+// ========================================
+// REGOLE SPECIFICHE HOME PAGE
+// ========================================
+
+// HOME PAGE: Larghezza massima del testo hero
+.home .hero-text {
+  max-width: 900px; // Larghezza aumentata per hero più ampio
+}
+
+// HOME PAGE: Bottoni centrati nella sezione hero
+.home .hero .hero-buttons {
+  justify-content: center; // Centra i bottoni su tutte le risoluzioni
+}
+
+// ========================================
+// LAYOUT GENERALE HOME PAGE
+// ========================================
+
+// Spacing tra sezioni della home
+.home .about {
+  padding: $spacing-4xl 0;
+  
+  // Padding laterale per tutti i dispositivi
+  @include desktop {
+    padding-left: 6rem; // Aumentato da 8rem a 12rem (192px)
+    padding-right: 6rem;
+  }
+  
+  @include md-down {
+    padding-left: 2rem; // Aumentato da 3rem a 4rem (64px)
+    padding-right: 2rem;
+  }
+  
+  @include mobile {
+    padding-left: 1rem; // Aumentato da 2.5rem a 3rem (48px)
+    padding-right: 1rem;
+  }
+}
+
+.home .ultimi-progetti {
+  padding: $spacing-4xl 0;
+}
+
+// ========================================
+// RESPONSIVE HOME PAGE
+// ========================================
+
+@include mobile {
+  .home .hero-text {
+    max-width: 100%; // Su mobile usa tutta la larghezza
+  }
+  
+  .home .ultimi-progetti {
+    padding: $spacing-3xl 0; // Padding ridotto su mobile
+  }
+}
+
+@include tablet {
+  .home .ultimi-progetti {
+    padding: $spacing-3xl 0; // Padding ridotto su tablet
+  }
+}
+
+// ========================================
+// RESPONSIVE HERO HOME
+// ========================================
+@include mobile {
+  .hero {
+    padding: $spacing-2xl 0;
+    padding-top: calc(#{$navbar-height} + #{$spacing-2xl}); // Compensa l'altezza della navbar fissa
+    min-height: 80vh;
+    
+    &--full {
+      min-height: 100vh;
+    }
+  }
+  
+  .hero-text h1 {
+    font-size: 2.625rem; // 42px - transizione più graduale da 48px (desktop)
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1875rem; // 19px - transizione più graduale da 20px (desktop)
+  }
+  
+  .hero-description {
+    font-size: $font-size-lg; // 18px - mantiene accessibilità WCAG AAA
+  }
+}

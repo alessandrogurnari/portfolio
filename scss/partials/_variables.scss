@@ -1,0 +1,116 @@
+// ========================================
+// VARIABLES
+// ========================================
+@use 'sass:color';
+
+// Navbar scura, testi a contrasto morbido, perla come sfondo
+$primary-color: #2A2E34;       // CTA/Primary (più chiaro della navbar per gerarchia visiva)
+$accent-color: #9AA0A6;        // Accenti sottili (silver tenue)
+$text-color: #2A2E34;          // Testo principale (nero fumo profondo)
+$text-light: #4A5568;          // Testo secondario (grigio scuro per WCAG AAA)
+$background-color: #F0F0F0;    // Sfondo pagina (grigio chiaro, più scuro per maggiore divario)
+$background-light: #E8E8E8;    // Sezioni alternate (grigio neutro, coordinato con background)
+$border-color: #D0D0D0;        // Bordi neutri (leggermente più chiaro per coerenza)
+$success-color: #2e7d32;       // Stato successo
+$error-color: #e63946;         // Stato errore
+
+// Accento brand (attivi/CTA speciali)
+$brand-accent: #06b6d4;     // Accento brand
+
+// Navbar specific
+$navbar-bg-color: #1E2328; // Navbar scura (charcoal)
+
+// Superfici (card/box/pannelli) - colore base dei contenitori
+$surface-color: #fafafa;      // Superfici (card, box, pannelli) grigio neutro molto chiaro
+
+// Card dedicate (se vuoi differenziarle dalle altre superfici)
+$card-color: $surface-color;  // Per le card; uguale a $surface-color, ma separabile se serve
+
+// Typography
+$font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-heading: $font-family-primary; // Usa la stessa famiglia del font primario
+$font-family-logo: 'SignPainter', 'HouseScript', cursive; // Font personalizzato per il logo
+
+$font-size-xs: 1rem;       // 16px (confortevole)
+$font-size-sm: 1rem;       // 16px (confortevole)
+$font-size-base: 1rem;     // 16px (standard moderno)
+$font-size-lg: 1.125rem;   // 18px (per enfasi)
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 3rem;      // 48px
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// Spacing
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+$spacing-4xl: 6rem;     // 96px
+
+// ========================================
+// BREAKPOINTS 2025 - BEST PRACTICES
+// ========================================
+// Breakpoints aggiornati secondo le best practices 2025
+// Basati su dispositivi reali e statistiche di utilizzo
+
+// Mobile First Approach - Aggiornato per 2025
+$breakpoint-xs: 0px;        // Extra Small (Mobile) - < 576px
+$breakpoint-sm: 576px;      // Small (Mobile Large) - 576px - 767px
+$breakpoint-md: 768px;      // Medium (Tablet) - 768px - 1023px
+$breakpoint-lg: 1024px;     // Large (Desktop Small) - 1024px - 1199px
+$breakpoint-xl: 1200px;     // Extra Large (Desktop) - 1200px - 1399px
+$breakpoint-xxl: 1400px;    // Extra Extra Large (Desktop Large) - ≥ 1400px
+
+// Breakpoints per compatibilità (deprecati) - RIMOSSI
+// Le variabili deprecate sono state rimosse per mantenere il codice pulito
+
+// Container max-widths (solo quelli utilizzati)
+$container-xl: 1280px;
+
+// Border radius
+$border-radius-sm: 0.25rem;   // 4px
+$border-radius-md: 0.375rem;  // 6px
+$border-radius-lg: 0.5rem;    // 8px
+$border-radius-xl: 0.75rem;   // 12px
+$border-radius-2xl: 1rem;     // 16px
+$border-radius-full: 9999px;
+
+// Shadows (solo quelli utilizzati)
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// Transitions - Sistema unificato 2025 (ottimizzato)
+$transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-normal: 0.5s cubic-bezier(0.4, 0, 0.6, 1); // Transizione principale (unificata con pulsante PDF)
+$transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-ease-out: 0.3s ease-out;
+// $transition-bounce rimosso perché non utilizzato
+
+// Animation delays per sequenze
+$animation-delay-1: 0.1s;
+$animation-delay-2: 0.2s;
+$animation-delay-3: 0.3s;
+$animation-delay-4: 0.4s;
+$animation-delay-5: 0.5s;
+// $animation-delay-6 rimosso perché non utilizzato
+
+// Layout dimensions
+$navbar-height: 64px;  // Altezza fissa navbar per tutti i dispositivi
+
+// Z-index (solo quelli utilizzati)
+$z-sticky: 1020;

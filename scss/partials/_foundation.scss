@@ -1,0 +1,162 @@
+// ========================================
+// FOUNDATION - FONDAMENTA DEL SITO
+// ========================================
+// Reset, base HTML/body, immagini responsive
+
+@use 'mixins' as *;
+@use 'variables' as *;
+
+
+// ========================================
+// SISTEMA SFONDI UNIFICATO
+// ========================================
+// Sistema che permette di cambiare lo sfondo di tutta la pagina
+// mantenendo navbar e footer con i loro sfondi specifici
+//
+// COME FUNZIONA:
+// 1. Il body ha lo sfondo di base ($background-color)
+// 2. Tutte le sezioni ereditano questo sfondo con background-color: inherit
+// 3. Solo navbar e footer mantengono sfondi specifici
+// 4. Gli elementi interni (card, bottoni, etc.) mantengono i loro colori
+//
+// PER CAMBIARE LO SFONDO DI TUTTA LA PAGINA:
+// Cambia solo il background-color del body e tutte le sezioni seguiranno
+// Esempio: body { background-color: #f0f0f0; } per uno sfondo grigio chiaro
+
+// Sfondo di base del body (questo sarà lo sfondo di tutte le sezioni)
+body {
+  background-color: $background-color;
+}
+
+// Tutte le sezioni principali ereditano lo sfondo dal body
+// Tranne navbar e footer che mantengono i loro sfondi specifici
+.hero,
+.about,
+.ultimi-progetti,
+.contact,
+.skills,
+.clients,
+.faq-section {
+  background-color: inherit; // Eredita dal body
+}
+
+// Navbar e footer mantengono sfondi specifici
+.navbar {
+  background-color: $navbar-bg-color;
+}
+
+.footer {
+  background-color: $background-light;
+}
+
+// ========================================
+// RESET
+// ========================================
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ========================================
+// HTML BASE
+// ========================================
+html {
+  font-size: $font-size-sm; // 18px per WCAG AAA
+  scroll-behavior: smooth;
+}
+
+// Transizione per link "Scopri i miei ultimi progetti"
+a[href="#ultimi-progetti"] {
+  scroll-behavior: smooth;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+// ========================================
+// BODY
+// ========================================
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 320px; // Larghezza minima per dispositivi molto piccoli
+}
+
+// ========================================
+// IMMAGINI
+// ========================================
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+// ========================================
+// PROTEZIONE RESIZE
+// ========================================
+.container,
+[class*="container-"] {
+  min-width: 0; // Permette al flex di ridursi
+  overflow-wrap: break-word; // Rompe le parole lunghe
+  word-break: break-word; // Fallback per browser più vecchi
+}
+
+// Elementi con larghezza fissa
+.fixed-width {
+  min-width: 0;
+  overflow: hidden;
+}
+
+// Tabelle responsive
+table {
+  width: 100%;
+  table-layout: fixed; // Previene overflow
+  word-wrap: break-word;
+}
+
+// ========================================
+// REGOLE GLOBALI RESIZE
+// ========================================
+.flex-container,
+.container,
+[class*="container"]:not(.nav-menu),
+[class*="grid"],
+[class*="flex"]:not(.nav-menu) {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+// Navbar e elementi fissi
+.navbar,
+.nav-container {
+  min-width: 0;
+}
+
+// Hero e sezioni
+.hero,
+.section {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+// Elementi con larghezze fisse
+.skill-icon,
+.social-link,
+.button-icon {
+  flex-shrink: 0;
+}
+
+// Elementi con testo lungo
+.long-text {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}

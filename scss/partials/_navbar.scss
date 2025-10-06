@@ -1,0 +1,220 @@
+// ========================================
+// NAVBAR - COMPONENTE NAVIGAZIONE
+// ========================================
+// Sistema di navigazione responsive con transizioni fluide
+// Ottimizzato per mobile, tablet e desktop
+
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'sass:color';
+
+// ========================================
+// NAVBAR PRINCIPALE
+// ========================================
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbar-height;
+  background-color: $navbar-bg-color;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $border-color;
+  z-index: $z-sticky;
+  transition: all $transition-normal;
+  
+  &.scrolled {
+    background-color: $navbar-bg-color;
+    box-shadow: $shadow-md;
+  }
+}
+
+// ========================================
+// CONTAINER NAVBAR
+// ========================================
+.nav-container {
+  height: 100%;
+  align-items: center;
+  @include container;
+  @include flex-between;
+}
+
+// ========================================
+// LOGO NAVBAR
+// ========================================
+.nav-logo {
+  display: flex;
+  align-items: center;
+  @include fade-in-up;
+  
+  a {
+    font-family: $font-family-logo; // Font personalizzato per il logo
+    font-size: 1.5rem; // Aumentato per maggiore impatto visivo del logo
+    font-weight: $font-weight-light;
+    letter-spacing: 0.05em; // Spaziatura tra le lettere del logo
+    transform: skew(+10deg); // Inclinazione del logo
+    // Logo: stesso colore dello sfondo delle pagine
+    color: $background-color;
+    text-decoration: none;
+    transition: color $transition-fast;
+    
+    &:hover {
+      // Hover logo: uguale al colore attivo dei link (brand accent)
+      color: $brand-accent;
+    }
+  }
+}
+
+// ========================================
+// MENU NAVIGAZIONE
+// ========================================
+.nav-menu {
+  @include flex-center;
+  align-items: center;
+  gap: $spacing-lg;
+  
+  @media (max-width: 1023px) {
+    position: fixed;
+    top: $navbar-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - #{$navbar-height});
+    width: 100vw;
+    background-color: $navbar-bg-color;
+    backdrop-filter: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing-xl;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform $transition-ease-out, opacity $transition-ease-out, visibility $transition-ease-out;
+    z-index: $z-sticky + 1;
+    
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    gap: $spacing-2xl;
+    
+    .nav-link {
+      transform: translateX(30px);
+      opacity: 0;
+      transition: all $transition-fast;
+      font-size: 20px;
+      font-weight: 500;
+      
+      @include sequential-animation($animation-delay-1);
+      
+      // Prevenzione completa del rettangolo di selezione su pressione prolungata
+      &::-moz-selection {
+        background: transparent;
+        color: inherit;
+      }
+      
+      &::selection {
+        background: transparent;
+        color: inherit;
+      }
+      
+      &::-webkit-selection {
+        background: transparent;
+        color: inherit;
+      }
+      
+      // Rimuovi outline su tutti gli stati
+      &:focus,
+      &:focus:active,
+      &:active,
+      &:focus-visible {
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-focus-ring-color: transparent;
+        -moz-outline: none;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+      }
+      
+      // Prevenzione specifica per pressione prolungata
+      &[onclick],
+      &[href] {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+    }
+    
+    &.active .nav-link {
+      transform: translateX(0);
+      opacity: 1;
+      font-size: 20px;
+    }
+  }
+  
+  // Desktop - Copertura completa senza gap
+  @media (min-width: 1024px) {
+    position: static;
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    flex-direction: row;
+    padding: 0;
+    transition: none;
+    
+    .nav-link {
+      transform: none;
+      opacity: 1;
+      transition: none;
+      font-size: 22px;
+    }
+  }
+  
+  // Sistema anti-flash: disabilita transizioni durante resize
+  @media (max-width: 1023px) {
+    &.resizing {
+      transition: none;
+      
+      .nav-link {
+        transition: none;
+      }
+    }
+  }
+}
+
+// Colori link navbar su fondo scuro (desktop e mobile) - Opzione A
+.navbar .nav-link {
+  // Link normali: stesso colore dello sfondo delle pagine
+  color: $background-color;
+  font-size: 18px; // 18px per desktop
+  
+  &::before {
+    background: currentColor; // underline segue il colore corrente
+  }
+  
+  &:hover:not(.active),
+  &:focus,
+  &:focus-visible {
+    // Hover/focus: uguale al colore attivo
+    color: $brand-accent;
+    ;
+  }
+  
+  &.active {
+    color: $brand-accent; // Active: accento brand coerente
+  }
+}
+
+// ========================================
+// NAVBAR COMPLETATA
+// ========================================

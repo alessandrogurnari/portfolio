@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scroll-restoration" content="manual">
+    <title>Alessandro Gurnari - Portfolio Personale</title>
+    <meta name="description" content="Portfolio personale di Alessandro Gurnari - Sviluppatore Web e Designer UX/UI">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alessandro Gurnari - Portfolio Personale">
+    <meta property="og:description" content="Portfolio personale di Alessandro Gurnari - Sviluppatore Web e Designer UX/UI">
+    <meta property="og:image" content="./assets/images/alessandro-gurnari-profile.jpg">
+    <meta property="og:url" content="https://alessandrogurnari.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alessandro Gurnari Portfolio">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:see_also" content="https://github.com/alessandrogurnari">
+    <meta property="og:see_also" content="https://instagram.com/alessandrogurnari">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/site.webmanifest">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css?v=1014">
+    
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="home">
+    <!-- Header con menu sticky -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Alessandro Gurnari</a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="cv.html" class="nav-link">CV</a>
+                    <a href="contattami.html" class="nav-link">Contattami</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle" aria-label="Apri menu di navigazione" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sezione Hero -->
+    <section id="home" class="hero hero--full">
+        <div class="hero-container">
+            <div class="hero-content hero-content--centered">
+                <div class="hero-text">
+                    <h1>Ciao, sono <span class="highlight">Alessandro</span></h1>
+                    <p class="hero-subtitle">UX/UI Designer</p>
+                    <p class="hero-description">
+                        Appassionato di tecnologia e design, mi occupo di creare 
+                        interfacce web funzionali e user-friendly per aiutare 
+                        le aziende a comunicare meglio online.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#ultimi-progetti" class="btn btn-primary">Scopri i miei ultimi progetti</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Chi Sono</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Sono partito dalla logica dell’ingegneria, affascinato dalla precisione dei numeri e delle strutture. 
+                        Con il tempo, però, ho capito che dietro ogni tecnologia ci sono <em>persone, emozioni</em> ed
+                        <em>esperienze</em> : ed è lì che ho trovato il mio spazio, nel design.
+                    </p>
+                    <p>
+                        Oggi progetto interfacce mettendomi nei panni degli utenti, con l’obiettivo di creare soluzioni <em>semplici, umane</em> e
+                        <em>curate nei dettagli.</em> Credo che un buon design non sia solo estetica, ma anche <em>empatia, chiarezza</em> e <em>funzionalità.</em>
+                    </p>
+                    <p>
+                        Ho completato il <em>Master in UX/UI Design</em> presso Start2Impact University, un percorso che mi ha permesso di esplorare ogni fase del design digitale: 
+                        dalla ricerca utenti all’accessibilità, dal wireframing allo sviluppo frontend con HTML e CSS.
+                    </p>
+                    <p>
+                        La mia formazione in <em>Ingegneria Informatica e dell’Automazione</em> mi ha dato solide basi tecniche, mentre l'esperienza lavorativa mi ha insegnato 
+                        l’importanza di ascoltare le persone per rispondere al meglio alle loro esigenze.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Ultimi Progetti -->
+    <section id="ultimi-progetti" class="ultimi-progetti">
+        <div class="container">
+            <h2 class="section-title">Ultimi Progetti</h2>
+            <p class="section-subtitle">Alcuni dei miei lavori più recenti</p>
+            
+            <div class="projects-grid">
+                <!-- I progetti verranno generati dinamicamente dal JavaScript -->
+            </div>
+            
+            <div class="projects-cta">
+                <a href="portfolio.html" class="btn btn-secondary">Vedi tutti i progetti</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sezione CTA -->
+    <section id="cta" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Pronto a lavorare insieme?</h3>
+                    <p>
+                        Sono sempre interessato a nuove opportunità e progetti stimolanti.<br class="desktop-only">
+                        Non esitare a contattarmi per discutere di come possiamo lavorare insieme.
+                    </p>
+                    <div class="cta-actions">
+                        <div class="hero-buttons">
+                            <a href="portfolio.html" class="btn btn-primary">Vedi il mio portfolio</a>
+                            <a href="contattami.html" class="btn btn-secondary">Contattami</a>
+                        </div>
+                        <div class="social-links">
+                            <span class="social-label">Seguimi:</span>
+                            <a href="https://github.com/alessandrogurnari" target="_blank" class="social-link social-link--homepage" title="Visita il mio GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://instagram.com/alessandrogurnari" target="_blank" class="social-link social-link--homepage" title="Seguimi su Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Alessandro Gurnari. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/project-tracker.js"></script>
+    
+    <!-- JavaScript per altezza uniforme card e smooth scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll personalizzato per sezione "Ultimi Progetti"
+            setTimeout(() => {
+                document.querySelectorAll('a[href="#ultimi-progetti"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector('#ultimi-progetti');
+                        if (target) {
+                            window.scrollTo({
+                                top: target.offsetTop + 10,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }, 100);
+            
+            // Funzione per altezze naturali delle card - ADATTIVE AL CONTENUTO
+            function setDynamicHomepageCardHeights() {
+                const projectCards = document.querySelectorAll('.ultimi-progetti .project-card');
+                if (projectCards.length === 0) return;
+                
+                // Permette alle card di avere altezze naturali basate sul contenuto
+                projectCards.forEach(card => {
+                    // Rimuove qualsiasi altezza fissa per permettere l'adattamento naturale
+                    card.style.height = 'auto';
+                    card.style.minHeight = 'auto';
+                    card.style.maxHeight = 'none';
+                });
+            }
+            
+            // Calcola altezze al caricamento e al resize
+            setTimeout(() => setDynamicHomepageCardHeights(), 500);
+            
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(setDynamicHomepageCardHeights, 250);
+            });
+        });
+    </script>
+</body>
+</html>

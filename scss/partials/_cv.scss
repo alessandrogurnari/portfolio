@@ -1,0 +1,998 @@
+// ========================================
+// CV PAGE - PAGINA CV 2025
+// ========================================
+// Stili specifici per la pagina CV
+// Include: hero section, sezioni CV, download, layout responsive
+// Richiama altri partials esistenti senza duplicare codice
+
+// Import mixins e variabili
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'sass:color';
+
+// ========================================
+// REGOLE SPECIFICHE CV PAGE HERO
+// ========================================
+
+// CV PAGE: Contenuto hero centrato
+.cv .hero-content {
+  justify-content: center; // Centra tutto il contenuto
+  text-align: center; // Centra il testo
+  
+  .hero-buttons {
+    justify-content: center; // Centra i bottoni
+  }
+}
+
+// ========================================
+// CV PROFESSIONAL SUMMARY
+// ========================================
+.cv-summary {
+  background-color: $surface-color;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border-radius: $border-radius-lg;
+  padding: $spacing-xl;
+  margin: $spacing-2xl 0;
+  border-left: 4px solid $brand-accent; // Coerenza con elementi accent del sito
+  
+  .cv-summary-content {
+    p {
+      font-size: $font-size-base; // 16px (standard moderno) su desktop
+      line-height: $line-height-relaxed;
+      color: $text-color;
+      margin: 0;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+  
+  // Mobile Large (576px - 767px)
+  @include sm {
+    padding: $spacing-lg;
+    margin: $spacing-xl 0;
+    
+    .cv-summary-content p {
+      font-size: 1rem; // Mobile Large: normale
+    }
+  }
+  
+  // Tablet (768px - 1023px)
+  @include tablet {
+    padding: $spacing-lg;
+    margin: $spacing-xl 0;
+    
+    .cv-summary-content p {
+      font-size: $font-size-base; // 16px (standard moderno) su tablet
+    }
+  }
+  
+  // Mobile (< 576px)
+  @include mobile {
+    padding: $spacing-md;
+    margin: $spacing-lg 0;
+    
+    .cv-summary-content p {
+      font-size: $font-size-base; // 16px (standard moderno) su mobile
+    }
+  }
+}
+
+// ========================================
+// HERO SECTION PER PAGINA CV
+// ========================================
+.hero.cv-hero {
+  min-height: 100vh;
+  // Padding unificato con home: $spacing-4xl 0
+  
+  // Override per mobile
+  @include mobile {
+    min-height: 100vh;
+    // Padding unificato con home: $spacing-4xl 0
+  }
+  
+  .hero-content {
+    text-align: center;
+    @include fade-in-up;
+    @include sequential-animation($animation-delay-1);
+  }
+  
+  .hero-text {
+    h1 {
+      @include heading-1;  // Usa il mixin standard per uniformità
+      
+      & {
+        margin-bottom: $spacing-lg; // Aumentato per coerenza con regole generali hero
+        color: $text-color; // Nero per contrasto con sfondo chiaro
+      }
+      
+      .highlight {
+        color: $brand-accent; // Vitae in brand accent
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: $text-color; // Nero per contrasto con sfondo chiaro
+      margin-bottom: 1rem;
+      font-weight: $font-weight-normal; // Ridotto per look più leggero
+      @include fade-in-up;
+      @include sequential-animation($animation-delay-1);
+    }
+    
+    .hero-description {
+      font-size: $font-size-base; // 16px (standard moderno)
+      color: $text-color; // Nero per contrasto con sfondo chiaro
+      line-height: $line-height-relaxed;
+      font-weight: $font-weight-light; // Font-weight leggero per descrizione
+      max-width: 600px;
+      margin: 0 auto;
+      @include fade-in-up;
+      @include sequential-animation($animation-delay-1);
+      
+      // Su desktop, larghezza maggiore ma sempre centrato
+      @include desktop {
+        max-width: 900px;
+      }
+    }
+  }
+}
+
+// ========================================
+// SEZIONI CV - ANIMAZIONI SEQUENZIALI
+// ========================================
+.cv-header-section,
+.cv-section,
+.cv-download {
+  @include fade-in-up-sequential($animation-delay-1);
+}
+
+.cv-section-title {
+  @include fade-in-up-sequential($animation-delay-1);
+}
+
+// ========================================
+// LAYOUT CV - CONTAINER E GRID
+// ========================================
+.cv-container {
+  padding-top: $spacing-4xl;
+  padding-bottom: 60px;
+  
+  @include md-down {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  @include mobile {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+.cv-main {
+  display: flex;
+  gap: 1.5rem;
+  
+  @include desktop {
+    gap: 7rem;
+  }
+  
+  @include md-down {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.cv-left {
+  flex: 2;
+  
+  @include desktop {
+    flex: 1.8;
+  }
+  
+  @include tablet {
+    flex: 1.8;
+  }
+}
+
+.cv-right {
+  flex: 1;
+  
+  @include desktop {
+    flex: 1.2;
+  }
+  
+  @include tablet {
+    flex: 1.2;
+  }
+}
+
+// ========================================
+// CV HEADER SECTION - NUOVO DESIGN
+// ========================================
+.cv-header-section {
+  padding: $spacing-2xl 0;
+  margin-bottom: $spacing-3xl;
+  border-bottom: 2px solid $border-color;
+}
+
+.cv-header-content {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-3xl;
+  
+  // Mobile: layout verticale
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-xl;
+  }
+  
+  // Tablet: layout orizzontale con foto a sinistra
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: $spacing-2xl;
+  }
+  
+  // Desktop: layout orizzontale con gap maggiore
+  @include desktop {
+    gap: $spacing-3xl;
+  }
+}
+
+.cv-photo-container {
+  flex-shrink: 0;
+  
+  @include mobile {
+    order: 1;
+  }
+  
+  @include tablet {
+    order: 1;
+  }
+}
+
+.cv-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  box-shadow: $shadow-lg;
+  
+  // Override per garantire che il border-radius sia applicato
+  &, img {
+    border-radius: 1rem !important;
+  }
+  
+  
+  .cv-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  }
+  
+  @include mobile {
+    width: 210px; // Aumentato da 150px per XS
+    height: 210px; // Aumentato da 150px per XS
+  }
+  
+  @include sm {
+    width: 210px; // Dimensione intermedia per SM
+    height: 210px; // Dimensione intermedia per SM
+  }
+  
+  @include tablet {
+    width: 260px;
+    height: 260px; // Altezza aumentata del blocco scritte
+  }
+  
+  @include desktop {
+    width: 270px;
+    height: 270px; // Aumentato per desktop
+  }
+}
+
+.cv-info-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  
+  @include mobile {
+    order: 2;
+    align-items: center;
+  }
+  
+  @include tablet {
+    order: 2;
+    align-items: flex-start;
+  }
+}
+
+.cv-info {
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: $spacing-sm;
+    line-height: 1.2;
+    
+    @include mobile {
+      font-size: 2rem;
+    }
+    
+    @include tablet {
+      font-size: 2.2rem;
+    }
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $brand-accent; // UX/UI Designer in brand accent per coerenza
+    margin-bottom: 0;
+    
+    @include sm-down {
+      font-size: 1.1rem;
+    }
+    
+    @include mobile {
+      font-size: 1.3rem;
+    }
+    
+    @include tablet {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.cv-contact {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  
+  @include mobile {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: $spacing-xl; // Aumentato da $spacing-lg per maggiore distanza tra le icone
+  }
+  
+  @include sm {
+    align-items: center; // Allineamento centrato per allineare con icona posizione
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: $spacing-xl; // Aumentato da $spacing-lg per maggiore distanza tra le icone
+    
+    // Aumenta dimensioni icone e testo per SM - regole più specifiche
+    .contact-item {
+      i {
+        font-size: 1.6rem !important; // Aumentato significativamente per SM
+        width: 24px !important; // Aumentato significativamente per SM
+      }
+      
+      // Icona posizione con testo più grande
+      &:nth-child(1) {
+        span {
+          font-size: 1.2rem !important; // Aumentato significativamente per SM
+        }
+      }
+      
+      // Icone social con dimensioni aumentate
+      &:nth-child(2),
+      &:nth-child(3) {
+        .social-link--homepage {
+          i {
+            font-size: 1.6rem !important; // Aumentato significativamente per SM
+            width: 24px !important; // Aumentato significativamente per SM
+          }
+        }
+      }
+    }
+  }
+  
+  @include tablet {
+    align-items: flex-start;
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  color: $text-color;
+  
+  i {
+    color: $primary-color;
+    font-size: 1.2rem; // Aumentato per accessibilità (19.2px) - coerente con icone social
+    width: 24px; // Aumentato da 20px per accessibilità
+    text-align: center;
+    line-height: 1; // Assicura line-height uniforme per tutte le icone
+    vertical-align: middle; // Allineamento verticale uniforme
+  }
+  
+  a {
+    color: $text-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  
+  // Stili specifici per l'icona posizione
+  &:nth-child(1) {
+    i {
+      color: #000000; // Nero per l'icona posizione
+      transition: color 0.1s ease; // Stessa velocità delle icone social
+    }
+    
+    span {
+      font-size: 1rem; // Dimensione base per il testo posizione
+      
+      @include mobile {
+        font-size: 1.2rem; // Aumentato leggermente su mobile
+      }
+      
+      @include tablet {
+        font-size: 1.1rem; // Dimensione identica al testo dei link social su tablet
+      }
+      
+      @include desktop {
+        font-size: 1.1rem; // Dimensione identica al testo dei link social su desktop
+      }
+    }
+    
+    &:hover i {
+      color: $brand-accent; // Accent al hover per l'icona posizione
+    }
+  }
+  
+  // Stili specifici per le icone social (GitHub e Instagram)
+  &:nth-child(2),
+  &:nth-child(3) {
+    .social-link--homepage {
+      color: #000000; // Nero per le icone social
+      width: auto; // Larghezza automatica per contenere icona + testo
+      height: auto; // Altezza automatica
+      min-width: auto; // Larghezza minima automatica
+      min-height: auto; // Altezza minima automatica
+      padding: 8px; // Padding per area cliccabile accessibile (44px totali)
+      display: flex;
+      align-items: center; // Allineamento verticale per coerenza con icona posizione
+      gap: $spacing-sm; // Gap tra icona e testo
+      transition: color 0.1s ease; // Transizione molto veloce
+      text-decoration: none;
+      
+      // Rimuove qualsiasi trasformazione/traslazione
+        &:hover {
+          color: $brand-accent; // Accent al hover
+          transform: none; // Nessuna traslazione
+          box-shadow: none; // Nessuna ombra
+          text-decoration: none;
+        }
+      
+      i {
+        color: inherit; // Eredita il colore dal link
+        transition: color 0.1s ease; // Transizione più veloce
+      }
+      
+      .social-text {
+        color: inherit; // Eredita il colore dal link
+        transition: color 0.1s ease; // Transizione più veloce
+      }
+    }
+    
+  }
+  
+  // Su mobile large, tablet e desktop, assicura allineamento perfetto quando i testi sono visibili
+  @include sm-up {
+    &:nth-child(1) {
+      display: flex;
+      align-items: center; // Allineamento centrato per coerenza con icone social
+      gap: $spacing-sm;
+      padding: 8px;
+      i {
+        line-height: 1;
+        vertical-align: middle;
+      }
+    }
+    
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: flex;
+      align-items: center; // Allineamento centrato per coerenza con icona posizione
+      gap: $spacing-sm;
+      .social-link--homepage {
+        align-items: center;
+        i {
+          line-height: 1;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  
+  // Su mobile e mobile large, nascondi il testo dei social e mostra solo l'icona
+  @include sm-down {
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 0;
+      width: auto;
+      min-width: auto;
+      
+      .social-link--homepage {
+        color: #000000; // Nero per le icone social su mobile
+        width: auto; // Larghezza automatica per allineamento con icona posizione
+        height: auto;
+        min-width: auto; // Larghezza minima automatica
+        min-height: auto;
+        padding: 0; // Nessun padding per allineamento con icona posizione
+        gap: 0; // Nessun gap su mobile (solo icona)
+        display: flex;
+        align-items: center;
+        justify-content: center; // Centra l'icona
+        transition: color 0.1s ease; // Transizione più veloce per sincronizzazione
+        
+        &:hover {
+          color: $brand-accent; // Brand accent al hover per mobile
+          transform: none; // Nessuna traslazione
+          box-shadow: none; // Nessuna ombra
+        }
+        
+        i {
+          text-align: center;
+          color: inherit; // Eredita il colore dal link
+          transition: color 0.1s ease; // Transizione più veloce
+          line-height: 1; // Line-height uniforme
+          vertical-align: middle; // Allineamento verticale uniforme
+        font-size: 1.2rem; // Dimensione ridotta per allineamento orizzontale
+        width: 20px; // Larghezza ridotta per allineamento orizzontale
+        }
+        
+        .social-text {
+          display: none; // Nasconde il testo su mobile
+        }
+      }
+    }
+    
+    // Icona posizione su mobile (mantiene il testo visibile)
+    &:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-sm;
+      padding: 0;
+      width: auto;
+      min-width: auto;
+      i {
+        color: #000000; // Nero per l'icona posizione su mobile
+        transition: color 0.1s ease; // Stessa velocità delle altre icone
+        line-height: 1; // Line-height uniforme
+        vertical-align: middle; // Allineamento verticale uniforme
+        font-size: 1.2rem; // Stessa dimensione delle icone social per allineamento orizzontale
+        width: 20px; // Stessa larghezza delle icone social per allineamento orizzontale
+      }
+      
+      // Hover per l'icona posizione su mobile
+      &:hover i {
+        color: $brand-accent; // Accent al hover
+      }
+    }
+    
+    // Regole di allineamento per icone social su mobile
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+    }
+  }
+  
+  // Su mobile più piccolo, dimensioni ottimizzate
+  @include mobile {
+    &:nth-child(2),
+    &:nth-child(3) {
+      .social-link--homepage {
+        padding: 0;
+        
+        i {
+          font-size: 1.5rem;
+          width: 24px;
+        }
+      }
+    }
+  }
+  
+}
+
+
+// ========================================
+// CV SECTIONS
+// ========================================
+.cv-section {
+  margin-bottom: 3rem;
+  
+  @include mobile {
+    margin-bottom: 2rem;
+  }
+}
+
+// Regole generali per paragrafi nelle sezioni CV - WCAG AAA
+.cv-section p {
+  font-size: $font-size-base; // 16px (standard moderno) su tutte le risoluzioni
+}
+
+// Sezione Esperienza Professionale con margine superiore maggiore
+.cv-section-experience {
+  margin-top: $spacing-xl;
+}
+
+// Sezione Competenze Tecniche con margine superiore solo su desktop
+.cv-section-skills {
+  margin-top: 0;
+  
+  @include desktop {
+    margin-top: $spacing-xl;
+  }
+}
+
+// Sezione Formazione con margine superiore su tablet e mobile
+.cv-section-education {
+  @include desktop {
+    margin-bottom: 2rem;
+  }
+  
+  @include md-down {
+    margin-top: $spacing-xl;
+    margin-bottom: 0;
+  }
+}
+
+// Sezioni Competenze Trasversali e Lingue con margine superiore aumentato
+.cv-section-soft-skills,
+.cv-section-languages {
+  margin-top: $spacing-3xl;
+}
+
+.cv-section h3.cv-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem; // Dimensione ottimale per sezioni CV
+  color: $primary-color;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $border-color;
+  
+  i {
+    font-size: 1.125rem;
+    color: $brand-accent; // Solo le icone delle categorie in brand accent
+  }
+  
+  @include mobile {
+    font-size: 1.2rem; // Dimensione ottimale per mobile
+    margin-bottom: 1rem;
+    gap: 0.4rem;
+    
+    i {
+      font-size: 1.1rem; // Aumentata da 1rem per accessibilità mobile
+    }
+  }
+}
+
+.cv-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $border-color;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  @include mobile {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.cv-item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  
+  @include mobile {
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  h4 {
+    font-size: 1.125rem;
+    color: $text-color;
+    margin: 0;
+    
+    @include mobile {
+      font-size: 1.1rem; // Aumentata da 1rem per accessibilità mobile
+      line-height: 1.3;
+    }
+  }
+  
+  .cv-date {
+    color: $text-light;
+    font-size: 1rem; // Aumentato da 0.875rem per accessibilità
+    font-weight: $font-weight-normal;
+    white-space: nowrap;
+    
+    @include mobile {
+      font-size: 1.1rem; // Aumentato per accessibilità mobile
+      align-self: flex-start;
+    }
+  }
+}
+
+.cv-company {
+  color: $text-light;
+  font-weight: $font-weight-normal; // Ridotto da medium a normal per look più leggero
+  font-size: 1rem; // Aggiunto per accessibilità
+  margin-bottom: 1rem;
+  
+  @include mobile {
+    font-size: 1.1rem; // Aumentato per accessibilità mobile
+    margin-bottom: 0.75rem;
+  }
+}
+
+.cv-list {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: $line-height-relaxed;
+    font-size: 1rem; // Aggiunto per accessibilità
+    
+    @include mobile {
+      padding-left: 1.25rem;
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem; // Aumentato per accessibilità mobile
+      line-height: 1.4;
+    }
+    
+    &::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
+}
+
+// ========================================
+// SKILLS E TAGS
+// ========================================
+.skills-category {
+  margin-bottom: 2rem;
+  
+  h4 {
+    font-size: 1.125rem;
+    color: $text-color;
+    margin-bottom: 1rem;
+    
+    @include mobile {
+      font-size: 1.1rem; // Aggiunto per accessibilità mobile
+    }
+  }
+}
+
+.skill-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  
+  @include mobile {
+    gap: 0.4rem;
+  }
+}
+
+.skill-tags .skill-tag {
+  background-color: $card-color;
+  color: $text-light;
+  padding: 0.25rem 0.75rem;
+  border-radius: $border-radius-md; // Uniformato con il bottone PDF
+  font-size: 0.9rem; // Ridotto leggermente per tutte le risoluzioni
+  font-weight: $font-weight-normal; // Ridotto spessore testo per look più leggero
+  border: 0.5px solid $border-color; // Ridotto spessore bordo per look più delicato
+  
+  @include mobile {
+    font-size: 1rem; // Aumentato ulteriormente per ottimale leggibilità su mobile
+    padding: 0.2rem 0.6rem;
+  }
+  
+  // Rimuove qualsiasi effetto hover
+  &:hover {
+    background-color: $background-light;
+    color: $text-light;
+    border-color: $border-color;
+    transform: none;
+  }
+}
+
+// ========================================
+// LINGUE
+// ========================================
+.language-item {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; // Tre colonne: nome, pallini, livello
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  
+  // Mantiene la struttura a tre colonne anche su mobile
+  @include mobile {
+    gap: 0.5rem; // Riduce il gap su mobile per adattarsi meglio
+  }
+  
+  .language-name {
+    font-weight: $font-weight-medium;
+    text-align: left;
+    font-size: 1rem; // Dimensione standard uniformata
+    
+    @include mobile {
+      font-size: 1rem; // Mantiene la dimensione standard su mobile
+    }
+  }
+  
+  .language-level {
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center; // Centra i pallini nella colonna centrale
+    
+    @include mobile {
+      gap: 0.2rem; // Riduce il gap tra i pallini su mobile
+    }
+    
+    span {
+      width: 10px; // Ridotto da 12px per desktop e tablet
+      height: 10px;
+      border-radius: 9999px;
+      background-color: $text-light;
+      
+      @include mobile {
+        width: 8px; // Ridotto anche su mobile per proporzione
+        height: 8px;
+      }
+      
+      &.inactive {
+        background-color: $border-color;
+      }
+    }
+  }
+  
+  .language-proficiency {
+    color: $text-light;
+    font-size: 1rem; // Dimensione standard uniformata
+    text-align: right;
+    
+    @include mobile {
+      font-size: 1rem; // Mantiene la dimensione standard su mobile
+    }
+  }
+}
+
+
+// ========================================
+// CV CTA - LAYOUT E SPAZIATURA OTTIMIZZATA
+// ========================================
+// Regole specifiche per la sezione CTA della pagina CV con spaziatura UX/UI ottimale
+.cv .contact {
+  padding: $spacing-3xl 0; // Riduce padding da 4xl a 2xl
+  
+  @include mobile {
+    padding: $spacing-3xl 0; // Riduce padding su mobile
+  }
+  
+  @include tablet {
+    padding: $spacing-3xl 0; // Riduce padding su tablet
+  }
+}
+
+.cv .contact-info {
+  text-align: center;
+  
+  // Spaziatura ottimale tra titolo e testo descrittivo
+  h3 {
+    margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
+  }
+  
+  p {
+    margin-bottom: 2.5rem; // 40px - Spazio ottimizzato per separare contenuto da azioni
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: $font-size-base; // 16px (standard moderno) e coerenza con Home/Portfolio
+  }
+  
+  // Responsive spacing per tablet
+  @include tablet {
+    h3 {
+      margin-bottom: 1.5rem; // 24px su tablet
+    }
+    
+    p {
+      margin-bottom: 2.25rem; // 36px su tablet
+    }
+  }
+  
+  // Responsive spacing per mobile
+  @include mobile {
+    h3 {
+      margin-bottom: 1.25rem; // 20px su mobile
+    }
+    
+    p {
+      margin-bottom: 2rem; // 32px su mobile
+    }
+  }
+}
+
+// ========================================
+// CV CTA ACTIONS - STRUTTURA COME HOME E PORTFOLIO
+// ========================================
+.cv .cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl; // 32px - Spazio ottimizzato
+  
+  .hero-buttons {
+    display: flex;
+    gap: $spacing-lg;
+    align-items: stretch;
+    margin-bottom: 0; // Reset margin per controllo preciso
+    
+    // Responsive per mobile
+    @include mobile {
+      flex-direction: row; // Bottoni affiancati anche su mobile
+      gap: $spacing-md;
+      width: auto; // Larghezza automatica invece di 100%
+      
+      .btn {
+        flex: none; // Larghezza naturale del contenuto
+        min-width: auto; // Larghezza minima naturale
+      }
+    }
+  }
+}
+
+// ========================================
+// CV CTA BOTTONE - DIMENSIONI UNIFORMI
+// ========================================
+// Stili specifici per il bottone CTA della pagina CV con dimensioni uniformi
+.cv .cta-actions .btn {
+  @include button-cta;
+  
+  // Override specifico per mobile - larghezza minima
+  @include mobile {
+    min-width: 200px; // Larghezza minima per evitare che sia troppo stretto
+  }
+}
+
+// Spacing specifico per l'icona del bottone CV
+.cv .btn i {
+  margin-right: 0.75rem; // Gap maggiore tra icona e testo
+}
+
+// ========================================
+// ANIMAZIONI SPECIFICHE CV
+// ========================================
+// Le animazioni sono integrate nella regola principale .hero.cv-hero sopra

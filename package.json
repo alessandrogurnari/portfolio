@@ -1,0 +1,38 @@
+{
+  "name": "portfolio-alessandro-gurnari",
+  "version": "1.0.0",
+  "description": "Portfolio personale di Alessandro Gurnari - Sviluppatore Web e Designer UX/UI",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "sass scss/main.scss assets/css/main.css --no-source-map",
+    "watch": "npm run watch:css",
+    "watch:css": "sass scss/main.scss assets/css/main.css --watch --no-source-map",
+    "dev": "npm run watch:css",
+    "serve": "python3 -m http.server 8000",
+    "start": "npm run build && npm run serve"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "html",
+    "css",
+    "sass",
+    "javascript",
+    "responsive",
+    "ux",
+    "ui",
+    "design",
+    "bootstrap"
+  ],
+  "author": "Alessandro Gurnari",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alessandrogurnari/portfolio"
+  },
+  "homepage": "https://alessandrogurnari.com"
+}

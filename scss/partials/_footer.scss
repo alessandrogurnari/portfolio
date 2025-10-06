@@ -1,0 +1,40 @@
+// ========================================
+// FOOTER - SEZIONE FOOTER
+// ========================================
+// Footer minimalista secondo le best practices
+// Solo copyright e informazioni essenziali
+
+// Import mixins e variabili per utilizzare le funzioni
+@use 'mixins' as *;
+@use 'variables' as *;
+
+// ========================================
+// FOOTER PRINCIPALE
+// ========================================
+.footer {
+  background-color: $background-color;
+  border-top: 1px solid $border-color;
+  padding: $spacing-xl 0;
+  text-align: center;
+  // Animazione rimossa per un footer più statico
+  
+  p {
+    margin: 0;
+    font-size: $font-size-xs;
+    color: $text-light;
+    // Animazione rimossa per un footer più statico
+  }
+}
+
+// ========================================
+// RESPONSIVE FOOTER
+// ========================================
+@include mobile {
+  .footer {
+    padding: $spacing-lg 0;
+    
+    p {
+      font-size: $font-size-xs;
+    }
+  }
+}

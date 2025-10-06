@@ -1,0 +1,113 @@
+// ========================================
+// UTILITIES - CLASSI UTILITY
+// ========================================
+// Questo partial contiene tutte le classi utility:
+// - Container
+// - Screen reader only
+// - Spacing utilities (margin, padding)
+// - Display utilities
+// - Position utilities
+
+// Import mixins e variabili
+@use 'mixins' as *;
+@use 'variables' as *;
+
+// ========================================
+// CONTAINER
+// ========================================
+.container {
+  @include container;
+}
+
+// ========================================
+// SCREEN READER ONLY
+// ========================================
+.sr-only {
+  @include sr-only;
+}
+
+// ========================================
+// SPACING UTILITIES - MARGIN
+// ========================================
+// Margin Bottom
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: $spacing-xs; }
+.mb-2 { margin-bottom: $spacing-sm; }
+.mb-3 { margin-bottom: $spacing-md; }
+.mb-4 { margin-bottom: $spacing-lg; }
+.mb-5 { margin-bottom: $spacing-xl; }
+
+// Margin Top
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: $spacing-xs; }
+.mt-2 { margin-top: $spacing-sm; }
+.mt-3 { margin-top: $spacing-md; }
+.mt-4 { margin-top: $spacing-lg; }
+.mt-5 { margin-top: $spacing-xl; }
+
+// Margin Left/Right (Logical Properties 2025)
+.mx-0 { margin-inline: 0; }
+.mx-1 { margin-inline: $spacing-xs; }
+.mx-2 { margin-inline: $spacing-sm; }
+.mx-3 { margin-inline: $spacing-md; }
+.mx-4 { margin-inline: $spacing-lg; }
+.mx-5 { margin-inline: $spacing-xl; }
+
+// Margin Top/Bottom (Logical Properties 2025)
+.my-0 { margin-block: 0; }
+.my-1 { margin-block: $spacing-xs; }
+.my-2 { margin-block: $spacing-sm; }
+.my-3 { margin-block: $spacing-md; }
+.my-4 { margin-block: $spacing-lg; }
+.my-5 { margin-block: $spacing-xl; }
+
+// ========================================
+// SPACING UTILITIES - PADDING
+// ========================================
+// Padding All
+.p-0 { padding: 0; }
+.p-1 { padding: $spacing-xs; }
+.p-2 { padding: $spacing-sm; }
+.p-3 { padding: $spacing-md; }
+.p-4 { padding: $spacing-lg; }
+.p-5 { padding: $spacing-xl; }
+
+// Padding Left/Right (Logical Properties 2025)
+.px-0 { padding-inline: 0; }
+.px-1 { padding-inline: $spacing-xs; }
+.px-2 { padding-inline: $spacing-sm; }
+.px-3 { padding-inline: $spacing-md; }
+.px-4 { padding-inline: $spacing-lg; }
+.px-5 { padding-inline: $spacing-xl; }
+
+// Padding Top/Bottom (Logical Properties 2025)
+.py-0 { padding-block: 0; }
+.py-1 { padding-block: $spacing-xs; }
+.py-2 { padding-block: $spacing-sm; }
+.py-3 { padding-block: $spacing-md; }
+.py-4 { padding-block: $spacing-lg; }
+.py-5 { padding-block: $spacing-xl; }
+
+// ========================================
+// DISPLAY UTILITIES
+// ========================================
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+// ========================================
+// POSITION UTILITIES
+// ========================================
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+.position-sticky { position: sticky; }
+
+// ========================================
+// VISIBILITY UTILITIES
+// ========================================
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }

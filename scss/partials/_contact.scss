@@ -1,0 +1,833 @@
+// ========================================
+// CONTACT PAGE - PAGINA CONTATTI 2025
+// ========================================
+// Stili specifici per la pagina contattami
+// Include: hero section, form Bootstrap, FAQ, layout responsive
+// Integrazione completa con EmailJS per invio email
+
+// Import mixins e variabili
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'sass:color';
+
+// ========================================
+// REGOLE SPECIFICHE CONTATTAMI PAGE HERO
+// ========================================
+
+// CONTATTAMI PAGE: Contenuto hero centrato
+.contattami .hero-content {
+  justify-content: center; // Centra tutto il contenuto
+  text-align: center; // Centra il testo
+  
+  .hero-buttons {
+    justify-content: center; // Centra i bottoni
+  }
+}
+
+// ========================================
+// BOOTSTRAP OVERRIDE MINIMO
+// ========================================
+// Override minimo delle classi Bootstrap per mantenere la logica Bootstrap
+.contattami .btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover {
+    background-color: $brand-accent;
+    border-color: $brand-accent;
+  }
+  
+  &:focus {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+  }
+}
+
+.contattami .accordion-button {
+  background-color: $card-color;
+  border-color: $border-color;
+  border-bottom: none;
+  color: $text-color;
+  
+  &:not(.collapsed) {
+    background-color: $brand-accent;
+    border-color: $brand-accent;
+    border-bottom: none;
+    color: $text-color;
+    box-shadow: none;
+    outline: none;
+    
+    // Freccia nera quando la domanda è aperta per contrasto ottimale
+    &::after {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111315'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    }
+  }
+  
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: none; // Rimuove ombre dal focus FAQ
+  }
+}
+
+// Assicura che tutti i bordi degli accordion siano visibili
+.contattami .accordion-item {
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: none; // Rimuove ombre dalle FAQ
+  
+  &:not(:first-of-type) {
+    border-top: 1px solid $border-color;
+  }
+  
+  .accordion-button {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none; // Rimuove ombre dai pulsanti FAQ
+  }
+  
+  .accordion-collapse {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+
+// ========================================
+// HERO SECTION PER PAGINA CONTATTI
+// ========================================
+.hero.contact-hero {
+  min-height: 100vh;
+  // Padding unificato con home: $spacing-4xl 0
+  
+  // Override per mobile
+  @include mobile {
+    min-height: 100vh;
+    // Padding unificato con home: $spacing-4xl 0
+  }
+  
+  .contact-hero .hero-content {
+    text-align: center;
+    @include fade-in-up;
+    @include sequential-animation($animation-delay-1);
+  }
+  
+  .hero-text {
+    @include fade-in-up;
+    
+    h1 {
+      @include heading-1;  // Usa il mixin standard per uniformità
+      
+      & {
+        margin-bottom: $spacing-lg; // Aumentato per coerenza con regole generali hero
+      }
+      
+      .highlight {
+        color: $brand-accent; // Contattami in brand accent
+      }
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: $text-color; // Nero per contrasto con sfondo chiaro
+      margin-bottom: 0;
+      font-weight: $font-weight-normal; // Ridotto per look più leggero
+      @include fade-in-up;
+      @include sequential-animation($animation-delay-1);
+    }
+  }
+}
+
+// ========================================
+// SEZIONE CONTACT - FORM CENTRATO
+// ========================================
+.contact {
+  padding: $spacing-4xl 0;
+  // Sfondo rimosso - ora eredita dal body
+  
+  // Responsive padding per diverse risoluzioni
+  @include mobile {
+    padding: $spacing-3xl 0;
+  }
+  
+  @include tablet {
+    padding: $spacing-4xl 0;
+  }
+  
+  
+  // Card del form
+  .card {
+    border: none;
+    border-radius: 16px;
+    transition: box-shadow $transition-normal;
+    background-color: $card-color; // Allinea il box form al colore card del progetto
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    @include fade-in-up;
+    
+    &:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  // Card body
+  .card-body {
+    padding: 3rem;
+    @include fade-in-up;
+    @include sequential-animation($animation-delay-1);
+    
+    // Responsive padding per il card-body
+    @include mobile {
+      padding: 2rem;
+    }
+    
+    @include tablet {
+      padding: 2.5rem;
+    }
+  }
+  
+  // Titolo del form
+  .form-title {
+    font-size: 1.75rem;
+    font-weight: $font-weight-bold;
+    color: $text-color;
+    margin-bottom: 1rem;
+    @include fade-in-up($animation-delay-2);
+  }
+  
+  // ========================================
+  // FORM CONTATTO - LOGICA BOOTSTRAP
+  // ========================================
+  
+  // Override regole globali che interferiscono con Bootstrap
+  .form-label {
+    position: static;
+    top: auto;
+    left: auto;
+    pointer-events: auto;
+    margin-bottom: 0.5rem; // Bootstrap standard
+    font-weight: $font-weight-medium; 
+    font-size: $font-size-base; // 16px (standard moderno)
+    font-family: $font-family-primary; // Font consistente con il sito
+  }
+  
+  // Stili form Bootstrap ottimizzati
+  .form-control {
+    background-color: $card-color; // Allinea i campi al colore delle card
+    color: $text-color;
+    border-color: color.scale($border-color, $lightness: -10%);
+    border-radius: 12px; // Allineato con il bottone
+    font-family: $font-family-primary; // Font consistente con il sito
+    font-size: $font-size-base; // 16px (standard moderno)
+    
+    &::placeholder {
+      font-size: $font-size-base; // 16px (standard moderno)
+      color: $text-light;
+      opacity: 0.8;
+      font-weight: $font-weight-light; 
+    }
+    
+    &:focus {
+      background-color: $card-color;
+      border-color: $brand-accent; // Solo il bordo cambia colore
+      box-shadow: none; // Nessuna ombra
+      outline: none; // Rimuove l'outline del browser
+    }
+  }
+  
+  // Altezza maggiore per i primi tre campi (input)
+  input.form-control {
+    padding: 1rem 1.25rem; // Padding maggiore per altezza superiore
+    min-height: 56px; // Altezza minima garantita
+  }
+  
+  // Padding ottimizzato per textarea (campo messaggio)
+  textarea.form-control {
+    padding: 1rem 1.25rem; // Padding consistente con gli input
+    min-height: 120px; // Altezza minima per il textarea
+    
+    // Padding responsive per mobile
+    @include mobile {
+      padding: 0.875rem 1rem; // Padding leggermente ridotto su mobile
+    }
+  }
+  
+  // Solo rimozione icone browser (non interferisce con layout)
+  input.form-control:valid,
+  input.form-control:invalid {
+    background-image: none;
+  }
+  
+  // ========================================
+  // STATI CAMPI FORM (SUCCESSO/ERRORE)
+  // ========================================
+  
+  // Campo con errore
+  .form-control.is-invalid {
+    border-color: $error-color;
+    background-color: rgba($error-color, 0.05);
+    
+    &:focus {
+      border-color: $error-color;
+      box-shadow: none; // Nessuna ombra
+    }
+  }
+  
+  // Campo con successo
+  .form-control.is-valid {
+    border-color: $success-color;
+    background-color: rgba($success-color, 0.05);
+    
+    &:focus {
+      border-color: $success-color;
+      box-shadow: none; // Nessuna ombra
+    }
+  }
+  
+  // Messaggi di feedback
+  .invalid-feedback {
+    color: $error-color;
+    font-size: $font-size-sm; // 16px (confortevole)
+    font-weight: $font-weight-normal; // Peso normale, non medium
+    margin-top: 0.25rem; // Margine ridotto
+    display: none; // Nascosto di default
+    animation: fadeInUp 0.3s ease-out;
+    
+    // Font size aumentato per mobile
+    @include mobile {
+      font-size: $font-size-sm; // 16px (confortevole) su mobile
+    }
+  }
+  
+  .valid-feedback {
+    color: $success-color;
+    font-size: $font-size-sm; // 16px (confortevole)
+    font-weight: $font-weight-normal; // Peso normale, non medium
+    margin-top: 0.25rem; // Margine ridotto
+    display: none; // Nascosto di default
+    animation: fadeInUp 0.3s ease-out;
+    
+    // Font size aumentato per mobile
+    @include mobile {
+      font-size: $font-size-sm; // 16px (confortevole) su mobile
+    }
+  }
+  
+  // Mostra i messaggi solo quando il campo ha lo stato corrispondente
+  .form-control.is-invalid + .invalid-feedback {
+    display: block;
+  }
+  
+  .form-control.is-valid + .valid-feedback {
+    display: block;
+  }
+  
+  // Animazione per i messaggi di feedback
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // Bottone del form - Usa variabili Bootstrap personalizzate
+  .contact-form .btn-primary {
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: $font-weight-semibold;
+    font-size: 1.1rem;
+    transition: all $transition-normal;
+    @include fade-in-up($animation-delay-5);
+    
+    &:hover {
+      box-shadow: 0 8px 20px rgba($primary-color, 0.3);
+    }
+  }
+}
+
+// ========================================
+// POPUP MESSAGGI - STILI PERSONALIZZATI
+// ========================================
+
+// Font size accessibili per tutti i breakpoint
+.popup-title {
+  font-size: 1.5rem; // 24px desktop (default)
+  
+  @include tablet {
+    font-size: 1.375rem; // 22px su tablet
+  }
+  
+  @include mobile {
+    font-size: 1.25rem; // 20px su mobile
+  }
+}
+
+.popup-message {
+  font-size: $font-size-sm; // 16px (confortevole)
+  
+  @include tablet {
+    font-size: $font-size-sm; // 16px (confortevole) su tablet
+  }
+  
+  @include mobile {
+    font-size: $font-size-sm; // 16px (confortevole) su mobile
+  }
+}
+
+.popup-close-btn {
+  &:hover {
+    color: $brand-accent !important; // Brand accent per hover, seguendo logica Bootstrap
+  }
+}
+
+// SEZIONE FAQ - STILI PULITI
+// ========================================
+.faq-section {
+  padding-top: $spacing-4xl;
+  padding-bottom: 4rem;
+  // Sfondo rimosso - ora eredita dal body
+  
+  .faq-title {
+    margin-bottom: 3rem;
+  }
+  
+  .faq-accordion {
+    gap: 1rem;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  // FAQ usa variabili Bootstrap personalizzate - nessun override necessario
+}
+
+// ========================================
+// CTA ACTIONS - BOTTONI E SOCIAL
+// ========================================
+.contattami .cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xl;
+  margin-top: $spacing-2xl;
+  @include fade-in-up;
+  @include sequential-animation($animation-delay-1);
+  
+  .hero-buttons {
+    display: flex;
+    gap: $spacing-lg;
+    align-items: stretch; // I bottoni si allineano per l'altezza
+    
+    .btn {
+      height: 56px; // Altezza maggiore per desktop
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap; // Previene il wrap del testo
+      min-width: fit-content; // Larghezza si adatta al contenuto
+      padding: $spacing-md $spacing-xl; // Padding maggiore per desktop
+      font-size: $font-size-base; // Font più grande per desktop
+      border-radius: $border-radius-lg; // Border radius standard
+    }
+  }
+  
+      .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-sm;
+        
+        .social-label {
+          font-size: $font-size-sm;
+          color: $text-light;
+          font-weight: $font-weight-medium;
+        }
+        
+        .social-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          background-color: $background-light;
+          border: 2px solid $border-color;
+          border-radius: 50%;
+          color: $text-color;
+          text-decoration: none;
+          transition: all $transition-normal;
+          
+          &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: white;
+            transform: translateY(-2px);
+          }
+          
+          i {
+            font-size: 1.1rem;
+          }
+        }
+      }
+  
+  // Regole per tablet
+  @include tablet {
+    .hero-buttons {
+      .btn {
+        height: 52px; // Altezza intermedia per tablet
+        padding: $spacing-sm $spacing-lg; // Padding ottimizzato per tablet
+        font-size: $font-size-base; // Font normale per tablet
+      }
+    }
+    
+    .social-links {
+      .social-label {
+        font-size: $font-size-sm;
+      }
+      
+      .social-link {
+        width: 40px;
+        height: 40px;
+        
+        i {
+          font-size: 1.05rem;
+        }
+      }
+    }
+  }
+  
+  @include mobile {
+    flex-direction: column;
+    gap: $spacing-lg;
+    
+    .hero-buttons {
+      width: 100%;
+      gap: $spacing-md; // Gap ridotto per mobile
+      
+      .btn {
+        height: 48px; // Altezza ottimizzata per mobile
+        padding: $spacing-sm $spacing-md; // Padding ridotto per mobile
+        font-size: $font-size-base; // Font normale per mobile (più leggibile)
+      }
+    }
+    
+    .social-links {
+      justify-content: center;
+      
+      .social-label {
+        font-size: $font-size-xs;
+      }
+      
+      .social-link {
+        width: 38px;
+        height: 38px;
+        
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// ========================================
+// HOMEPAGE CTA - LAYOUT E SPAZIATURA OTTIMIZZATA
+// ========================================
+// Regole specifiche per la sezione CTA della homepage con spaziatura UX/UI ottimale
+.home .contact-info {
+  text-align: center;
+  
+  // Spaziatura ottimale tra titolo e testo descrittivo
+  h3 {
+    margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
+  }
+  
+  p {
+    margin-bottom: 2.5rem; // 40px - Spazio ottimizzato per separare contenuto da azioni
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: $font-size-base; // 16px (standard moderno) su desktop
+    font-weight: $font-weight-light; // 300 - Font-weight più leggero
+    
+    // Controllo del <br> solo su desktop
+    .desktop-only {
+      display: none; // Nascondi su mobile e tablet
+      
+      @include desktop {
+        display: inline; // Mostra solo su desktop
+      }
+    }
+  }
+  
+  // Responsive spacing per titolo e testo
+  @include tablet {
+    h3 {
+      margin-bottom: $spacing-lg; // 24px su tablet
+    }
+    
+    p {
+      margin-bottom: 2.25rem; // 36px su tablet
+      font-size: $font-size-base; // 16px (standard moderno) su tablet
+    }
+  }
+  
+  @include mobile {
+    h3 {
+      margin-bottom: 1.25rem; // 20px su mobile
+    }
+    
+    p {
+      margin-bottom: 2rem; // 32px su mobile
+      font-size: $font-size-base; // 18px per accessibilità su mobile
+    }
+  }
+}
+
+.home .cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-3xl; // 48px - Spazio aumentato tra bottoni e social
+  
+  .hero-buttons {
+    display: flex;
+    gap: $spacing-lg;
+    align-items: stretch;
+    margin-bottom: 0; // Reset margin per controllo preciso
+    
+    .btn {
+      white-space: nowrap; // Previene il wrap del testo su mobile
+      min-width: fit-content; // Larghezza si adatta al contenuto
+    }
+  }
+  
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-lg;
+    margin-top: 0; // Reset margin per controllo preciso
+    
+    .social-label {
+      font-size: $font-size-base;
+      color: $text-light;
+      font-weight: $font-weight-medium;
+    }
+  }
+  
+  // Responsive per homepage
+  @include tablet {
+    gap: $spacing-2xl; // 32px su tablet - spazio aumentato
+    
+    .hero-buttons {
+      gap: $spacing-md;
+      
+      .btn {
+        white-space: nowrap; // Previene il wrap del testo su tablet
+      }
+    }
+    
+    .social-links {
+      gap: $spacing-md;
+      
+      .social-label {
+        font-size: $font-size-base;
+      }
+    }
+  }
+  
+  @include mobile {
+    gap: $spacing-2xl; // 48px su mobile - spazio aumentato
+    
+    .hero-buttons {
+      gap: $spacing-md;
+      
+      .btn {
+        white-space: nowrap; // Previene il wrap del testo su mobile
+      }
+    }
+    
+    .social-links {
+      gap: $spacing-md;
+      
+      .social-label {
+        font-size: $font-size-base;
+      }
+    }
+  }
+}
+
+// ========================================
+// SOCIAL LINK HOMEPAGE - VERSIONE PULITA
+// ========================================
+// Classe specifica per le icone social della homepage
+.social-link--homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: $text-color;
+  text-decoration: none;
+  transition: color $transition-fast, transform $transition-fast;
+  padding: $spacing-sm;
+  min-width: 44px;
+  min-height: 44px;
+  box-shadow: none;
+  
+  &:hover {
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: $brand-accent;
+    box-shadow: none;
+  }
+  
+  &:focus {
+    outline: 2px solid $brand-accent;
+    outline-offset: 2px;
+    border-radius: 4px;
+    background: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  &:active {
+    background: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  
+  i {
+    font-size: 1.5rem;
+  }
+  
+  // Responsive
+  @include tablet {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    
+    i {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @include mobile {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    
+    i {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// ========================================
+// PORTFOLIO CTA - LAYOUT E SPAZIATURA OTTIMIZZATA
+// ========================================
+// Regole specifiche per la sezione CTA della pagina portfolio con spaziatura UX/UI ottimale
+.portfolio .contact-info {
+  text-align: center;
+  
+  // Spaziatura ottimale tra titolo e testo descrittivo
+  h3 {
+    margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
+  }
+  
+  p {
+    margin-bottom: 2.5rem; // 40px - Spazio ottimizzato per separare contenuto da azioni
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: $font-size-base; // 16px (standard moderno) su desktop
+    font-weight: $font-weight-light; // 300 - Font-weight più leggero
+  }
+  
+  // Responsive spacing per titolo e testo - Best Practices UX/UI
+  @include tablet {
+    h3 {
+      margin-bottom: $spacing-lg; // 24px su tablet
+    }
+    
+    p {
+      margin-bottom: 2.25rem; // 36px su tablet - ridotto per migliore UX
+      font-size: $font-size-base; // 16px (standard moderno) su tablet
+    }
+  }
+  
+  @include mobile {
+    h3 {
+      margin-bottom: 1.25rem; // 20px su mobile - ridotto per schermi piccoli
+    }
+    
+    p {
+      margin-bottom: 2rem; // 32px su mobile - ridotto per migliore leggibilità
+      font-size: $font-size-base; // 16px (standard moderno) su mobile
+    }
+  }
+}
+
+// ========================================
+// PORTFOLIO CTA ACTIONS - STRUTTURA COME HOME
+// ========================================
+.portfolio .cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl; // 32px - Spazio ottimizzato tra bottoni
+  
+  .hero-buttons {
+    display: flex;
+    gap: $spacing-lg;
+    align-items: stretch;
+    margin-bottom: 0; // Reset margin per controllo preciso
+    
+    .btn {
+      white-space: nowrap; // Previene il wrap del testo su mobile
+      min-width: fit-content; // Larghezza si adatta al contenuto
+    }
+  }
+  
+  // Responsive per portfolio
+  @include tablet {
+    gap: $spacing-lg; // 24px su tablet - ottimizzato per UX
+    
+    .hero-buttons {
+      gap: $spacing-md;
+      
+      .btn {
+        white-space: nowrap; // Previene il wrap del testo su tablet
+      }
+    }
+  }
+  
+  @include mobile {
+    gap: 1.25rem; // 20px su mobile - ottimizzato per UX (come home)
+    
+    .hero-buttons {
+      gap: $spacing-md; // 16px su mobile (come home)
+      
+      .btn {
+        white-space: nowrap; // Previene il wrap del testo su mobile
+        min-width: fit-content; // Larghezza si adatta al contenuto (come home)
+      }
+    }
+  }
+}

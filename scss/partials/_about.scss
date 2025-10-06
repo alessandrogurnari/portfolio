@@ -1,0 +1,182 @@
+// ========================================
+// ABOUT - SEZIONE ABOUT
+// ========================================
+// Questo partial gestisce tutti gli stili della sezione about
+
+// Import mixins e variabili per utilizzare le funzioni
+@use 'mixins' as *;
+@use 'variables' as *;
+
+// ========================================
+// ABOUT SECTION
+// ========================================
+.about {
+  padding: $spacing-4xl 0;
+  // Sfondo rimosso - ora eredita dal body
+  
+  
+  // Varianti di background
+  &--light {
+    background-color: $background-light;
+  }
+  
+  &--dark {
+    background-color: $navbar-bg-color;
+    color: white;
+  }
+  
+  &--gradient {
+    background: linear-gradient(135deg, $background-light 0%, $background-color 100%);
+  }
+}
+
+// ========================================
+// CONTENUTO ABOUT
+// ========================================
+.about-content {
+  @include flex-between;
+  
+  & {
+    gap: $spacing-3xl;
+  }
+  
+  // Desktop: riduce lo spazio della colonna destra
+  @include desktop {
+    gap: $spacing-4xl; // Gap maggiore tra le colonne su desktop
+    
+    .about-text {
+      flex: 1.5; // Riduce leggermente lo spazio del testo
+    }
+    
+    .about-stats {
+      flex: 1; // Mantiene lo spazio delle statistiche
+    }
+  }
+  
+  // Tablet e mobile: layout a colonna singola
+  @include md-down {
+    flex-direction: column;
+    gap: $spacing-2xl;
+  }
+  
+  // Varianti di layout
+  &--centered {
+    flex-direction: column;
+    text-align: center;
+    gap: $spacing-2xl;
+  }
+  
+  &--reverse {
+    flex-direction: row-reverse;
+    
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+}
+
+// ========================================
+// TESTO ABOUT
+// ========================================
+.about-text {
+  flex: 1;
+  
+  p {
+    @include body-text;
+    margin-bottom: $spacing-lg;
+    line-height: $line-height-relaxed;
+  }
+  
+  // Varianti di testo
+  &--large p {
+    font-size: $font-size-lg;
+  }
+  
+  &--small p {
+    font-size: $font-size-sm;
+  }
+}
+
+
+
+// ========================================
+// ANIMAZIONI ABOUT
+// ========================================
+.about {
+  .about-content {
+    @include fade-in-up;
+    @include sequential-animation($animation-delay-1);
+  }
+  
+  .about-stats {
+    @include fade-in-up($animation-delay-2);
+  }
+  
+  .stat {
+    @include fade-in-up;
+    @include sequential-animation($animation-delay-1);
+  }
+}
+
+// Keyframes spostati in _animations.scss
+
+// ========================================
+// RESPONSIVE ABOUT
+// ========================================
+
+// Desktop e Tablet: font-size 16px (standard moderno)
+.about-text p {
+  font-size: $font-size-base; // 16px (standard moderno)
+}
+
+// Spazio maggiore tra i punti del processo di lavoro
+.about-text h3 {
+  margin-top: $spacing-2xl;
+  margin-bottom: $spacing-lg;
+
+  // Colora solo i numeri del processo (1., 2., 3., 4.)
+  &::before {
+    content: attr(data-step);
+    color: $brand-accent;
+    margin-right: 0.5rem;
+  }
+}
+
+@include mobile {
+  .about {
+    padding: $spacing-2xl 2rem; // Incluse anche le dimensioni laterali
+  }
+  
+  .about-content {
+    gap: $spacing-3xl; // Aumentato spazio tra stats e fine punto 4 su mobile
+  }
+  
+  .contact-info p {
+    font-size: $font-size-base; // 16px (standard moderno)
+  }
+  
+  .about-stats {
+    gap: $spacing-lg;
+  }
+  
+  // Transizione graduale per i testi about su mobile
+  .about-text p {
+    font-size: $font-size-base; // 16px (standard moderno)
+  }
+  
+  .about-text h3 {
+    font-size: 1.375rem; // 22px - transizione più graduale da 24px (desktop)
+  }
+  
+  // Titolo sezione "Chi Sono" più grande su mobile
+  .section-title {
+    font-size: 1.75rem; // 28px - transizione più graduale da 30px (desktop)
+  }
+}
+
+// Tablet: spazio aumentato tra stats e fine punto 4
+@include tablet {
+  .about-content {
+    gap: $spacing-3xl; // Aumentato spazio tra stats e fine punto 4 su tablet
+  }
+}

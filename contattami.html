@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scroll-restoration" content="manual">
+    <title>Contattami - Alessandro Gurnari</title>
+    <meta name="description" content="Contatta Alessandro Gurnari per progetti web e design UX/UI">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contattami - Alessandro Gurnari">
+    <meta property="og:description" content="Contatta Alessandro Gurnari per progetti web e design UX/UI">
+    <meta property="og:image" content="./assets/images/alessandro-gurnari-profile.jpg">
+    <meta property="og:url" content="https://alessandrogurnari.com/contattami.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alessandro Gurnari Portfolio">
+    
+    <!-- Social Media Meta Tags -->
+    <meta property="og:see_also" content="https://github.com/alessandrogurnari">
+    <meta property="og:see_also" content="https://instagram.com/alessandrogurnari">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/site.webmanifest">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css?v=1014">
+    
+    <!-- CSS personalizzato per popup e form -->
+    <style>
+        #message.is-valid {
+            background-image: none;
+            border-color: #198754;
+        }
+        
+        /* Popup personalizzato estetico */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            backdrop-filter: blur(4px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .popup-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .popup-container {
+            position: relative;
+            max-width: 320px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .popup-content {
+            background: white;
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9) translateY(20px);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .popup-overlay.show .popup-content {
+            transform: scale(1) translateY(0);
+        }
+        
+        .popup-icon {
+            margin-bottom: 15px;
+        }
+        
+        .popup-icon i {
+            font-size: 2.5rem;
+            color: #28a745;
+            animation: popupBounce 0.5s ease;
+        }
+        
+        .popup-icon i.error {
+            color: #dc3545;
+        }
+        
+        .popup-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        
+        .popup-message {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+        
+        .popup-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: #999;
+            cursor: pointer;
+            padding: 8px;
+            width: auto;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .popup-close-btn:hover {
+            color: #2563eb;
+            transform: scale(1.1);
+        }
+        
+        .popup-close-btn:active {
+            transform: scale(0.9);
+        }
+        
+        @keyframes popupBounce {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 576px) {
+            .popup-content {
+                padding: 25px 20px;
+                margin: 15px;
+            }
+            
+            .popup-icon i {
+                font-size: 2rem;
+            }
+            
+            .popup-title {
+                font-size: 1.1rem;
+            }
+            
+            .popup-message {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+    
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="contattami">
+    <!-- Header con menu sticky -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">Alessandro Gurnari</a>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="cv.html" class="nav-link">CV</a>
+                    <a href="contattami.html" class="nav-link active" aria-current="page">Contattami</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle" aria-label="Apri menu di navigazione" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sezione Hero -->
+    <section class="hero contact-hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <div class="hero-text">
+                    <h1 class="mb-4"><span class="highlight">Contattami</span></h1>
+                    <p class="hero-subtitle mb-0">Parliamo del tuo prossimo progetto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Form di Contatto -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-5">
+                                <h3 class="mb-4 form-title">Raccontami la tua idea</h3>
+                                <p class="text-muted mb-0">Hai un progetto in mente? Scrivimi e ne parliamo insieme.</p>
+                            </div>
+                            
+                            <!-- Popup personalizzato per messaggi -->
+                            <div id="form-popup" class="popup-overlay" style="display: none;">
+                                <div class="popup-container">
+                                    <div class="popup-content">
+                                        <div class="popup-icon">
+                                            <i id="popup-icon" class="fas fa-check-circle"></i>
+                                        </div>
+                                        <h3 id="popup-title" class="popup-title">Messaggio Inviato</h3>
+                                        <p id="popup-message" class="popup-message">Il tuo messaggio è stato inviato con successo!</p>
+                                        <button type="button" class="popup-close-btn" onclick="closePopup()">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <form id="contact-form" novalidate>
+                                <div class="mb-4">
+                                    <label for="name" class="form-label fw-semibold">Nome completo *</label>
+                                    <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Inserisci il tuo nome completo" required aria-describedby="name-error">
+                                    <div class="invalid-feedback" id="name-error">
+                                        Inserisci un nome valido (minimo 2 caratteri).
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="email" class="form-label fw-semibold">Indirizzo email *</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="esempio@email.com" required aria-describedby="email-error">
+                                    <div class="invalid-feedback" id="email-error">
+                                        Inserisci un indirizzo email valido.
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="subject" class="form-label fw-semibold">Oggetto *</label>
+                                    <input type="text" class="form-control form-control-lg" id="subject" name="subject" placeholder="Titolo del messaggio" required aria-describedby="subject-error">
+                                    <div class="invalid-feedback" id="subject-error">
+                                        Inserisci un oggetto valido (minimo 5 caratteri).
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-5">
+                                    <label for="message" class="form-label fw-semibold">Messaggio *</label>
+                                    <textarea class="form-control form-control-lg" id="message" name="message" rows="6" placeholder="Descrivi il tuo progetto, le tue esigenze e qualsiasi dettaglio importante..." required aria-describedby="message-error"></textarea>
+                                    <div class="invalid-feedback" id="message-error">
+                                        Inserisci un messaggio valido (minimo 20 caratteri).
+                                    </div>
+                                    <div class="form-text">
+                                        <span id="char-count">0</span>/500 caratteri
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg py-3 fs-5 fs-md-5" id="submit-btn">
+                                        <span id="btn-text">
+                                            <i class="fas fa-paper-plane me-3"></i>Invia Messaggio
+                                        </span>
+                                        <span id="btn-loading" class="d-none">
+                                            <i class="fas fa-spinner fa-spin me-3" role="status" aria-hidden="true"></i>
+                                            Invio in corso...
+                                        </span>
+                                    </button>
+                                </div>
+                                
+                                <!-- Informazione sui tempi di risposta -->
+                                <div class="text-center mt-4">
+                                    <small class="text-muted">
+                                        Ti risponderò entro 24 ore
+                                    </small>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione FAQ -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="text-center faq-title">Domande Frequenti</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="faq1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    Come funziona il processo di collaborazione?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Il processo inizia con una consultazione per comprendere le tue esigenze. 
+                                    Poi procedo con la progettazione UX/UI, creazione di wireframe e prototipi, 
+                                    e sviluppo del progetto finale. Ti tengo aggiornato durante tutto il processo 
+                                    e includo revisioni per garantire che il risultato soddisfi le tue aspettative.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    Che tipo di progetti posso realizzare?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Posso realizzare diversi tipi di progetti: siti web responsive, design di interfacce utente, 
+                                    wireframe e prototipi interattivi, e progetti di ricerca utente. 
+                                    Ho esperienza sia nel design UX/UI che nello sviluppo frontend, 
+                                    quindi posso seguire un progetto dalla fase di progettazione fino all'implementazione.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    Che tecnologie utilizzi per lo sviluppo?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Per lo sviluppo web utilizzo HTML5, CSS3, JavaScript ES6+, Sass e Bootstrap. 
+                                    Per il design UX/UI uso Figma per prototipi e wireframe, e ho esperienza 
+                                    con user research e test di usabilità. Tutti i progetti sono ottimizzati 
+                                    per accessibilità e usabilità, seguendo le best practice del settore.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Alessandro Gurnari. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/emailjs-config.js"></script>
+    <script src="./assets/js/contact.js"></script>
+    
+    <!-- Form Validation & UX Enhancement -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const charCount = document.getElementById('char-count');
+            const messageTextarea = document.getElementById('message');
+            
+            // Contatore caratteri
+            if (messageTextarea && charCount) {
+                messageTextarea.addEventListener('input', function() {
+                    const count = this.value.length;
+                    charCount.textContent = count;
+                    
+                    if (count > 500) {
+                        charCount.parentElement.classList.add('text-danger');
+                        this.classList.add('is-invalid');
+                    } else {
+                        charCount.parentElement.classList.remove('text-danger');
+                        this.classList.remove('is-invalid');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

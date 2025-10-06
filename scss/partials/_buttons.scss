@@ -1,0 +1,234 @@
+// ========================================
+// BUTTONS - COMPONENTE BOTTONI
+// ========================================
+// Questo partial gestisce tutti gli stili dei bottoni
+// presenti nel sito
+
+// Import mixins e variabili per utilizzare le funzioni
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'sass:color';
+
+// ========================================
+// BOTTONI PRINCIPALI - CONSOLIDATI
+// ========================================
+// Tutte le regole per .btn sono state consolidate in un unico blocco
+// per eliminare duplicati e migliorare la manutenibilità
+.btn {
+  @include button-base;
+  @include fade-in-up-sequential($animation-delay-1);
+  
+  &-primary {
+    @include button-primary;
+  }
+  
+  &-secondary {
+    @include button-secondary;
+  }
+  
+  &-lg {
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-lg; // 18px per WCAG AAA
+    border-radius: 10px;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &.loading {
+    position: relative;
+    color: transparent;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 2px solid transparent;
+      border-top: 2px solid currentColor;
+      border-radius: 50%;
+      animation: spin $transition-slow linear infinite;
+    }
+  }
+  
+  // Rimosso: btn-outline, btn-ghost, btn-success, btn-danger (non utilizzati nel sito)
+  // Rimosso: btn-sm, btn-md, btn-xl (non utilizzati nel sito)
+}
+
+// ========================================
+// GRUPPI DI BOTTONI
+// ========================================
+// Rimosso: btn-group (non utilizzato nel sito)
+
+// ========================================
+// BOTTONI SPECIALI
+// ========================================
+// Rimosso: btn-icon e btn-floating (non utilizzati nel sito)
+
+// ========================================
+// ANIMAZIONI BOTTONI
+// ========================================
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// ========================================
+// RESPONSIVE BOTTONI
+// ========================================
+@include mobile {
+  .btn {
+    &-lg {
+      padding: $spacing-sm $spacing-md;
+      font-size: $font-size-lg; // 18px per WCAG AAA
+    }
+  }
+  
+  // Rimosso: btn-group e btn-floating (non utilizzati)
+}
+
+// ========================================
+// BOTTONI PERSONALIZZATI
+// ========================================
+// Regole specifiche per bottoni con animazioni particolari
+// Ogni bottone ha dimensioni e stili ottimizzati per la sua sezione
+
+// ========================================
+// BOTTONI SPECIFICI PER SEZIONE E PAGINA
+// ========================================
+// Regole specifiche per ogni tipo di bottone nel sito
+
+// 1. BOTTONE HERO HOME - "Scopri i miei ultimi progetti" (con freccia)
+.home .hero .hero-buttons .btn.btn-primary:first-child {
+  // Stili base
+  padding: $spacing-lg $spacing-2xl;
+  font-size: $font-size-lg;
+  height: 60px;
+  border-radius: $border-radius-lg;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 350px;
+  transition: all $transition-fast;
+  
+  // Freccia sempre visibile
+  &::after {
+    content: '↓';
+    font-size: 1.4rem;
+    color: white;
+    margin-left: $spacing-md;
+    opacity: 1;
+    pointer-events: none;
+  }
+  
+  // Freccia nera in hover per contrasto WCAG AAA
+  &:hover::after {
+    color: $text-color; // Testo nero per contrasto ottimale
+  }
+  
+  // Responsive
+  @include mobile {
+    height: 48px;
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-lg;
+    min-width: 400px;
+    flex: none;
+    
+    &::after {
+      font-size: 1.2rem;
+      margin-left: $spacing-sm;
+    }
+  }
+  
+  @include tablet {
+    height: 56px;
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-lg;
+    min-width: 380px;
+    
+    &::after {
+      font-size: 1.3rem;
+      margin-left: $spacing-md;
+    }
+  }
+  
+  @include desktop {
+    height: 60px;
+    padding: $spacing-lg $spacing-2xl;
+    font-size: $font-size-lg;
+    min-width: 350px;
+    
+    &::after {
+      font-size: 1.4rem;
+      margin-left: $spacing-md;
+    }
+  }
+}
+
+// 2. BOTTONI CTA HOME - "Vedi il mio portfolio" e "Contattami"
+.home .cta-actions .btn {
+  @include button-cta;
+}
+
+// Icona GitHub nella sezione CTA HOME - affianco ai bottoni
+.home .cta-actions .social-link {
+  @include fade-in-up($animation-delay-4); // Stessa animazione dei bottoni
+}
+
+// 3. BOTTONI HERO PORTFOLIO
+// ========================================
+
+// Bottone "Inizia un Progetto" - PIENO (stesse dimensioni del bottone "Contattami")
+.btn.btn-primary.btn-portfolio-primary {
+  @include button-cta;
+}
+
+// Bottone "Vai al CV" - VUOTO (stesse dimensioni del bottone "Inizia un Progetto")
+.btn.btn-secondary.btn-portfolio-secondary {
+  @include button-cta;
+}
+
+// 4. BOTTONE FORM CONTATTAMI - "Invia Messaggio" (gestito da Bootstrap)
+// Rimuoviamo le regole duplicate - Bootstrap gestisce già le dimensioni
+
+// 5. BOTTONI NAVBAR (se presenti)
+.navbar .btn {
+  // Stili base
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-sm;
+  height: 36px;
+  border-radius: $border-radius-sm;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
+  
+  // Responsive
+  @include mobile {
+    height: 32px;
+    padding: $spacing-xs $spacing-xs;
+    font-size: $font-size-xs;
+  }
+  
+  @include tablet {
+    height: 34px;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+  }
+  
+  @include desktop {
+    height: 36px;
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+  }
+}
