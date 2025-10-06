@@ -62,28 +62,6 @@ mio-sito-personale/
 - **Tipografia**: Inter (Google Fonts) con pesi 300-700
 - **Breakpoints**: Mobile (< 576px), Mobile Large (576-767px), Tablet (768-1023px), Desktop (≥ 1024px)
 
-## ⚙️ Installazione e Setup
-
-```bash
-# 1. Clona il repository
-git clone https://github.com/alessandrogurnari/portfolio.git
-cd portfolio
-
-# 2. Installa le dipendenze
-npm install
-
-# 3. Compila i file Sass
-npm run build:css
-
-# 4. Apri il sito
-open index.html
-```
-
-## 📜 Scripts NPM
-
-- `npm run build:css` - Compila SCSS in CSS
-- `npm run watch:css` - Watch mode per sviluppo
-
 ## 🔧 Caratteristiche Tecniche
 
 ### Sistema di Sincronizzazione Progetti
@@ -97,20 +75,3 @@ open index.html
 - **Hardware Acceleration**: Ottimizzazioni per scroll e transizioni smooth
 - **Accessibilità WCAG AAA**: Font-size minimo 18px per conformità
 - **Codice Pulito**: Regole consolidate, !important superflue rimosse
-
-## 📧 Configurazione EmailJS
-
-1. Crea account su [EmailJS.com](https://www.emailjs.com/)
-2. Configura servizio email e template
-3. Aggiorna credenziali in `js/emailjs-config.js`
-
-## 📞 Contatti
-
-- **GitHub**: [github.com/alessandrogurnari](https://github.com/alessandrogurnari)
-- **Instagram**: [instagram.com/alessandrogurnari](https://instagram.com/alessandrogurnari)
-- **Portfolio**: [alessandrogurnari.com](https://alessandrogurnari.com)
-
----
-
-**Sviluppato con passione da Alessandro Gurnari**  
-*Portfolio personale - 2025*
