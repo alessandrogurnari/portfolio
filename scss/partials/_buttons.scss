@@ -29,7 +29,7 @@
   &-lg {
     padding: $spacing-md $spacing-lg;
     font-size: $font-size-lg; // 18px per WCAG AAA
-    border-radius: 10px;
+    border-radius: $border-radius-lg; // 8px - Standardizzato con bottone hero
   }
   
   &:disabled {
@@ -116,7 +116,7 @@
   padding: $spacing-lg $spacing-2xl;
   font-size: $font-size-lg;
   height: 60px;
-  border-radius: $border-radius-lg;
+  border-radius: $border-radius-lg; // 8px - Border-radius originale del bottone hero
   position: relative;
   display: flex;
   align-items: center;
@@ -181,6 +181,12 @@
 // 2. BOTTONI CTA HOME - "Vedi il mio portfolio" e "Contattami"
 .home .cta-actions .btn {
   @include button-cta;
+  
+  // Padding laterale aumentato solo per smartphone
+  @include smartphone {
+    padding-left: $spacing-xl !important; // Padding laterale aumentato per smartphone
+    padding-right: $spacing-xl !important; // Padding laterale aumentato per smartphone
+  }
 }
 
 // Icona GitHub nella sezione CTA HOME - affianco ai bottoni
@@ -208,9 +214,9 @@
 .navbar .btn {
   // Stili base
   padding: $spacing-xs $spacing-sm;
-  font-size: $font-size-sm;
+  font-size: $font-size-base; // 16px (aumentato da 14px)
   height: 36px;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius-lg; // 8px - Standardizzato con bottone hero
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   
   // Responsive

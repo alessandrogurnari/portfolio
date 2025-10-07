@@ -109,6 +109,16 @@
       transition: transform $transition-normal;
     }
     
+    // Ottimizzazione per smartphone
+    @include smartphone {
+      height: 160px !important; // Altezza ridotta per smartphone
+      
+      img {
+        object-fit: contain !important; // Mostra l'immagine completa senza tagli
+        object-position: center !important; // Centra l'immagine
+      }
+    }
+    
     .project-overlay {
       position: absolute;
       top: 0;
@@ -163,8 +173,8 @@
       
         // Ottimizzazione per smartphone
         @include smartphone {
-          font-size: 2rem !important; // 32px per test - dovrebbe essere visibile!
-          margin-bottom: $spacing-sm !important; // Margine ridotto
+          font-size: 1.25rem !important; // 20px per smartphone - dimensione appropriata
+          margin-bottom: $spacing-md !important; // Margine aumentato per migliore spaziatura
           padding-left: $spacing-sm !important; // Padding sinistro aumentato
           padding-right: $spacing-sm !important; // Padding destro aumentato
         }
@@ -182,13 +192,13 @@
         font-size: $font-size-sm !important; // 18px su mobile (aumentato da 16px)
       }
       
-      // Ottimizzazione per smartphone
-      @include smartphone {
-        font-size: $font-size-smartphone-base !important; // 14px per smartphone (aumentato da 13px)
-        line-height: 1.4 !important; // Line-height ridotto
-        padding-left: $spacing-sm !important; // Padding sinistro aumentato
-        padding-right: $spacing-sm !important; // Padding destro aumentato
-      }
+        // Ottimizzazione per smartphone
+        @include smartphone {
+          font-size: $font-size-smartphone-xl !important; // 18px per smartphone - dimensione ottimale
+          line-height: 1.4 !important; // Line-height ridotto
+          padding-left: $spacing-sm !important; // Padding sinistro aumentato
+          padding-right: $spacing-sm !important; // Padding destro aumentato
+        }
     }
     
     // Padding ridotto per smartphone
@@ -228,6 +238,12 @@
     
     .btn {
       @include button-cta;
+      
+      // Padding laterale aumentato solo per smartphone
+      @include smartphone {
+        padding-left: $spacing-xl !important; // Padding laterale aumentato per smartphone
+        padding-right: $spacing-xl !important; // Padding laterale aumentato per smartphone
+      }
     }
   }
 }

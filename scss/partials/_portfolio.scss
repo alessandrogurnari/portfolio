@@ -631,6 +631,16 @@
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   
+  // Ottimizzazione per smartphone
+  @include smartphone {
+    height: 160px !important; // Altezza ridotta per smartphone
+    
+    img {
+      object-fit: contain !important; // Mostra l'immagine completa senza tagli
+      object-position: center !important; // Centra l'immagine
+    }
+  }
+  
   .project-overlay {
     position: absolute;
     top: 0;
@@ -687,8 +697,8 @@
     
         // Ottimizzazione per smartphone
         @include smartphone {
-          font-size: 2rem !important; // 32px per test - dovrebbe essere visibile!
-          margin-bottom: $spacing-sm !important; // Margine ridotto
+          font-size: 1.25rem !important; // 20px per smartphone - dimensione appropriata
+          margin-bottom: $spacing-md !important; // Margine aumentato per migliore spaziatura
           padding-left: $spacing-sm !important; // Padding sinistro aumentato
           padding-right: $spacing-sm !important; // Padding destro aumentato
         }
@@ -701,13 +711,13 @@
     margin-bottom: 0; // Rimosso per avvicinare i tag
     flex: 1; // Il paragrafo si espande per riempire lo spazio disponibile
     
-    // Ottimizzazione per smartphone
-    @include smartphone {
-      font-size: $font-size-smartphone-lg !important; // 16px per smartphone (aumentato da 14px)
-      line-height: 1.4 !important; // Line-height ridotto
-      padding-left: $spacing-sm !important; // Padding sinistro aumentato
-      padding-right: $spacing-sm !important; // Padding destro aumentato
-    }
+        // Ottimizzazione per smartphone
+        @include smartphone {
+          font-size: $font-size-smartphone-xl !important; // 18px per smartphone - dimensione ottimale
+          line-height: 1.4 !important; // Line-height ridotto
+          padding-left: $spacing-sm !important; // Padding sinistro aumentato
+          padding-right: $spacing-sm !important; // Padding destro aumentato
+        }
   }
   
   // Padding ridotto per smartphone
@@ -848,5 +858,25 @@
   
   &--success h3 {
     color: $success-color;
+  }
+}
+
+// DESCRIZIONE CTA PORTFOLIO - Padding laterale per smartphone
+.portfolio .contact-info p {
+  // Padding laterale per smartphone (come in home)
+  @include smartphone {
+    padding-left: $spacing-lg !important; // Padding laterale per aria
+    padding-right: $spacing-lg !important; // Padding laterale per aria
+  }
+}
+
+// BOTTONI CTA PORTFOLIO - "Inizia un Progetto" e "Vai al CV"
+.portfolio .cta-actions .btn {
+  @include button-cta;
+  
+  // Padding laterale aumentato solo per smartphone
+  @include smartphone {
+    padding-left: $spacing-xl !important; // Padding laterale aumentato per smartphone
+    padding-right: $spacing-xl !important; // Padding laterale aumentato per smartphone
   }
 }

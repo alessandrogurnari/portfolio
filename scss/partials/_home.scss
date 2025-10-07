@@ -217,3 +217,12 @@
     font-size: $font-size-lg; // 18px - mantiene accessibilità WCAG AAA
   }
 }
+
+// ========================================
+// SOCIAL LABEL HOME - "Seguimi:" 
+// ========================================
+.home .cta-actions .social-links .social-label {
+  @include smartphone {
+    font-size: $font-size-smartphone-xl !important; // 16px per smartphone (aumentato)
+  }
+}

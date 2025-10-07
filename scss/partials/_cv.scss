@@ -985,6 +985,12 @@
   @include mobile {
     min-width: 200px; // Larghezza minima per evitare che sia troppo stretto
   }
+  
+  // Padding laterale aumentato solo per smartphone
+  @include smartphone {
+    padding-left: $spacing-xl !important; // Padding laterale aumentato per smartphone
+    padding-right: $spacing-xl !important; // Padding laterale aumentato per smartphone
+  }
 }
 
 // Spacing specifico per l'icona del bottone CV

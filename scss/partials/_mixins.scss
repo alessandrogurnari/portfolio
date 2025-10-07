@@ -234,9 +234,9 @@
   justify-content: center;
   padding: $spacing-sm $spacing-lg;
   border: none;
-  border-radius: $border-radius-lg;
+  border-radius: $border-radius-lg; // 8px - Standardizzato con bottone hero
   font-family: $font-family-primary;
-  font-size: $font-size-base; // 16px (standard moderno)
+  font-size: $font-size-lg; // 18px (aumentato per migliore leggibilità)
   font-weight: $font-weight-medium;
   text-decoration: none;
   cursor: pointer;
@@ -311,8 +311,8 @@
   @include smartphone {
     height: 40px;
     padding: $spacing-xs $spacing-sm;
-    font-size: $font-size-smartphone-base; // 14px per smartphone
-    border-radius: $border-radius-sm;
+    font-size: $font-size-smartphone-lg; // 16px per smartphone (aumentato)
+    border-radius: $border-radius-lg; // 8px - Standardizzato con bottone hero
   }
   
   @include tablet {
