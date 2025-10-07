@@ -815,8 +815,8 @@
   flex-direction: row !important; // Layout orizzontale su desktop
   gap: $spacing-xl;
   
-  // Stili per i figli diretti (div senza classe)
-  > div {
+  // Stili per le statistiche
+  .stat {
     text-align: center;
     
     h3 {
@@ -833,6 +833,11 @@
       font-size: 14px; // 14px - dimensioni corrette
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      
+      // Regole smartphone per descrizioni stats
+      @include smartphone {
+        font-size: $font-size-smartphone-xs !important; // 14px per smartphone
+      }
     }
   }
   
