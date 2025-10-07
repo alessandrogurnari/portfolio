@@ -78,6 +78,11 @@
     color: $text-color;
     @include heading-1;
     
+    // Regole smartphone per titoli hero
+    @include smartphone {
+      font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
+    }
+    
     .highlight {
       color: $brand-accent; // Alessandro in brand accent
     }
@@ -91,6 +96,11 @@
   font-weight: $font-weight-normal; // Ridotto da medium a normal per look più leggero
   @include fade-in-up;
   @include sequential-animation($animation-delay-1);
+  
+  // Regole smartphone per sottotitolo hero
+  @include smartphone {
+    font-size: $font-size-smartphone-xl !important; // 18px per smartphone
+  }
 }
 
 .hero-description {
@@ -106,6 +116,13 @@
   @include mobile {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+  
+  // Regole smartphone per descrizione hero
+  @include smartphone {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
   }
 }
 
@@ -139,6 +156,7 @@
       width: auto !important; // Larghezza automatica invece di 100%
       min-width: 200px !important; // Larghezza minima per touch
       max-width: 280px !important; // Larghezza massima per estetica
+      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
     }
     
     // Sovrascrive regole specifiche per btn-primary:first-child

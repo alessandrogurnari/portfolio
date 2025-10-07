@@ -40,7 +40,7 @@ body {
 }
 
 html {
-  font-size: 0.875rem;
+  font-size: 1rem;
   scroll-behavior: smooth;
 }
 
@@ -51,7 +51,7 @@ a[href="#ultimi-progetti"] {
 
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.5;
   color: #2A2E34;
@@ -129,66 +129,81 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
 @media (max-width: 399px) {
   h1 {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  h1 {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
   }
 }
 
 h2 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
 @media (max-width: 399px) {
   h2 {
-    font-size: 1.375rem;
+    font-size: 1.875rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
 }
 
 h3 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.375rem;
+  font-size: 1.875rem;
   font-weight: 600;
   line-height: 1.5;
   color: #2A2E34;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  h3 {
+    font-size: 1.25rem !important;
+  }
+}
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  h4 {
+    font-size: 1.125rem !important;
+  }
 }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 500;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  h5 {
+    font-size: 1rem !important;
+  }
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 500;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  h6 {
+    font-size: 0.875rem !important;
+  }
 }
 
 p {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.75;
   color: #2A2E34;
@@ -196,7 +211,7 @@ p {
 }
 @media (max-width: 480px) and (orientation: portrait) {
   p {
-    font-size: 0.875rem;
+    font-size: 0.875rem !important;
   }
 }
 
@@ -223,19 +238,14 @@ li {
 
 .section-title {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
 @media (max-width: 399px) {
   .section-title {
-    font-size: 1.375rem;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .section-title {
-    font-size: 1.5rem;
+    font-size: 1.875rem;
   }
 }
 .section-title {
@@ -568,9 +578,9 @@ html {
   justify-content: center;
   padding: 0.5rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 8px !important;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
@@ -619,9 +629,9 @@ html {
   justify-content: center;
   padding: 0.5rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 8px !important;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
@@ -658,9 +668,9 @@ html {
   justify-content: center;
   padding: 0.5rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 8px !important;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
@@ -695,7 +705,7 @@ html {
 }
 .btn-lg {
   padding: 1rem 1.5rem;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   border-radius: 0.5rem;
 }
 .btn:disabled {
@@ -733,12 +743,12 @@ html {
 @media (max-width: 399px) {
   .btn-lg {
     padding: 0.5rem 1rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 .home .hero .hero-buttons .btn.btn-primary:first-child {
   padding: 1.5rem 3rem;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   height: 60px;
   border-radius: 0.5rem;
   position: relative;
@@ -763,7 +773,7 @@ html {
   .home .hero .hero-buttons .btn.btn-primary:first-child {
     height: 48px;
     padding: 0.5rem 1.5rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     min-width: 400px;
     flex: none;
   }
@@ -776,7 +786,7 @@ html {
   .home .hero .hero-buttons .btn.btn-primary:first-child {
     height: 56px;
     padding: 1rem 2rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     min-width: 380px;
   }
   .home .hero .hero-buttons .btn.btn-primary:first-child::after {
@@ -788,7 +798,7 @@ html {
   .home .hero .hero-buttons .btn.btn-primary:first-child {
     height: 60px;
     padding: 1.5rem 3rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     min-width: 350px;
   }
   .home .hero .hero-buttons .btn.btn-primary:first-child::after {
@@ -799,9 +809,9 @@ html {
 
 .home .cta-actions .btn {
   padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   height: 48px;
-  border-radius: 0.375rem;
+  border-radius: 8px !important;
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
@@ -809,36 +819,29 @@ html {
   .home .cta-actions .btn {
     height: 44px;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
     flex: 1;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .home .cta-actions .btn {
-    height: 40px;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .home .cta-actions .btn {
     height: 46px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 1024px) {
   .home .cta-actions .btn {
     height: 48px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .home .cta-actions .btn {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    font-size: 1rem !important;
   }
 }
 
@@ -849,9 +852,9 @@ html {
 
 .btn.btn-primary.btn-portfolio-primary {
   padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   height: 48px;
-  border-radius: 0.375rem;
+  border-radius: 8px !important;
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
@@ -859,38 +862,30 @@ html {
   .btn.btn-primary.btn-portfolio-primary {
     height: 44px;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
     flex: 1;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .btn.btn-primary.btn-portfolio-primary {
-    height: 40px;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .btn.btn-primary.btn-portfolio-primary {
     height: 46px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 1024px) {
   .btn.btn-primary.btn-portfolio-primary {
     height: 48px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
 .btn.btn-secondary.btn-portfolio-secondary {
   padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   height: 48px;
-  border-radius: 0.375rem;
+  border-radius: 8px !important;
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
@@ -898,36 +893,28 @@ html {
   .btn.btn-secondary.btn-portfolio-secondary {
     height: 44px;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
     flex: 1;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .btn.btn-secondary.btn-portfolio-secondary {
-    height: 40px;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .btn.btn-secondary.btn-portfolio-secondary {
     height: 46px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 1024px) {
   .btn.btn-secondary.btn-portfolio-secondary {
     height: 48px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
 .navbar .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   height: 36px;
   border-radius: 0.5rem;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
@@ -943,14 +930,14 @@ html {
   .navbar .btn {
     height: 34px;
     padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 @media (min-width: 1024px) {
   .navbar .btn {
     height: 36px;
     padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -1047,7 +1034,7 @@ a:active {
 @media (max-width: 767px) {
   .nav-link {
     padding: 1rem 1.5rem;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     text-align: center;
     border-radius: 12px;
     margin: 0.25rem 0;
@@ -1115,7 +1102,7 @@ a:active {
   outline-offset: 2px;
 }
 .social-link i, .social-link svg {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 .social-link--github:hover {
   background-color: #333;
@@ -1124,7 +1111,7 @@ a:active {
 
 .project-link {
   color: white;
-  font-size: 1.375rem;
+  font-size: 1.875rem;
   text-decoration: none;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   display: inline-block;
@@ -1167,7 +1154,7 @@ a:active {
 }
 
 .logo-link {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #2A2E34;
   text-decoration: none;
@@ -1241,7 +1228,7 @@ a:active {
     height: 44px;
   }
   .social-link i, .social-link svg {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 .navbar {
@@ -1589,7 +1576,7 @@ a:active {
 }
 .about-text p {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.75;
   color: #2A2E34;
@@ -1598,14 +1585,24 @@ a:active {
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .about-text p {
-    font-size: 0.875rem;
+    font-weight: 300;
   }
 }
 .about-text--large p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .about-text--large p {
+    font-size: 1rem !important;
+  }
 }
 .about-text--small p {
-  font-size: 0.875rem;
+  font-size: 1rem;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .about-text--small p {
+    font-size: 0.8125rem !important;
+  }
 }
 
 .about .about-content {
@@ -1658,7 +1655,12 @@ a:active {
 }
 
 .about-text p {
-  font-size: 1rem;
+  font-size: 1.125rem;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .about-text p {
+    font-size: 1rem !important;
+  }
 }
 
 .about-text h3 {
@@ -1684,7 +1686,7 @@ a:active {
     gap: 2rem !important;
   }
   .about-text p {
-    font-size: 1.125rem !important;
+    font-size: 1rem !important;
     line-height: 1.5 !important;
   }
   .about-text h3 {
@@ -1707,12 +1709,17 @@ a:active {
 .ultimi-progetti .section-subtitle {
   text-align: center;
   color: #4A5568;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .section-subtitle {
+    font-size: 1rem !important;
+  }
 }
 .ultimi-progetti .projects-grid {
   display: grid;
@@ -1839,7 +1846,7 @@ a:active {
   flex: 1;
 }
 .ultimi-progetti .project-content h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #2A2E34;
   margin-top: 1.5rem;
@@ -1847,7 +1854,7 @@ a:active {
 }
 @media (max-width: 399px) {
   .ultimi-progetti .project-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
@@ -1867,12 +1874,13 @@ a:active {
 }
 @media (max-width: 399px) {
   .ultimi-progetti .project-content p {
-    font-size: 0.875rem !important;
+    font-size: 1rem !important;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .ultimi-progetti .project-content p {
-    font-size: 1.125rem !important;
+    font-size: 1rem !important;
+    font-weight: 300;
     line-height: 1.4 !important;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -1899,6 +1907,12 @@ a:active {
   font-weight: 500;
 }
 @media (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .project-tags .tag {
+    font-weight: 400 !important;
+    border-width: 0.75px !important;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
   .ultimi-progetti .project-tags {
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -1909,9 +1923,9 @@ a:active {
 }
 .ultimi-progetti .projects-cta .btn {
   padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   height: 48px;
-  border-radius: 0.375rem;
+  border-radius: 8px !important;
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
@@ -1919,36 +1933,29 @@ a:active {
   .ultimi-progetti .projects-cta .btn {
     height: 44px;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
     flex: 1;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .ultimi-progetti .projects-cta .btn {
-    height: 40px;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .ultimi-progetti .projects-cta .btn {
     height: 46px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 1024px) {
   .ultimi-progetti .projects-cta .btn {
     height: 48px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .ultimi-progetti .projects-cta .btn {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    font-size: 1rem !important;
   }
 }
 
@@ -2045,19 +2052,19 @@ a:active {
   margin-bottom: 1.5rem;
   color: #2A2E34;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
 @media (max-width: 399px) {
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .hero-text h1 {
-    font-size: 1.75rem;
+    font-size: 1.75rem !important;
   }
 }
 .hero-text h1 .highlight {
@@ -2065,7 +2072,7 @@ a:active {
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #2A2E34;
   margin-bottom: 1.5rem;
   font-weight: 400;
@@ -2090,9 +2097,14 @@ a:active {
 .hero-subtitle:nth-child(6) {
   animation-delay: 0.6s;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero-subtitle {
+    font-size: 1.125rem !important;
+  }
+}
 
 .hero-description {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.75;
   margin-bottom: 3rem;
   color: #2A2E34;
@@ -2124,6 +2136,13 @@ a:active {
     padding-right: 2rem;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero-description {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-size: 1rem !important;
+  }
+}
 
 .hero-buttons {
   display: flex;
@@ -2149,6 +2168,7 @@ a:active {
     width: auto !important;
     min-width: 200px !important;
     max-width: 280px !important;
+    font-size: 1rem !important;
   }
   .home .hero .hero-buttons .btn.btn-primary:first-child {
     min-width: 200px !important;
@@ -2212,7 +2232,7 @@ a:active {
     font-size: 1.1875rem;
   }
   .hero-description {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
@@ -2252,12 +2272,17 @@ a:active {
 .section-subtitle {
   text-align: center;
   color: #4A5568;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .section-subtitle {
+    font-size: 1rem !important;
+  }
 }
 
 .hero.portfolio-hero {
@@ -2298,24 +2323,24 @@ a:active {
 }
 .hero.portfolio-hero .hero-text h1 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
 @media (max-width: 399px) {
   .hero.portfolio-hero .hero-text h1 {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .hero.portfolio-hero .hero-text h1 {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
   }
 }
 .hero.portfolio-hero .hero-text h1 {
   margin-bottom: 1.5rem;
   color: #2A2E34;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.portfolio-hero .hero-text h1 {
+    font-size: 1.75rem !important;
+  }
 }
 .hero.portfolio-hero .hero-text h1 .highlight {
   color: #06b6d4;
@@ -2346,6 +2371,11 @@ a:active {
 .hero.portfolio-hero .hero-text .hero-subtitle:nth-child(6) {
   animation-delay: 0.6s;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.portfolio-hero .hero-text .hero-subtitle {
+    font-size: 1.125rem !important;
+  }
+}
 .hero.portfolio-hero .hero-text .hero-description {
   color: #2A2E34;
   font-weight: 300;
@@ -2356,6 +2386,11 @@ a:active {
 @media (min-width: 1024px) {
   .hero.portfolio-hero .hero-text .hero-description .desktop-only {
     display: inline;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.portfolio-hero .hero-text .hero-description {
+    font-size: 1rem !important;
   }
 }
 
@@ -2511,18 +2546,29 @@ a:active {
 }
 @media (max-width: 1023px) {
   .client-works-header .client-works-info h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .client-works-header .client-works-info h3 {
+    font-size: 1.125rem !important;
   }
 }
 .client-works-header .client-works-info p {
   color: #4A5568;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   margin: 0;
   line-height: 1.5;
 }
 @media (max-width: 1023px) {
   .client-works-header .client-works-info p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .client-works-header .client-works-info p {
+    font-size: 1rem !important;
+    font-weight: 300 !important;
   }
 }
 .client-works-header .client-works-arrow {
@@ -2546,7 +2592,7 @@ a:active {
   }
 }
 .client-works-header .client-works-arrow i {
-  font-size: 0.875rem;
+  font-size: 1rem;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .client-works-header .client-works-arrow.active {
@@ -2573,23 +2619,39 @@ a:active {
     min-height: 50px;
   }
   .client-works-header .client-works-info h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     line-height: 1.3;
   }
+}
+@media (max-width: 399px) and (max-width: 480px) and (orientation: portrait) {
+  .client-works-header .client-works-info h3 {
+    font-size: 1.125rem !important;
+  }
+}
+@media (max-width: 399px) {
   .client-works-header .client-works-info p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 1.5;
     margin: 0;
   }
+}
+@media (max-width: 399px) and (max-width: 480px) and (orientation: portrait) {
+  .client-works-header .client-works-info p {
+    padding-top: 0.5rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 300 !important;
+  }
+}
+@media (max-width: 399px) {
   .client-works-header .client-works-arrow {
     width: 36px;
     height: 36px;
     margin-right: 0.5rem;
   }
   .client-works-header .client-works-arrow i {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
@@ -2642,13 +2704,13 @@ a:active {
     padding: 0.5rem;
   }
   .client-works-header .client-works-info h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
     line-height: 1.3;
   }
   .client-works-header .client-works-info p {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 1.5;
     margin: 0;
   }
@@ -2658,7 +2720,7 @@ a:active {
     margin-right: 0.5rem;
   }
   .client-works-header .client-works-arrow i {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -2848,7 +2910,7 @@ a:active {
   justify-content: space-between;
 }
 .project-card .project-content h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #2A2E34;
   margin-top: 1.5rem;
@@ -2876,7 +2938,8 @@ a:active {
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .project-card .project-content p {
-    font-size: 1.125rem !important;
+    font-size: 1rem !important;
+    font-weight: 300 !important;
     line-height: 1.4 !important;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -2901,6 +2964,12 @@ a:active {
   border-radius: 0.5rem;
   font-size: 0.75rem;
   font-weight: 500;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .project-card .project-tags .tag {
+    font-weight: 400 !important;
+    border-width: 0.75px !important;
+  }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .project-card .project-tags {
@@ -2939,7 +3008,7 @@ a:active {
     gap: 2rem;
   }
   .about-stats > div h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .about-stats > div p {
     font-size: 14px;
@@ -2952,7 +3021,7 @@ a:active {
     gap: 2rem;
   }
   .about-stats > div h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .about-stats > div p {
     font-size: 16px;
@@ -2965,7 +3034,7 @@ a:active {
     gap: 1rem;
   }
   .about-stats > div h3 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .about-stats > div p {
     font-size: 14px;
@@ -2978,7 +3047,7 @@ a:active {
     gap: 0.5rem !important;
   }
   .about-stats > div h3 {
-    font-size: 1.125rem !important;
+    font-size: 1rem !important;
   }
   .about-stats > div p {
     padding-top: 0.5rem !important;
@@ -2992,7 +3061,7 @@ a:active {
   gap: 2rem;
 }
 .about-stats--small h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 .about-stats--accent h3 {
   color: #9AA0A6;
@@ -3010,9 +3079,9 @@ a:active {
 
 .portfolio .cta-actions .btn {
   padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   height: 48px;
-  border-radius: 0.375rem;
+  border-radius: 8px !important;
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
@@ -3020,36 +3089,29 @@ a:active {
   .portfolio .cta-actions .btn {
     height: 44px;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
     flex: 1;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .portfolio .cta-actions .btn {
-    height: 40px;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .portfolio .cta-actions .btn {
     height: 46px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 1024px) {
   .portfolio .cta-actions .btn {
     height: 48px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .portfolio .cta-actions .btn {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    font-size: 1rem !important;
   }
 }
 
@@ -3080,6 +3142,11 @@ a:active {
   border-color: #D0D0D0;
   border-bottom: none;
   color: #2A2E34;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contattami .accordion-button {
+    font-size: 0.875rem !important;
+  }
 }
 .contattami .accordion-button:not(.collapsed) {
   background-color: #06b6d4;
@@ -3160,23 +3227,23 @@ a:active {
 }
 .hero.contact-hero .hero-text h1 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
 @media (max-width: 399px) {
   .hero.contact-hero .hero-text h1 {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .hero.contact-hero .hero-text h1 {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
   }
 }
 .hero.contact-hero .hero-text h1 {
   margin-bottom: 1.5rem;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.contact-hero .hero-text h1 {
+    font-size: 1.75rem !important;
+  }
 }
 .hero.contact-hero .hero-text h1 .highlight {
   color: #06b6d4;
@@ -3206,6 +3273,11 @@ a:active {
 }
 .hero.contact-hero .hero-text .hero-subtitle:nth-child(6) {
   animation-delay: 0.6s;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.contact-hero .hero-text .hero-subtitle {
+    font-size: 1.125rem !important;
+  }
 }
 
 .contact {
@@ -3244,7 +3316,7 @@ a:active {
     padding: 1.5rem 1.5rem !important;
   }
   .contact .card-body .text-muted {
-    font-size: 1rem !important;
+    font-size: 0.875rem !important;
     line-height: 1.5 !important;
   }
 }
@@ -3301,6 +3373,11 @@ a:active {
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s ease-out;
   animation-delay: 0.2s;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .form-title {
+    font-size: 1.25rem !important;
+  }
+}
 .contact .form-label {
   position: static;
   top: auto;
@@ -3308,8 +3385,13 @@ a:active {
   pointer-events: auto;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .form-label {
+    font-size: 1rem !important;
+  }
 }
 .contact .form-control {
   background-color: #fafafa;
@@ -3317,19 +3399,32 @@ a:active {
   border-color: #bbbbbb;
   border-radius: 12px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 1rem;
+  font-size: 1.125rem;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .form-control {
+    font-size: 0.875rem !important;
+  }
 }
 .contact .form-control::-moz-placeholder {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #4A5568;
   opacity: 0.8;
   font-weight: 300;
 }
 .contact .form-control::placeholder {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #4A5568;
   opacity: 0.8;
   font-weight: 300;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .form-control::-moz-placeholder {
+    font-size: 0.875rem !important;
+  }
+  .contact .form-control::placeholder {
+    font-size: 0.875rem !important;
+  }
 }
 .contact .form-control:focus {
   background-color: #fafafa;
@@ -3372,7 +3467,7 @@ a:active {
 }
 .contact .invalid-feedback {
   color: #e63946;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
   margin-top: 0.25rem;
   display: none;
@@ -3380,12 +3475,17 @@ a:active {
 }
 @media (max-width: 399px) {
   .contact .invalid-feedback {
-    font-size: 0.875rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .invalid-feedback {
+    font-size: 0.875rem !important;
   }
 }
 .contact .valid-feedback {
   color: #2e7d32;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
   margin-top: 0.25rem;
   display: none;
@@ -3393,7 +3493,17 @@ a:active {
 }
 @media (max-width: 399px) {
   .contact .valid-feedback {
-    font-size: 0.875rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .valid-feedback {
+    font-size: 0.875rem !important;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .form-text {
+    font-size: 0.875rem !important;
   }
 }
 .contact .form-control.is-invalid + .invalid-feedback {
@@ -3421,7 +3531,19 @@ a:active {
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s ease-out;
   animation-delay: 0.5s;
 }
-.contact .contact-form .btn-primary:hover {
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .contact-form .btn-primary {
+    font-size: 1rem !important;
+    padding: 10px 20px !important;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .contact .contact-form .btn-primary {
+    font-size: 1rem !important;
+    padding: 10px 20px !important;
+  }
+}
+.contact:hover {
   box-shadow: 0 8px 20px rgba(42, 46, 52, 0.3);
 }
 
@@ -3440,16 +3562,16 @@ a:active {
 }
 
 .popup-message {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .popup-message {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 @media (max-width: 399px) {
   .popup-message {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
@@ -3464,6 +3586,11 @@ a:active {
 .faq-section .faq-title {
   margin-bottom: 3rem;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .faq-section .faq-title {
+    font-size: 1.5rem !important;
+  }
+}
 .faq-section .faq-accordion {
   gap: 1rem;
 }
@@ -3471,6 +3598,12 @@ a:active {
   margin-bottom: 1rem;
   border-radius: 12px;
   overflow: hidden;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .faq-section .accordion-body {
+    font-size: 0.875rem !important;
+    font-weight: 300 !important;
+  }
 }
 
 .contattami .cta-actions {
@@ -3515,7 +3648,7 @@ a:active {
   min-width: -moz-fit-content;
   min-width: fit-content;
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   border-radius: 0.5rem;
 }
 .contattami .cta-actions .social-links {
@@ -3525,7 +3658,7 @@ a:active {
   gap: 0.5rem;
 }
 .contattami .cta-actions .social-links .social-label {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #4A5568;
   font-weight: 500;
 }
@@ -3555,10 +3688,10 @@ a:active {
   .contattami .cta-actions .hero-buttons .btn {
     height: 52px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   .contattami .cta-actions .social-links .social-label {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .contattami .cta-actions .social-links .social-link {
     width: 40px;
@@ -3580,8 +3713,15 @@ a:active {
   .contattami .cta-actions .hero-buttons .btn {
     height: 48px;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
+}
+@media (max-width: 399px) and (max-width: 480px) and (orientation: portrait) {
+  .contattami .cta-actions .hero-buttons .btn {
+    font-size: 1rem !important;
+  }
+}
+@media (max-width: 399px) {
   .contattami .cta-actions .social-links {
     justify-content: center;
   }
@@ -3603,13 +3743,23 @@ a:active {
 .home .contact-info h3 {
   margin-bottom: 1.5rem;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .home .contact-info h3 {
+    font-size: 1.25rem !important;
+  }
+}
 .home .contact-info p {
   margin-bottom: 2.5rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 300;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .home .contact-info p {
+    font-size: 0.875rem !important;
+  }
 }
 .home .contact-info p .desktop-only {
   display: none;
@@ -3625,7 +3775,7 @@ a:active {
   }
   .home .contact-info p {
     margin-bottom: 2.25rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 399px) {
@@ -3634,7 +3784,7 @@ a:active {
   }
   .home .contact-info p {
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -3663,7 +3813,7 @@ a:active {
   margin-top: 0;
 }
 .home .cta-actions .social-links .social-label {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #4A5568;
   font-weight: 500;
 }
@@ -3681,7 +3831,7 @@ a:active {
     gap: 1rem;
   }
   .home .cta-actions .social-links .social-label {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 399px) {
@@ -3698,7 +3848,7 @@ a:active {
     gap: 1rem;
   }
   .home .cta-actions .social-links .social-label {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -3772,13 +3922,23 @@ a:active {
 .portfolio .contact-info h3 {
   margin-bottom: 1.5rem;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .portfolio .contact-info h3 {
+    font-size: 1.25rem !important;
+  }
+}
 .portfolio .contact-info p {
   margin-bottom: 2.5rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 300;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .portfolio .contact-info p {
+    font-size: 0.875rem !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .portfolio .contact-info h3 {
@@ -3786,7 +3946,7 @@ a:active {
   }
   .portfolio .contact-info p {
     margin-bottom: 2.25rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 399px) {
@@ -3795,7 +3955,7 @@ a:active {
   }
   .portfolio .contact-info p {
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -3858,7 +4018,7 @@ a:active {
   border-left: 4px solid #06b6d4;
 }
 .cv-summary .cv-summary-content p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.75;
   color: #2A2E34;
   margin: 0;
@@ -3880,7 +4040,7 @@ a:active {
     margin: 2rem 0;
   }
   .cv-summary .cv-summary-content p {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 399px) {
@@ -3889,7 +4049,7 @@ a:active {
     margin: 1.5rem 0;
   }
   .cv-summary .cv-summary-content p {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -3931,24 +4091,24 @@ a:active {
 }
 .hero.cv-hero .hero-text h1 {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.25;
   color: #2A2E34;
 }
 @media (max-width: 399px) {
   .hero.cv-hero .hero-text h1 {
-    font-size: 2rem;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .hero.cv-hero .hero-text h1 {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
   }
 }
 .hero.cv-hero .hero-text h1 {
   margin-bottom: 1.5rem;
   color: #2A2E34;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.cv-hero .hero-text h1 {
+    font-size: 1.75rem !important;
+  }
 }
 .hero.cv-hero .hero-text h1 .highlight {
   color: #06b6d4;
@@ -3979,8 +4139,13 @@ a:active {
 .hero.cv-hero .hero-text .hero-subtitle:nth-child(6) {
   animation-delay: 0.6s;
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.cv-hero .hero-text .hero-subtitle {
+    font-size: 1.125rem !important;
+  }
+}
 .hero.cv-hero .hero-text .hero-description {
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: #2A2E34;
   line-height: 1.75;
   font-weight: 300;
@@ -3988,6 +4153,11 @@ a:active {
   margin: 0 auto;
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s ease-out;
   animation-delay: 0s;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .hero.cv-hero .hero-text .hero-description {
+    font-size: 1rem !important;
+  }
 }
 .hero.cv-hero .hero-text .hero-description:nth-child(1) {
   animation-delay: 0.1s;
@@ -4499,7 +4669,12 @@ a:active {
 }
 
 .cv-section p {
-  font-size: 1rem;
+  font-size: 1.125rem;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .cv-section p {
+    font-weight: 300 !important;
+  }
 }
 
 .cv-section-experience {
@@ -4640,6 +4815,11 @@ a:active {
     line-height: 1.4;
   }
 }
+@media (max-width: 480px) and (orientation: portrait) {
+  .cv-list li {
+    font-weight: 300 !important;
+  }
+}
 .cv-list li::before {
   content: "•";
   position: absolute;
@@ -4686,6 +4866,11 @@ a:active {
   .skill-tags .skill-tag {
     font-size: 1rem;
     padding: 0.2rem 0.6rem;
+  }
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .skill-tags .skill-tag {
+    font-weight: 300 !important;
   }
 }
 .skill-tags .skill-tag:hover {
@@ -4778,7 +4963,13 @@ a:active {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1rem;
+  font-size: 1.125rem;
+}
+@media (max-width: 480px) and (orientation: portrait) {
+  .cv .contact-info p {
+    font-size: 1rem !important;
+    font-weight: 300 !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .cv .contact-info h3 {
@@ -4823,9 +5014,9 @@ a:active {
 
 .cv .cta-actions .btn {
   padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   height: 48px;
-  border-radius: 0.375rem;
+  border-radius: 8px !important;
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
@@ -4833,30 +5024,22 @@ a:active {
   .cv .cta-actions .btn {
     height: 44px;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
     flex: 1;
-  }
-}
-@media (max-width: 480px) and (orientation: portrait) {
-  .cv .cta-actions .btn {
-    height: 40px;
-    padding: 0.25rem 0.5rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .cv .cta-actions .btn {
     height: 46px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (min-width: 1024px) {
   .cv .cta-actions .btn {
     height: 48px;
     padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 @media (max-width: 399px) {
@@ -4866,8 +5049,9 @@ a:active {
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .cv .cta-actions .btn {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+    font-size: 1rem !important;
   }
 }
 

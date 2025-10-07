@@ -184,8 +184,9 @@
   
   // Padding laterale aumentato solo per smartphone
   @include smartphone {
-    padding-left: $spacing-xl !important; // Padding laterale aumentato per smartphone
-    padding-right: $spacing-xl !important; // Padding laterale aumentato per smartphone
+    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
+    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
   }
 }
 

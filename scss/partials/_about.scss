@@ -85,15 +85,30 @@
     @include body-text;
     margin-bottom: $spacing-lg;
     line-height: $line-height-relaxed;
+    
+    // Regole smartphone per font-weight
+    @include smartphone {
+      font-weight: $font-weight-light; // 300 per smartphone
+    }
   }
   
   // Varianti di testo
   &--large p {
     font-size: $font-size-lg;
+    
+    // Regole smartphone per testo large
+    @include smartphone {
+      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    }
   }
   
   &--small p {
     font-size: $font-size-sm;
+    
+    // Regole smartphone per testo small
+    @include smartphone {
+      font-size: $font-size-smartphone-sm !important; // 13px per smartphone
+    }
   }
 }
 
@@ -124,9 +139,14 @@
 // RESPONSIVE ABOUT
 // ========================================
 
-// Desktop e Tablet: font-size 16px (standard moderno)
+// Desktop e Tablet: font-size 18px (standard moderno)
 .about-text p {
-  font-size: $font-size-base; // 16px (standard moderno)
+  font-size: $font-size-base; // 18px (standard moderno)
+  
+  // Regole smartphone per paragrafi about
+  @include smartphone {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+  }
 }
 
 // Spazio maggiore tra i punti del processo di lavoro
@@ -160,7 +180,7 @@
   
   .about-text {
     p {
-      font-size: $font-size-smartphone-xl !important; // 14px per smartphone
+      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
       line-height: 1.5 !important;
     }
     

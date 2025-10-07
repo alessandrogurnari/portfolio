@@ -50,6 +50,11 @@
   border-bottom: none;
   color: $text-color;
   
+  // Regole smartphone per accordion-button
+  @include smartphone {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+  }
+  
   &:not(.collapsed) {
     background-color: $brand-accent;
     border-color: $brand-accent;
@@ -129,6 +134,11 @@
         margin-bottom: $spacing-lg; // Aumentato per coerenza con regole generali hero
       }
       
+      // Regole smartphone per titoli hero contact
+      @include smartphone {
+        font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
+      }
+      
       .highlight {
         color: $brand-accent; // Contattami in brand accent
       }
@@ -141,6 +151,11 @@
       font-weight: $font-weight-normal; // Ridotto per look più leggero
       @include fade-in-up;
       @include sequential-animation($animation-delay-1);
+      
+      // Regole smartphone per sottotitolo contact
+      @include smartphone {
+        font-size: $font-size-smartphone-xl !important; // 18px per smartphone
+      }
     }
   }
 }
@@ -187,9 +202,9 @@
     .card-body {
       padding: $spacing-lg $spacing-lg !important; // Aumenta padding laterale interno card
       
-      // Aumenta font-size del sottotitolo per smartphone
+      // Riduce font-size del sottotitolo per smartphone
       .text-muted {
-        font-size: $font-size-smartphone-lg !important; // 16px per smartphone (aumentato)
+        font-size: $font-size-smartphone-base !important; // 14px per smartphone (ridotto)
         line-height: 1.5 !important;
       }
     }
@@ -233,6 +248,11 @@
     color: $text-color;
     margin-bottom: 1rem;
     @include fade-in-up($animation-delay-2);
+    
+    // Regole smartphone per titolo form
+    @include smartphone {
+      font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+    }
   }
   
   // ========================================
@@ -249,6 +269,11 @@
     font-weight: $font-weight-medium; 
     font-size: $font-size-base; // 16px (standard moderno)
     font-family: $font-family-primary; // Font consistente con il sito
+    
+    // Regole smartphone per form-label
+    @include smartphone {
+      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    }
   }
   
   // Stili form Bootstrap ottimizzati
@@ -260,11 +285,21 @@
     font-family: $font-family-primary; // Font consistente con il sito
     font-size: $font-size-base; // 16px (standard moderno)
     
+    // Regole smartphone per form-control
+    @include smartphone {
+      font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    }
+    
     &::placeholder {
       font-size: $font-size-base; // 16px (standard moderno)
       color: $text-light;
       opacity: 0.8;
       font-weight: $font-weight-light; 
+      
+      // Regole smartphone per placeholder
+      @include smartphone {
+        font-size: $font-size-smartphone-base !important; // 14px per smartphone
+      }
     }
     
     &:focus {
@@ -337,6 +372,11 @@
     @include mobile {
       font-size: $font-size-sm; // 16px (confortevole) su mobile
     }
+    
+    // Regole smartphone per invalid-feedback
+    @include smartphone {
+      font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    }
   }
   
   .valid-feedback {
@@ -351,7 +391,19 @@
     @include mobile {
       font-size: $font-size-sm; // 16px (confortevole) su mobile
     }
+    
+    // Regole smartphone per valid-feedback
+    @include smartphone {
+      font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    }
+}
+
+// Regole smartphone per form-text (contatore caratteri)
+.form-text {
+  @include smartphone {
+    font-size: $font-size-smartphone-base !important; // 13px per smartphone
   }
+}
   
   // Mostra i messaggi solo quando il campo ha lo stato corrispondente
   .form-control.is-invalid + .invalid-feedback {
@@ -383,9 +435,23 @@
     transition: all $transition-normal;
     @include fade-in-up($animation-delay-5);
     
-    &:hover {
-      box-shadow: 0 8px 20px rgba($primary-color, 0.3);
+    // Regole smartphone per bottone form
+    @include smartphone {
+      font-size: $font-size-smartphone-lg !important; // 14px per smartphone
+      padding: 10px 20px !important; // Padding ridotto per smartphone
     }
+  }
+  
+  // Regola più specifica per smartphone - sovrascrive Bootstrap
+  @include smartphone {
+    .contact-form .btn-primary {
+      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+      padding: 10px 20px !important; // Padding ridotto per smartphone
+    }
+  }
+    
+  &:hover {
+    box-shadow: 0 8px 20px rgba($primary-color, 0.3);
   }
 }
 
@@ -433,6 +499,11 @@
   
   .faq-title {
     margin-bottom: 3rem;
+    
+    // Regole smartphone per titoli FAQ
+    @include smartphone {
+      font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
+    }
   }
   
   .faq-accordion {
@@ -443,6 +514,14 @@
     margin-bottom: 1rem;
     border-radius: 12px;
     overflow: hidden;
+  }
+  
+  // Regole smartphone per contenuti FAQ
+  .accordion-body {
+    @include smartphone {
+      font-size: $font-size-smartphone-base !important; // 14px per smartphone
+      font-weight: 300 !important; // Font-weight normale per smartphone
+    }
   }
   
   // FAQ usa variabili Bootstrap personalizzate - nessun override necessario
@@ -555,6 +634,11 @@
         height: 48px; // Altezza ottimizzata per mobile
         padding: $spacing-sm $spacing-md; // Padding ridotto per mobile
         font-size: $font-size-base; // Font normale per mobile (più leggibile)
+        
+        // Regole smartphone per bottoni hero
+        @include smartphone {
+          font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+        }
       }
     }
     
@@ -587,6 +671,11 @@
   // Spaziatura ottimale tra titolo e testo descrittivo
   h3 {
     margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
+    
+    // Regole smartphone per titoli h3 CTA
+    @include smartphone {
+      font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+    }
   }
   
   p {
@@ -596,6 +685,11 @@
     margin-right: auto;
     font-size: $font-size-base; // 16px (standard moderno) su desktop
     font-weight: $font-weight-light; // 300 - Font-weight più leggero
+    
+    // Regole smartphone per paragrafi CTA
+    @include smartphone {
+      font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    }
     
     // Controllo del <br> solo su desktop
     .desktop-only {
@@ -788,6 +882,11 @@
   // Spaziatura ottimale tra titolo e testo descrittivo
   h3 {
     margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
+    
+    // Regole smartphone per titoli h3 CTA portfolio
+    @include smartphone {
+      font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+    }
   }
   
   p {
@@ -797,6 +896,11 @@
     margin-right: auto;
     font-size: $font-size-base; // 16px (standard moderno) su desktop
     font-weight: $font-weight-light; // 300 - Font-weight più leggero
+    
+    // Regole smartphone per paragrafi CTA portfolio
+    @include smartphone {
+      font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    }
   }
   
   // Responsive spacing per titolo e testo - Best Practices UX/UI

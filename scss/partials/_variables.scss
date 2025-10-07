@@ -31,15 +31,15 @@ $font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
 $font-family-heading: $font-family-primary; // Usa la stessa famiglia del font primario
 $font-family-logo: 'SignPainter', 'HouseScript', cursive; // Font personalizzato per il logo
 
-$font-size-xs: 0.875rem;   // 14px (mobile ottimizzato)
-$font-size-sm: 0.875rem;   // 14px (mobile ottimizzato)
-$font-size-base: 1rem;     // 16px (standard moderno)
-$font-size-lg: 1.125rem;   // 18px (per enfasi)
-$font-size-xl: 1.25rem;    // 20px
-$font-size-2xl: 1.375rem;  // 22px (ridotto per mobile)
-$font-size-3xl: 1.75rem;   // 28px (ridotto per mobile)
-$font-size-4xl: 2rem;      // 32px (ridotto per mobile)
-$font-size-5xl: 2.5rem;    // 40px (ridotto per mobile)
+$font-size-xs: 0.875rem;   // 14px (aumentato per desktop)
+$font-size-sm: 1rem;       // 16px (aumentato per desktop)
+$font-size-base: 1.125rem; // 18px (aumentato per desktop)
+$font-size-lg: 1.25rem;    // 20px (aumentato per desktop)
+$font-size-xl: 1.5rem;     // 24px (aumentato per desktop)
+$font-size-2xl: 1.875rem;  // 30px (aumentato per desktop)
+$font-size-3xl: 2.25rem;   // 36px (aumentato per desktop)
+$font-size-4xl: 2.75rem;   // 44px (aumentato per desktop)
+$font-size-5xl: 3.5rem;    // 56px (aumentato per desktop)
 
 // Font-size specifici per smartphone (viewport width < 480px)
 $font-size-smartphone-xs: 0.75rem;   // 12px

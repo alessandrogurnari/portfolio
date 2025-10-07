@@ -19,6 +19,11 @@
     font-size: $font-size-lg; // 18px - Accessibile e consistente
     margin-top: $spacing-2xl;
     margin-bottom: $spacing-2xl;
+    
+    // Regole smartphone per sottotitoli sezioni
+    @include smartphone {
+      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    }
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -182,19 +187,20 @@
     
     p {
       color: $text-light;
-      font-size: $font-size-lg !important; // 18px aumentato per migliore leggibilità
+      font-size: $font-size-base !important; // 16px ridotto per desktop
       line-height: $line-height-relaxed;
       margin-bottom: 0; // Rimosso per avvicinare i tag
       flex: 1; // Il paragrafo si espande per riempire lo spazio disponibile
       
       // Font-size ridotto su mobile
       @include mobile {
-        font-size: $font-size-sm !important; // 18px su mobile (aumentato da 16px)
+        font-size: $font-size-sm !important; // 14px su mobile
       }
       
         // Ottimizzazione per smartphone
         @include smartphone {
-          font-size: $font-size-smartphone-xl !important; // 18px per smartphone - dimensione ottimale
+          font-size: $font-size-smartphone-lg !important; // 16px per smartphone (ridotto)
+          font-weight: $font-weight-light; // 300 per smartphone
           line-height: 1.4 !important; // Line-height ridotto
           padding-left: $spacing-sm !important; // Padding sinistro aumentato
           padding-right: $spacing-sm !important; // Padding destro aumentato
@@ -221,6 +227,12 @@
       border-radius: $border-radius-lg; // Border-radius 8px per tag compatti
       font-size: 0.75rem; // 12px - tag più piccoli per elementi secondari
       font-weight: $font-weight-medium;
+      
+      // Regole smartphone per tag
+      @include smartphone {
+        font-weight: 400 !important; // 400 per smartphone (normale)
+        border-width: 0.75px !important; // Bordo proporzionale per smartphone
+      }
     }
     
     // Ottimizzazione per smartphone
@@ -241,8 +253,9 @@
       
       // Padding laterale aumentato solo per smartphone
       @include smartphone {
-        padding-left: $spacing-xl !important; // Padding laterale aumentato per smartphone
-        padding-right: $spacing-xl !important; // Padding laterale aumentato per smartphone
+        padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
+        padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
+        font-size: $font-size-smartphone-lg !important; // 16px per smartphone
       }
     }
   }
