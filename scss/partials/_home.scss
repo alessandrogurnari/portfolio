@@ -219,10 +219,19 @@
 }
 
 // ========================================
+// HERO HOME - ALTEZZA MINIMA PER SMARTPHONE
+// ========================================
+@include smartphone {
+  .hero {
+    min-height: 70vh !important; // Riduce l'altezza per evitare sovrapposizione con navbar
+  }
+}
+
+// ========================================
 // SOCIAL LABEL HOME - "Seguimi:" 
 // ========================================
 .home .cta-actions .social-links .social-label {
   @include smartphone {
-    font-size: $font-size-smartphone-xl !important; // 16px per smartphone (aumentato)
+    font-size: $font-size-smartphone-xl !important; // 18px per smartphone (aumentato)
   }
 }
