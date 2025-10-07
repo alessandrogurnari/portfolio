@@ -161,13 +161,13 @@
         font-size: $font-size-xl; // 20px su mobile
       }
       
-      // Ottimizzazione per smartphone
-      @include smartphone {
-        font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-        margin-bottom: $spacing-sm !important; // Margine ridotto
-        padding-left: $spacing-sm !important; // Padding sinistro aumentato
-        padding-right: $spacing-sm !important; // Padding destro aumentato
-      }
+        // Ottimizzazione per smartphone
+        @include smartphone {
+          font-size: 2rem !important; // 32px per test - dovrebbe essere visibile!
+          margin-bottom: $spacing-sm !important; // Margine ridotto
+          padding-left: $spacing-sm !important; // Padding sinistro aumentato
+          padding-right: $spacing-sm !important; // Padding destro aumentato
+        }
     }
     
     p {

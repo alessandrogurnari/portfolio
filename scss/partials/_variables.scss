@@ -79,12 +79,23 @@ $spacing-4xl: 6rem;     // 96px
 // Basati su dispositivi reali e statistiche di utilizzo
 
 // Mobile First Approach - Ottimizzato per dispositivi reali
-$breakpoint-xs: 0px;        // Extra Small (Mobile) - < 480px
-$breakpoint-sm: 480px;      // Small (Mobile Large) - 480px - 767px
+$breakpoint-xs: 0px;        // Extra Small (Mobile) - < 400px
+$breakpoint-sm: 400px;      // Small (Mobile) - 400px - 767px
 $breakpoint-md: 768px;      // Medium (Tablet) - 768px - 1023px
 $breakpoint-lg: 1024px;     // Large (Desktop Small) - 1024px - 1199px
 $breakpoint-xl: 1200px;     // Extra Large (Desktop) - 1200px - 1399px
 $breakpoint-xxl: 1400px;    // Extra Extra Large (Desktop Large) - ≥ 1400px
+
+// Font-size specifici per smartphone (viewport width < 480px)
+$font-size-smartphone-xs: 0.75rem;   // 12px
+$font-size-smartphone-sm: 0.8125rem; // 13px
+$font-size-smartphone-base: 0.875rem; // 14px
+$font-size-smartphone-lg: 1rem;      // 16px
+$font-size-smartphone-xl: 1.125rem;  // 18px
+$font-size-smartphone-2xl: 1.25rem;  // 20px
+$font-size-smartphone-3xl: 1.5rem;   // 24px
+$font-size-smartphone-4xl: 1.75rem;  // 28px
+$font-size-smartphone-5xl: 2rem;     // 32px
 
 // Breakpoints per compatibilità (deprecati) - RIMOSSI
 // Le variabili deprecate sono state rimosse per mantenere il codice pulito

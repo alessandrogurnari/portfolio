@@ -134,7 +134,7 @@ h1 {
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   h1 {
     font-size: 2rem;
   }
@@ -152,7 +152,7 @@ h2 {
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   h2 {
     font-size: 1.375rem;
   }
@@ -228,7 +228,7 @@ li {
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .section-title {
     font-size: 1.375rem;
   }
@@ -263,7 +263,7 @@ li {
   min-width: 0;
   overflow-wrap: break-word;
 }
-@media (min-width: 480px) {
+@media (min-width: 400px) {
   .container {
     padding: 0 2rem;
   }
@@ -538,7 +538,7 @@ html {
   scrollbar-width: thin;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -730,7 +730,7 @@ html {
     transform: rotate(360deg);
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .btn-lg {
     padding: 0.5rem 1rem;
     font-size: 1.125rem;
@@ -759,7 +759,7 @@ html {
 .home .hero .hero-buttons .btn.btn-primary:first-child:hover::after {
   color: #2A2E34;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .home .hero .hero-buttons .btn.btn-primary:first-child {
     height: 48px;
     padding: 0.5rem 1.5rem;
@@ -805,7 +805,7 @@ html {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .home .cta-actions .btn {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -849,7 +849,7 @@ html {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .btn.btn-primary.btn-portfolio-primary {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -888,7 +888,7 @@ html {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .btn.btn-secondary.btn-portfolio-secondary {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -926,7 +926,7 @@ html {
   border-radius: 0.25rem;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .navbar .btn {
     height: 32px;
     padding: 0.25rem 0.25rem;
@@ -1229,7 +1229,7 @@ a:active {
   justify-content: flex-end;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .social-link {
     width: 44px;
     height: 44px;
@@ -1266,7 +1266,7 @@ a:active {
   min-width: 0;
   overflow-wrap: break-word;
 }
-@media (min-width: 480px) {
+@media (min-width: 400px) {
   .nav-container {
     padding: 0 2rem;
   }
@@ -1572,7 +1572,7 @@ a:active {
 .about-content--reverse {
   flex-direction: row-reverse;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .about-content--reverse {
     flex-direction: column;
   }
@@ -1665,7 +1665,7 @@ a:active {
   margin-right: 0.5rem;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .about {
     padding: 3rem 2rem;
   }
@@ -1744,7 +1744,7 @@ a:active {
     margin-bottom: 1.5rem;
   }
 }
-@media (max-width: 1023px) and (max-width: 479px) {
+@media (max-width: 1023px) and (max-width: 399px) {
   .ultimi-progetti .projects-grid .project-card {
     flex: 0 0 330px;
     min-width: 330px;
@@ -1828,14 +1828,14 @@ a:active {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .ultimi-progetti .project-content h3 {
     font-size: 1.25rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .ultimi-progetti .project-content h3 {
-    font-size: 1rem !important;
+    font-size: 2rem !important;
     margin-bottom: 0.5rem !important;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -1848,7 +1848,7 @@ a:active {
   margin-bottom: 0;
   flex: 1;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .ultimi-progetti .project-content p {
     font-size: 0.875rem !important;
   }
@@ -1898,7 +1898,7 @@ a:active {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .ultimi-progetti .projects-cta .btn {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -1951,7 +1951,7 @@ a:active {
   min-width: 0;
   overflow-wrap: break-word;
 }
-@media (min-width: 480px) {
+@media (min-width: 400px) {
   .hero-container {
     padding: 0 2rem;
   }
@@ -1996,7 +1996,7 @@ a:active {
 .hero-content:nth-child(6) {
   animation-delay: 0.6s;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero-content {
     flex-direction: column;
     text-align: center;
@@ -2021,7 +2021,7 @@ a:active {
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero-text h1 {
     font-size: 2rem;
   }
@@ -2089,7 +2089,7 @@ a:active {
 .hero-description:nth-child(6) {
   animation-delay: 0.6s;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero-description {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -2143,7 +2143,7 @@ a:active {
     padding-right: 2rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .home .about {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -2154,7 +2154,7 @@ a:active {
   padding: 6rem 0;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .home .hero-text {
     max-width: 100%;
   }
@@ -2167,7 +2167,7 @@ a:active {
     padding: 4rem 0;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero {
     padding: 3rem 0;
     padding-top: calc(64px + 3rem);
@@ -2198,7 +2198,7 @@ a:active {
   color: #4A5568;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .footer {
     padding: 1.5rem 0;
   }
@@ -2228,7 +2228,7 @@ a:active {
 .hero.portfolio-hero {
   min-height: 100vh;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero.portfolio-hero {
     min-height: 100vh;
   }
@@ -2263,7 +2263,7 @@ a:active {
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero.portfolio-hero .hero-text h1 {
     font-size: 2rem;
   }
@@ -2323,7 +2323,7 @@ a:active {
   padding: 6rem 0;
   overflow-x: visible;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .clients {
     padding: 4rem 0;
   }
@@ -2363,7 +2363,7 @@ a:active {
   justify-content: center;
   overflow-x: hidden;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .clients .clients-grid {
     gap: 3rem;
     padding: 1rem 0;
@@ -2399,7 +2399,7 @@ a:active {
   filter: grayscale(100%) opacity(0.7);
   transition: filter 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .clients .client-item .client-logo-img {
     max-height: 30px;
   }
@@ -2517,7 +2517,7 @@ a:active {
 .client-works-header .client-works-arrow.active i {
   transform: rotate(-180deg);
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .client-works-header {
     flex-direction: row;
     text-align: left;
@@ -2692,7 +2692,7 @@ a:active {
     display: none;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .projects-navigation {
     display: none;
   }
@@ -2803,14 +2803,14 @@ a:active {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .project-card .project-content h4 {
     font-size: 1.375rem;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .project-card .project-content h4 {
-    font-size: 1rem !important;
+    font-size: 2rem !important;
     margin-bottom: 0.5rem !important;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
@@ -2908,7 +2908,7 @@ a:active {
     letter-spacing: 0.4px;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .about-stats {
     flex-direction: row;
     gap: 1rem;
@@ -3018,7 +3018,7 @@ a:active {
 .hero.contact-hero {
   min-height: 100vh;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero.contact-hero {
     min-height: 100vh;
   }
@@ -3057,7 +3057,7 @@ a:active {
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero.contact-hero .hero-text h1 {
     font-size: 2rem;
   }
@@ -3103,7 +3103,7 @@ a:active {
 .contact {
   padding: 6rem 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .contact {
     padding: 4rem 0;
   }
@@ -3175,7 +3175,7 @@ a:active {
 .contact .card-body:nth-child(6) {
   animation-delay: 0.6s;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .contact .card-body {
     padding: 2rem;
   }
@@ -3237,7 +3237,7 @@ a:active {
   padding: 1rem 1.25rem;
   min-height: 120px;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .contact textarea.form-control {
     padding: 0.875rem 1rem;
   }
@@ -3270,7 +3270,7 @@ a:active {
   display: none;
   animation: fadeInUp 0.3s ease-out;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .contact .invalid-feedback {
     font-size: 0.875rem;
   }
@@ -3283,7 +3283,7 @@ a:active {
   display: none;
   animation: fadeInUp 0.3s ease-out;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .contact .valid-feedback {
     font-size: 0.875rem;
   }
@@ -3325,7 +3325,7 @@ a:active {
     font-size: 1.375rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .popup-title {
     font-size: 1.25rem;
   }
@@ -3339,7 +3339,7 @@ a:active {
     font-size: 0.875rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .popup-message {
     font-size: 0.875rem;
   }
@@ -3460,7 +3460,7 @@ a:active {
     font-size: 1.05rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .contattami .cta-actions {
     flex-direction: column;
     gap: 1.5rem;
@@ -3520,7 +3520,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .home .contact-info h3 {
     margin-bottom: 1.25rem;
   }
@@ -3576,7 +3576,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .home .cta-actions {
     gap: 3rem;
   }
@@ -3646,7 +3646,7 @@ a:active {
     font-size: 1.6rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .social-link--homepage {
     width: 48px;
     height: 48px;
@@ -3681,7 +3681,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .portfolio .contact-info h3 {
     margin-bottom: 1.25rem;
   }
@@ -3719,7 +3719,7 @@ a:active {
     white-space: nowrap;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .portfolio .cta-actions {
     gap: 1.25rem;
   }
@@ -3757,7 +3757,7 @@ a:active {
   text-align: center;
   font-style: italic;
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 400px) and (max-width: 767px) {
   .cv-summary {
     padding: 1.5rem;
     margin: 2rem 0;
@@ -3775,7 +3775,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-summary {
     padding: 1rem;
     margin: 1.5rem 0;
@@ -3788,7 +3788,7 @@ a:active {
 .hero.cv-hero {
   min-height: 100vh;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero.cv-hero {
     min-height: 100vh;
   }
@@ -3823,7 +3823,7 @@ a:active {
   line-height: 1.25;
   color: #2A2E34;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .hero.cv-hero .hero-text h1 {
     font-size: 2rem;
   }
@@ -3968,7 +3968,7 @@ a:active {
     padding-right: 3rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-container {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -4030,7 +4030,7 @@ a:active {
   align-items: flex-start;
   gap: 4rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-header-content {
     flex-direction: column;
     align-items: center;
@@ -4054,7 +4054,7 @@ a:active {
 .cv-photo-container {
   flex-shrink: 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-photo-container {
     order: 1;
   }
@@ -4081,13 +4081,13 @@ a:active {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-photo {
     width: 210px;
     height: 210px;
   }
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 400px) and (max-width: 767px) {
   .cv-photo {
     width: 210px;
     height: 210px;
@@ -4112,7 +4112,7 @@ a:active {
   flex-direction: column;
   gap: 1.5rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-info-container {
     order: 2;
     align-items: center;
@@ -4132,7 +4132,7 @@ a:active {
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-info h1 {
     font-size: 2rem;
   }
@@ -4153,7 +4153,7 @@ a:active {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-info h2 {
     font-size: 1.3rem;
   }
@@ -4169,7 +4169,7 @@ a:active {
   flex-direction: column;
   gap: 0.5rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-contact {
     align-items: center;
     flex-direction: row;
@@ -4177,7 +4177,7 @@ a:active {
     gap: 2rem;
   }
 }
-@media (min-width: 480px) and (max-width: 767px) {
+@media (min-width: 400px) and (max-width: 767px) {
   .cv-contact {
     align-items: center;
     flex-direction: row;
@@ -4231,7 +4231,7 @@ a:active {
 .contact-item:nth-child(1) span {
   font-size: 1rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .contact-item:nth-child(1) span {
     font-size: 1.2rem;
   }
@@ -4276,7 +4276,7 @@ a:active {
   color: inherit;
   transition: color 0.1s ease;
 }
-@media (min-width: 480px) {
+@media (min-width: 400px) {
   .contact-item:nth-child(1) {
     display: flex;
     align-items: center;
@@ -4366,7 +4366,7 @@ a:active {
     gap: 0.5rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .contact-item:nth-child(2) .social-link--homepage, .contact-item:nth-child(3) .social-link--homepage {
     padding: 0;
   }
@@ -4379,7 +4379,7 @@ a:active {
 .cv-section {
   margin-bottom: 3rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-section {
     margin-bottom: 2rem;
   }
@@ -4433,7 +4433,7 @@ a:active {
   font-size: 1.125rem;
   color: #06b6d4;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-section h3.cv-section-title {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -4452,7 +4452,7 @@ a:active {
 .cv-item:last-child {
   border-bottom: none;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-item {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
@@ -4464,7 +4464,7 @@ a:active {
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-item-header {
     flex-direction: column;
     gap: 0.25rem;
@@ -4476,7 +4476,7 @@ a:active {
   color: #2A2E34;
   margin: 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-item-header h4 {
     font-size: 1.1rem;
     line-height: 1.3;
@@ -4488,7 +4488,7 @@ a:active {
   font-weight: 400;
   white-space: nowrap;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-item-header .cv-date {
     font-size: 1.1rem;
     align-self: flex-start;
@@ -4501,7 +4501,7 @@ a:active {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-company {
     font-size: 1.1rem;
     margin-bottom: 0.75rem;
@@ -4519,7 +4519,7 @@ a:active {
   line-height: 1.75;
   font-size: 1rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv-list li {
     padding-left: 1.25rem;
     margin-bottom: 0.4rem;
@@ -4543,7 +4543,7 @@ a:active {
   color: #2A2E34;
   margin-bottom: 1rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .skills-category h4 {
     font-size: 1.1rem;
   }
@@ -4554,7 +4554,7 @@ a:active {
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .skill-tags {
     gap: 0.4rem;
   }
@@ -4569,7 +4569,7 @@ a:active {
   font-weight: 400;
   border: 0.5px solid #D0D0D0;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .skill-tags .skill-tag {
     font-size: 1rem;
     padding: 0.2rem 0.6rem;
@@ -4589,7 +4589,7 @@ a:active {
   margin-bottom: 1rem;
   gap: 1rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .language-item {
     gap: 0.5rem;
   }
@@ -4599,7 +4599,7 @@ a:active {
   text-align: left;
   font-size: 1rem;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .language-item .language-name {
     font-size: 1rem;
   }
@@ -4609,7 +4609,7 @@ a:active {
   gap: 0.25rem;
   justify-content: center;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .language-item .language-level {
     gap: 0.2rem;
   }
@@ -4620,7 +4620,7 @@ a:active {
   border-radius: 9999px;
   background-color: #4A5568;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .language-item .language-level span {
     width: 8px;
     height: 8px;
@@ -4634,7 +4634,7 @@ a:active {
   font-size: 1rem;
   text-align: right;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .language-item .language-proficiency {
     font-size: 1rem;
   }
@@ -4643,7 +4643,7 @@ a:active {
 .cv .contact {
   padding: 4rem 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv .contact {
     padding: 4rem 0;
   }
@@ -4675,7 +4675,7 @@ a:active {
     margin-bottom: 2.25rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv .contact-info h3 {
     margin-bottom: 1.25rem;
   }
@@ -4696,7 +4696,7 @@ a:active {
   align-items: stretch;
   margin-bottom: 0;
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv .cta-actions .hero-buttons {
     flex-direction: row;
     gap: 1rem;
@@ -4716,7 +4716,7 @@ a:active {
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv .cta-actions .btn {
     height: 44px;
     padding: 0.5rem 1rem;
@@ -4746,7 +4746,7 @@ a:active {
     font-size: 1rem;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 399px) {
   .cv .cta-actions .btn {
     min-width: 200px;
   }
