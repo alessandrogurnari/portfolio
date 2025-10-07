@@ -266,7 +266,8 @@
   
   // Project tags container - ottimizzazione per smartphone
   .ultimi-progetti .project-tags {
-    margin-top: $spacing-3xl !important; // Margin-top ridotto da xl a lg per smartphone
+    margin-top: $spacing-3xl !important; 
+    margin-bottom: $spacing-sm !important; 
     padding-left: $spacing-sm !important; // Padding sinistro aumentato
     padding-right: $spacing-sm !important; // Padding destro aumentato
   }

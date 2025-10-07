@@ -963,4 +963,65 @@
     padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
     font-size: $font-size-smartphone-lg !important; // 16px per smartphone
   }
+  
+  // Rimuovi tap highlight blu su smartphone per client header
+  .client-works-header {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+  }
+  
+  // Card portfolio smartphone - identiche alle card home (specificità massima)
+  .portfolio .ultimi-progetti .projects-grid .project-card .project-content p {
+    font-size: 1rem !important; // 16px per smartphone
+    font-weight: 300 !important; // Font-weight leggero come home
+    line-height: 1.6 !important; // Line-height ottimale come home
+    padding-left: 0.5rem !important; // Padding sinistro
+    padding-right: 0.5rem !important; // Padding destro
+  }
+  
+  // Forza anche con selettore alternativo
+  .portfolio .project-card .project-content p {
+    font-size: 1rem !important; // 16px per smartphone
+    font-weight: 300 !important; // Font-weight leggero come home
+    line-height: 1.6 !important; // Line-height ottimale come home
+  }
+  
+  
+
+  .portfolio .project-card .project-tags {
+    margin-top: $spacing-3xl !important; // Stesso valore di home
+    margin-bottom: $spacing-sm !important; // Stesso valore di home
+    padding-left: $spacing-sm !important; // Stesso padding di home
+    padding-right: $spacing-sm !important; // Stesso padding di home
+  }
+  
+  .portfolio .ultimi-progetti .projects-grid .project-card .project-tags .tag {
+    font-weight: 400 !important; // Font-weight normale per tag
+    border-width: 0.75px !important; // Bordo più sottile
+  }
+  
+  // CTA portfolio smartphone - identico a home
+  .portfolio .contact-info p {
+    font-size: 1rem !important; // 16px per smartphone (stesso di home)
+    line-height: 1.6 !important; // Line-height ottimale (stesso di home)
+    padding-bottom: 1rem !important; // Padding-bottom (stesso di home)
+  }
+  
+  // Processo di lavoro portfolio smartphone - aumenta distanza tra punti
+  .portfolio .about-text h3 {
+    margin-top: 2.5rem !important; // Aumenta distanza tra punti (era 1.5rem)
+    margin-bottom: 1rem !important; // Aumenta distanza dopo il titolo
+  }
+  
+  // Primo titolo del processo di lavoro senza margin-top
+  .portfolio .about-text h3:first-child {
+    margin-top: 0 !important; // Rimuove margin-top dal primo titolo
+  }
+  
+  // Statistiche portfolio smartphone - aumenta font-size titoli
+  .portfolio .about-stats > div h3 {
+    font-size: 1.15rem !important; // Aumenta font-size titoli stats (era 1rem)
+  }
 }

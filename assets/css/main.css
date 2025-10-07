@@ -1918,6 +1918,7 @@ a:active {
   }
   .ultimi-progetti .project-tags {
     margin-top: 4rem !important;
+    margin-bottom: 0.5rem !important;
     padding-left: 0.5rem !important;
     padding-right: 0.5rem !important;
   }
@@ -3037,6 +3038,50 @@ a:active {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
     font-size: 1rem !important;
+  }
+  .client-works-header {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+         user-select: none !important;
+  }
+  .portfolio .ultimi-progetti .projects-grid .project-card .project-content p {
+    font-size: 1rem !important;
+    font-weight: 300 !important;
+    line-height: 1.6 !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .portfolio .project-card .project-content p {
+    font-size: 1rem !important;
+    font-weight: 300 !important;
+    line-height: 1.6 !important;
+  }
+  .portfolio .project-card .project-tags {
+    margin-top: 4rem !important;
+    margin-bottom: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+  .portfolio .ultimi-progetti .projects-grid .project-card .project-tags .tag {
+    font-weight: 400 !important;
+    border-width: 0.75px !important;
+  }
+  .portfolio .contact-info p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    padding-bottom: 1rem !important;
+  }
+  .portfolio .about-text h3 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .portfolio .about-text h3:first-child {
+    margin-top: 0 !important;
+  }
+  .portfolio .about-stats > div h3 {
+    font-size: 1.15rem !important;
   }
 }
 .contattami .hero-content {
