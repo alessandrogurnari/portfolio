@@ -85,30 +85,17 @@
     @include body-text;
     margin-bottom: $spacing-lg;
     line-height: $line-height-relaxed;
-    
-    // Regole smartphone per font-weight
-    @include smartphone {
-      font-weight: $font-weight-light; // 300 per smartphone
-    }
   }
   
   // Varianti di testo
   &--large p {
     font-size: $font-size-lg;
     
-    // Regole smartphone per testo large
-    @include smartphone {
-      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-    }
   }
   
   &--small p {
     font-size: $font-size-sm;
     
-    // Regole smartphone per testo small
-    @include smartphone {
-      font-size: $font-size-smartphone-sm !important; // 13px per smartphone
-    }
   }
 }
 
@@ -139,14 +126,10 @@
 // RESPONSIVE ABOUT
 // ========================================
 
-// Desktop e Tablet: font-size 20px (aumentato per migliore leggibilità)
+// Desktop e Tablet: font-size standard
 .about-text p {
-  font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
+  font-size: $font-size-base; // 16px - standard
   
-  // Regole smartphone per paragrafi about
-  @include smartphone {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-  }
 }
 
 // Spazio maggiore tra i punti del processo di lavoro
@@ -168,8 +151,22 @@
   }
 }
 
-// Smartphone: margini laterali ottimizzati
+
+// Tablet: spazio aumentato tra stats e fine punto 4
+@include tablet {
+  .about-content {
+    gap: $spacing-3xl; // Aumentato spazio tra stats e fine punto 4 su tablet
+  }
+}
+
+// ========================================
+// REGOLE SMARTPHONE - OVERRIDE FINALE
+// ========================================
+// Le regole smartphone vengono applicate alla fine per avere la precedenza
+// su tutte le altre regole responsive
+
 @include smartphone {
+  // About section - margini laterali ottimizzati
   .about {
     padding: $spacing-xl $spacing-xs !important; // Margini laterali ridotti per smartphone
   }
@@ -181,7 +178,7 @@
   .about-text {
     p {
       font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-      line-height: 1.5 !important;
+      line-height: 1.6 !important; // Line-height ottimale per smartphone
     }
     
     h3 {
@@ -194,11 +191,25 @@
   .section-title {
     font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
   }
-}
-
-// Tablet: spazio aumentato tra stats e fine punto 4
-@include tablet {
-  .about-content {
-    gap: $spacing-3xl; // Aumentato spazio tra stats e fine punto 4 su tablet
+  
+  // About stats - font-weight ridotto
+  .about-stats .stat h3 {
+    font-weight: $font-weight-light; // 300 per smartphone
+  }
+  
+  // About stats - dimensioni ridotte
+  .about-stats .stat p {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+  }
+  
+  // About stats - dimensioni ridotte per testo small
+  .about-stats .stat .text-small {
+    font-size: $font-size-smartphone-sm !important; // 13px per smartphone
+  }
+  
+  // About content - paragrafi con font-weight e dimensioni specifiche per smartphone
+  .about-content p {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-weight: $font-weight-light !important; // 300 per sezione "chi sono" su smartphone
   }
 }

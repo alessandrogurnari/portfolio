@@ -30,49 +30,29 @@ h1 {
 h2 {
   @include heading-2;
   
-  // Regole smartphone per h2
-  @include smartphone {
-    font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
-  }
 }
 
 h3 {
   @include heading-3;
   
-  // Regole smartphone per h3
-  @include smartphone {
-    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
-  }
 }
 
 h4 {
   font-size: $font-size-xl;
   font-weight: $font-weight-semibold;
   
-  // Regole smartphone per h4
-  @include smartphone {
-    font-size: $font-size-smartphone-xl !important; // 18px per smartphone
-  }
 }
 
 h5 {
   font-size: $font-size-lg;
   font-weight: $font-weight-medium;
   
-  // Regole smartphone per h5
-  @include smartphone {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-  }
 }
 
 h6 {
   font-size: $font-size-base;
   font-weight: $font-weight-medium;
   
-  // Regole smartphone per h6
-  @include smartphone {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
-  }
 }
 
 // ========================================
@@ -82,10 +62,6 @@ p {
   @include body-text;
   margin-bottom: $spacing-md;
   
-  // Regole smartphone per paragrafi
-  @include smartphone {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
-  }
 }
 
 // ========================================
@@ -137,5 +113,43 @@ li {
     height: 4px;
     background-color: $brand-accent;
     border-radius: $border-radius-full;
+  }
+}
+
+// ========================================
+// REGOLE SMARTPHONE - OVERRIDE FINALE
+// ========================================
+// Le regole smartphone vengono applicate alla fine per avere la precedenza
+// su tutte le altre regole responsive
+
+@include smartphone {
+  // Titoli h2 - dimensioni ridotte
+  h2 {
+    font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
+  }
+  
+  // Titoli h3 - dimensioni ridotte
+  h3 {
+    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+  }
+  
+  // Titoli h4 - dimensioni ridotte
+  h4 {
+    font-size: $font-size-smartphone-xl !important; // 18px per smartphone
+  }
+  
+  // Titoli h5 - dimensioni ridotte
+  h5 {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+  }
+  
+  // Titoli h6 - dimensioni ridotte
+  h6 {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+  }
+  
+  // Paragrafi - dimensioni ridotte
+  p {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
   }
 }

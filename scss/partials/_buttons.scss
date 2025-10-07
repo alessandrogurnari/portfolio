@@ -182,12 +182,6 @@
 .home .cta-actions .btn {
   @include button-cta;
   
-  // Padding laterale aumentato solo per smartphone
-  @include smartphone {
-    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-  }
 }
 
 // Icona GitHub nella sezione CTA HOME - affianco ai bottoni
@@ -237,5 +231,20 @@
     height: 36px;
     padding: $spacing-xs $spacing-sm;
     font-size: $font-size-sm;
+  }
+}
+
+// ========================================
+// REGOLE SMARTPHONE - OVERRIDE FINALE
+// ========================================
+// Le regole smartphone vengono applicate alla fine per avere la precedenza
+// su tutte le altre regole responsive
+
+@include smartphone {
+  // Bottoni CTA HOME - padding e dimensioni per smartphone
+  .home .cta-actions .btn {
+    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
+    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
   }
 }

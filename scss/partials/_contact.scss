@@ -50,11 +50,6 @@
   border-bottom: none;
   color: $text-color;
   
-  // Regole smartphone per accordion-button
-  @include smartphone {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
-  }
-  
   &:not(.collapsed) {
     background-color: $brand-accent;
     border-color: $brand-accent;
@@ -107,11 +102,6 @@
   min-height: 100vh;
   // Padding unificato con home: $spacing-4xl 0
   
-  // Altezza per smartphone
-  @include smartphone {
-    min-height: 90vh !important;
-  }
-  
   // Override per mobile
   @include mobile {
     min-height: 100vh;
@@ -134,11 +124,6 @@
         margin-bottom: $spacing-lg; // Aumentato per coerenza con regole generali hero
       }
       
-      // Regole smartphone per titoli hero contact
-      @include smartphone {
-        font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
-      }
-      
       .highlight {
         color: $brand-accent; // Contattami in brand accent
       }
@@ -151,11 +136,6 @@
       font-weight: $font-weight-normal; // Ridotto per look più leggero
       @include fade-in-up;
       @include sequential-animation($animation-delay-1);
-      
-      // Regole smartphone per sottotitolo contact
-      @include smartphone {
-        font-size: $font-size-smartphone-xl !important; // 18px per smartphone
-      }
     }
   }
 }
@@ -176,39 +156,6 @@
     padding: $spacing-4xl 0;
   }
   
-  // Smartphone: riduci spazi laterali del form
-  @include smartphone {
-    padding: $spacing-2xl $spacing-xs !important; // Riduci spazi laterali per smartphone
-    
-    .container {
-      padding-left: $spacing-sm !important; // Riduci padding container
-      padding-right: $spacing-sm !important; // Riduci padding container
-    }
-    
-    .row {
-      margin-left: 0 !important; // Rimuovi margini Bootstrap
-      margin-right: 0 !important; // Rimuovi margini Bootstrap
-    }
-    
-    .col-12 {
-      padding-left: $spacing-sm !important; // Riduci padding colonne
-      padding-right: $spacing-sm !important; // Riduci padding colonne
-    }
-    
-    .card {
-      margin: 0 !important; // Rimuovi margini card
-    }
-    
-    .card-body {
-      padding: $spacing-lg $spacing-lg !important; // Aumenta padding laterale interno card
-      
-      // Riduce font-size del sottotitolo per smartphone
-      .text-muted {
-        font-size: $font-size-smartphone-base !important; // 14px per smartphone (ridotto)
-        line-height: 1.5 !important;
-      }
-    }
-  }
   
   
   // Card del form
@@ -249,10 +196,6 @@
     margin-bottom: 1rem;
     @include fade-in-up($animation-delay-2);
     
-    // Regole smartphone per titolo form
-    @include smartphone {
-      font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
-    }
   }
   
   // ========================================
@@ -270,10 +213,6 @@
     font-size: $font-size-base; // 16px (standard moderno)
     font-family: $font-family-primary; // Font consistente con il sito
     
-    // Regole smartphone per form-label
-    @include smartphone {
-      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-    }
   }
   
   // Stili form Bootstrap ottimizzati
@@ -285,10 +224,6 @@
     font-family: $font-family-primary; // Font consistente con il sito
     font-size: $font-size-base; // 16px (standard moderno)
     
-    // Regole smartphone per form-control
-    @include smartphone {
-      font-size: $font-size-smartphone-base !important; // 14px per smartphone
-    }
     
     &::placeholder {
       font-size: $font-size-base; // 16px (standard moderno)
@@ -296,10 +231,6 @@
       opacity: 0.8;
       font-weight: $font-weight-light; 
       
-      // Regole smartphone per placeholder
-      @include smartphone {
-        font-size: $font-size-smartphone-base !important; // 14px per smartphone
-      }
     }
     
     &:focus {
@@ -373,10 +304,6 @@
       font-size: $font-size-sm; // 16px (confortevole) su mobile
     }
     
-    // Regole smartphone per invalid-feedback
-    @include smartphone {
-      font-size: $font-size-smartphone-base !important; // 14px per smartphone
-    }
   }
   
   .valid-feedback {
@@ -392,18 +319,10 @@
       font-size: $font-size-sm; // 16px (confortevole) su mobile
     }
     
-    // Regole smartphone per valid-feedback
-    @include smartphone {
-      font-size: $font-size-smartphone-base !important; // 14px per smartphone
-    }
 }
 
 // Regole smartphone per form-text (contatore caratteri)
-.form-text {
-  @include smartphone {
-    font-size: $font-size-smartphone-base !important; // 13px per smartphone
-  }
-}
+
   
   // Mostra i messaggi solo quando il campo ha lo stato corrispondente
   .form-control.is-invalid + .invalid-feedback {
@@ -435,20 +354,8 @@
     transition: all $transition-normal;
     @include fade-in-up($animation-delay-5);
     
-    // Regole smartphone per bottone form
-    @include smartphone {
-      font-size: $font-size-smartphone-lg !important; // 14px per smartphone
-      padding: 10px 20px !important; // Padding ridotto per smartphone
-    }
   }
   
-  // Regola più specifica per smartphone - sovrascrive Bootstrap
-  @include smartphone {
-    .contact-form .btn-primary {
-      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-      padding: 10px 20px !important; // Padding ridotto per smartphone
-    }
-  }
     
   &:hover {
     box-shadow: 0 8px 20px rgba($primary-color, 0.3);
@@ -500,10 +407,6 @@
   .faq-title {
     margin-bottom: 3rem;
     
-    // Regole smartphone per titoli FAQ
-    @include smartphone {
-      font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
-    }
   }
   
   .faq-accordion {
@@ -517,12 +420,7 @@
   }
   
   // Regole smartphone per contenuti FAQ
-  .accordion-body {
-    @include smartphone {
-      font-size: $font-size-smartphone-base !important; // 14px per smartphone
-      font-weight: 300 !important; // Font-weight normale per smartphone
-    }
-  }
+  
   
   // FAQ usa variabili Bootstrap personalizzate - nessun override necessario
 }
@@ -635,10 +533,6 @@
         padding: $spacing-sm $spacing-md; // Padding ridotto per mobile
         font-size: $font-size-base; // Font normale per mobile (più leggibile)
         
-        // Regole smartphone per bottoni hero
-        @include smartphone {
-          font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-        }
       }
     }
     
@@ -672,10 +566,6 @@
   h3 {
     margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
     
-    // Regole smartphone per titoli h3 CTA
-    @include smartphone {
-      font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
-    }
   }
   
   p {
@@ -686,10 +576,6 @@
     font-size: $font-size-base; // 16px (standard moderno) su desktop
     font-weight: $font-weight-light; // 300 - Font-weight più leggero
     
-    // Regole smartphone per paragrafi CTA
-    @include smartphone {
-      font-size: $font-size-smartphone-base !important; // 14px per smartphone
-    }
     
     // Controllo del <br> solo su desktop
     .desktop-only {
@@ -883,10 +769,6 @@
   h3 {
     margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
     
-    // Regole smartphone per titoli h3 CTA portfolio
-    @include smartphone {
-      font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
-    }
   }
   
   p {
@@ -897,10 +779,6 @@
     font-size: $font-size-base; // 16px (standard moderno) su desktop
     font-weight: $font-weight-light; // 300 - Font-weight più leggero
     
-    // Regole smartphone per paragrafi CTA portfolio
-    @include smartphone {
-      font-size: $font-size-smartphone-base !important; // 14px per smartphone
-    }
   }
   
   // Responsive spacing per titolo e testo - Best Practices UX/UI
@@ -972,5 +850,147 @@
         min-width: fit-content; // Larghezza si adatta al contenuto (come home)
       }
     }
+  }
+}
+
+// ========================================
+// REGOLE SMARTPHONE - OVERRIDE FINALE
+// ========================================
+// Le regole smartphone vengono applicate alla fine per avere la precedenza
+// su tutte le altre regole responsive
+
+@include smartphone {
+  // Accordion button - dimensioni ridotte
+  .contattami .accordion-button {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+  }
+  
+  // Hero section - riduzione altezza
+  .hero.contact-hero {
+    min-height: 90vh !important;
+  }
+  
+  // Titoli hero contact - dimensioni ridotte
+  .hero.contact-hero .hero-text h1 {
+    font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
+  }
+  
+  // Sottotitolo hero contact - dimensioni ridotte
+  .hero.contact-hero .hero-subtitle {
+    font-size: $font-size-smartphone-xl !important; // 18px per smartphone
+  }
+  
+  // Form section - riduzione spazi laterali
+  .contact-form-section {
+    padding: $spacing-2xl $spacing-xs !important; // Riduci spazi laterali per smartphone
+    
+    .container {
+      padding-left: $spacing-sm !important; // Riduci padding container
+      padding-right: $spacing-sm !important; // Riduci padding container
+    }
+    
+    .row {
+      margin-left: 0 !important; // Rimuovi margini Bootstrap
+      margin-right: 0 !important; // Rimuovi margini Bootstrap
+    }
+    
+    .col-12 {
+      padding-left: $spacing-sm !important; // Riduci padding colonne
+      padding-right: $spacing-sm !important; // Riduci padding colonne
+    }
+    
+    .card {
+      margin: 0 !important; // Rimuovi margini card
+    }
+    
+    .card-body {
+      padding: $spacing-lg $spacing-lg !important; // Aumenta padding laterale interno card
+      
+      // Riduce font-size del sottotitolo per smartphone
+      .text-muted {
+        font-size: $font-size-smartphone-base !important; // 14px per smartphone (ridotto)
+        line-height: 1.5 !important;
+      }
+    }
+  }
+  
+  // Titolo form - dimensioni ridotte
+  .contact-form .form-title {
+    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+  }
+  
+  // Form labels - dimensioni ridotte
+  .contact-form .form-label {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+  }
+  
+  // Form controls - dimensioni ridotte
+  .contact-form .form-control {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+  }
+  
+  // Form placeholders - dimensioni ridotte
+  .contact-form .form-control::placeholder {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+  }
+  
+  // Form feedback - dimensioni ridotte
+  .contact-form .invalid-feedback,
+  .contact-form .valid-feedback {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+  }
+  
+  // Form text (contatore caratteri) - dimensioni ridotte
+  .form-text {
+    font-size: $font-size-smartphone-base !important; // 13px per smartphone
+  }
+  
+  // Bottoni form - dimensioni ridotte
+  .contact-form .btn-primary {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    padding: 10px 20px !important; // Padding ridotto per smartphone
+  }
+  
+  // Titoli FAQ - dimensioni ridotte
+  .contact-faq .accordion-button {
+    font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
+  }
+  
+  // Contenuti FAQ - dimensioni ridotte
+  .contact-faq .accordion-body {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-weight: 300 !important; // Font-weight normale per smartphone
+  }
+  
+  // Bottoni hero - dimensioni ridotte
+  .contact .hero-buttons .btn {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+  }
+  
+  // Titoli CTA - dimensioni ridotte
+  .contact .cta-actions h3 {
+    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+  }
+  
+  // Paragrafi CTA - dimensioni ridotte
+  .contact .cta-actions p {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+  }
+  
+  // Paragrafi CTA home - dimensioni aumentate per smartphone
+  .home .contact-info p {
+    font-size: $font-size-smartphone-lg !important; 
+    line-height: 1.6 !important; // Line-height ottimale per smartphone
+    padding-bottom: $spacing-lg !important; // Padding-bottom aumentato per smartphone
+  }
+  
+  // Titoli CTA portfolio - dimensioni ridotte
+  .portfolio .cta-actions h3 {
+    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+  }
+  
+  // Paragrafi CTA portfolio - dimensioni ridotte
+  .portfolio .cta-actions p {
+    font-size: $font-size-smartphone-base !important; // 14px per smartphone
   }
 }

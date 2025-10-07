@@ -84,11 +84,6 @@
   min-height: 100vh;
   // Padding unificato con home: $spacing-4xl 0
   
-  // Altezza per smartphone
-  @include smartphone {
-    min-height: 90vh !important;
-  }
-  
   // Override per mobile
   @include mobile {
     min-height: 100vh;
@@ -110,10 +105,6 @@
         color: $text-color; // Nero per contrasto con sfondo chiaro
       }
       
-      // Regole smartphone per titoli hero CV
-      @include smartphone {
-        font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
-      }
       
       .highlight {
         color: $brand-accent; // Vitae in brand accent
@@ -128,10 +119,6 @@
       @include fade-in-up;
       @include sequential-animation($animation-delay-1);
       
-      // Regole smartphone per sottotitolo CV
-      @include smartphone {
-        font-size: $font-size-smartphone-xl !important; // 16px per smartphone
-      }
     }
     
     .hero-description {
@@ -143,10 +130,6 @@
       margin: 0 auto;
       @include fade-in-up;
       
-      // Regole smartphone per descrizione CV
-      @include smartphone {
-        font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-      }
       @include sequential-animation($animation-delay-1);
       
       // Su desktop, larghezza maggiore ma sempre centrato
@@ -648,10 +631,6 @@
 .cv-section p {
   font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
   
-  // Regole smartphone per paragrafi CV
-  @include smartphone {
-    font-weight: 300 !important; // Font-weight leggero per smartphone
-  }
 }
 
 // Sezione Esperienza Professionale con margine superiore maggiore
@@ -792,10 +771,6 @@
       line-height: 1.4;
     }
     
-    // Regole smartphone per liste CV
-    @include smartphone {
-      font-weight: 300 !important; // Font-weight leggero per smartphone
-    }
     
     &::before {
       content: "•";
@@ -848,10 +823,6 @@
     padding: 0.2rem 0.6rem;
   }
   
-  // Regole smartphone per skill tags CV
-  @include smartphone {
-    font-weight: 300 !important; // Font-weight leggero per smartphone
-  }
   
   // Rimuove qualsiasi effetto hover
   &:hover {
@@ -956,11 +927,6 @@
     margin-right: auto;
     font-size: $font-size-base; // 16px (standard moderno) e coerenza con Home/Portfolio
     
-    // Regole smartphone per paragrafi CTA CV
-    @include smartphone {
-      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-      font-weight: 300 !important; // Font-weight leggero per smartphone
-    }
   }
   
   // Responsive spacing per tablet
@@ -1027,12 +993,6 @@
     min-width: 200px; // Larghezza minima per evitare che sia troppo stretto
   }
   
-  // Padding laterale aumentato solo per smartphone
-  @include smartphone {
-    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-  }
 }
 
 // Spacing specifico per l'icona del bottone CV
@@ -1044,3 +1004,59 @@
 // ANIMAZIONI SPECIFICHE CV
 // ========================================
 // Le animazioni sono integrate nella regola principale .hero.cv-hero sopra
+
+// ========================================
+// REGOLE SMARTPHONE - OVERRIDE FINALE
+// ========================================
+// Le regole smartphone vengono applicate alla fine per avere la precedenza
+// su tutte le altre regole responsive
+
+@include smartphone {
+  // Hero section - riduzione altezza
+  .hero.cv-hero {
+    min-height: 90vh !important;
+  }
+  
+  // Titoli hero CV - dimensioni ridotte
+  .hero.cv-hero .hero-text h1 {
+    font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
+  }
+  
+  // Sottotitolo hero CV - dimensioni ridotte
+  .hero.cv-hero .hero-subtitle {
+    font-size: $font-size-smartphone-xl !important; // 16px per smartphone
+  }
+  
+  // Descrizione hero CV - dimensioni ridotte
+  .hero.cv-hero .hero-description {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+  }
+  
+  // Paragrafi CV - font-weight ridotto
+  .cv-content p {
+    font-weight: 300 !important; // Font-weight leggero per smartphone
+  }
+  
+  // Liste CV - font-weight ridotto
+  .cv-content ul li {
+    font-weight: 300 !important; // Font-weight leggero per smartphone
+  }
+  
+  // Skill tags CV - font-weight ridotto
+  .skill-tags .tag {
+    font-weight: 300 !important; // Font-weight leggero per smartphone
+  }
+  
+  // Paragrafi CTA CV - dimensioni e font-weight ridotti
+  .cv .cta-actions p {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-weight: 300 !important; // Font-weight leggero per smartphone
+  }
+  
+  // Bottoni CTA CV - padding e dimensioni
+  .cv .cta-actions .btn {
+    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
+    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+  }
+}

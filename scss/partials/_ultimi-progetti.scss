@@ -20,10 +20,6 @@
     margin-top: $spacing-2xl;
     margin-bottom: $spacing-2xl;
     
-    // Regole smartphone per sottotitoli sezioni
-    @include smartphone {
-      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-    }
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -69,15 +65,6 @@
           margin-bottom: $spacing-lg; // Margine destro per mobile
         }
         
-        // Ottimizzazione specifica per smartphone
-        @include smartphone {
-          flex: 0 0 280px !important; // Larghezza ridotta per smartphone
-          min-width: 280px !important; // Larghezza minima ridotta
-          max-width: 300px !important; // Larghezza massima ridotta
-          padding-bottom: 15px !important; // Padding ridotto
-          margin-top: $spacing-xs !important; // Margine ridotto
-          margin-bottom: $spacing-md !important; // Margine ridotto
-        }
       }
     }
   }
@@ -114,15 +101,6 @@
       transition: transform $transition-normal;
     }
     
-    // Ottimizzazione per smartphone
-    @include smartphone {
-      height: 160px !important; // Altezza ridotta per smartphone
-      
-      img {
-        object-fit: contain !important; // Mostra l'immagine completa senza tagli
-        object-position: center !important; // Centra l'immagine
-      }
-    }
     
     .project-overlay {
       position: absolute;
@@ -176,41 +154,22 @@
         font-size: $font-size-xl; // 20px su mobile
       }
       
-        // Ottimizzazione per smartphone
-        @include smartphone {
-          font-size: 1.25rem !important; // 20px per smartphone - dimensione appropriata
-          margin-bottom: $spacing-md !important; // Margine aumentato per migliore spaziatura
-          padding-left: $spacing-sm !important; // Padding sinistro aumentato
-          padding-right: $spacing-sm !important; // Padding destro aumentato
-        }
     }
     
     p {
       color: $text-light;
-      font-size: $font-size-base !important; // 16px ridotto per desktop
+      font-size: $font-size-base; // 16px standard per desktop
       line-height: $line-height-relaxed;
       margin-bottom: 0; // Rimosso per avvicinare i tag
       flex: 1; // Il paragrafo si espande per riempire lo spazio disponibile
       
-      // Font-size ridotto su mobile
+      // Font-size standard su mobile
       @include mobile {
-        font-size: $font-size-sm !important; // 14px su mobile
+        font-size: $font-size-sm; // 14px su mobile
       }
       
-        // Ottimizzazione per smartphone
-        @include smartphone {
-          font-size: $font-size-smartphone-lg !important; // 16px per smartphone (ridotto)
-          font-weight: $font-weight-light; // 300 per smartphone
-          line-height: 1.4 !important; // Line-height ridotto
-          padding-left: $spacing-sm !important; // Padding sinistro aumentato
-          padding-right: $spacing-sm !important; // Padding destro aumentato
-        }
     }
     
-    // Padding ridotto per smartphone
-    @include smartphone {
-      padding: $spacing-sm !important; // Padding ridotto per smartphone
-    }
   }
   
   .project-tags {
@@ -228,18 +187,8 @@
       font-size: 0.75rem; // 12px - tag più piccoli per elementi secondari
       font-weight: $font-weight-medium;
       
-      // Regole smartphone per tag
-      @include smartphone {
-        font-weight: 400 !important; // 400 per smartphone (normale)
-        border-width: 0.75px !important; // Bordo proporzionale per smartphone
-      }
     }
     
-    // Ottimizzazione per smartphone
-    @include smartphone {
-      padding-left: $spacing-sm !important; // Padding sinistro aumentato
-      padding-right: $spacing-sm !important; // Padding destro aumentato
-    }
   }
   
   // ========================================
@@ -251,12 +200,81 @@
     .btn {
       @include button-cta;
       
-      // Padding laterale aumentato solo per smartphone
-      @include smartphone {
-        padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
-        padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
-        font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-      }
     }
+  }
+}
+
+// ========================================
+// REGOLE SMARTPHONE - OVERRIDE FINALE
+// ========================================
+// Le regole smartphone vengono applicate alla fine per avere la precedenza
+// su tutte le altre regole responsive
+
+@include smartphone {
+  // Sottotitoli sezioni - dimensioni ridotte
+  .section-subtitle {
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+  }
+  
+  // Project cards - ottimizzazione per smartphone
+  .ultimi-progetti .projects-grid .project-card {
+    flex: 0 0 280px !important; // Larghezza ridotta per smartphone
+    min-width: 280px !important; // Larghezza minima ridotta
+    max-width: 300px !important; // Larghezza massima ridotta
+    padding-bottom: 15px !important; // Padding ridotto
+    margin-top: $spacing-xs !important; // Margine ridotto
+    margin-bottom: $spacing-md !important; // Margine ridotto
+  }
+  
+  // Project images - ottimizzazione per smartphone
+  .ultimi-progetti .project-image {
+    height: 160px !important; // Altezza ridotta per smartphone
+    
+    img {
+      object-fit: contain !important; // Mostra l'immagine completa senza tagli
+      object-position: center !important; // Centra l'immagine
+    }
+  }
+  
+  // Project titles - ottimizzazione per smartphone
+  .ultimi-progetti .project-content h3 {
+    font-size: 1.25rem !important; // 20px per smartphone - dimensione appropriata
+    margin-bottom: $spacing-md !important; // Margine aumentato per migliore spaziatura
+    padding-left: $spacing-sm !important; // Padding sinistro aumentato
+    padding-right: $spacing-sm !important; // Padding destro aumentato
+  }
+  
+  // Project descriptions - ottimizzazione per smartphone
+  .home .ultimi-progetti .project-content p {
+    font-size: $font-size-smartphone-lg !important; 
+    font-weight: $font-weight-light !important; // 300 per smartphone
+    line-height: 1.6 !important; // Line-height ridotto
+    padding-left: $spacing-sm !important; // Padding sinistro aumentato
+    padding-right: $spacing-sm !important; // Padding destro aumentato
+  }
+  
+  // Project content - padding ridotto per smartphone
+  .ultimi-progetti .project-content {
+    padding: $spacing-sm !important; // Padding ridotto per smartphone
+  }
+  
+  // Project tags - ottimizzazione per smartphone
+  .ultimi-progetti .project-tags .tag {
+    font-weight: 400 !important; // 400 per smartphone (normale)
+    border-width: 0.75px !important; // Bordo proporzionale per smartphone
+  }
+  
+  // Project tags container - ottimizzazione per smartphone
+  .ultimi-progetti .project-tags {
+    margin-top: $spacing-3xl !important; // Margin-top ridotto da xl a lg per smartphone
+    padding-left: $spacing-sm !important; // Padding sinistro aumentato
+    padding-right: $spacing-sm !important; // Padding destro aumentato
+  }
+  
+  // Project CTA buttons - ottimizzazione per smartphone
+  .ultimi-progetti .projects-cta .btn {
+    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
+    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
+    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
   }
 }
