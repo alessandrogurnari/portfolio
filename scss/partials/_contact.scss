@@ -885,8 +885,8 @@
     padding: $spacing-2xl $spacing-xs !important; // Riduci spazi laterali per smartphone
     
     .container {
-      padding-left: $spacing-sm !important; // Riduci padding container
-      padding-right: $spacing-sm !important; // Riduci padding container
+      padding-left: $spacing-xs !important; // Riduci padding container
+      padding-right: $spacing-xs !important; // Riduci padding container
     }
     
     .row {
@@ -895,8 +895,8 @@
     }
     
     .col-12 {
-      padding-left: $spacing-sm !important; // Riduci padding colonne
-      padding-right: $spacing-sm !important; // Riduci padding colonne
+      padding-left: $spacing-xs !important; // Riduci padding colonne
+      padding-right: $spacing-xs !important; // Riduci padding colonne
     }
     
     .card {
@@ -904,7 +904,7 @@
     }
     
     .card-body {
-      padding: $spacing-lg $spacing-lg !important; // Aumenta padding laterale interno card
+      padding: $spacing-xs $spacing-xs !important; // Aumenta padding laterale interno card
       
       // Riduce font-size del sottotitolo per smartphone
       .text-muted {
@@ -948,7 +948,7 @@
   // Bottoni form - dimensioni ridotte
   .contact-form .btn-primary {
     font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-    padding: 10px 20px !important; // Padding ridotto per smartphone
+    padding: 10px 40px !important; // Padding ridotto per smartphone
   }
   
   // Titoli FAQ - dimensioni ridotte
@@ -993,4 +993,63 @@
   .portfolio .cta-actions p {
     font-size: $font-size-smartphone-base !important; // 14px per smartphone
   }
+  
+  // Testo FAQ smartphone - font-weight 300, line-height 1.6 e font-size ridotto
+  .faq-section .accordion-body {
+    font-weight: 300 !important; // Font-weight leggero per smartphone
+    line-height: 1.6 !important; // Line-height ottimale per smartphone
+    font-size: 1rem !important; // Font-size ridotto per smartphone (14px)
+  }
+  
+  // Domande FAQ smartphone - aumenta font-size
+  .faq-section .accordion-button {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+  }
+  
+  // Form smartphone - riduci margini laterali per evitare schiacciamento
+  .contact .container {
+    padding-left: 1rem !important; // Mostra leggermente i bordi sinistro
+    padding-right: 1rem !important; // Mostra leggermente i bordi destro
+  }
+  
+  .contact .col-12,
+  .contact .col-md-10,
+  .contact .col-lg-8,
+  .contact .col-xl-7 {
+    padding-left: 0.25rem !important; // Riduce padding colonne
+    padding-right: 0.25rem !important; // Riduce padding colonne
+  }
+  
+  // Card form smartphone - riduci padding laterale
+  .contact .card {
+    margin-left: 0 !important; // Rimuove margin sinistro
+    margin-right: 0 !important; // Rimuove margin destro
+  }
+  
+  .contact .card-body {
+    padding-left: 1rem !important; // Riduce padding sinistro card
+    padding-right: 1rem !important; // Riduce padding destro card
+  }
+  
+  // Testo "Ti risponderò entro 24 ore" smartphone - riduci font-size
+  .contact .text-muted {
+    font-size: 0.875rem !important; // 14px per smartphone
+  }
+  
+  // Titolo form smartphone - aumenta font-size
+  .contact .form-title {
+    font-size: 1.5rem !important; // 24px per smartphone (aumentato)
+  }
+  
+  // Descrizione form smartphone - aumenta font-size
+  .contact .card-body .text-muted {
+    font-size: 1rem !important; // 16px per smartphone (aumentato)
+  }
+  
+  // Label form smartphone - riduci font-size
+  .contact .form-label {
+    font-size: 1rem !important; 
+  }
+
 }

@@ -1032,19 +1032,71 @@
     font-size: $font-size-smartphone-lg !important; // 16px per smartphone
   }
   
-  // Paragrafi CV - font-weight ridotto
-  .cv-content p {
-    font-weight: 300 !important; // Font-weight leggero per smartphone
-  }
   
   // Liste CV - font-weight ridotto
   .cv-content ul li {
     font-weight: 300 !important; // Font-weight leggero per smartphone
   }
   
-  // Skill tags CV - font-weight ridotto
-  .skill-tags .tag {
+  // Paragrafi CV smartphone - font-weight 300
+  .cv-content p {
+    font-weight: 500 !important; // Font-weight leggero per smartphone
+  }
+  
+  // Skill CV smartphone - font-weight 300 e rimuovi hover
+  .cv .skill-tag {
     font-weight: 300 !important; // Font-weight leggero per smartphone
+    pointer-events: none !important; // Rimuovi hover su smartphone
+  }
+  
+  // Titoli categorie skill CV smartphone - aumenta padding-bottom
+  .cv .skills-category h4 {
+    padding-bottom: 0.25rem !important; // Aumenta padding-bottom per smartphone
+  }
+  
+  // Testo formazione ed esperienza professionale CV smartphone - font-weight 300
+  .cv .cv-list li {
+    font-weight: 300 !important; // Font-weight leggero per smartphone
+    line-height: 1.6 !important; // Line-height ottimale per smartphone
+  }
+  
+  .cv .cv-company {
+    font-weight: 400 !important; // Font-weight leggero per smartphone
+    font-size: 0.875rem !important; // Font-size 16px per smartphone
+    padding-top: 0.5rem !important; // Padding-top per smartphone
+    padding-bottom: 1rem !important; // Padding-bottom per smartphone
+  }
+  
+  // Summary CV smartphone - font-weight 300 e font-size 1rem
+  .cv .cv-summary-content p {
+    font-weight: 300 !important; // Font-weight leggero per smartphone
+    font-size: 1rem !important; // Font-size 16px per smartphone
+    line-height: 1.6 !important; // Line-height ottimale per smartphone
+  }
+  
+  // Elemento summary CV smartphone - aumenta padding top e bottom
+  .cv .cv-summary {
+    padding-top: 1.5rem !important; // Aumenta padding-top per smartphone
+    padding-bottom: 1.5rem !important; // Aumenta padding-bottom per smartphone
+    margin-bottom: 4rem !important; // Aumenta distanza con sezione successiva
+  }
+  
+  // Testo "versione pdf disponibile" CV smartphone - aumenta font-size
+  .cv .contact-info p {
+    font-size: 1rem !important; 
+    font-weight: 300 !important;
+    line-height: 1.6 !important; // Line-height ottimale per smartphone
+    padding-bottom: 1rem !important; // Padding-bottom (stesso di home)
+  }
+  
+  // Container immagine CV smartphone - aumenta padding-bottom
+  .cv .cv-photo-container {
+    padding-bottom: 2rem !important; // Aumenta padding-bottom per smartphone
+  }
+  
+  // Scritta "UX/UI Designer" CV smartphone - aumenta padding-bottom
+  .cv .cv-info h2 {
+    padding-bottom: 1rem !important; // Aumenta padding-bottom per smartphone
   }
   
   // Paragrafi CTA CV - dimensioni e font-weight ridotti
