@@ -84,6 +84,11 @@
   min-height: 100vh;
   // Padding unificato con home: $spacing-4xl 0
   
+  // Altezza per smartphone
+  @include smartphone {
+    min-height: 90vh !important;
+  }
+  
   // Override per mobile
   @include mobile {
     min-height: 100vh;
