@@ -145,7 +145,7 @@
     }
     
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: $font-size-xl; // 24px - aumentato per migliore leggibilità
       color: $text-color; // Nero per contrasto con sfondo chiaro
       margin-bottom: 0;
       font-weight: $font-weight-normal; // Ridotto per look più leggero

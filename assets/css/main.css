@@ -1655,7 +1655,7 @@ a:active {
 }
 
 .about-text p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .about-text p {
@@ -2346,7 +2346,7 @@ a:active {
   color: #06b6d4;
 }
 .hero.portfolio-hero .hero-text .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #2A2E34;
   margin-bottom: 1rem;
   font-weight: 400;
@@ -2377,6 +2377,7 @@ a:active {
   }
 }
 .hero.portfolio-hero .hero-text .hero-description {
+  font-size: 1.25rem;
   color: #2A2E34;
   font-weight: 300;
 }
@@ -3249,7 +3250,7 @@ a:active {
   color: #06b6d4;
 }
 .hero.contact-hero .hero-text .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #2A2E34;
   margin-bottom: 0;
   font-weight: 400;
@@ -4114,7 +4115,7 @@ a:active {
   color: #06b6d4;
 }
 .hero.cv-hero .hero-text .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #2A2E34;
   margin-bottom: 1rem;
   font-weight: 400;
@@ -4145,7 +4146,7 @@ a:active {
   }
 }
 .hero.cv-hero .hero-text .hero-description {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: #2A2E34;
   line-height: 1.75;
   font-weight: 300;
@@ -4669,7 +4670,7 @@ a:active {
 }
 
 .cv-section p {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
 }
 @media (max-width: 480px) and (orientation: portrait) {
   .cv-section p {
@@ -4805,7 +4806,7 @@ a:active {
   padding-left: 1.5rem;
   margin-bottom: 0.5rem;
   line-height: 1.75;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 @media (max-width: 399px) {
   .cv-list li {

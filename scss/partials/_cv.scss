@@ -121,7 +121,7 @@
     }
     
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: $font-size-xl; // 24px - aumentato per migliore leggibilità
       color: $text-color; // Nero per contrasto con sfondo chiaro
       margin-bottom: 1rem;
       font-weight: $font-weight-normal; // Ridotto per look più leggero
@@ -135,7 +135,7 @@
     }
     
     .hero-description {
-      font-size: $font-size-base; // 16px (standard moderno)
+      font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
       color: $text-color; // Nero per contrasto con sfondo chiaro
       line-height: $line-height-relaxed;
       font-weight: $font-weight-light; // Font-weight leggero per descrizione
@@ -646,7 +646,7 @@
 
 // Regole generali per paragrafi nelle sezioni CV - WCAG AAA
 .cv-section p {
-  font-size: $font-size-base; // 16px (standard moderno) su tutte le risoluzioni
+  font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
   
   // Regole smartphone per paragrafi CV
   @include smartphone {
@@ -783,7 +783,7 @@
     padding-left: 1.5rem;
     margin-bottom: 0.5rem;
     line-height: $line-height-relaxed;
-    font-size: 1rem; // Aggiunto per accessibilità
+    font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
     
     @include mobile {
       padding-left: 1.25rem;

@@ -90,7 +90,7 @@
 }
 
 .hero-subtitle {
-  font-size: $font-size-xl;
+  font-size: $font-size-xl; // 24px - aumentato per migliore leggibilità
   color: $text-color; // Cambiato da $text-light per migliore contrasto con background brand accent
   margin-bottom: $spacing-lg;
   font-weight: $font-weight-normal; // Ridotto da medium a normal per look più leggero
@@ -104,7 +104,7 @@
 }
 
 .hero-description {
-  font-size: $font-size-lg;
+  font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
   line-height: $line-height-relaxed;
   margin-bottom: $spacing-2xl;
   color: $text-color; // Cambiato da $text-light per migliore contrasto con background brand accent
@@ -240,7 +240,7 @@
   }
   
   .hero-description {
-    font-size: $font-size-lg; // 18px - mantiene accessibilità WCAG AAA
+    font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
   }
 }
 

@@ -139,9 +139,9 @@
 // RESPONSIVE ABOUT
 // ========================================
 
-// Desktop e Tablet: font-size 18px (standard moderno)
+// Desktop e Tablet: font-size 20px (aumentato per migliore leggibilità)
 .about-text p {
-  font-size: $font-size-base; // 18px (standard moderno)
+  font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
   
   // Regole smartphone per paragrafi about
   @include smartphone {
