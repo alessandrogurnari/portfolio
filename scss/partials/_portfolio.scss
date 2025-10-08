@@ -248,11 +248,17 @@
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08); 
       
       .client-works-arrow {
-        background-color: $brand-accent; 
-        color: white; 
-        box-shadow: 0 4px 16px rgba($primary-color, 0.1); 
+        background-color: transparent; 
+        color: $brand-accent; 
+        box-shadow: none; 
       }
     }
+  }
+  
+  // Stato attivo dell'header - mantiene bordo brand accent
+  &.active {
+    border-right-color: $brand-accent; 
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08); 
   }
   
   // Effetto di click
@@ -312,17 +318,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px; // Dimensione del cerchio
-    height: 40px; // Dimensione del cerchio
-    background-color: $card-color; // Background come le altre superfici
-    border-radius: 50%; // Cerchio perfetto
-    color: $primary-color; // Colore primario per la freccia
+    width: 40px; // Dimensione del contenitore
+    height: 40px; // Dimensione del contenitore
+    background-color: transparent; // Nessun background
+    border-radius: 0; // Nessun cerchio
+    color: #2A2E34; // Freccia nera
     cursor: pointer;
     // Transizione definita sopra nell'header
     flex-shrink: 0; // Mantiene le dimensioni fisse
     margin-right: $spacing-xl; 
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); 
-    border: 1px solid rgba(0, 0, 0, 0.05); // Bordo sottile per definizione
+    box-shadow: none; // Nessuna ombra
+    border: none; // Nessun bordo
     
     // Media query per risoluzioni intermedie (≤ 1023px)
     @media (max-width: 1023px) {
@@ -334,17 +340,19 @@
       transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
     }
     
+    // Stato hover - solo per dispositivi con mouse (desktop/tablet)
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: $brand-accent;
+      }
+    }
     
-    // Stato attivo (quando espanso) - solo per desktop/tablet
-    @include md-up {
-      &.active {
-        background-color: $card-color; 
-        color: $primary-color; 
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); 
-        
-        i {
-          transform: rotate(-180deg); // Rotazione antioraria come Bootstrap FAQ
-        }
+    // Stato attivo (quando espanso) - per tutti i dispositivi
+    &.active {
+      color: $brand-accent; 
+      
+      i {
+        transform: rotate(-180deg); // Rotazione antioraria come Bootstrap FAQ
       }
     }
   }
@@ -833,12 +841,25 @@
     border-right-color: transparent !important;
     
     .client-works-arrow {
-      background-color: $surface-color !important;
-      color: $text-color !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+      background-color: transparent !important;
+      color: #2A2E34 !important;
+      box-shadow: none !important;
       
       i {
         transform: rotate(0deg) !important; // Freccia verso il basso
+      }
+    }
+    
+    // STATO NON ATTIVO - regole esplicite per quando active non è presente
+    &:not(.active) {
+      .client-works-arrow {
+        background-color: transparent !important;
+        color: #2A2E34 !important;
+        box-shadow: none !important;
+        
+        i {
+          transform: rotate(0deg) !important; // Freccia verso il basso
+        }
       }
     }
     
@@ -848,9 +869,9 @@
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
       
       .client-works-arrow {
-        background-color: $brand-accent !important;
-        color: white !important;
-        box-shadow: 0 4px 16px rgba($primary-color, 0.1) !important;
+        background-color: transparent !important;
+        color: $brand-accent !important;
+        box-shadow: none !important;
         
         i {
           transform: rotate(-180deg) !important; // Freccia verso l'alto
@@ -891,9 +912,11 @@
       transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
       
       i {
-        font-size: $font-size-smartphone-sm !important; 
+        font-size: $font-size-smartphone-lg !important; 
         transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
       }
+      
+      // Hover gestito a livello generale con media query
     }
   }
   
@@ -1051,4 +1074,59 @@
   .portfolio .section-title {
     margin-top: 4rem !important; // Aggiunge margin-top al titolo della sezione
   }
+  
+  // APPROCCIO: Escludi titolo, sottotitolo e header dal container dinamico
+  .portfolio .container {
+
+    // Padding fisso per titolo, sottotitolo e header (sempre $spacing-lg)
+    .section-title,
+    .section-subtitle,
+    .client-works-header {
+      padding-left: $spacing-lg !important;
+      padding-right: $spacing-lg !important;
+    }
+    
+    // APPROCCIO CON MARGIN NEGATIVO: Tre fasi di scroll
+    .client-works-section .projects-grid {
+      
+      // FASE 1: Scroll start - margin sinistro 0, margin destro negativo
+      &.scroll-start {
+        margin-left: 0 !important;
+        margin-right: -$spacing-lg !important;
+        width: calc(100% + #{$spacing-lg}) !important;
+      }
+      
+      // FASE 2: Scroll middle - margin negativo su entrambi i lati
+      &.scroll-middle {
+        margin-left: -$spacing-lg !important;
+        margin-right: -$spacing-lg !important;
+        width: calc(100% + #{$spacing-lg * 2}) !important;
+      }
+      
+      // FASE 3: Scroll end - margin sinistro negativo, margin destro 0
+      &.scroll-end {
+        margin-left: -$spacing-lg !important;
+        margin-right: 0 !important;
+        width: calc(100% + #{$spacing-lg}) !important;
+      }
+    }
+  }
+  
+  // Box-shadow fisso per le card portfolio su smartphone
+  .project-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    }
+    
+    &:active {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    }
+    
+    &:focus {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+    }
+  }
+  
 }

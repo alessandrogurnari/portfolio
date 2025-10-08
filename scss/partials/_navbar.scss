@@ -200,11 +200,14 @@
     background: currentColor; // underline segue il colore corrente
   }
   
-  &:hover:not(.active),
+  &:hover:not(.active) {
+    color: $brand-accent;
+  }
+  
   &:focus,
   &:focus-visible {
-    color: $brand-accent;
-    ;
+    outline: none !important;
+    box-shadow: none !important;
   }
   
   &.active {

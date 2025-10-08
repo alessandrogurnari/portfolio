@@ -162,10 +162,10 @@
     }
     
     
-    // Stato focus per accessibilità
+    // Focus rimosso per design
     &:focus {
-      outline: 2px solid $brand-accent !important;
-      outline-offset: 2px !important;
+      outline: none !important;
+      box-shadow: none !important;
     }
   }
   
@@ -202,10 +202,10 @@
     }
     
     
-    // Stato focus per accessibilità
+    // Focus rimosso per design
     &:focus {
-      outline: 2px solid $brand-accent !important;
-      outline-offset: 2px !important;
+      outline: none !important;
+      box-shadow: none !important;
     }
   }
   

@@ -68,8 +68,14 @@ document.addEventListener('DOMContentLoaded', function() {
       popupTitle.textContent = 'Errore';
     }
     
-    // Imposta il messaggio
-    popupMessage.textContent = message;
+    // Imposta il messaggio - aggiungi <br> su smartphone per il messaggio di successo
+    if (type === 'success' && window.innerWidth <= 480) {
+      // Su smartphone, sostituisci il punto esclamativo con <br> per il messaggio di successo
+      const formattedMessage = message.replace('! ', '!<br>');
+      popupMessage.innerHTML = formattedMessage;
+    } else {
+      popupMessage.textContent = message;
+    }
     
     // Mostra il popup
     popupElement.style.display = 'flex';

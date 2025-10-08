@@ -26,9 +26,10 @@ Un portfolio responsive che racconta la mia storia professionale attraverso:
 
 ### Funzionalità avanzate
 - **Portfolio dinamico** con sincronizzazione automatica dei progetti
-- **Scroll intelligente** con padding dinamico su smartphone
+- **Scroll intelligente** con padding dinamico su smartphone (homepage e portfolio separati)
 - **Form di contatto** integrato con EmailJS
 - **Accordion interattivo** per organizzare i progetti per cliente
+- **Touch-friendly interactions** con stati attivi/inattivi ottimizzati
 
 ## 🛠️ Tecnologie utilizzate
 
@@ -51,7 +52,8 @@ Un portfolio responsive che racconta la mia storia professionale attraverso:
 │   ├── js/                 # JavaScript modulare
 │   │   ├── main.js         # Core functionality
 │   │   ├── client-header-manager.js  # Gestione accordion portfolio
-│   │   ├── projects-scroll-manager.js # Scroll dinamico smartphone
+│   │   ├── projects-home-scroll-manager.js # Scroll dinamico homepage
+│   │   ├── projects-portfolio-scroll-manager.js # Scroll dinamico portfolio
 │   │   ├── contact.js      # Form di contatto
 │   │   └── projects-navigation.js    # Navigazione progetti
 │   ├── images/             # Immagini e icone

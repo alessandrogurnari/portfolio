@@ -40,10 +40,8 @@
   }
   
   &:focus {
-    background-color: $primary-color;
-    border-color: $primary-color;
-    box-shadow: none;
-    outline: none;
+    outline: none !important;
+    box-shadow: none !important;
   }
   
   &:active {
@@ -704,12 +702,8 @@
   }
   
   &:focus {
-    outline: 2px solid $brand-accent;
-    outline-offset: 2px;
-    border-radius: 4px;
-    background: none;
-    background-color: transparent;
-    box-shadow: none;
+    outline: none !important;
+    box-shadow: none !important;
   }
   
   &:active {

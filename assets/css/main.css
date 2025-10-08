@@ -584,7 +584,8 @@ html {
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s ease-out;
 }
 .btn:focus:not(:active) {
-  box-shadow: 0 0 0 3px rgba(42, 46, 52, 0.3);
+  outline: none !important;
+  box-shadow: none !important;
 }
 .btn:focus:active, .btn:active {
   outline: none;
@@ -636,7 +637,8 @@ html {
   color: white;
 }
 .btn-primary:focus:not(:active) {
-  box-shadow: 0 0 0 3px rgba(42, 46, 52, 0.3);
+  outline: none !important;
+  box-shadow: none !important;
 }
 .btn-primary:focus:active, .btn-primary:active {
   outline: none;
@@ -676,7 +678,8 @@ html {
   border: 1.5px solid #2A2E34;
 }
 .btn-secondary:focus:not(:active) {
-  box-shadow: 0 0 0 3px rgba(42, 46, 52, 0.3);
+  outline: none !important;
+  box-shadow: none !important;
 }
 .btn-secondary:focus:active, .btn-secondary:active {
   outline: none;
@@ -792,8 +795,8 @@ html {
     color: #ffffff !important;
   }
   .home .hero .hero-buttons .btn.btn-primary:first-child:focus {
-    outline: 2px solid #06b6d4 !important;
-    outline-offset: 2px !important;
+    outline: none !important;
+    box-shadow: none !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -822,8 +825,8 @@ html {
     color: #ffffff !important;
   }
   .home .hero .hero-buttons .btn.btn-primary:first-child:focus {
-    outline: 2px solid #06b6d4 !important;
-    outline-offset: 2px !important;
+    outline: none !important;
+    box-shadow: none !important;
   }
 }
 @media (min-width: 1024px) {
@@ -1022,9 +1025,8 @@ a:hover {
   color: #131518;
 }
 a:focus {
-  outline: 2px solid #2A2E34;
-  outline-offset: 2px;
-  border-radius: 4px;
+  outline: none !important;
+  box-shadow: none !important;
 }
 a:active {
   color: black;
@@ -1170,8 +1172,8 @@ a:active {
   border-color: #06b6d4;
 }
 .social-link:focus {
-  outline: 2px solid #2A2E34;
-  outline-offset: 2px;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .social-link i, .social-link svg {
   font-size: 1.25rem;
@@ -1192,9 +1194,8 @@ a:active {
   color: #9AA0A6;
 }
 .project-link:focus {
-  outline: 2px solid #9AA0A6;
-  outline-offset: 4px;
-  border-radius: 4px;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .footer-link {
@@ -1207,9 +1208,8 @@ a:active {
   color: #9AA0A6;
 }
 .footer-link:focus {
-  outline: 2px solid #9AA0A6;
-  outline-offset: 2px;
-  border-radius: 4px;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .footer-link::after {
   content: "";
@@ -1236,9 +1236,8 @@ a:active {
   color: #2A2E34;
 }
 .logo-link:focus {
-  outline: 2px solid #2A2E34;
-  outline-offset: 2px;
-  border-radius: 4px;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .link-primary {
@@ -1502,8 +1501,12 @@ a:active {
 .navbar .nav-link::before {
   background: currentColor;
 }
-.navbar .nav-link:hover:not(.active), .navbar .nav-link:focus, .navbar .nav-link:focus-visible {
+.navbar .nav-link:hover:not(.active) {
   color: #06b6d4;
+}
+.navbar .nav-link:focus, .navbar .nav-link:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 .navbar .nav-link.active {
   color: #06b6d4;
@@ -1547,8 +1550,8 @@ a:active {
   transition: none;
 }
 .nav-toggle:focus {
-  outline: 2px solid #2A2E34;
-  outline-offset: 2px;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .nav-toggle::before, .nav-toggle::after {
   content: "";
@@ -2612,10 +2615,14 @@ a:active {
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   }
   .client-works-header:hover .client-works-arrow {
-    background-color: #06b6d4;
-    color: white;
-    box-shadow: 0 4px 16px rgba(42, 46, 52, 0.1);
+    background-color: transparent;
+    color: #06b6d4;
+    box-shadow: none;
   }
+}
+.client-works-header.active {
+  border-right-color: #06b6d4;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 .client-works-header:active {
   border-right-color: transparent;
@@ -2668,14 +2675,14 @@ a:active {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #fafafa;
-  border-radius: 50%;
+  background-color: transparent;
+  border-radius: 0;
   color: #2A2E34;
   cursor: pointer;
   flex-shrink: 0;
   margin-right: 2rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  border: none;
 }
 @media (max-width: 1023px) {
   .client-works-header .client-works-arrow {
@@ -2686,15 +2693,16 @@ a:active {
   font-size: 1rem;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-@media (min-width: 768px) {
-  .client-works-header .client-works-arrow.active {
-    background-color: #fafafa;
-    color: #2A2E34;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+@media (hover: hover) and (pointer: fine) {
+  .client-works-header .client-works-arrow:hover {
+    color: #06b6d4;
   }
-  .client-works-header .client-works-arrow.active i {
-    transform: rotate(-180deg);
-  }
+}
+.client-works-header .client-works-arrow.active {
+  color: #06b6d4;
+}
+.client-works-header .client-works-arrow.active i {
+  transform: rotate(-180deg);
 }
 @media (max-width: 399px) {
   .client-works-header {
@@ -3110,11 +3118,19 @@ a:active {
     border-right-color: transparent !important;
   }
   .client-works-header .client-works-arrow {
-    background-color: #fafafa !important;
+    background-color: transparent !important;
     color: #2A2E34 !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+    box-shadow: none !important;
   }
   .client-works-header .client-works-arrow i {
+    transform: rotate(0deg) !important;
+  }
+  .client-works-header:not(.active) .client-works-arrow {
+    background-color: transparent !important;
+    color: #2A2E34 !important;
+    box-shadow: none !important;
+  }
+  .client-works-header:not(.active) .client-works-arrow i {
     transform: rotate(0deg) !important;
   }
   .client-works-header.active {
@@ -3122,9 +3138,9 @@ a:active {
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
   }
   .client-works-header.active .client-works-arrow {
-    background-color: #06b6d4 !important;
-    color: white !important;
-    box-shadow: 0 4px 16px rgba(42, 46, 52, 0.1) !important;
+    background-color: transparent !important;
+    color: #06b6d4 !important;
+    box-shadow: none !important;
   }
   .client-works-header.active .client-works-arrow i {
     transform: rotate(-180deg) !important;
@@ -3158,7 +3174,7 @@ a:active {
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   }
   .client-works-header .client-works-arrow i {
-    font-size: 0.8125rem !important;
+    font-size: 1rem !important;
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   }
   .projects-grid .project-card {
@@ -3274,6 +3290,39 @@ a:active {
   .portfolio .section-title {
     margin-top: 4rem !important;
   }
+  .portfolio .container .section-title,
+  .portfolio .container .section-subtitle,
+  .portfolio .container .client-works-header {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+  .portfolio .container .client-works-section .projects-grid.scroll-start {
+    margin-left: 0 !important;
+    margin-right: -1.5rem !important;
+    width: calc(100% + 1.5rem) !important;
+  }
+  .portfolio .container .client-works-section .projects-grid.scroll-middle {
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
+    width: calc(100% + 3rem) !important;
+  }
+  .portfolio .container .client-works-section .projects-grid.scroll-end {
+    margin-left: -1.5rem !important;
+    margin-right: 0 !important;
+    width: calc(100% + 1.5rem) !important;
+  }
+  .project-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  }
+  .project-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  }
+  .project-card:active {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  }
+  .project-card:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  }
 }
 .contattami .hero-content {
   justify-content: center;
@@ -3294,10 +3343,8 @@ a:active {
   outline: none;
 }
 .contattami .btn-primary:focus {
-  background-color: #2A2E34;
-  border-color: #2A2E34;
-  box-shadow: none;
-  outline: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .contattami .btn-primary:active {
   background-color: #06b6d4;
@@ -3916,12 +3963,8 @@ a:active {
   box-shadow: none;
 }
 .social-link--homepage:focus {
-  outline: 2px solid #06b6d4;
-  outline-offset: 2px;
-  border-radius: 4px;
-  background: none;
-  background-color: transparent;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .social-link--homepage:active {
   background: none;

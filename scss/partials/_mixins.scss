@@ -98,12 +98,11 @@
 }
 
 
-// Focus visible moderno
+// Focus rimosso per design
 @mixin focus-visible {
   &:focus-visible {
-    outline: 2px solid $primary-color;
-    outline-offset: 2px;
-    border-radius: $border-radius-sm;
+    outline: none !important;
+    box-shadow: none !important;
   }
 }
 
@@ -230,7 +229,8 @@
   user-select: none;
   
   &:focus:not(:active) {
-    box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+    outline: none !important;
+    box-shadow: none !important;
   }
   
   &:focus:active,
@@ -327,9 +327,8 @@
   transition: all $transition-normal;
   
   &:focus {
-    outline: none;
-    border-color: $primary-color;
-    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    outline: none !important;
+    box-shadow: none !important;
   }
   
   &::placeholder {
