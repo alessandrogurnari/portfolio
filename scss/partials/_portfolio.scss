@@ -1024,4 +1024,9 @@
   .portfolio .about-stats > div h3 {
     font-size: 1.15rem !important; // Aumenta font-size titoli stats (era 1rem)
   }
+  
+  // Titolo sezione "Il mio processo di lavoro" portfolio smartphone - aggiungi margin-top
+  .portfolio .section-title {
+    margin-top: 4rem !important; // Aggiunge margin-top al titolo della sezione
+  }
 }

@@ -247,4 +247,60 @@
     padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
     font-size: $font-size-smartphone-lg !important; // 16px per smartphone
   }
+  
+  // Freccia bottone hero smartphone - migliora aspetto (specificità massima)
+  .home .hero .hero-buttons .btn.btn-primary:first-child::after {
+    font-size: 1.2rem !important; // Riduce dimensione freccia per smartphone
+    margin-left: 0.75rem !important; // Riduce spazio tra testo e freccia
+    opacity: 1 !important; // Mantiene opacità
+  }
+  
+  // Bottoni neri smartphone - aumenta altezza per bilanciare effetto visivo
+  .home .cta-actions .btn.btn-primary,
+  .portfolio .cta-actions .btn.btn-primary.btn-portfolio-primary {
+    padding-top: 0.7rem !important; // Aumenta padding top per bilanciare altezza
+    padding-bottom: 0.7rem !important; // Aumenta padding bottom per bilanciare altezza
+  }
+  
+  // Freccia bottone hero smartphone - aspetto adattato per smartphone
+  .home .hero .hero-buttons .btn.btn-primary:first-child::after {
+    content: "\f107" !important; // Font Awesome freccia giù
+    font-family: "Font Awesome 6 Free" !important; // Font Awesome
+    font-weight: 900 !important; // Font Awesome richiede 900 per icone solide
+    font-size: 1.1rem !important; // Font-size ridotto per smartphone
+    color: white !important; // Stesso colore del desktop
+    margin-left: 1.2rem !important; // Margin ridotto per smartphone
+    opacity: 1 !important; // Stessa opacità del desktop
+    pointer-events: none !important; // Stesso pointer-events del desktop
+  }
+  
+  // Freccia bottone hero smartphone - colore nero su hover/active
+  .home .hero .hero-buttons .btn.btn-primary:first-child:hover::after,
+  .home .hero .hero-buttons .btn.btn-primary:first-child:active::after,
+  .home .hero .hero-buttons .btn.btn-primary:first-child:focus::after {
+    color: #2A2E34 !important; // Colore nero come il testo su hover/active
+  }
+  
+  // Rimuovi box-shadow anche negli stati focus/active
+  .home .hero .hero-buttons .btn.btn-primary:first-child:focus,
+  .home .hero .hero-buttons .btn.btn-primary:first-child:active,
+  .home .hero .hero-buttons .btn.btn-primary:first-child:focus:active {
+    outline: none !important; // Rimuovi outline al focus
+    -webkit-focus-ring-color: transparent !important; // Rimuovi anello di focus su WebKit
+    -webkit-tap-highlight-color: transparent !important; // Rimuovi highlight blu su smartphone
+    box-shadow: none !important; // Rimuovi box-shadow al focus/active
+    box-shadow: none !important; // Rimuovi box-shadow negli stati focus/active
+    outline: none !important; // Rimuovi outline negli stati focus/active
+  }
+  
+  // Rimuovi highlight al click sul logo smartphone
+  .nav-logo a {
+    -webkit-tap-highlight-color: transparent !important; // Rimuovi highlight blu su smartphone
+    -webkit-touch-callout: none !important; // Rimuovi callout su smartphone
+    -webkit-user-select: none !important; // Rimuovi selezione su smartphone
+    user-select: none !important; // Rimuovi selezione su smartphone
+    outline: none !important; // Rimuovi riquadro di contorno al focus
+    -webkit-focus-ring-color: transparent !important; // Rimuovi anello di focus su WebKit
+    font-size: 1.5rem !important; 
+  }
 }

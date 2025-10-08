@@ -930,6 +930,51 @@ html {
     padding-right: 1.5rem !important;
     font-size: 1rem !important;
   }
+  .home .hero .hero-buttons .btn.btn-primary:first-child::after {
+    font-size: 1.2rem !important;
+    margin-left: 0.75rem !important;
+    opacity: 1 !important;
+  }
+  .home .cta-actions .btn.btn-primary,
+  .portfolio .cta-actions .btn.btn-primary.btn-portfolio-primary {
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child::after {
+    content: "\f107" !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    font-size: 1.1rem !important;
+    color: white !important;
+    margin-left: 1.2rem !important;
+    opacity: 1 !important;
+    pointer-events: none !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:hover::after,
+  .home .hero .hero-buttons .btn.btn-primary:first-child:active::after,
+  .home .hero .hero-buttons .btn.btn-primary:first-child:focus::after {
+    color: #2A2E34 !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:focus,
+  .home .hero .hero-buttons .btn.btn-primary:first-child:active,
+  .home .hero .hero-buttons .btn.btn-primary:first-child:focus:active {
+    outline: none !important;
+    -webkit-focus-ring-color: transparent !important;
+    -webkit-tap-highlight-color: transparent !important;
+    box-shadow: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  .nav-logo a {
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+         user-select: none !important;
+    outline: none !important;
+    -webkit-focus-ring-color: transparent !important;
+    font-size: 1.5rem !important;
+  }
 }
 a {
   color: #2A2E34;
@@ -3083,6 +3128,9 @@ a:active {
   .portfolio .about-stats > div h3 {
     font-size: 1.15rem !important;
   }
+  .portfolio .section-title {
+    margin-top: 4rem !important;
+  }
 }
 .contattami .hero-content {
   justify-content: center;
@@ -3099,11 +3147,20 @@ a:active {
 .contattami .btn-primary:hover {
   background-color: #06b6d4;
   border-color: #06b6d4;
+  box-shadow: none;
+  outline: none;
 }
 .contattami .btn-primary:focus {
   background-color: #2A2E34;
   border-color: #2A2E34;
-  box-shadow: 0 0 0 0.2rem rgba(42, 46, 52, 0.25);
+  box-shadow: none;
+  outline: none;
+}
+.contattami .btn-primary:active {
+  background-color: #06b6d4;
+  border-color: #06b6d4;
+  box-shadow: none;
+  outline: none;
 }
 
 .contattami .accordion-button {
@@ -3250,9 +3307,6 @@ a:active {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s ease-out;
   animation-delay: 0s;
-}
-.contact .card:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 .contact .card-body {
   padding: 3rem;
@@ -3414,9 +3468,6 @@ a:active {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s ease-out;
   animation-delay: 0.5s;
-}
-.contact:hover {
-  box-shadow: 0 8px 20px rgba(42, 46, 52, 0.3);
 }
 
 .popup-title {
@@ -3899,6 +3950,20 @@ a:active {
     font-size: 1rem !important;
     padding: 10px 40px !important;
   }
+  .contact-form .btn-primary:hover {
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  .contact-form .btn-primary:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  .contact-form .btn-primary:active {
+    box-shadow: none !important;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
   .contact-faq .accordion-button {
     font-size: 1.5rem !important;
   }
@@ -3930,6 +3995,7 @@ a:active {
     font-weight: 300 !important;
     line-height: 1.6 !important;
     font-size: 1rem !important;
+    padding-bottom: 1.5rem !important;
   }
   .faq-section .accordion-button {
     font-size: 1rem !important;

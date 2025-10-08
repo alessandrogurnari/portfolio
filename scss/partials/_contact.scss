@@ -35,12 +35,22 @@
   &:hover {
     background-color: $brand-accent;
     border-color: $brand-accent;
+    box-shadow: none; // Rimuovi box-shadow
+    outline: none; // Rimuovi outline
   }
   
   &:focus {
     background-color: $primary-color;
     border-color: $primary-color;
-    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+    box-shadow: none; // Rimuovi box-shadow
+    outline: none; // Rimuovi outline
+  }
+  
+  &:active {
+    background-color: $brand-accent;
+    border-color: $brand-accent;
+    box-shadow: none; // Rimuovi box-shadow
+    outline: none; // Rimuovi outline
   }
 }
 
@@ -167,9 +177,7 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     @include fade-in-up;
     
-    &:hover {
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
+    // Rimosso effetto hover per evitare interferenze con sezioni CTA altre pagine
   }
   
   // Card body
@@ -353,12 +361,6 @@
     font-size: 1.1rem;
     transition: all $transition-normal;
     @include fade-in-up($animation-delay-5);
-    
-  }
-  
-    
-  &:hover {
-    box-shadow: 0 8px 20px rgba($primary-color, 0.3);
   }
 }
 
@@ -945,10 +947,28 @@
     font-size: $font-size-smartphone-base !important; // 13px per smartphone
   }
   
-  // Bottoni form - dimensioni ridotte
+  // Bottoni form - dimensioni ridotte e rimuovi box-shadow/outline/highlight
   .contact-form .btn-primary {
     font-size: $font-size-smartphone-lg !important; // 16px per smartphone
     padding: 10px 40px !important; // Padding ridotto per smartphone
+    
+    // Rimuovi box-shadow, outline e highlight su smartphone
+    &:hover {
+      box-shadow: none !important; // Rimuovi box-shadow
+      outline: none !important; // Rimuovi outline
+      -webkit-tap-highlight-color: transparent !important; // Rimuovi tap highlight
+    }
+    
+    &:focus {
+      box-shadow: none !important; // Rimuovi box-shadow
+      outline: none !important; // Rimuovi outline
+    }
+    
+    &:active {
+      box-shadow: none !important; // Rimuovi box-shadow
+      outline: none !important; // Rimuovi outline
+      -webkit-tap-highlight-color: transparent !important; // Rimuovi tap highlight
+    }
   }
   
   // Titoli FAQ - dimensioni ridotte
@@ -999,6 +1019,7 @@
     font-weight: 300 !important; // Font-weight leggero per smartphone
     line-height: 1.6 !important; // Line-height ottimale per smartphone
     font-size: 1rem !important; // Font-size ridotto per smartphone (14px)
+    padding-bottom: 1.5rem !important;
   }
   
   // Domande FAQ smartphone - aumenta font-size
@@ -1051,5 +1072,4 @@
   .contact .form-label {
     font-size: 1rem !important; 
   }
-
 }
