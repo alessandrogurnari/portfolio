@@ -751,7 +751,7 @@ html {
 .home .hero .hero-buttons .btn.btn-primary:first-child::after {
   content: "↓";
   font-size: 1.4rem;
-  color: white;
+  color: #ffffff;
   margin-left: 1rem;
   opacity: 1;
   pointer-events: none;
@@ -766,10 +766,34 @@ html {
     font-size: 1.25rem;
     min-width: 400px;
     flex: none;
+    color: #ffffff !important;
   }
   .home .hero .hero-buttons .btn.btn-primary:first-child::after {
     font-size: 1.2rem;
     margin-left: 0.5rem;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: #2A2E34 !important;
+    color: #ffffff !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:active {
+    background-color: #06b6d4 !important;
+    color: #2A2E34 !important;
+    transform: scale(0.98) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:active::after {
+    color: #2A2E34 !important;
+    transform: translateY(1px) !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child::after {
+    color: #ffffff !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:focus {
+    outline: 2px solid #06b6d4 !important;
+    outline-offset: 2px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -778,10 +802,28 @@ html {
     padding: 1rem 2rem;
     font-size: 1.25rem;
     min-width: 380px;
+    color: #ffffff !important;
   }
   .home .hero .hero-buttons .btn.btn-primary:first-child::after {
     font-size: 1.3rem;
     margin-left: 1rem;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:active {
+    background-color: #06b6d4 !important;
+    color: #2A2E34 !important;
+    transform: scale(0.99) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:active::after {
+    color: #2A2E34 !important;
+    transform: translateY(1px) !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child::after {
+    color: #ffffff !important;
+  }
+  .home .hero .hero-buttons .btn.btn-primary:first-child:focus {
+    outline: 2px solid #06b6d4 !important;
+    outline-offset: 2px !important;
   }
 }
 @media (min-width: 1024px) {
@@ -945,15 +987,10 @@ html {
     font-family: "Font Awesome 6 Free" !important;
     font-weight: 900 !important;
     font-size: 1.1rem !important;
-    color: white !important;
+    color: #ffffff !important;
     margin-left: 1.2rem !important;
     opacity: 1 !important;
     pointer-events: none !important;
-  }
-  .home .hero .hero-buttons .btn.btn-primary:first-child:hover::after,
-  .home .hero .hero-buttons .btn.btn-primary:first-child:active::after,
-  .home .hero .hero-buttons .btn.btn-primary:first-child:focus::after {
-    color: #2A2E34 !important;
   }
   .home .hero .hero-buttons .btn.btn-primary:first-child:focus,
   .home .hero .hero-buttons .btn.btn-primary:first-child:active,

@@ -108,7 +108,7 @@
   &::after {
     content: '↓';
     font-size: 1.4rem;
-    color: white;
+    color: $white-color;
     margin-left: $spacing-md;
     opacity: 1;
     pointer-events: none;
@@ -131,6 +131,42 @@
       font-size: 1.2rem;
       margin-left: $spacing-sm;
     }
+    
+    // STATI TOUCH-FRIENDLY PER SMARTPHONE
+    // Disabilita hover su smartphone
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+      background-color: $primary-color !important;
+      color: $white-color !important; // Testo bianco di default
+    }
+    
+    // Stato attivo (quando toccato) - Brand accent con testo nero
+    &:active {
+      background-color: $brand-accent !important;
+      color: $text-color !important;
+      transform: scale(0.98) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+      
+      &::after {
+        color: $text-color !important; // Freccia nera durante il click
+        transform: translateY(1px) !important;
+      }
+    }
+    
+    // Stato normale (non attivo) - Testo bianco
+    color: $white-color !important;
+    
+    &::after {
+      color: $white-color !important; // Freccia bianca di default
+    }
+    
+    
+    // Stato focus per accessibilità
+    &:focus {
+      outline: 2px solid $brand-accent !important;
+      outline-offset: 2px !important;
+    }
   }
   
   @include tablet {
@@ -142,6 +178,34 @@
     &::after {
       font-size: 1.3rem;
       margin-left: $spacing-md;
+    }
+    
+    // STATI TOUCH-FRIENDLY PER TABLET
+    // Mantiene hover per tablet ma aggiunge stato attivo
+    &:active {
+      background-color: $brand-accent !important;
+      color: $text-color !important;
+      transform: scale(0.99) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+      
+      &::after {
+        color: $text-color !important; // Freccia nera durante il click
+        transform: translateY(1px) !important;
+      }
+    }
+    
+    // Stato normale (non attivo) - Testo bianco
+    color: $white-color !important;
+    
+    &::after {
+      color: $white-color !important; // Freccia bianca di default
+    }
+    
+    
+    // Stato focus per accessibilità
+    &:focus {
+      outline: 2px solid $brand-accent !important;
+      outline-offset: 2px !important;
     }
   }
   
@@ -248,18 +312,12 @@
     font-family: "Font Awesome 6 Free" !important; // Font Awesome
     font-weight: 900 !important; // Font Awesome richiede 900 per icone solide
     font-size: 1.1rem !important; 
-    color: white !important; // Stesso colore del desktop
+    color: $white-color !important; // Stesso colore del desktop
     margin-left: 1.2rem !important; 
     opacity: 1 !important; // Stessa opacità del desktop
     pointer-events: none !important; // Stesso pointer-events del desktop
   }
   
-  // Freccia bottone hero smartphone - colore nero su hover/active
-  .home .hero .hero-buttons .btn.btn-primary:first-child:hover::after,
-  .home .hero .hero-buttons .btn.btn-primary:first-child:active::after,
-  .home .hero .hero-buttons .btn.btn-primary:first-child:focus::after {
-    color: #2A2E34 !important; // Colore nero come il testo su hover/active
-  }
   
   
   .home .hero .hero-buttons .btn.btn-primary:first-child:focus,
