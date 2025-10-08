@@ -29,7 +29,7 @@
 // ========================================
 // SPACING UTILITIES - MARGIN
 // ========================================
-// Margin Bottom
+
 .mb-0 { margin-bottom: 0; }
 .mb-1 { margin-bottom: $spacing-xs; }
 .mb-2 { margin-bottom: $spacing-sm; }
@@ -37,7 +37,7 @@
 .mb-4 { margin-bottom: $spacing-lg; }
 .mb-5 { margin-bottom: $spacing-xl; }
 
-// Margin Top
+
 .mt-0 { margin-top: 0; }
 .mt-1 { margin-top: $spacing-xs; }
 .mt-2 { margin-top: $spacing-sm; }
@@ -45,7 +45,7 @@
 .mt-4 { margin-top: $spacing-lg; }
 .mt-5 { margin-top: $spacing-xl; }
 
-// Margin Left/Right (Logical Properties 2025)
+
 .mx-0 { margin-inline: 0; }
 .mx-1 { margin-inline: $spacing-xs; }
 .mx-2 { margin-inline: $spacing-sm; }
@@ -53,7 +53,7 @@
 .mx-4 { margin-inline: $spacing-lg; }
 .mx-5 { margin-inline: $spacing-xl; }
 
-// Margin Top/Bottom (Logical Properties 2025)
+
 .my-0 { margin-block: 0; }
 .my-1 { margin-block: $spacing-xs; }
 .my-2 { margin-block: $spacing-sm; }
@@ -64,7 +64,7 @@
 // ========================================
 // SPACING UTILITIES - PADDING
 // ========================================
-// Padding All
+
 .p-0 { padding: 0; }
 .p-1 { padding: $spacing-xs; }
 .p-2 { padding: $spacing-sm; }
@@ -72,7 +72,7 @@
 .p-4 { padding: $spacing-lg; }
 .p-5 { padding: $spacing-xl; }
 
-// Padding Left/Right (Logical Properties 2025)
+
 .px-0 { padding-inline: 0; }
 .px-1 { padding-inline: $spacing-xs; }
 .px-2 { padding-inline: $spacing-sm; }
@@ -80,7 +80,7 @@
 .px-4 { padding-inline: $spacing-lg; }
 .px-5 { padding-inline: $spacing-xl; }
 
-// Padding Top/Bottom (Logical Properties 2025)
+
 .py-0 { padding-block: 0; }
 .py-1 { padding-block: $spacing-xs; }
 .py-2 { padding-block: $spacing-sm; }

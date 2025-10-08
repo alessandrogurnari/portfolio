@@ -28,8 +28,8 @@
   
   &-lg {
     padding: $spacing-md $spacing-lg;
-    font-size: $font-size-lg; // 18px per WCAG AAA
-    border-radius: $border-radius-lg; // 8px - Standardizzato con bottone hero
+    font-size: $font-size-lg; 
+    border-radius: $border-radius-lg; 
   }
   
   &:disabled {
@@ -92,7 +92,7 @@
   .btn {
     &-lg {
       padding: $spacing-sm $spacing-md;
-      font-size: $font-size-lg; // 18px per WCAG AAA
+      font-size: $font-size-lg; 
     }
   }
   
@@ -116,7 +116,7 @@
   padding: $spacing-lg $spacing-2xl;
   font-size: $font-size-lg;
   height: 60px;
-  border-radius: $border-radius-lg; // 8px - Border-radius originale del bottone hero
+  border-radius: $border-radius-lg; 
   position: relative;
   display: flex;
   align-items: center;
@@ -139,7 +139,7 @@
     color: $text-color; // Testo nero per contrasto ottimale
   }
   
-  // Responsive
+  
   @include mobile {
     height: 48px;
     padding: $spacing-sm $spacing-lg;
@@ -203,18 +203,18 @@
 }
 
 // 4. BOTTONE FORM CONTATTAMI - "Invia Messaggio" (gestito da Bootstrap)
-// Rimuoviamo le regole duplicate - Bootstrap gestisce già le dimensioni
+
 
 // 5. BOTTONI NAVBAR (se presenti)
 .navbar .btn {
   // Stili base
   padding: $spacing-xs $spacing-sm;
-  font-size: $font-size-base; // 16px (aumentato da 14px)
+  font-size: $font-size-base; 
   height: 36px;
-  border-radius: $border-radius-lg; // 8px - Standardizzato con bottone hero
+  border-radius: $border-radius-lg; 
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   
-  // Responsive
+  
   @include mobile {
     height: 32px;
     padding: $spacing-xs $spacing-xs;
@@ -243,23 +243,23 @@
 @include smartphone {
   // Bottoni CTA HOME - padding e dimensioni per smartphone
   .home .cta-actions .btn {
-    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    padding-left: $spacing-lg !important; 
+    padding-right: $spacing-lg !important; 
+    font-size: $font-size-smartphone-lg !important; 
   }
   
   // Freccia bottone hero smartphone - migliora aspetto (specificità massima)
   .home .hero .hero-buttons .btn.btn-primary:first-child::after {
-    font-size: 1.2rem !important; // Riduce dimensione freccia per smartphone
-    margin-left: 0.75rem !important; // Riduce spazio tra testo e freccia
+    font-size: 1.2rem !important; 
+    margin-left: 0.75rem !important; 
     opacity: 1 !important; // Mantiene opacità
   }
   
   // Bottoni neri smartphone - aumenta altezza per bilanciare effetto visivo
   .home .cta-actions .btn.btn-primary,
   .portfolio .cta-actions .btn.btn-primary.btn-portfolio-primary {
-    padding-top: 0.7rem !important; // Aumenta padding top per bilanciare altezza
-    padding-bottom: 0.7rem !important; // Aumenta padding bottom per bilanciare altezza
+    padding-top: 0.7rem !important; 
+    padding-bottom: 0.7rem !important; 
   }
   
   // Freccia bottone hero smartphone - aspetto adattato per smartphone
@@ -267,9 +267,9 @@
     content: "\f107" !important; // Font Awesome freccia giù
     font-family: "Font Awesome 6 Free" !important; // Font Awesome
     font-weight: 900 !important; // Font Awesome richiede 900 per icone solide
-    font-size: 1.1rem !important; // Font-size ridotto per smartphone
+    font-size: 1.1rem !important; 
     color: white !important; // Stesso colore del desktop
-    margin-left: 1.2rem !important; // Margin ridotto per smartphone
+    margin-left: 1.2rem !important; 
     opacity: 1 !important; // Stessa opacità del desktop
     pointer-events: none !important; // Stesso pointer-events del desktop
   }
@@ -281,26 +281,26 @@
     color: #2A2E34 !important; // Colore nero come il testo su hover/active
   }
   
-  // Rimuovi box-shadow anche negli stati focus/active
+  
   .home .hero .hero-buttons .btn.btn-primary:first-child:focus,
   .home .hero .hero-buttons .btn.btn-primary:first-child:active,
   .home .hero .hero-buttons .btn.btn-primary:first-child:focus:active {
-    outline: none !important; // Rimuovi outline al focus
-    -webkit-focus-ring-color: transparent !important; // Rimuovi anello di focus su WebKit
-    -webkit-tap-highlight-color: transparent !important; // Rimuovi highlight blu su smartphone
-    box-shadow: none !important; // Rimuovi box-shadow al focus/active
-    box-shadow: none !important; // Rimuovi box-shadow negli stati focus/active
-    outline: none !important; // Rimuovi outline negli stati focus/active
+    outline: none !important; 
+    -webkit-focus-ring-color: transparent !important; 
+    -webkit-tap-highlight-color: transparent !important; 
+    box-shadow: none !important; 
+    box-shadow: none !important; 
+    outline: none !important; 
   }
   
-  // Rimuovi highlight al click sul logo smartphone
+  
   .nav-logo a {
-    -webkit-tap-highlight-color: transparent !important; // Rimuovi highlight blu su smartphone
-    -webkit-touch-callout: none !important; // Rimuovi callout su smartphone
-    -webkit-user-select: none !important; // Rimuovi selezione su smartphone
-    user-select: none !important; // Rimuovi selezione su smartphone
-    outline: none !important; // Rimuovi riquadro di contorno al focus
-    -webkit-focus-ring-color: transparent !important; // Rimuovi anello di focus su WebKit
+    -webkit-tap-highlight-color: transparent !important; 
+    -webkit-touch-callout: none !important; 
+    -webkit-user-select: none !important; 
+    user-select: none !important; 
+    outline: none !important; 
+    -webkit-focus-ring-color: transparent !important; 
     font-size: 1.5rem !important; 
   }
 }

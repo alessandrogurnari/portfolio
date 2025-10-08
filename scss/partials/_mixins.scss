@@ -234,9 +234,9 @@
   justify-content: center;
   padding: $spacing-sm $spacing-lg;
   border: none;
-  border-radius: 8px !important; // 8px - Standardizzato per tutte le risoluzioni
+  border-radius: 8px !important; 
   font-family: $font-family-primary;
-  font-size: $font-size-lg; // 18px (aumentato per migliore leggibilità)
+  font-size: $font-size-lg; 
   font-weight: $font-weight-medium;
   text-decoration: none;
   cursor: pointer;
@@ -295,16 +295,16 @@
 // Mixin per bottoni CTA standard (altezza 48px, responsive)
 @mixin button-cta {
   padding: $spacing-sm $spacing-lg;
-  font-size: $font-size-base; // 16px (standard moderno)
+  font-size: $font-size-base; 
   height: 48px;
-  border-radius: 8px !important; // 8px - Standardizzato per tutte le risoluzioni
+  border-radius: 8px !important; 
   min-width: auto;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   
   @include mobile {
     height: 44px;
     padding: $spacing-sm $spacing-md;
-    font-size: $font-size-base; // 16px (standard moderno)
+    font-size: $font-size-base; 
     flex: 1;
   }
   
@@ -312,13 +312,13 @@
   @include tablet {
     height: 46px;
     padding: $spacing-sm $spacing-lg;
-    font-size: $font-size-base; // 16px (standard moderno)
+    font-size: $font-size-base; 
   }
   
   @include desktop {
     height: 48px;
     padding: $spacing-sm $spacing-lg;
-    font-size: $font-size-base; // 16px (standard moderno)
+    font-size: $font-size-base; 
   }
 }
 
@@ -360,13 +360,13 @@
 // Typography Mixins
 @mixin heading-1 {
   font-family: $font-family-heading;
-  font-size: $font-size-5xl; // Aumentato da 4xl a 5xl per titoli hero più grandi
+  font-size: $font-size-5xl; 
   font-weight: $font-weight-bold;
   line-height: $line-height-tight;
   color: $text-color;
   
   @include mobile {
-    font-size: $font-size-4xl; // Aumentato da 3xl a 4xl per mobile
+    font-size: $font-size-4xl; 
   }
   
 }

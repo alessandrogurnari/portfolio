@@ -2,7 +2,7 @@
 // MAIN JAVASCRIPT FILE - PORTFOLIO ALESSANDRO GURNARI
 // ========================================
 // Gestisce navigazione, animazioni e interazioni del sito
-// Ottimizzato per performance e accessibilità WCAG AAA
+
 
 // ========================================
 // MENU HAMBURGER - GESTIONE CLICK
@@ -181,13 +181,13 @@ const animateOnScroll = () => {
         // Attiva le animazioni CSS esistenti
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
-        // Rimuovi l'osservazione per evitare animazioni multiple
+        
         observer.unobserve(entry.target);
       }
     });
   }, { 
-    threshold: 0.2, // Aumentato per ridurre attivazioni premature
-    rootMargin: '0px 0px -50px 0px' // Margine negativo per attivazione più tarda
+    threshold: 0.2, 
+    rootMargin: '0px 0px -50px 0px' 
   });
   
   elements.forEach(element => {
@@ -410,7 +410,7 @@ const initializePortfolioFilter = () => {
     clientItem.addEventListener('click', function() {
       const clientName = this.getAttribute('data-client');
       
-      // Rimuovi classe active da tutti i clienti
+      
       clientItems.forEach(item => item.classList.remove('active'));
       
       // Aggiungi classe active al cliente cliccato

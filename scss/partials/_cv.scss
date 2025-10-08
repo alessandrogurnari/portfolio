@@ -16,11 +16,11 @@
 
 // CV PAGE: Contenuto hero centrato
 .cv .hero-content {
-  justify-content: center; // Centra tutto il contenuto
-  text-align: center; // Centra il testo
+  justify-content: center; 
+  text-align: center; 
   
   .hero-buttons {
-    justify-content: center; // Centra i bottoni
+    justify-content: center; 
   }
 }
 
@@ -37,7 +37,7 @@
   
   .cv-summary-content {
     p {
-      font-size: $font-size-base; // 16px (standard moderno) su desktop
+      font-size: $font-size-base; 
       line-height: $line-height-relaxed;
       color: $text-color;
       margin: 0;
@@ -62,7 +62,7 @@
     margin: $spacing-xl 0;
     
     .cv-summary-content p {
-      font-size: $font-size-base; // 16px (standard moderno) su tablet
+      font-size: $font-size-base; 
     }
   }
   
@@ -72,7 +72,7 @@
     margin: $spacing-lg 0;
     
     .cv-summary-content p {
-      font-size: $font-size-base; // 16px (standard moderno) su mobile
+      font-size: $font-size-base; 
     }
   }
 }
@@ -82,12 +82,12 @@
 // ========================================
 .hero.cv-hero {
   min-height: 100vh;
-  // Padding unificato con home: $spacing-4xl 0
+  
   
   // Override per mobile
   @include mobile {
     min-height: 100vh;
-    // Padding unificato con home: $spacing-4xl 0
+    
   }
   
   .hero-content {
@@ -101,7 +101,7 @@
       @include heading-1;  // Usa il mixin standard per uniformità
       
       & {
-        margin-bottom: $spacing-lg; // Aumentato per coerenza con regole generali hero
+        margin-bottom: $spacing-lg; 
         color: $text-color; // Nero per contrasto con sfondo chiaro
       }
       
@@ -112,7 +112,7 @@
     }
     
     .hero-subtitle {
-      font-size: $font-size-xl; // 24px - aumentato per migliore leggibilità
+      font-size: $font-size-xl; 
       color: $text-color; // Nero per contrasto con sfondo chiaro
       margin-bottom: 1rem;
       font-weight: $font-weight-normal; // Ridotto per look più leggero
@@ -122,7 +122,7 @@
     }
     
     .hero-description {
-      font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
+      font-size: $font-size-lg; 
       color: $text-color; // Nero per contrasto con sfondo chiaro
       line-height: $line-height-relaxed;
       font-weight: $font-weight-light; // Font-weight leggero per descrizione
@@ -276,8 +276,8 @@
   }
   
   @include mobile {
-    width: 210px; // Aumentato da 150px per XS
-    height: 210px; // Aumentato da 150px per XS
+    width: 210px; 
+    height: 210px; 
   }
   
   @include sm {
@@ -292,7 +292,7 @@
   
   @include desktop {
     width: 270px;
-    height: 270px; // Aumentato per desktop
+    height: 270px; 
   }
 }
 
@@ -359,26 +359,26 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    gap: $spacing-xl; // Aumentato da $spacing-lg per maggiore distanza tra le icone
+    gap: $spacing-xl; 
   }
   
   @include sm {
-    align-items: center; // Allineamento centrato per allineare con icona posizione
+    align-items: center; 
     flex-direction: row;
     justify-content: flex-start;
-    gap: $spacing-xl; // Aumentato da $spacing-lg per maggiore distanza tra le icone
+    gap: $spacing-xl; 
     
-    // Aumenta dimensioni icone e testo per SM - regole più specifiche
+    
     .contact-item {
       i {
-        font-size: 1.6rem !important; // Aumentato significativamente per SM
-        width: 24px !important; // Aumentato significativamente per SM
+        font-size: 1.6rem !important; 
+        width: 24px !important; 
       }
       
       // Icona posizione con testo più grande
       &:nth-child(1) {
         span {
-          font-size: 1.2rem !important; // Aumentato significativamente per SM
+          font-size: 1.2rem !important; 
         }
       }
       
@@ -387,8 +387,8 @@
       &:nth-child(3) {
         .social-link--homepage {
           i {
-            font-size: 1.6rem !important; // Aumentato significativamente per SM
-            width: 24px !important; // Aumentato significativamente per SM
+            font-size: 1.6rem !important; 
+            width: 24px !important; 
           }
         }
       }
@@ -408,11 +408,11 @@
   
   i {
     color: $primary-color;
-    font-size: 1.2rem; // Aumentato per accessibilità (19.2px) - coerente con icone social
-    width: 24px; // Aumentato da 20px per accessibilità
+    font-size: 1.2rem; 
+    width: 24px; 
     text-align: center;
     line-height: 1; // Assicura line-height uniforme per tutte le icone
-    vertical-align: middle; // Allineamento verticale uniforme
+    vertical-align: middle; 
   }
   
   a {
@@ -436,7 +436,7 @@
       font-size: 1rem; // Dimensione base per il testo posizione
       
       @include mobile {
-        font-size: 1.2rem; // Aumentato leggermente su mobile
+        font-size: 1.2rem; 
       }
       
       @include tablet {
@@ -462,9 +462,9 @@
       height: auto; // Altezza automatica
       min-width: auto; // Larghezza minima automatica
       min-height: auto; // Altezza minima automatica
-      padding: 8px; // Padding per area cliccabile accessibile (44px totali)
+      padding: 8px; 
       display: flex;
-      align-items: center; // Allineamento verticale per coerenza con icona posizione
+      align-items: center; 
       gap: $spacing-sm; // Gap tra icona e testo
       transition: color 0.1s ease; // Transizione molto veloce
       text-decoration: none;
@@ -494,7 +494,7 @@
   @include sm-up {
     &:nth-child(1) {
       display: flex;
-      align-items: center; // Allineamento centrato per coerenza con icone social
+      align-items: center; 
       gap: $spacing-sm;
       padding: 8px;
       i {
@@ -506,7 +506,7 @@
     &:nth-child(2),
     &:nth-child(3) {
       display: flex;
-      align-items: center; // Allineamento centrato per coerenza con icona posizione
+      align-items: center; 
       gap: $spacing-sm;
       .social-link--homepage {
         align-items: center;
@@ -540,7 +540,7 @@
         gap: 0; // Nessun gap su mobile (solo icona)
         display: flex;
         align-items: center;
-        justify-content: center; // Centra l'icona
+        justify-content: center; 
         transition: color 0.1s ease; // Transizione più veloce per sincronizzazione
         
         &:hover {
@@ -554,7 +554,7 @@
           color: inherit; // Eredita il colore dal link
           transition: color 0.1s ease; // Transizione più veloce
           line-height: 1; // Line-height uniforme
-          vertical-align: middle; // Allineamento verticale uniforme
+          vertical-align: middle; 
         font-size: 1.2rem; // Dimensione ridotta per allineamento orizzontale
         width: 20px; // Larghezza ridotta per allineamento orizzontale
         }
@@ -578,7 +578,7 @@
         color: #000000; // Nero per l'icona posizione su mobile
         transition: color 0.1s ease; // Stessa velocità delle altre icone
         line-height: 1; // Line-height uniforme
-        vertical-align: middle; // Allineamento verticale uniforme
+        vertical-align: middle; 
         font-size: 1.2rem; // Stessa dimensione delle icone social per allineamento orizzontale
         width: 20px; // Stessa larghezza delle icone social per allineamento orizzontale
       }
@@ -629,7 +629,7 @@
 
 // Regole generali per paragrafi nelle sezioni CV - WCAG AAA
 .cv-section p {
-  font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
+  font-size: $font-size-lg; 
   
 }
 
@@ -686,7 +686,7 @@
     gap: 0.4rem;
     
     i {
-      font-size: 1.1rem; // Aumentata da 1rem per accessibilità mobile
+      font-size: 1.1rem; 
     }
   }
 }
@@ -723,19 +723,19 @@
     margin: 0;
     
     @include mobile {
-      font-size: 1.1rem; // Aumentata da 1rem per accessibilità mobile
+      font-size: 1.1rem; 
       line-height: 1.3;
     }
   }
   
   .cv-date {
     color: $text-light;
-    font-size: 1rem; // Aumentato da 0.875rem per accessibilità
+    font-size: 1rem; 
     font-weight: $font-weight-normal;
     white-space: nowrap;
     
     @include mobile {
-      font-size: 1.1rem; // Aumentato per accessibilità mobile
+      font-size: 1.1rem; 
       align-self: flex-start;
     }
   }
@@ -748,7 +748,7 @@
   margin-bottom: 1rem;
   
   @include mobile {
-    font-size: 1.1rem; // Aumentato per accessibilità mobile
+    font-size: 1.1rem; 
     margin-bottom: 0.75rem;
   }
 }
@@ -762,12 +762,12 @@
     padding-left: 1.5rem;
     margin-bottom: 0.5rem;
     line-height: $line-height-relaxed;
-    font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
+    font-size: $font-size-lg; 
     
     @include mobile {
       padding-left: 1.25rem;
       margin-bottom: 0.4rem;
-      font-size: 1.1rem; // Aumentato per accessibilità mobile
+      font-size: 1.1rem; 
       line-height: 1.4;
     }
     
@@ -819,7 +819,7 @@
   border: 0.5px solid $border-color; // Ridotto spessore bordo per look più delicato
   
   @include mobile {
-    font-size: 1rem; // Aumentato ulteriormente per ottimale leggibilità su mobile
+    font-size: 1rem; 
     padding: 0.2rem 0.6rem;
   }
   
@@ -845,7 +845,7 @@
   
   // Mantiene la struttura a tre colonne anche su mobile
   @include mobile {
-    gap: 0.5rem; // Riduce il gap su mobile per adattarsi meglio
+    gap: 0.5rem; 
   }
   
   .language-name {
@@ -861,10 +861,10 @@
   .language-level {
     display: flex;
     gap: 0.25rem;
-    justify-content: center; // Centra i pallini nella colonna centrale
+    justify-content: center; 
     
     @include mobile {
-      gap: 0.2rem; // Riduce il gap tra i pallini su mobile
+      gap: 0.2rem; 
     }
     
     span {
@@ -901,14 +901,14 @@
 // ========================================
 // Regole specifiche per la sezione CTA della pagina CV con spaziatura UX/UI ottimale
 .cv .contact {
-  padding: $spacing-3xl 0; // Riduce padding da 4xl a 2xl
+  padding: $spacing-3xl 0; 
   
   @include mobile {
-    padding: $spacing-3xl 0; // Riduce padding su mobile
+    padding: $spacing-3xl 0; 
   }
   
   @include tablet {
-    padding: $spacing-3xl 0; // Riduce padding su tablet
+    padding: $spacing-3xl 0; 
   }
 }
 
@@ -917,37 +917,37 @@
   
   // Spaziatura ottimale tra titolo e testo descrittivo
   h3 {
-    margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
+    margin-bottom: $spacing-lg; 
   }
   
   p {
-    margin-bottom: 2.5rem; // 40px - Spazio ottimizzato per separare contenuto da azioni
+    margin-bottom: 2.5rem; 
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-size: $font-size-base; // 16px (standard moderno) e coerenza con Home/Portfolio
+    font-size: $font-size-base; 
     
   }
   
-  // Responsive spacing per tablet
+  
   @include tablet {
     h3 {
-      margin-bottom: 1.5rem; // 24px su tablet
+      margin-bottom: 1.5rem; 
     }
     
     p {
-      margin-bottom: 2.25rem; // 36px su tablet
+      margin-bottom: 2.25rem; 
     }
   }
   
-  // Responsive spacing per mobile
+  
   @include mobile {
     h3 {
-      margin-bottom: 1.25rem; // 20px su mobile
+      margin-bottom: 1.25rem; 
     }
     
     p {
-      margin-bottom: 2rem; // 32px su mobile
+      margin-bottom: 2rem; 
     }
   }
 }
@@ -959,7 +959,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $spacing-xl; // 32px - Spazio ottimizzato
+  gap: $spacing-xl; 
   
   .hero-buttons {
     display: flex;
@@ -967,7 +967,7 @@
     align-items: stretch;
     margin-bottom: 0; // Reset margin per controllo preciso
     
-    // Responsive per mobile
+    
     @include mobile {
       flex-direction: row; // Bottoni affiancati anche su mobile
       gap: $spacing-md;
@@ -1019,17 +1019,17 @@
   
   // Titoli hero CV - dimensioni ridotte
   .hero.cv-hero .hero-text h1 {
-    font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
+    font-size: $font-size-smartphone-4xl !important; 
   }
   
   // Sottotitolo hero CV - dimensioni ridotte
   .hero.cv-hero .hero-subtitle {
-    font-size: $font-size-smartphone-xl !important; // 16px per smartphone
+    font-size: $font-size-smartphone-xl !important; 
   }
   
   // Descrizione hero CV - dimensioni ridotte
   .hero.cv-hero .hero-description {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
   }
   
   
@@ -1046,12 +1046,12 @@
   // Skill CV smartphone - font-weight 300 e rimuovi hover
   .cv .skill-tag {
     font-weight: 300 !important; // Font-weight leggero per smartphone
-    pointer-events: none !important; // Rimuovi hover su smartphone
+    pointer-events: none !important; 
   }
   
   // Titoli categorie skill CV smartphone - aumenta padding-bottom
   .cv .skills-category h4 {
-    padding-bottom: 0.25rem !important; // Aumenta padding-bottom per smartphone
+    padding-bottom: 0.25rem !important; 
   }
   
   // Testo formazione ed esperienza professionale CV smartphone - font-weight 300
@@ -1062,23 +1062,23 @@
   
   .cv .cv-company {
     font-weight: 400 !important; // Font-weight leggero per smartphone
-    font-size: 0.875rem !important; // Font-size 16px per smartphone
-    padding-top: 0.5rem !important; // Padding-top per smartphone
-    padding-bottom: 1rem !important; // Padding-bottom per smartphone
+    font-size: 0.875rem !important; 
+    padding-top: 0.5rem !important; 
+    padding-bottom: 1rem !important; 
   }
   
   // Summary CV smartphone - font-weight 300 e font-size 1rem
   .cv .cv-summary-content p {
     font-weight: 300 !important; // Font-weight leggero per smartphone
-    font-size: 1rem !important; // Font-size 16px per smartphone
+    font-size: 1rem !important; 
     line-height: 1.6 !important; // Line-height ottimale per smartphone
   }
   
   // Elemento summary CV smartphone - aumenta padding top e bottom
   .cv .cv-summary {
-    padding-top: 1.5rem !important; // Aumenta padding-top per smartphone
-    padding-bottom: 1.5rem !important; // Aumenta padding-bottom per smartphone
-    margin-bottom: 4rem !important; // Aumenta distanza con sezione successiva
+    padding-top: 1.5rem !important; 
+    padding-bottom: 1.5rem !important; 
+    margin-bottom: 4rem !important; 
   }
   
   // Testo "versione pdf disponibile" CV smartphone - aumenta font-size
@@ -1086,29 +1086,29 @@
     font-size: 1rem !important; 
     font-weight: 300 !important;
     line-height: 1.6 !important; // Line-height ottimale per smartphone
-    padding-bottom: 1rem !important; // Padding-bottom (stesso di home)
+    padding-bottom: 1rem !important; 
   }
   
   // Container immagine CV smartphone - aumenta padding-bottom
   .cv .cv-photo-container {
-    padding-bottom: 2rem !important; // Aumenta padding-bottom per smartphone
+    padding-bottom: 2rem !important; 
   }
   
   // Scritta "UX/UI Designer" CV smartphone - aumenta padding-bottom
   .cv .cv-info h2 {
-    padding-bottom: 1rem !important; // Aumenta padding-bottom per smartphone
+    padding-bottom: 1rem !important; 
   }
   
   // Paragrafi CTA CV - dimensioni e font-weight ridotti
   .cv .cta-actions p {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
     font-weight: 300 !important; // Font-weight leggero per smartphone
   }
   
   // Bottoni CTA CV - padding e dimensioni
   .cv .cta-actions .btn {
-    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    padding-left: $spacing-lg !important; 
+    padding-right: $spacing-lg !important; 
+    font-size: $font-size-smartphone-lg !important; 
   }
 }

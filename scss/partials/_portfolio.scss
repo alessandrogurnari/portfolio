@@ -15,11 +15,11 @@
 
 // PORTFOLIO PAGE: Contenuto hero centrato
 .portfolio .hero-content {
-  justify-content: center; // Centra tutto il contenuto
-  text-align: center; // Centra il testo
+  justify-content: center; 
+  text-align: center; 
   
   .hero-buttons {
-    justify-content: center; // Centra i bottoni
+    justify-content: center; 
   }
 }
 
@@ -34,7 +34,7 @@
   color: $text-light;
   font-size: $font-size-lg;
   margin-top: $spacing-2xl;
-  margin-bottom: $spacing-2xl; // Aumentato per più spazio con header cliente
+  margin-bottom: $spacing-2xl; 
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -45,12 +45,12 @@
 // ========================================
 .hero.portfolio-hero {
   min-height: 100vh;
-  // Padding unificato con home: $spacing-4xl 0
+  
   
   // Override per mobile
   @include mobile {
     min-height: 100vh;
-    // Padding unificato con home: $spacing-4xl 0
+    
   }
   
   .hero-content {
@@ -64,7 +64,7 @@
       @include heading-1;  // Usa il mixin standard per uniformità
       
       & {
-        margin-bottom: $spacing-lg; // Aumentato per coerenza con regole generali hero
+        margin-bottom: $spacing-lg; 
         color: $text-color; // Titolo nero come Contattami
       }
       
@@ -74,8 +74,8 @@
     }
     
     .hero-subtitle {
-      font-size: $font-size-xl; // 24px - aumentato per migliore leggibilità
-        color: $text-color; // Nero per contrasto con sfondo chiaro
+      font-size: $font-size-xl; 
+      color: $text-color; // Nero per contrasto con sfondo chiaro
       margin-bottom: 1rem;
       font-weight: $font-weight-normal; // Ridotto per look più leggero
       @include fade-in-up;
@@ -85,7 +85,7 @@
     .hero-description {
       // Utilizza le regole base da _hero.scss
       // Aggiunge solo regole specifiche per la pagina portfolio
-      font-size: $font-size-lg; // 20px - aumentato per migliore leggibilità
+      font-size: $font-size-lg; 
         color: $text-color; // Nero per contrasto con sfondo chiaro
       font-weight: $font-weight-light; // Font-weight leggero per descrizione
       
@@ -119,7 +119,7 @@
   .clients-grid {
     display: flex;
     align-items: center;
-    justify-content: flex-start; // Allinea a sinistra per scroll
+    justify-content: flex-start; 
     gap: 4rem;
     flex-wrap: nowrap; // Forza una sola riga
     width: 100%;
@@ -228,7 +228,7 @@
   align-items: center;
   gap: $spacing-lg;
   margin-bottom: 0; // Rimosso per evitare doppio spacing con .client-works-section
-  padding: $spacing-lg; // Padding ottimizzato per altezza contenuta
+  padding: $spacing-lg; 
   background-color: $card-color;
   border-radius: $border-radius-xl;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
@@ -278,7 +278,7 @@
     object-fit: contain; // Mantiene proporzioni originali
     border-radius: $border-radius-lg;
     background-color: $card-color; // Background pulito per valorizzare il logo
-    padding: $spacing-md; // Padding generoso per respirare
+    padding: $spacing-md; 
     margin-right: $spacing-md;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); // Shadow sottile per profondità
     flex-shrink: 0; // Mantiene le dimensioni fisse
@@ -290,7 +290,7 @@
     min-width: 0; // Permette al testo di wrappare se necessario
     
     h3 {
-      font-size: 1.375rem; // 22px - dimensione ottimale per desktop
+      font-size: 1.375rem; 
       font-weight: $font-weight-semibold; // Peso ridotto per aspetto più elegante
       color: $text-color;
       margin-bottom: $spacing-sm; 
@@ -298,20 +298,20 @@
       
       // Media query per risoluzioni intermedie (≤ 1023px)
       @media (max-width: 1023px) {
-        font-size: $font-size-xl; // 20px - dimensione ridotta per risoluzioni intermedie
+        font-size: $font-size-xl; 
       }
       
     }
     
     p {
       color: $text-light;
-      font-size: $font-size-lg; // 18px per WCAG AAA
+      font-size: $font-size-lg; 
       margin: 0;
       line-height: 1.5; // Line height ottimizzato per leggibilità
       
       // Media query per risoluzioni intermedie (≤ 1023px)
       @media (max-width: 1023px) {
-        font-size: $font-size-lg; // 18px per WCAG AAA
+        font-size: $font-size-lg; 
       }
       
     }
@@ -329,17 +329,17 @@
     cursor: pointer;
     // Transizione definita sopra nell'header
     flex-shrink: 0; // Mantiene le dimensioni fisse
-    margin-right: $spacing-xl; // Margine destro per desktop
+    margin-right: $spacing-xl; 
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); // Ombra esterna come gli altri elementi
     border: 1px solid rgba(0, 0, 0, 0.05); // Bordo sottile per definizione
     
     // Media query per risoluzioni intermedie (≤ 1023px)
     @media (max-width: 1023px) {
-      margin-right: $spacing-sm; // Margine ridotto per risoluzioni intermedie
+      margin-right: $spacing-sm; 
     }
     
     i {
-      font-size: $font-size-sm; // 18px - dimensione proporzionale alla freccia
+      font-size: $font-size-sm; 
       transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); // Rotazione smooth
     }
     
@@ -359,22 +359,22 @@
   @include mobile {
     // Mantiene layout orizzontale come desktop/tablet
     flex-direction: row;
-    text-align: left; // Allineamento a sinistra per coerenza
+    text-align: left; 
     gap: $spacing-md;
-    padding: $spacing-lg; // Padding aumentato per migliore touch target
+    padding: $spacing-lg; 
     min-height: 100px; // Altezza minima aumentata per accessibilità
     
     .client-works-logo {
       max-width: 90px; // Larghezza aumentata per migliore visibilità
       height: 70px; // Altezza aumentata per migliore visibilità
-      padding: $spacing-md; // Padding aumentato per migliore touch target e respiro
+      padding: $spacing-md; 
       min-width: 70px; // Larghezza minima garantita per accessibilità
       min-height: 50px; // Altezza minima garantita per accessibilità
     }
     
     .client-works-info {
       h3 {
-        font-size: $font-size-xl; // 20px - dimensione minima per accessibilità (WCAG)
+        font-size: $font-size-xl; 
         font-weight: $font-weight-semibold; // Peso ottimizzato per mobile
         margin-bottom: $spacing-sm; // Spacing aumentato per migliore separazione
         line-height: 1.3; // Line height ottimizzato per mobile
@@ -382,7 +382,7 @@
       }
       
       p {
-        font-size: $font-size-lg; // 18px per WCAG AAA
+        font-size: $font-size-lg; 
         line-height: 1.5; // Line height ottimizzato per leggibilità
         margin: 0; // Reset margin per controllo preciso
         
@@ -392,35 +392,35 @@
     .client-works-arrow {
       width: 36px; // Dimensione ridotta per mobile
       height: 36px; // Dimensione ridotta per mobile
-      margin-right: $spacing-sm; // Margine destro ridotto per mobile
+      margin-right: $spacing-sm; 
       
       i {
-        font-size: $font-size-sm; // 18px - dimensione proporzionale per mobile (WCAG AAA)
+        font-size: $font-size-sm; 
       }
     }
   }
   
   
   @include tablet {
-    padding: $spacing-lg; // Padding ottimizzato per tablet
+    padding: $spacing-lg; 
     min-height: 95px; // Altezza minima ottimizzata per tablet
     
     .client-works-logo {
       max-width: 110px; // Larghezza massima per tablet
       height: 70px; // Altezza intermedia per tablet
-      padding: $spacing-sm; // Padding ottimizzato per tablet
+      padding: $spacing-sm; 
     }
     
     .client-works-info {
       h3 {
-        font-size: $font-size-xl; // 20px - dimensione ottimale per tablet (WCAG AA)
+        font-size: $font-size-xl; 
         font-weight: $font-weight-semibold; // Peso ottimizzato per tablet
         margin-bottom: $spacing-sm; // Spacing consistente
         line-height: 1.3; // Line height ottimizzato
       }
       
       p {
-        font-size: $font-size-lg; // 18px per WCAG AAA
+        font-size: $font-size-lg; 
         line-height: 1.5; // Line height ottimizzato per leggibilità
         margin: 0; // Reset margin per controllo preciso
       }
@@ -429,10 +429,10 @@
     .client-works-arrow {
       width: 38px; // Dimensione intermedia per tablet
       height: 38px; // Dimensione intermedia per tablet
-      margin-right: $spacing-sm; // Margine destro ridotto per tablet
+      margin-right: $spacing-sm; 
       
       i {
-        font-size: $font-size-sm; // 18px - dimensione proporzionale per tablet
+        font-size: $font-size-sm; 
       }
     }
   }
@@ -469,14 +469,14 @@
     gap: $spacing-lg;
     padding-bottom: $spacing-sm; // Spazio per le ombre
     
-    // Dimensioni delle card per mobile, gap e tablet
+    
     .project-card {
       flex: 0 0 340px; // Larghezza fissa intermedia
       min-width: 340px; // Larghezza minima intermedia
       max-width: 360px; // Larghezza massima intermedia
-      padding-bottom: 20px; // Padding bottom - coerente con desktop
+      padding-bottom: 20px; 
       margin-top: $spacing-md;
-      margin-bottom: $spacing-sm; // Margine bottom ridotto
+      margin-bottom: $spacing-sm; 
       
     }
   }
@@ -620,29 +620,29 @@
 
 .project-content {
   padding: $spacing-xl;
-  padding-top: $spacing-3xl; // Aumenta ulteriormente la distanza dall'immagine
+  padding-top: $spacing-3xl; 
   flex: 1; // Occupa tutto lo spazio disponibile
   display: flex;
   flex-direction: column;
   justify-content: space-between; // Distribuisce lo spazio tra contenuto e tag
   
   h4 {
-    font-size: $font-size-xl; // 20px - più grande del testo per gerarchia visiva
+    font-size: $font-size-xl; 
     font-weight: $font-weight-semibold;
     color: $text-color;
-    margin-top: $spacing-lg; // Aumenta la distanza dall'immagine
-    margin-bottom: $spacing-md; // Aumentato da sm a md per più spazio
+    margin-top: $spacing-lg; 
+    margin-bottom: $spacing-md; 
     
     // Titolo più grande su mobile per gerarchia più marcata
     @include mobile {
-      font-size: 1.375rem; // 22px - gerarchia più marcata su mobile
+      font-size: 1.375rem; 
     }
     
   }
   
   p {
     color: $text-light;
-    font-size: $font-size-lg !important; // 18px ridotto per desktop
+    font-size: $font-size-lg !important; 
     line-height: $line-height-relaxed;
     margin-bottom: 0; // Rimosso per avvicinare i tag
     flex: 1; // Il paragrafo si espande per riempire lo spazio disponibile
@@ -663,7 +663,7 @@
     border: 1px solid $primary-color;
     padding: $spacing-xs $spacing-sm;
     border-radius: $border-radius-lg; // Border-radius 8px per tag compatti
-    font-size: 0.75rem; // 12px - tag più piccoli per elementi secondari
+    font-size: 0.75rem; 
     font-weight: $font-weight-medium;
     
   }
@@ -686,7 +686,7 @@
     
     h3 {
       font-family: $font-family-heading;
-      font-size: 1.25rem; // 20px - dimensioni corrette
+      font-size: 1.25rem; 
       font-weight: $font-weight-semibold;
       line-height: $line-height-normal;
       color: $brand-accent; // Colore accent per i titoli
@@ -695,7 +695,7 @@
     
     p {
       color: $text-light;
-      font-size: 14px; // 14px - dimensioni corrette
+      font-size: 14px; 
       text-transform: uppercase;
       letter-spacing: 0.5px;
       
@@ -708,7 +708,7 @@
     gap: $spacing-xl;
     
     > div h3 {
-      font-size: $font-size-xl; // 20px
+      font-size: $font-size-xl; 
     }
     
     > div p {
@@ -723,7 +723,7 @@
     gap: $spacing-xl;
     
     > div h3 {
-      font-size: $font-size-xl; // 20px
+      font-size: $font-size-xl; 
     }
     
     > div p {
@@ -738,7 +738,7 @@
     gap: $spacing-md; // Ridotto da lg (1.5rem) a md (1rem)
     
     > div h3 {
-      font-size: $font-size-xl; // 20px
+      font-size: $font-size-xl; 
     }
     
     > div p {
@@ -785,7 +785,7 @@
 @include smartphone {
   // Sottotitoli sezioni - dimensioni ridotte
   .section-subtitle {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
   }
   
   // Hero section - riduzione altezza
@@ -795,70 +795,70 @@
   
   // Titoli hero portfolio - dimensioni ridotte
   .hero.portfolio-hero .hero-text h1 {
-    font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
+    font-size: $font-size-smartphone-4xl !important; 
   }
   
   // Sottotitolo hero portfolio - dimensioni ridotte
   .hero.portfolio-hero .hero-subtitle {
-    font-size: $font-size-smartphone-xl !important; // 16px per smartphone
+    font-size: $font-size-smartphone-xl !important; 
   }
   
   // Descrizione hero portfolio - dimensioni ridotte
   .hero.portfolio-hero .hero-description {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
   }
   
   // Client works header - titoli
   .client-works-header .client-works-info h3 {
-    font-size: $font-size-smartphone-xl !important; // 18px per smartphone
+    font-size: $font-size-smartphone-xl !important; 
   }
   
   // Client works header - descrizioni
   .client-works-header .client-works-info p {
-    font-size: $font-size-smartphone-lg !important; // 14px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
     font-weight: $font-weight-light !important; // 300 per smartphone
   }
   
   // Client works header mobile - titoli
   .client-works-header .client-works-info h3 {
-    font-size: $font-size-smartphone-xl !important; // 18px per smartphone
+    font-size: $font-size-smartphone-xl !important; 
   }
   
   // Client works header mobile - descrizioni
   .client-works-header .client-works-info p {
     padding-top: $spacing-sm !important;
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
     font-weight: $font-weight-light !important; // 300 per smartphone
   }
   
   // Client works header - layout verticale per smartphone
   .client-works-header {
     flex-direction: column !important; // Layout verticale
-    text-align: center !important; // Centra tutto il contenuto
+    text-align: center !important; 
     gap: $spacing-md !important; // Gap ridotto per smartphone
-    padding: $spacing-lg !important; // Padding ottimizzato per smartphone
+    padding: $spacing-lg !important; 
     min-height: auto !important; // Altezza automatica per layout verticale
     
     .client-works-logo {
       max-width: 100px !important; // Larghezza ottimizzata per smartphone
       height: 60px !important; // Altezza ottimizzata per smartphone
-      padding: $spacing-sm !important; // Padding ridotto per smartphone
-      margin: 0 auto $spacing-sm auto !important; // Centra l'immagine e aggiunge margine sotto
-      align-self: center !important; // Centra l'immagine
+      padding: $spacing-sm !important; 
+      margin: 0 auto $spacing-sm auto !important; 
+      align-self: center !important; 
     }
     
     .client-works-info {
-      text-align: center !important; // Centra il testo
+      text-align: center !important; 
       
       h3 {
-        font-size: $font-size-smartphone-2xl !important; // 18px per smartphone
+        font-size: $font-size-smartphone-2xl !important; 
         font-weight: $font-weight-semibold !important;
-        margin-bottom: $spacing-sm !important; // Margine ridotto
+        margin-bottom: $spacing-sm !important; 
         line-height: 1.3 !important;
       }
       
       p {
-        font-size: $font-size-smartphone-lg !important; // 14px per smartphone
+        font-size: $font-size-smartphone-lg !important; 
         line-height: 1.4 !important;
         margin: 0 !important;
       }
@@ -867,11 +867,11 @@
     .client-works-arrow {
       width: 32px !important; // Dimensione ridotta per smartphone
       height: 32px !important; // Dimensione ridotta per smartphone
-      margin: $spacing-sm auto 0 auto !important; // Centra la freccia e aggiunge margine sopra
-      align-self: center !important; // Centra la freccia
+      margin: $spacing-sm auto 0 auto !important; 
+      align-self: center !important; 
       
       i {
-        font-size: $font-size-smartphone-sm !important; // 13px per smartphone
+        font-size: $font-size-smartphone-sm !important; 
       }
     }
   }
@@ -881,9 +881,9 @@
     flex: 0 0 280px !important; // Larghezza ridotta per smartphone
     min-width: 280px !important; // Larghezza minima ridotta
     max-width: 300px !important; // Larghezza massima ridotta
-    padding-bottom: 15px !important; // Padding ridotto
-    margin-top: $spacing-xs !important; // Margine ridotto
-    margin-bottom: $spacing-sm !important; // Margine ridotto
+    padding-bottom: 15px !important; 
+    margin-top: $spacing-xs !important; 
+    margin-bottom: $spacing-sm !important; 
   }
   
   // Immagini progetti - altezza ridotta
@@ -892,30 +892,30 @@
     
     img {
       object-fit: contain !important; // Mostra l'immagine completa senza tagli
-      object-position: center !important; // Centra l'immagine
+      object-position: center !important; 
     }
   }
   
   // Titoli progetti - dimensioni ridotte
   .project-content h4 {
-    font-size: 1.25rem !important; // 20px per smartphone - dimensione appropriata
-    margin-bottom: $spacing-md !important; // Margine aumentato per migliore spaziatura
-    padding-left: $spacing-sm !important; // Padding sinistro aumentato
-    padding-right: $spacing-sm !important; // Padding destro aumentato
+    font-size: 1.25rem !important; 
+    margin-bottom: $spacing-md !important; 
+    padding-left: $spacing-sm !important; 
+    padding-right: $spacing-sm !important; 
   }
   
   // Descrizioni progetti - dimensioni ridotte
   .project-content p {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone (ridotto)
+    font-size: $font-size-smartphone-lg !important; 
     font-weight: $font-weight-light !important; // 300 per smartphone
     line-height: 1.4 !important; // Line-height ridotto
-    padding-left: $spacing-sm !important; // Padding sinistro aumentato
-    padding-right: $spacing-sm !important; // Padding destro aumentato
+    padding-left: $spacing-sm !important; 
+    padding-right: $spacing-sm !important; 
   }
   
   // Contenuto progetti - padding ridotto
   .project-content {
-    padding: $spacing-sm !important; // Padding ridotto per smartphone
+    padding: $spacing-sm !important; 
   }
   
   // Tag progetti - dimensioni ridotte
@@ -926,13 +926,13 @@
   
   // Tag progetti - padding ridotto
   .project-tags {
-    padding-left: $spacing-sm !important; // Padding sinistro aumentato
-    padding-right: $spacing-sm !important; // Padding destro aumentato
+    padding-left: $spacing-sm !important; 
+    padding-right: $spacing-sm !important; 
   }
   
   // Statistiche portfolio - descrizioni ridotte
   .about-stats .stat p {
-    font-size: $font-size-smartphone-xs !important; // 14px per smartphone
+    font-size: $font-size-smartphone-xs !important; 
   }
   
   // Statistiche portfolio - layout e dimensioni
@@ -941,30 +941,30 @@
     gap: $spacing-sm !important; // Gap ridotto per smartphone
     
     > div h3 {
-      font-size: $font-size-smartphone-lg !important; // 16px per smartphone (ridotto)
+      font-size: $font-size-smartphone-lg !important; 
     }
     
     > div p {
       padding-top: $spacing-sm !important;
-      font-size: $font-size-smartphone-base !important; // 13px per smartphone (aumentato da 12px)
+      font-size: $font-size-smartphone-base !important; 
       letter-spacing: 0.3px !important; // Letter-spacing ridotto
     }
   }
   
   // Descrizione CTA portfolio - padding laterale
   .portfolio .contact-info p {
-    padding-left: $spacing-lg !important; // Padding laterale per aria
-    padding-right: $spacing-lg !important; // Padding laterale per aria
+    padding-left: $spacing-lg !important; 
+    padding-right: $spacing-lg !important; 
   }
   
   // Bottoni CTA portfolio - padding e dimensioni
   .portfolio .cta-actions .btn {
-    padding-left: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    padding-right: $spacing-lg !important; // Padding laterale aumentato per smartphone
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    padding-left: $spacing-lg !important; 
+    padding-right: $spacing-lg !important; 
+    font-size: $font-size-smartphone-lg !important; 
   }
   
-  // Rimuovi tap highlight blu su smartphone per client header
+  
   .client-works-header {
     -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none !important;
@@ -974,16 +974,16 @@
   
   // Card portfolio smartphone - identiche alle card home (specificità massima)
   .portfolio .ultimi-progetti .projects-grid .project-card .project-content p {
-    font-size: 1rem !important; // 16px per smartphone
+    font-size: 1rem !important; 
     font-weight: 300 !important; // Font-weight leggero come home
     line-height: 1.6 !important; // Line-height ottimale come home
-    padding-left: 0.5rem !important; // Padding sinistro
-    padding-right: 0.5rem !important; // Padding destro
+    padding-left: 0.5rem !important; 
+    padding-right: 0.5rem !important; 
   }
   
   // Forza anche con selettore alternativo
   .portfolio .project-card .project-content p {
-    font-size: 1rem !important; // 16px per smartphone
+    font-size: 1rem !important; 
     font-weight: 300 !important; // Font-weight leggero come home
     line-height: 1.6 !important; // Line-height ottimale come home
   }
@@ -1004,15 +1004,15 @@
   
   // CTA portfolio smartphone - identico a home
   .portfolio .contact-info p {
-    font-size: 1rem !important; // 16px per smartphone (stesso di home)
+    font-size: 1rem !important; 
     line-height: 1.6 !important; // Line-height ottimale (stesso di home)
-    padding-bottom: 1rem !important; // Padding-bottom (stesso di home)
+    padding-bottom: 1rem !important; 
   }
   
   // Processo di lavoro portfolio smartphone - aumenta distanza tra punti
   .portfolio .about-text h3 {
-    margin-top: 2.5rem !important; // Aumenta distanza tra punti (era 1.5rem)
-    margin-bottom: 1rem !important; // Aumenta distanza dopo il titolo
+    margin-top: 2.5rem !important; 
+    margin-bottom: 1rem !important; 
   }
   
   // Primo titolo del processo di lavoro senza margin-top
@@ -1022,7 +1022,7 @@
   
   // Statistiche portfolio smartphone - aumenta font-size titoli
   .portfolio .about-stats > div h3 {
-    font-size: 1.15rem !important; // Aumenta font-size titoli stats (era 1rem)
+    font-size: 1.15rem !important; 
   }
   
   // Titolo sezione "Il mio processo di lavoro" portfolio smartphone - aggiungi margin-top

@@ -45,7 +45,7 @@
     gap: $spacing-4xl; // Gap maggiore tra le colonne su desktop
     
     .about-text {
-      flex: 1.5; // Riduce leggermente lo spazio del testo
+      flex: 1.5; 
     }
     
     .about-stats {
@@ -128,7 +128,7 @@
 
 // Desktop e Tablet: font-size standard
 .about-text p {
-  font-size: $font-size-base; // 16px - standard
+  font-size: $font-size-base; 
   
 }
 
@@ -155,7 +155,7 @@
 // Tablet: spazio aumentato tra stats e fine punto 4
 @include tablet {
   .about-content {
-    gap: $spacing-3xl; // Aumentato spazio tra stats e fine punto 4 su tablet
+    gap: $spacing-3xl; 
   }
 }
 
@@ -168,7 +168,7 @@
 @include smartphone {
   // About section - margini laterali ottimizzati
   .about {
-    padding: $spacing-xl $spacing-xs !important; // Margini laterali ridotti per smartphone
+    padding: $spacing-xl $spacing-xs !important; 
   }
   
   .about-content {
@@ -177,19 +177,19 @@
   
   .about-text {
     p {
-      font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+      font-size: $font-size-smartphone-lg !important; 
       line-height: 1.6 !important; // Line-height ottimale per smartphone
     }
     
     h3 {
-      font-size: $font-size-smartphone-2xl !important; // 18px per smartphone
-      margin-top: $spacing-lg !important; // Margine ridotto
-      margin-bottom: $spacing-sm !important; // Margine ridotto
+      font-size: $font-size-smartphone-2xl !important; 
+      margin-top: $spacing-lg !important; 
+      margin-bottom: $spacing-sm !important; 
     }
   }
   
   .section-title {
-    font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
+    font-size: $font-size-smartphone-3xl !important; 
   }
   
   // About stats - font-weight ridotto
@@ -199,17 +199,17 @@
   
   // About stats - dimensioni ridotte
   .about-stats .stat p {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
   }
   
   // About stats - dimensioni ridotte per testo small
   .about-stats .stat .text-small {
-    font-size: $font-size-smartphone-sm !important; // 13px per smartphone
+    font-size: $font-size-smartphone-sm !important; 
   }
   
   // About content - paragrafi con font-weight e dimensioni specifiche per smartphone
   .about-content p {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
     font-weight: $font-weight-light !important; // 300 per sezione "chi sono" su smartphone
   }
 }

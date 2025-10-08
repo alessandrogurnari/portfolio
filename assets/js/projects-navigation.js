@@ -132,7 +132,7 @@ class ProjectsNavigation {
                 } else {
                     // Caso B: 4+ card - mostra frecce, limita a 3
                     navigation.style.display = 'flex';
-                    navigation.style.marginTop = '4px'; // Riduce lo spazio tra card e frecce
+                    navigation.style.marginTop = '4px'; 
                     grid.classList.add('open');
                     this.limitVisibleCards(grid, 3);
                     updateButtonStates();

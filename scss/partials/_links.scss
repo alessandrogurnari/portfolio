@@ -2,7 +2,7 @@
 // LINKS - COMPONENTE LINK
 // ========================================
 // Gestisce tutti gli stili dei link del sito
-// Ottimizzato per navbar, hover effects e accessibilità
+
 // Include: nav-link, social-link, project-link, footer-link
 
 @use 'mixins' as *;
@@ -43,10 +43,10 @@ a {
   padding: $spacing-sm $spacing-md;
   border-radius: 8px;
   display: flex;
-  align-items: center; // Centra verticalmente il testo del link
+  align-items: center; 
   @include fade-in-up-sequential($animation-delay-1);
   
-  // Rimuovi outline di focus e effetti di selezione
+  
   outline: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -88,7 +88,7 @@ a {
   //   outline-offset: 2px;
   // }
   
-  // Rimuovi outline quando attivo (click/touch)
+  
   &:focus:active,
   &:active {
     outline: none;
@@ -139,7 +139,7 @@ a {
       color: inherit;
     }
     
-    // Rimuovi outline su tutti gli stati - MOBILE
+    
     &:focus,
     &:focus:active,
     &:active,

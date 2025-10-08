@@ -16,11 +16,11 @@
 
 // CONTATTAMI PAGE: Contenuto hero centrato
 .contattami .hero-content {
-  justify-content: center; // Centra tutto il contenuto
-  text-align: center; // Centra il testo
+  justify-content: center;
+  text-align: center;
   
   .hero-buttons {
-    justify-content: center; // Centra i bottoni
+    justify-content: center;
   }
 }
 
@@ -35,22 +35,22 @@
   &:hover {
     background-color: $brand-accent;
     border-color: $brand-accent;
-    box-shadow: none; // Rimuovi box-shadow
-    outline: none; // Rimuovi outline
+    box-shadow: none;
+    outline: none;
   }
   
   &:focus {
     background-color: $primary-color;
     border-color: $primary-color;
-    box-shadow: none; // Rimuovi box-shadow
-    outline: none; // Rimuovi outline
+    box-shadow: none;
+    outline: none;
   }
   
   &:active {
     background-color: $brand-accent;
     border-color: $brand-accent;
-    box-shadow: none; // Rimuovi box-shadow
-    outline: none; // Rimuovi outline
+    box-shadow: none;
+    outline: none;
   }
 }
 
@@ -110,12 +110,9 @@
 // ========================================
 .hero.contact-hero {
   min-height: 100vh;
-  // Padding unificato con home: $spacing-4xl 0
   
-  // Override per mobile
   @include mobile {
     min-height: 100vh;
-    // Padding unificato con home: $spacing-4xl 0
   }
   
   .contact-hero .hero-content {
@@ -131,7 +128,7 @@
       @include heading-1;  // Usa il mixin standard per uniformità
       
       & {
-        margin-bottom: $spacing-lg; // Aumentato per coerenza con regole generali hero
+        margin-bottom: $spacing-lg;
       }
       
       .highlight {
@@ -140,10 +137,10 @@
     }
     
     .hero-subtitle {
-      font-size: $font-size-xl; // 24px - aumentato per migliore leggibilità
-      color: $text-color; // Nero per contrasto con sfondo chiaro
+      font-size: $font-size-xl;
+      color: $text-color;
       margin-bottom: 0;
-      font-weight: $font-weight-normal; // Ridotto per look più leggero
+      font-weight: $font-weight-normal;
       @include fade-in-up;
       @include sequential-animation($animation-delay-1);
     }
@@ -157,7 +154,6 @@
   padding: $spacing-4xl 0;
   // Sfondo rimosso - ora eredita dal body
   
-  // Responsive padding per diverse risoluzioni
   @include mobile {
     padding: $spacing-3xl 0;
   }
@@ -166,18 +162,14 @@
     padding: $spacing-4xl 0;
   }
   
-  
-  
   // Card del form
   .card {
     border: none;
     border-radius: 16px;
     transition: box-shadow $transition-normal;
-    background-color: $card-color; // Allinea il box form al colore card del progetto
+    background-color: $card-color;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
     @include fade-in-up;
-    
-    // Rimosso effetto hover per evitare interferenze con sezioni CTA altre pagine
   }
   
   // Card body
@@ -186,7 +178,6 @@
     @include fade-in-up;
     @include sequential-animation($animation-delay-1);
     
-    // Responsive padding per il card-body
     @include mobile {
       padding: 2rem;
     }
@@ -218,23 +209,23 @@
     pointer-events: auto;
     margin-bottom: 0.5rem; // Bootstrap standard
     font-weight: $font-weight-medium; 
-    font-size: $font-size-base; // 16px (standard moderno)
+    font-size: $font-size-base; 
     font-family: $font-family-primary; // Font consistente con il sito
     
   }
   
   // Stili form Bootstrap ottimizzati
   .form-control {
-    background-color: $card-color; // Allinea i campi al colore delle card
+    background-color: $card-color;
     color: $text-color;
     border-color: color.scale($border-color, $lightness: -10%);
-    border-radius: 12px; // Allineato con il bottone
-    font-family: $font-family-primary; // Font consistente con il sito
-    font-size: $font-size-base; // 16px (standard moderno)
+    border-radius: 12px;
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
     
     
     &::placeholder {
-      font-size: $font-size-base; // 16px (standard moderno)
+      font-size: $font-size-base;
       color: $text-light;
       opacity: 0.8;
       font-weight: $font-weight-light; 
@@ -251,18 +242,18 @@
   
   // Altezza maggiore per i primi tre campi (input)
   input.form-control {
-    padding: 1rem 1.25rem; // Padding maggiore per altezza superiore
+    padding: 1rem 1.25rem; 
     min-height: 56px; // Altezza minima garantita
   }
   
-  // Padding ottimizzato per textarea (campo messaggio)
+  
   textarea.form-control {
-    padding: 1rem 1.25rem; // Padding consistente con gli input
+    padding: 1rem 1.25rem; 
     min-height: 120px; // Altezza minima per il textarea
     
-    // Padding responsive per mobile
+    
     @include mobile {
-      padding: 0.875rem 1rem; // Padding leggermente ridotto su mobile
+      padding: 0.875rem 1rem; 
     }
   }
   
@@ -301,30 +292,30 @@
   // Messaggi di feedback
   .invalid-feedback {
     color: $error-color;
-    font-size: $font-size-sm; // 16px (confortevole)
+    font-size: $font-size-sm; 
     font-weight: $font-weight-normal; // Peso normale, non medium
-    margin-top: 0.25rem; // Margine ridotto
+    margin-top: 0.25rem; 
     display: none; // Nascosto di default
     animation: fadeInUp 0.3s ease-out;
     
     // Font size aumentato per mobile
     @include mobile {
-      font-size: $font-size-sm; // 16px (confortevole) su mobile
+      font-size: $font-size-sm; 
     }
     
   }
   
   .valid-feedback {
     color: $success-color;
-    font-size: $font-size-sm; // 16px (confortevole)
+    font-size: $font-size-sm; 
     font-weight: $font-weight-normal; // Peso normale, non medium
-    margin-top: 0.25rem; // Margine ridotto
+    margin-top: 0.25rem; 
     display: none; // Nascosto di default
     animation: fadeInUp 0.3s ease-out;
     
     // Font size aumentato per mobile
     @include mobile {
-      font-size: $font-size-sm; // 16px (confortevole) su mobile
+      font-size: $font-size-sm; 
     }
     
 }
@@ -370,26 +361,26 @@
 
 // Font size accessibili per tutti i breakpoint
 .popup-title {
-  font-size: 1.5rem; // 24px desktop (default)
+  font-size: 1.5rem; 
   
   @include tablet {
-    font-size: 1.375rem; // 22px su tablet
+    font-size: 1.375rem; 
   }
   
   @include mobile {
-    font-size: 1.25rem; // 20px su mobile
+    font-size: 1.25rem; 
   }
 }
 
 .popup-message {
-  font-size: $font-size-sm; // 16px (confortevole)
+  font-size: $font-size-sm; 
   
   @include tablet {
-    font-size: $font-size-sm; // 16px (confortevole) su tablet
+    font-size: $font-size-sm; 
   }
   
   @include mobile {
-    font-size: $font-size-sm; // 16px (confortevole) su mobile
+    font-size: $font-size-sm; 
   }
 }
 
@@ -452,7 +443,7 @@
       text-align: center;
       white-space: nowrap; // Previene il wrap del testo
       min-width: fit-content; // Larghezza si adatta al contenuto
-      padding: $spacing-md $spacing-xl; // Padding maggiore per desktop
+      padding: $spacing-md $spacing-xl; 
       font-size: $font-size-base; // Font più grande per desktop
       border-radius: $border-radius-lg; // Border radius standard
     }
@@ -501,7 +492,7 @@
     .hero-buttons {
       .btn {
         height: 52px; // Altezza intermedia per tablet
-        padding: $spacing-sm $spacing-lg; // Padding ottimizzato per tablet
+        padding: $spacing-sm $spacing-lg; 
         font-size: $font-size-base; // Font normale per tablet
       }
     }
@@ -532,7 +523,7 @@
       
       .btn {
         height: 48px; // Altezza ottimizzata per mobile
-        padding: $spacing-sm $spacing-md; // Padding ridotto per mobile
+        padding: $spacing-sm $spacing-md; 
         font-size: $font-size-base; // Font normale per mobile (più leggibile)
         
       }
@@ -566,16 +557,16 @@
   
   // Spaziatura ottimale tra titolo e testo descrittivo
   h3 {
-    margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
+    margin-bottom: $spacing-lg; 
     
   }
   
   p {
-    margin-bottom: 2.5rem; // 40px - Spazio ottimizzato per separare contenuto da azioni
+    margin-bottom: 2.5rem; 
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-size: $font-size-base; // 16px (standard moderno) su desktop
+    font-size: $font-size-base; 
     font-weight: $font-weight-light; // 300 - Font-weight più leggero
     
     
@@ -589,26 +580,26 @@
     }
   }
   
-  // Responsive spacing per titolo e testo
+  
   @include tablet {
     h3 {
-      margin-bottom: $spacing-lg; // 24px su tablet
+      margin-bottom: $spacing-lg; 
     }
     
     p {
-      margin-bottom: 2.25rem; // 36px su tablet
-      font-size: $font-size-base; // 16px (standard moderno) su tablet
+      margin-bottom: 2.25rem; 
+      font-size: $font-size-base; 
     }
   }
   
   @include mobile {
     h3 {
-      margin-bottom: 1.25rem; // 20px su mobile
+      margin-bottom: 1.25rem; 
     }
     
     p {
-      margin-bottom: 2rem; // 32px su mobile
-      font-size: $font-size-base; // 18px per accessibilità su mobile
+      margin-bottom: 2rem; 
+      font-size: $font-size-base; 
     }
   }
 }
@@ -617,7 +608,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $spacing-3xl; // 48px - Spazio aumentato tra bottoni e social
+  gap: $spacing-3xl; 
   
   .hero-buttons {
     display: flex;
@@ -645,9 +636,9 @@
     }
   }
   
-  // Responsive per homepage
+  
   @include tablet {
-    gap: $spacing-2xl; // 32px su tablet - spazio aumentato
+    gap: $spacing-2xl; 
     
     .hero-buttons {
       gap: $spacing-md;
@@ -667,7 +658,7 @@
   }
   
   @include mobile {
-    gap: $spacing-2xl; // 48px su mobile - spazio aumentato
+    gap: $spacing-2xl; 
     
     .hero-buttons {
       gap: $spacing-md;
@@ -736,7 +727,7 @@
     font-size: 1.5rem;
   }
   
-  // Responsive
+  
   @include tablet {
     width: 48px;
     height: 48px;
@@ -769,40 +760,40 @@
   
   // Spaziatura ottimale tra titolo e testo descrittivo
   h3 {
-    margin-bottom: $spacing-lg; // 24px - Spazio medio per gerarchia visiva
+    margin-bottom: $spacing-lg; 
     
   }
   
   p {
-    margin-bottom: 2.5rem; // 40px - Spazio ottimizzato per separare contenuto da azioni
+    margin-bottom: 2.5rem; 
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-size: $font-size-base; // 16px (standard moderno) su desktop
+    font-size: $font-size-base; 
     font-weight: $font-weight-light; // 300 - Font-weight più leggero
     
   }
   
-  // Responsive spacing per titolo e testo - Best Practices UX/UI
+  
   @include tablet {
     h3 {
-      margin-bottom: $spacing-lg; // 24px su tablet
+      margin-bottom: $spacing-lg; 
     }
     
     p {
-      margin-bottom: 2.25rem; // 36px su tablet - ridotto per migliore UX
-      font-size: $font-size-base; // 16px (standard moderno) su tablet
+      margin-bottom: 2.25rem; 
+      font-size: $font-size-base; 
     }
   }
   
   @include mobile {
     h3 {
-      margin-bottom: 1.25rem; // 20px su mobile - ridotto per schermi piccoli
+      margin-bottom: 1.25rem; 
     }
     
     p {
-      margin-bottom: 2rem; // 32px su mobile - ridotto per migliore leggibilità
-      font-size: $font-size-base; // 16px (standard moderno) su mobile
+      margin-bottom: 2rem; 
+      font-size: $font-size-base; 
     }
   }
 }
@@ -814,7 +805,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: $spacing-xl; // 32px - Spazio ottimizzato tra bottoni
+  gap: $spacing-xl; 
   
   .hero-buttons {
     display: flex;
@@ -828,9 +819,9 @@
     }
   }
   
-  // Responsive per portfolio
+  
   @include tablet {
-    gap: $spacing-lg; // 24px su tablet - ottimizzato per UX
+    gap: $spacing-lg; 
     
     .hero-buttons {
       gap: $spacing-md;
@@ -842,10 +833,10 @@
   }
   
   @include mobile {
-    gap: 1.25rem; // 20px su mobile - ottimizzato per UX (come home)
+    gap: 1.25rem; 
     
     .hero-buttons {
-      gap: $spacing-md; // 16px su mobile (come home)
+      gap: $spacing-md; 
       
       .btn {
         white-space: nowrap; // Previene il wrap del testo su mobile
@@ -864,7 +855,7 @@
 @include smartphone {
   // Accordion button - dimensioni ridotte
   .contattami .accordion-button {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
   
   // Hero section - riduzione altezza
@@ -874,12 +865,12 @@
   
   // Titoli hero contact - dimensioni ridotte
   .hero.contact-hero .hero-text h1 {
-    font-size: $font-size-smartphone-4xl !important; // 28px per smartphone
+    font-size: $font-size-smartphone-4xl !important; 
   }
   
   // Sottotitolo hero contact - dimensioni ridotte
   .hero.contact-hero .hero-subtitle {
-    font-size: $font-size-smartphone-xl !important; // 18px per smartphone
+    font-size: $font-size-smartphone-xl !important; 
   }
   
   // Form section - riduzione spazi laterali
@@ -892,8 +883,8 @@
     }
     
     .row {
-      margin-left: 0 !important; // Rimuovi margini Bootstrap
-      margin-right: 0 !important; // Rimuovi margini Bootstrap
+      margin-left: 0 !important; 
+      margin-right: 0 !important; 
     }
     
     .col-12 {
@@ -902,15 +893,15 @@
     }
     
     .card {
-      margin: 0 !important; // Rimuovi margini card
+      margin: 0 !important; 
     }
     
     .card-body {
-      padding: $spacing-xs $spacing-xs !important; // Aumenta padding laterale interno card
+      padding: $spacing-xs $spacing-xs !important; 
       
-      // Riduce font-size del sottotitolo per smartphone
+      
       .text-muted {
-        font-size: $font-size-smartphone-base !important; // 14px per smartphone (ridotto)
+        font-size: $font-size-smartphone-base !important; 
         line-height: 1.5 !important;
       }
     }
@@ -918,107 +909,107 @@
   
   // Titolo form - dimensioni ridotte
   .contact-form .form-title {
-    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+    font-size: $font-size-smartphone-2xl !important; 
   }
   
   // Form labels - dimensioni ridotte
   .contact-form .form-label {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
   }
   
   // Form controls - dimensioni ridotte
   .contact-form .form-control {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
   
   // Form placeholders - dimensioni ridotte
   .contact-form .form-control::placeholder {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
   
   // Form feedback - dimensioni ridotte
   .contact-form .invalid-feedback,
   .contact-form .valid-feedback {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
   
   // Form text (contatore caratteri) - dimensioni ridotte
   .form-text {
-    font-size: $font-size-smartphone-base !important; // 13px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
   
   // Bottoni form - dimensioni ridotte e rimuovi box-shadow/outline/highlight
   .contact-form .btn-primary {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
-    padding: 10px 40px !important; // Padding ridotto per smartphone
+    font-size: $font-size-smartphone-lg !important; 
+    padding: 10px 40px !important; 
     
-    // Rimuovi box-shadow, outline e highlight su smartphone
+    
     &:hover {
-      box-shadow: none !important; // Rimuovi box-shadow
-      outline: none !important; // Rimuovi outline
-      -webkit-tap-highlight-color: transparent !important; // Rimuovi tap highlight
+      box-shadow: none !important; 
+      outline: none !important; 
+      -webkit-tap-highlight-color: transparent !important; 
     }
     
     &:focus {
-      box-shadow: none !important; // Rimuovi box-shadow
-      outline: none !important; // Rimuovi outline
+      box-shadow: none !important; 
+      outline: none !important; 
     }
     
     &:active {
-      box-shadow: none !important; // Rimuovi box-shadow
-      outline: none !important; // Rimuovi outline
-      -webkit-tap-highlight-color: transparent !important; // Rimuovi tap highlight
+      box-shadow: none !important; 
+      outline: none !important; 
+      -webkit-tap-highlight-color: transparent !important; 
     }
   }
   
   // Titoli FAQ - dimensioni ridotte
   .contact-faq .accordion-button {
-    font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
+    font-size: $font-size-smartphone-3xl !important; 
   }
   
   // Contenuti FAQ - dimensioni ridotte
   .contact-faq .accordion-body {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
     font-weight: 300 !important; // Font-weight normale per smartphone
   }
   
   // Bottoni hero - dimensioni ridotte
   .contact .hero-buttons .btn {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
   }
   
   // Titoli CTA - dimensioni ridotte
   .contact .cta-actions h3 {
-    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+    font-size: $font-size-smartphone-2xl !important; 
   }
   
   // Paragrafi CTA - dimensioni ridotte
   .contact .cta-actions p {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
   
   // Paragrafi CTA home - dimensioni aumentate per smartphone
   .home .contact-info p {
     font-size: $font-size-smartphone-lg !important; 
     line-height: 1.6 !important; // Line-height ottimale per smartphone
-    padding-bottom: $spacing-lg !important; // Padding-bottom aumentato per smartphone
+    padding-bottom: $spacing-lg !important; 
   }
   
   // Titoli CTA portfolio - dimensioni ridotte
   .portfolio .cta-actions h3 {
-    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+    font-size: $font-size-smartphone-2xl !important; 
   }
   
   // Paragrafi CTA portfolio - dimensioni ridotte
   .portfolio .cta-actions p {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
   
   // Testo FAQ smartphone - font-weight 300, line-height 1.6 e font-size ridotto
   .faq-section .accordion-body {
     font-weight: 300 !important; // Font-weight leggero per smartphone
     line-height: 1.6 !important; // Line-height ottimale per smartphone
-    font-size: 1rem !important; // Font-size ridotto per smartphone (14px)
+    font-size: 1rem !important; 
     padding-bottom: 1.5rem !important;
   }
   
@@ -1038,8 +1029,8 @@
   .contact .col-md-10,
   .contact .col-lg-8,
   .contact .col-xl-7 {
-    padding-left: 0.25rem !important; // Riduce padding colonne
-    padding-right: 0.25rem !important; // Riduce padding colonne
+    padding-left: 0.25rem !important; 
+    padding-right: 0.25rem !important; 
   }
   
   // Card form smartphone - riduci padding laterale
@@ -1049,23 +1040,23 @@
   }
   
   .contact .card-body {
-    padding-left: 1rem !important; // Riduce padding sinistro card
-    padding-right: 1rem !important; // Riduce padding destro card
+    padding-left: 1rem !important; 
+    padding-right: 1rem !important; 
   }
   
   // Testo "Ti risponderò entro 24 ore" smartphone - riduci font-size
   .contact .text-muted {
-    font-size: 0.875rem !important; // 14px per smartphone
+    font-size: 0.875rem !important; 
   }
   
   // Titolo form smartphone - aumenta font-size
   .contact .form-title {
-    font-size: 1.5rem !important; // 24px per smartphone (aumentato)
+    font-size: 1.5rem !important; 
   }
   
   // Descrizione form smartphone - aumenta font-size
   .contact .card-body .text-muted {
-    font-size: 1rem !important; // 16px per smartphone (aumentato)
+    font-size: 1rem !important; 
   }
   
   // Label form smartphone - riduci font-size

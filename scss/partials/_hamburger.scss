@@ -24,7 +24,7 @@
   transition: all $transition-normal;
   @include fade-in-up;
   
-  // Rimuovi outline di focus e ripple effect
+  
   outline: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;

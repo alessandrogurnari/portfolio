@@ -78,7 +78,7 @@ class ClientHeaderManager {
             insertAfter = container.firstElementChild;
         }
 
-        // Rimuovi tutte le sezioni clienti dal DOM
+        
         clientSections.forEach(section => {
             section.remove();
         });

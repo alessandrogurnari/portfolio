@@ -2,7 +2,7 @@
 // NAVBAR - COMPONENTE NAVIGAZIONE
 // ========================================
 // Sistema di navigazione responsive con transizioni fluide
-// Ottimizzato per mobile, tablet e desktop
+
 
 @use 'mixins' as *;
 @use 'variables' as *;
@@ -49,7 +49,7 @@
   
   a {
     font-family: $font-family-logo; // Font personalizzato per il logo
-    font-size: 1.5rem; // Aumentato per maggiore impatto visivo del logo
+    font-size: 1.5rem; 
     font-weight: $font-weight-light;
     letter-spacing: 0.05em; // Spaziatura tra le lettere del logo
     transform: skew(+10deg); // Inclinazione del logo
@@ -126,7 +126,7 @@
         color: inherit;
       }
       
-      // Rimuovi outline su tutti gli stati
+      
       &:focus,
       &:focus:active,
       &:active,
@@ -196,7 +196,7 @@
 .navbar .nav-link {
   // Link normali: stesso colore dello sfondo delle pagine
   color: $background-color;
-  font-size: 18px; // 18px per desktop
+  font-size: 18px; 
   
   &::before {
     background: currentColor; // underline segue il colore corrente

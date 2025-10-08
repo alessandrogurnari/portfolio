@@ -125,31 +125,31 @@ li {
 @include smartphone {
   // Titoli h2 - dimensioni ridotte
   h2 {
-    font-size: $font-size-smartphone-3xl !important; // 24px per smartphone
+    font-size: $font-size-smartphone-3xl !important; 
   }
   
   // Titoli h3 - dimensioni ridotte
   h3 {
-    font-size: $font-size-smartphone-2xl !important; // 20px per smartphone
+    font-size: $font-size-smartphone-2xl !important; 
   }
   
   // Titoli h4 - dimensioni ridotte
   h4 {
-    font-size: $font-size-smartphone-xl !important; // 18px per smartphone
+    font-size: $font-size-smartphone-xl !important; 
   }
   
   // Titoli h5 - dimensioni ridotte
   h5 {
-    font-size: $font-size-smartphone-lg !important; // 16px per smartphone
+    font-size: $font-size-smartphone-lg !important; 
   }
   
   // Titoli h6 - dimensioni ridotte
   h6 {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
   
   // Paragrafi - dimensioni ridotte
   p {
-    font-size: $font-size-smartphone-base !important; // 14px per smartphone
+    font-size: $font-size-smartphone-base !important; 
   }
 }

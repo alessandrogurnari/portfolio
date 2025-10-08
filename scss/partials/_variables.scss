@@ -23,7 +23,7 @@ $navbar-bg-color: #1E2328; // Navbar scura (charcoal)
 // Superfici (card/box/pannelli) - colore base dei contenitori
 $surface-color: #fafafa;      // Superfici (card, box, pannelli) grigio neutro molto chiaro
 
-// Card dedicate (se vuoi differenziarle dalle altre superfici)
+// Card dedicate 
 $card-color: $surface-color;  // Per le card; uguale a $surface-color, ma separabile se serve
 
 // Typography
@@ -31,26 +31,26 @@ $font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Ro
 $font-family-heading: $font-family-primary; // Usa la stessa famiglia del font primario
 $font-family-logo: 'SignPainter', 'HouseScript', cursive; // Font personalizzato per il logo
 
-$font-size-xs: 0.875rem;   // 14px (aumentato per desktop)
-$font-size-sm: 1rem;       // 16px (aumentato per desktop)
-$font-size-base: 1.125rem; // 18px (aumentato per desktop)
-$font-size-lg: 1.25rem;    // 20px (aumentato per desktop)
-$font-size-xl: 1.5rem;     // 24px (aumentato per desktop)
-$font-size-2xl: 1.875rem;  // 30px (aumentato per desktop)
-$font-size-3xl: 2.25rem;   // 36px (aumentato per desktop)
-$font-size-4xl: 2.75rem;   // 44px (aumentato per desktop)
-$font-size-5xl: 3.5rem;    // 56px (aumentato per desktop)
+$font-size-xs: 0.875rem;   
+$font-size-sm: 1rem;       
+$font-size-base: 1.125rem; 
+$font-size-lg: 1.25rem;    
+$font-size-xl: 1.5rem;     
+$font-size-2xl: 1.875rem;  
+$font-size-3xl: 2.25rem;   
+$font-size-4xl: 2.75rem;   
+$font-size-5xl: 3.5rem;    
 
-// Font-size specifici per smartphone (viewport width < 480px)
-$font-size-smartphone-xs: 0.75rem;   // 12px
-$font-size-smartphone-sm: 0.8125rem; // 13px
-$font-size-smartphone-base: 0.875rem; // 14px
-$font-size-smartphone-lg: 1rem;      // 16px
-$font-size-smartphone-xl: 1.125rem;  // 18px
-$font-size-smartphone-2xl: 1.25rem;  // 20px
-$font-size-smartphone-3xl: 1.5rem;   // 24px
-$font-size-smartphone-4xl: 1.75rem;  // 28px
-$font-size-smartphone-5xl: 2rem;     // 32px
+
+$font-size-smartphone-xs: 0.75rem;   
+$font-size-smartphone-sm: 0.8125rem; 
+$font-size-smartphone-base: 0.875rem; 
+$font-size-smartphone-lg: 1rem;      
+$font-size-smartphone-xl: 1.125rem;  
+$font-size-smartphone-2xl: 1.25rem;  
+$font-size-smartphone-3xl: 1.5rem;   
+$font-size-smartphone-4xl: 1.75rem;  
+$font-size-smartphone-5xl: 2rem;     
 
 $font-weight-light: 300;
 $font-weight-normal: 400;
@@ -63,14 +63,14 @@ $line-height-normal: 1.5;
 $line-height-relaxed: 1.75;
 
 // Spacing
-$spacing-xs: 0.25rem;   // 4px
-$spacing-sm: 0.5rem;    // 8px
-$spacing-md: 1rem;      // 16px
-$spacing-lg: 1.5rem;    // 24px
-$spacing-xl: 2rem;      // 32px
-$spacing-2xl: 3rem;     // 48px
-$spacing-3xl: 4rem;     // 64px
-$spacing-4xl: 6rem;     // 96px
+$spacing-xs: 0.25rem;   
+$spacing-sm: 0.5rem;    
+$spacing-md: 1rem;      
+$spacing-lg: 1.5rem;    
+$spacing-xl: 2rem;      
+$spacing-2xl: 3rem;     
+$spacing-3xl: 4rem;     
+$spacing-4xl: 6rem;     
 
 // ========================================
 // BREAKPOINTS 2025 - BEST PRACTICES
@@ -86,29 +86,27 @@ $breakpoint-lg: 1024px;     // Large (Desktop Small) - 1024px - 1199px
 $breakpoint-xl: 1200px;     // Extra Large (Desktop) - 1200px - 1399px
 $breakpoint-xxl: 1400px;    // Extra Extra Large (Desktop Large) - ≥ 1400px
 
-// Font-size specifici per smartphone (viewport width < 480px)
-$font-size-smartphone-xs: 0.75rem;   // 12px
-$font-size-smartphone-sm: 0.8125rem; // 13px
-$font-size-smartphone-base: 0.875rem; // 14px
-$font-size-smartphone-lg: 1rem;      // 16px
-$font-size-smartphone-xl: 1.125rem;  // 18px
-$font-size-smartphone-2xl: 1.25rem;  // 20px
-$font-size-smartphone-3xl: 1.5rem;   // 24px
-$font-size-smartphone-4xl: 1.75rem;  // 28px
-$font-size-smartphone-5xl: 2rem;     // 32px
 
-// Breakpoints per compatibilità (deprecati) - RIMOSSI
-// Le variabili deprecate sono state rimosse per mantenere il codice pulito
+$font-size-smartphone-xs: 0.75rem;   
+$font-size-smartphone-sm: 0.8125rem; 
+$font-size-smartphone-base: 0.875rem; 
+$font-size-smartphone-lg: 1rem;      
+$font-size-smartphone-xl: 1.125rem;  
+$font-size-smartphone-2xl: 1.25rem;  
+$font-size-smartphone-3xl: 1.5rem;   
+$font-size-smartphone-4xl: 1.75rem;  
+$font-size-smartphone-5xl: 2rem;     
+
 
 // Container max-widths (solo quelli utilizzati)
 $container-xl: 1280px;
 
 // Border radius
-$border-radius-sm: 0.25rem;   // 4px
-$border-radius-md: 0.375rem;  // 6px
-$border-radius-lg: 0.5rem;    // 8px
-$border-radius-xl: 0.75rem;   // 12px
-$border-radius-2xl: 1rem;     // 16px
+$border-radius-sm: 0.25rem;   
+$border-radius-md: 0.375rem;  
+$border-radius-lg: 0.5rem;    
+$border-radius-xl: 0.75rem;   
+$border-radius-2xl: 1rem;     
 $border-radius-full: 9999px;
 
 // Shadows (solo quelli utilizzati)
@@ -116,12 +114,12 @@ $shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06
 $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 $shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-// Transitions - Sistema unificato 2025 (ottimizzato)
+// Transitions 
 $transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 $transition-normal: 0.5s cubic-bezier(0.4, 0, 0.6, 1); // Transizione principale (unificata con pulsante PDF)
 $transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 $transition-ease-out: 0.3s ease-out;
-// $transition-bounce rimosso perché non utilizzato
+
 
 // Animation delays per sequenze
 $animation-delay-1: 0.1s;

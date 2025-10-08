@@ -29,7 +29,7 @@ const EMAILJS_CONFIG = {
   TEMPLATE_ID: 'template_cz448vu'
 };
 
-// Template email di esempio per EmailJS:
+
 /*
 Oggetto: Nuovo messaggio dal portfolio - {{subject}}
 

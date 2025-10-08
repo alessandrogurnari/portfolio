@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Funzione per mostrare il feedback di un campo
   function showFieldFeedback(field, message, type) {
-    // Rimuovi feedback esistenti
+    
     removeFieldFeedback(field);
     
     // Crea il messaggio di feedback solo se c'è un messaggio
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Validazione durante la digitazione (con debounce per performance)
     let timeoutId;
     field.addEventListener('input', function() {
-      // Rimuovi timeout precedente
+      
       clearTimeout(timeoutId);
       
       // Se il campo ha già uno stato di validazione, rimuovilo temporaneamente
@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset del form
         contactForm.reset();
         
-        // Rimuovi tutti gli stati di validazione
+        
         formFields.forEach(field => {
           field.classList.remove('is-invalid', 'is-valid');
           removeFieldFeedback(field);
