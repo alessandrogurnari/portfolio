@@ -147,7 +147,7 @@
 
 @include mobile {
   .about {
-    padding: $spacing-2xl 2rem; // Incluse anche le dimensioni laterali
+    padding: $spacing-2xl 2rem;
   }
 }
 
@@ -172,13 +172,13 @@
   }
   
   .about-content {
-    gap: $spacing-xl !important; // Gap ridotto per smartphone
+    gap: $spacing-xl !important; 
   }
   
   .about-text {
     p {
       font-size: $font-size-smartphone-lg !important; 
-      line-height: 1.6 !important; // Line-height ottimale per smartphone
+      line-height: 1.6 !important; 
     }
     
     h3 {

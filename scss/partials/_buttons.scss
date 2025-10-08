@@ -58,20 +58,7 @@
       animation: spin $transition-slow linear infinite;
     }
   }
-  
-  // Rimosso: btn-outline, btn-ghost, btn-success, btn-danger (non utilizzati nel sito)
-  // Rimosso: btn-sm, btn-md, btn-xl (non utilizzati nel sito)
 }
-
-// ========================================
-// GRUPPI DI BOTTONI
-// ========================================
-// Rimosso: btn-group (non utilizzato nel sito)
-
-// ========================================
-// BOTTONI SPECIALI
-// ========================================
-// Rimosso: btn-icon e btn-floating (non utilizzati nel sito)
 
 // ========================================
 // ANIMAZIONI BOTTONI
@@ -95,8 +82,6 @@
       font-size: $font-size-lg; 
     }
   }
-  
-  // Rimosso: btn-group e btn-floating (non utilizzati)
 }
 
 // ========================================
@@ -104,11 +89,6 @@
 // ========================================
 // Regole specifiche per bottoni con animazioni particolari
 // Ogni bottone ha dimensioni e stili ottimizzati per la sua sezione
-
-// ========================================
-// BOTTONI SPECIFICI PER SEZIONE E PAGINA
-// ========================================
-// Regole specifiche per ogni tipo di bottone nel sito
 
 // 1. BOTTONE HERO HOME - "Scopri i miei ultimi progetti" (con freccia)
 .home .hero .hero-buttons .btn.btn-primary:first-child {

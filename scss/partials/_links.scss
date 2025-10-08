@@ -82,11 +82,6 @@ a {
     }
   }
   
-  // Focus per accessibilità (solo per navigazione da tastiera) - DISABILITATO per rimuovere rettangolo
-  // &:focus:not(:active) {
-  //   outline: 2px solid $primary-color;
-  //   outline-offset: 2px;
-  // }
   
   
   &:focus:active,
@@ -105,7 +100,7 @@ a {
     
     &::before {
       width: 100%;
-      height: 3px; // underline più visibile per lo stato attivo
+      height: 3px; 
     }
     
     &:hover {
@@ -171,8 +166,6 @@ a {
   &::before { background: currentColor; }
   &.active::before { height: 2px; }
 }
-
-// Regole consolidate per nav-link (gestite nel selettore principale sopra)
 
 // ========================================
 // LINK SOCIAL

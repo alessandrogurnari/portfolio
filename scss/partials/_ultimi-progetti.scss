@@ -140,7 +140,7 @@
   
   .project-content {
     padding: $spacing-xl;
-    padding-top: $spacing-3xl; 
+    padding-top: $spacing-lg; 
     display: flex;
     flex-direction: column;
     justify-content: space-between; // Distribuisce lo spazio tra contenuto e tag
@@ -150,7 +150,7 @@
       font-size: $font-size-xl;
       font-weight: $font-weight-semibold;
       color: $text-color;
-      margin-top: $spacing-lg; 
+      margin-top: 0; 
       margin-bottom: $spacing-md; 
       
       // Titolo più grande su mobile per gerarchia più marcata
@@ -332,6 +332,7 @@
   // Project content - padding ridotto per smartphone
   .ultimi-progetti .project-content {
     padding: $spacing-sm !important; 
+    padding-top: $spacing-lg !important; // Riduce ulteriormente il padding-top
   }
   
   // Project tags - ottimizzazione per smartphone

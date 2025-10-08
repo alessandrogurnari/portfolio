@@ -76,7 +76,7 @@
   
   &:focus {
     border-color: $primary-color;
-    box-shadow: none; // Rimuove ombre dal focus FAQ
+    box-shadow: none; 
   }
 }
 
@@ -85,7 +85,7 @@
   border: 1px solid $border-color;
   border-radius: 12px;
   margin-bottom: 1rem;
-  box-shadow: none; // Rimuove ombre dalle FAQ
+  box-shadow: none;
   
   &:not(:first-of-type) {
     border-top: 1px solid $border-color;
@@ -96,7 +96,7 @@
     border-top-right-radius: 12px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    box-shadow: none; // Rimuove ombre dai pulsanti FAQ
+    box-shadow: none;
   }
   
   .accordion-collapse {
@@ -234,9 +234,9 @@
     
     &:focus {
       background-color: $card-color;
-      border-color: $brand-accent; // Solo il bordo cambia colore
-      box-shadow: none; // Nessuna ombra
-      outline: none; // Rimuove l'outline del browser
+      border-color: $brand-accent;
+      box-shadow: none; 
+      outline: none; 
     }
   }
   
@@ -274,7 +274,7 @@
     
     &:focus {
       border-color: $error-color;
-      box-shadow: none; // Nessuna ombra
+      box-shadow: none; 
     }
   }
   
@@ -285,7 +285,7 @@
     
     &:focus {
       border-color: $success-color;
-      box-shadow: none; // Nessuna ombra
+      box-shadow: none; 
     }
   }
   
@@ -293,9 +293,9 @@
   .invalid-feedback {
     color: $error-color;
     font-size: $font-size-sm; 
-    font-weight: $font-weight-normal; // Peso normale, non medium
+    font-weight: $font-weight-normal; 
     margin-top: 0.25rem; 
-    display: none; // Nascosto di default
+    display: none; 
     animation: fadeInUp 0.3s ease-out;
     
     // Font size aumentato per mobile
@@ -308,9 +308,9 @@
   .valid-feedback {
     color: $success-color;
     font-size: $font-size-sm; 
-    font-weight: $font-weight-normal; // Peso normale, non medium
+    font-weight: $font-weight-normal; 
     margin-top: 0.25rem; 
-    display: none; // Nascosto di default
+    display: none; 
     animation: fadeInUp 0.3s ease-out;
     
     // Font size aumentato per mobile
@@ -411,11 +411,6 @@
     border-radius: 12px;
     overflow: hidden;
   }
-  
-  // Regole smartphone per contenuti FAQ
-  
-  
-  // FAQ usa variabili Bootstrap personalizzate - nessun override necessario
 }
 
 // ========================================
@@ -614,11 +609,11 @@
     display: flex;
     gap: $spacing-lg;
     align-items: stretch;
-    margin-bottom: 0; // Reset margin per controllo preciso
+    margin-bottom: 0; 
     
     .btn {
-      white-space: nowrap; // Previene il wrap del testo su mobile
-      min-width: fit-content; // Larghezza si adatta al contenuto
+      white-space: nowrap; 
+      min-width: fit-content;
     }
   }
   
@@ -627,7 +622,7 @@
     align-items: center;
     justify-content: center;
     gap: $spacing-lg;
-    margin-top: 0; // Reset margin per controllo preciso
+    margin-top: 0; 
     
     .social-label {
       font-size: $font-size-base;
@@ -644,7 +639,7 @@
       gap: $spacing-md;
       
       .btn {
-        white-space: nowrap; // Previene il wrap del testo su tablet
+        white-space: nowrap; 
       }
     }
     
@@ -664,7 +659,7 @@
       gap: $spacing-md;
       
       .btn {
-        white-space: nowrap; // Previene il wrap del testo su mobile
+        white-space: nowrap; 
       }
     }
     
@@ -811,11 +806,11 @@
     display: flex;
     gap: $spacing-lg;
     align-items: stretch;
-    margin-bottom: 0; // Reset margin per controllo preciso
+    margin-bottom: 0; 
     
     .btn {
-      white-space: nowrap; // Previene il wrap del testo su mobile
-      min-width: fit-content; // Larghezza si adatta al contenuto
+      white-space: nowrap; 
+      min-width: fit-content; 
     }
   }
   
@@ -827,7 +822,7 @@
       gap: $spacing-md;
       
       .btn {
-        white-space: nowrap; // Previene il wrap del testo su tablet
+        white-space: nowrap; 
       }
     }
   }
@@ -839,8 +834,8 @@
       gap: $spacing-md; 
       
       .btn {
-        white-space: nowrap; // Previene il wrap del testo su mobile
-        min-width: fit-content; // Larghezza si adatta al contenuto (come home)
+        white-space: nowrap; 
+        min-width: fit-content; 
       }
     }
   }
@@ -875,11 +870,11 @@
   
   // Form section - riduzione spazi laterali
   .contact-form-section {
-    padding: $spacing-2xl $spacing-xs !important; // Riduci spazi laterali per smartphone
+    padding: $spacing-2xl $spacing-xs !important; 
     
     .container {
-      padding-left: $spacing-xs !important; // Riduci padding container
-      padding-right: $spacing-xs !important; // Riduci padding container
+      padding-left: $spacing-xs !important; 
+      padding-right: $spacing-xs !important; 
     }
     
     .row {
@@ -888,8 +883,8 @@
     }
     
     .col-12 {
-      padding-left: $spacing-xs !important; // Riduci padding colonne
-      padding-right: $spacing-xs !important; // Riduci padding colonne
+      padding-left: $spacing-xs !important; 
+      padding-right: $spacing-xs !important; 
     }
     
     .card {
@@ -970,7 +965,7 @@
   // Contenuti FAQ - dimensioni ridotte
   .contact-faq .accordion-body {
     font-size: $font-size-smartphone-base !important; 
-    font-weight: 300 !important; // Font-weight normale per smartphone
+    font-weight: 300 !important; 
   }
   
   // Bottoni hero - dimensioni ridotte
@@ -1021,8 +1016,8 @@
   
   // Form smartphone - riduci margini laterali per evitare schiacciamento
   .contact .container {
-    padding-left: 1rem !important; // Mostra leggermente i bordi sinistro
-    padding-right: 1rem !important; // Mostra leggermente i bordi destro
+    padding-left: 1rem !important; 
+    padding-right: 1rem !important; 
   }
   
   .contact .col-12,
@@ -1035,8 +1030,8 @@
   
   // Card form smartphone - riduci padding laterale
   .contact .card {
-    margin-left: 0 !important; // Rimuove margin sinistro
-    margin-right: 0 !important; // Rimuove margin destro
+    margin-left: 0 !important; 
+    margin-right: 0 !important; 
   }
   
   .contact .card-body {

@@ -53,13 +53,11 @@
     font-weight: $font-weight-light;
     letter-spacing: 0.05em; // Spaziatura tra le lettere del logo
     transform: skew(+10deg); // Inclinazione del logo
-    // Logo: stesso colore dello sfondo delle pagine
     color: $background-color;
     text-decoration: none;
     transition: color $transition-fast;
     
     &:hover {
-      // Hover logo: uguale al colore attivo dei link (brand accent)
       color: $brand-accent;
     }
   }
@@ -205,16 +203,12 @@
   &:hover:not(.active),
   &:focus,
   &:focus-visible {
-    // Hover/focus: uguale al colore attivo
     color: $brand-accent;
     ;
   }
   
   &.active {
-    color: $brand-accent; // Active: accento brand coerente
+    color: $brand-accent; 
   }
 }
 
-// ========================================
-// NAVBAR COMPLETATA
-// ========================================

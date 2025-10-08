@@ -81,9 +81,9 @@
 
 .hero-subtitle {
   font-size: $font-size-xl; 
-  color: $text-color; // Cambiato da $text-light per migliore contrasto con background brand accent
+  color: $text-color; 
   margin-bottom: $spacing-lg;
-  font-weight: $font-weight-normal; // Ridotto da medium a normal per look più leggero
+  font-weight: $font-weight-normal; 
   @include fade-in-up;
   @include sequential-animation($animation-delay-1);
 }
@@ -92,8 +92,8 @@
   font-size: $font-size-lg; 
   line-height: $line-height-relaxed;
   margin-bottom: $spacing-2xl;
-  color: $text-color; // Cambiato da $text-light per migliore contrasto con background brand accent
-  font-weight: $font-weight-light; // Aggiunto font-weight leggero per descrizione
+  color: $text-color; 
+  font-weight: $font-weight-light; 
   @include fade-in-up;
   @include sequential-animation($animation-delay-1);
   
@@ -204,11 +204,6 @@
 }
 
 // ========================================
-// SOCIAL LABEL HOME - "Seguimi:" 
-// ========================================
-
-
-// ========================================
 // REGOLE SMARTPHONE - OVERRIDE FINALE
 // ========================================
 // Le regole smartphone vengono applicate alla fine per avere la precedenza
@@ -235,7 +230,7 @@
     padding-left: 0.25rem;
     padding-right: 0.25rem;
     font-size: $font-size-smartphone-lg !important; 
-    line-height: 1.6 !important; // Line-height ottimale per smartphone
+    line-height: 1.6 !important; 
   }
   
   // Bottoni hero - layout verticale e dimensioni
