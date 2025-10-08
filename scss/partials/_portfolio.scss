@@ -75,9 +75,9 @@
     
     .hero-subtitle {
       font-size: $font-size-xl; 
-      color: $text-color; // Nero per contrasto con sfondo chiaro
+        color: $text-color; 
       margin-bottom: 1rem;
-      font-weight: $font-weight-normal; // Ridotto per look più leggero
+      font-weight: $font-weight-normal; 
       @include fade-in-up;
       @include sequential-animation($animation-delay-1);
     }
@@ -86,8 +86,8 @@
       // Utilizza le regole base da _hero.scss
       // Aggiunge solo regole specifiche per la pagina portfolio
       font-size: $font-size-lg; 
-        color: $text-color; // Nero per contrasto con sfondo chiaro
-      font-weight: $font-weight-light; // Font-weight leggero per descrizione
+        color: $text-color; 
+      font-weight: $font-weight-light;
       
       // Controllo del <br> solo su desktop
       .desktop-only {
@@ -114,7 +114,6 @@
     padding: $spacing-3xl 0;
   }
   
-  // .section-title gestito in _typography.scss
   
   .clients-grid {
     display: flex;
@@ -215,8 +214,6 @@
   }
 }
 
-// Regola .clients consolidata nella sezione principale sopra
-
 
 // ========================================
 // HEADER CLIENTE - CLICCABILE E ANIMATO
@@ -227,7 +224,7 @@
   display: flex;
   align-items: center;
   gap: $spacing-lg;
-  margin-bottom: 0; // Rimosso per evitare doppio spacing con .client-works-section
+  margin-bottom: 0; 
   padding: $spacing-lg; 
   background-color: $card-color;
   border-radius: $border-radius-xl;
@@ -236,38 +233,32 @@
   min-height: 100px; // Altezza minima per consistenza visiva
   cursor: pointer; // Indica che l'header è cliccabile
   transition: box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              border-right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); // Transizioni separate per evitare scatti
-  
+              border-right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
   // Transizione per la freccia
   .client-works-arrow {
     transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
                 color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); // Transizioni sincronizzate e morbide
+                box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
   }
   
-  // Hover su tutto l'header - solo bordo destro colorato
-  &:hover {
-    border-right-color: $brand-accent; // Cambia solo il colore del bordo
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08); // Ombra più morbida
-    
-    .client-works-arrow {
-      background-color: $brand-accent; // Cerchio con stesso colore del bordo destro
-      color: white; // Freccia bianca per contrasto
-      box-shadow: 0 4px 16px rgba($primary-color, 0.1); // Ombra armonizzata con il bordo
-    }
-    
-    // Hover funziona anche quando l'elemento è attivo
-    .client-works-arrow.active {
-      background-color: $brand-accent; // Cerchio con stesso colore del bordo destro anche se attivo
-      color: white; // Freccia bianca anche se attivo
-      box-shadow: 0 4px 16px rgba($primary-color, 0.1); // Ombra armonizzata anche se attivo
+  // Hover su tutto l'header - solo per desktop/tablet (non smartphone)
+  @include md-up {
+    &:hover {
+      border-right-color: $brand-accent; 
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08); 
+      
+      .client-works-arrow {
+        background-color: $brand-accent; 
+        color: white; 
+        box-shadow: 0 4px 16px rgba($primary-color, 0.1); 
+      }
     }
   }
   
   // Effetto di click
   &:active {
-    border-right-color: transparent; // Ripristina il bordo trasparente
-    box-shadow: $shadow-md; // Ombra normale
+    border-right-color: transparent; 
+    box-shadow: $shadow-md; 
   }
   
   .client-works-logo {
@@ -330,7 +321,7 @@
     // Transizione definita sopra nell'header
     flex-shrink: 0; // Mantiene le dimensioni fisse
     margin-right: $spacing-xl; 
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); // Ombra esterna come gli altri elementi
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); 
     border: 1px solid rgba(0, 0, 0, 0.05); // Bordo sottile per definizione
     
     // Media query per risoluzioni intermedie (≤ 1023px)
@@ -340,18 +331,20 @@
     
     i {
       font-size: $font-size-sm; 
-      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); // Rotazione smooth
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
     }
     
     
-    // Stato attivo (quando espanso)
-    &.active {
-      background-color: $card-color; // Background come stato normale
-      color: $primary-color; // Freccia blu come stato normale
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); // Ombra normale
-      
-      i {
-        transform: rotate(-180deg); // Rotazione antioraria come Bootstrap FAQ
+    // Stato attivo (quando espanso) - solo per desktop/tablet
+    @include md-up {
+      &.active {
+        background-color: $card-color; 
+        color: $primary-color; 
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); 
+        
+        i {
+          transform: rotate(-180deg); // Rotazione antioraria come Bootstrap FAQ
+        }
       }
     }
   }
@@ -362,36 +355,36 @@
     text-align: left; 
     gap: $spacing-md;
     padding: $spacing-lg; 
-    min-height: 100px; // Altezza minima aumentata per accessibilità
+    min-height: 100px; 
     
     .client-works-logo {
-      max-width: 90px; // Larghezza aumentata per migliore visibilità
-      height: 70px; // Altezza aumentata per migliore visibilità
+      max-width: 90px; 
+      height: 70px; 
       padding: $spacing-md; 
-      min-width: 70px; // Larghezza minima garantita per accessibilità
-      min-height: 50px; // Altezza minima garantita per accessibilità
+      min-width: 70px; 
+      min-height: 50px; 
     }
     
     .client-works-info {
       h3 {
         font-size: $font-size-xl; 
-        font-weight: $font-weight-semibold; // Peso ottimizzato per mobile
-        margin-bottom: $spacing-sm; // Spacing aumentato per migliore separazione
-        line-height: 1.3; // Line height ottimizzato per mobile
+        font-weight: $font-weight-semibold; 
+        margin-bottom: $spacing-sm; 
+        line-height: 1.3; 
         
       }
       
       p {
         font-size: $font-size-lg; 
-        line-height: 1.5; // Line height ottimizzato per leggibilità
-        margin: 0; // Reset margin per controllo preciso
+        line-height: 1.5; 
+        margin: 0; 
         
       }
     }
     
     .client-works-arrow {
-      width: 36px; // Dimensione ridotta per mobile
-      height: 36px; // Dimensione ridotta per mobile
+      width: 36px;  
+      height: 36px; 
       margin-right: $spacing-sm; 
       
       i {
@@ -403,32 +396,32 @@
   
   @include tablet {
     padding: $spacing-lg; 
-    min-height: 95px; // Altezza minima ottimizzata per tablet
+    min-height: 95px; 
     
     .client-works-logo {
-      max-width: 110px; // Larghezza massima per tablet
-      height: 70px; // Altezza intermedia per tablet
+      max-width: 110px; 
+      height: 70px; 
       padding: $spacing-sm; 
     }
     
     .client-works-info {
       h3 {
         font-size: $font-size-xl; 
-        font-weight: $font-weight-semibold; // Peso ottimizzato per tablet
-        margin-bottom: $spacing-sm; // Spacing consistente
-        line-height: 1.3; // Line height ottimizzato
+        font-weight: $font-weight-semibold; 
+        margin-bottom: $spacing-sm; 
+        line-height: 1.3; 
       }
       
       p {
         font-size: $font-size-lg; 
-        line-height: 1.5; // Line height ottimizzato per leggibilità
-        margin: 0; // Reset margin per controllo preciso
+        line-height: 1.5; 
+        margin: 0; 
       }
     }
     
     .client-works-arrow {
-      width: 38px; // Dimensione intermedia per tablet
-      height: 38px; // Dimensione intermedia per tablet
+      width: 38px; 
+      height: 38px; 
       margin-right: $spacing-sm; 
       
       i {
@@ -447,9 +440,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: $spacing-xl;
-  align-items: stretch; // Altezze uniformi per riga
-  margin-top: $spacing-2xl; // Spacing dall'header cliente (aumentato)
-  margin-bottom: $spacing-lg; // Spacing ridotto per avvicinare le frecce
+  align-items: stretch; 
+  margin-top: $spacing-2xl; 
+  margin-bottom: $spacing-lg; 
   scroll-behavior: smooth; // Scroll fluido per navigazione
   
   // Desktop: 3 card in una riga (non modificato)
@@ -458,7 +451,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); // 3 colonne fisse
     gap: $spacing-xl;
-    padding-bottom: $spacing-xl; // Spazio per le ombre
+    padding-bottom: $spacing-xl; 
   }
   
   
@@ -467,13 +460,13 @@
     @include horizontal-scroll;
     grid-template-columns: none; // Rimuove grid
     gap: $spacing-lg;
-    padding-bottom: $spacing-sm; // Spazio per le ombre
+    padding-bottom: $spacing-sm; 
     
     
     .project-card {
-      flex: 0 0 340px; // Larghezza fissa intermedia
-      min-width: 340px; // Larghezza minima intermedia
-      max-width: 360px; // Larghezza massima intermedia
+      flex: 0 0 340px; 
+      min-width: 340px; 
+      max-width: 360px; 
       padding-bottom: 20px; 
       margin-top: $spacing-md;
       margin-bottom: $spacing-sm; 
@@ -557,14 +550,14 @@
   background-color: $card-color;
   border-radius: $border-radius-xl;
   overflow: hidden; // Ripristina i bordi arrotondati superiori
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); // ancora più soft
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04); 
   transition: transform $transition-normal, 
               box-shadow $transition-normal,
               opacity 0.4s ease-out;
   display: flex;
   flex-direction: column;
-  position: relative; // Per eventuali elementi posizionati assolutamente
-  padding-bottom: 20px; // Spazio per i tag posizionati assolutamente
+  position: relative; 
+  padding-bottom: 20px; 
   
   &:hover {
     transform: translateY(-4px);
@@ -597,7 +590,6 @@
     opacity: 0;
     transition: opacity $transition-normal;
     
-    // Rimuove il transform in hover per i pulsanti PDF
     .btn {
       transition: all $transition-fast;
       
@@ -621,10 +613,10 @@
 .project-content {
   padding: $spacing-xl;
   padding-top: $spacing-3xl; 
-  flex: 1; // Occupa tutto lo spazio disponibile
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // Distribuisce lo spazio tra contenuto e tag
+  justify-content: space-between; 
   
   h4 {
     font-size: $font-size-xl; 
@@ -644,8 +636,8 @@
     color: $text-light;
     font-size: $font-size-lg !important; 
     line-height: $line-height-relaxed;
-    margin-bottom: 0; // Rimosso per avvicinare i tag
-    flex: 1; // Il paragrafo si espande per riempire lo spazio disponibile
+    margin-bottom: 0; 
+    flex: 1; 
     
   }
   
@@ -655,14 +647,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: $spacing-md;
-  margin-top: $spacing-4xl; // Bel margin-top per separare i tag dal contenuto
+  margin-top: $spacing-4xl; 
   
   .tag {
     background-color: $card-color;
     color: $primary-color;
     border: 1px solid $primary-color;
     padding: $spacing-xs $spacing-sm;
-    border-radius: $border-radius-lg; // Border-radius 8px per tag compatti
+    border-radius: $border-radius-lg; 
     font-size: 0.75rem; 
     font-weight: $font-weight-medium;
     
@@ -677,7 +669,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row !important; // Layout orizzontale su desktop
+  flex-direction: row !important; 
   gap: $spacing-xl;
   
   // Stili per le statistiche
@@ -689,7 +681,7 @@
       font-size: 1.25rem; 
       font-weight: $font-weight-semibold;
       line-height: $line-height-normal;
-      color: $brand-accent; // Colore accent per i titoli
+      color: $brand-accent; 
       margin-bottom: $spacing-xs;
     }
     
@@ -735,7 +727,7 @@
   // Mobile: layout orizzontale con gap più piccolo
   @include mobile {
     flex-direction: row;
-    gap: $spacing-md; // Ridotto da lg (1.5rem) a md (1rem)
+    gap: $spacing-md; 
     
     > div h3 {
       font-size: $font-size-xl; 
@@ -767,8 +759,6 @@
     color: $success-color;
   }
 }
-
-// DESCRIZIONE CTA PORTFOLIO - Padding laterale per smartphone
 
 
 // BOTTONI CTA PORTFOLIO - "Inizia un Progetto" e "Vai al CV"
@@ -833,15 +823,44 @@
   
   // Client works header - layout verticale per smartphone
   .client-works-header {
-    flex-direction: column !important; // Layout verticale
+    flex-direction: column !important; 
     text-align: center !important; 
-    gap: $spacing-md !important; // Gap ridotto per smartphone
+    gap: $spacing-md !important; 
     padding: $spacing-lg !important; 
-    min-height: auto !important; // Altezza automatica per layout verticale
+    min-height: auto !important; 
+    
+    // STATO INATTIVO (default) - bordo trasparente, freccia normale
+    border-right-color: transparent !important;
+    
+    .client-works-arrow {
+      background-color: $surface-color !important;
+      color: $text-color !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+      
+      i {
+        transform: rotate(0deg) !important; // Freccia verso il basso
+      }
+    }
+    
+    // STATO ATTIVO - bordo brand accent, freccia ruotata e colorata
+    &.active {
+      border-right-color: $brand-accent !important;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+      
+      .client-works-arrow {
+        background-color: $brand-accent !important;
+        color: white !important;
+        box-shadow: 0 4px 16px rgba($primary-color, 0.1) !important;
+        
+        i {
+          transform: rotate(-180deg) !important; // Freccia verso l'alto
+        }
+      }
+    }
     
     .client-works-logo {
-      max-width: 100px !important; // Larghezza ottimizzata per smartphone
-      height: 60px !important; // Altezza ottimizzata per smartphone
+      max-width: 100px !important; 
+      height: 60px !important; 
       padding: $spacing-sm !important; 
       margin: 0 auto $spacing-sm auto !important; 
       align-self: center !important; 
@@ -865,22 +884,24 @@
     }
     
     .client-works-arrow {
-      width: 32px !important; // Dimensione ridotta per smartphone
-      height: 32px !important; // Dimensione ridotta per smartphone
+      width: 32px !important; 
+      height: 32px !important; 
       margin: $spacing-sm auto 0 auto !important; 
       align-self: center !important; 
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
       
       i {
         font-size: $font-size-smartphone-sm !important; 
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
       }
     }
   }
   
   // Progetti grid - dimensioni ridotte per smartphone
   .projects-grid .project-card {
-    flex: 0 0 280px !important; // Larghezza ridotta per smartphone
-    min-width: 280px !important; // Larghezza minima ridotta
-    max-width: 300px !important; // Larghezza massima ridotta
+    flex: 0 0 280px !important; 
+    min-width: 280px !important; 
+    max-width: 300px !important; 
     padding-bottom: 15px !important; 
     margin-top: $spacing-xs !important; 
     margin-bottom: $spacing-sm !important; 
@@ -888,7 +909,7 @@
   
   // Immagini progetti - altezza ridotta
   .project-image {
-    height: 160px !important; // Altezza ridotta per smartphone
+    height: 160px !important; 
     
     img {
       object-fit: contain !important; // Mostra l'immagine completa senza tagli
@@ -908,7 +929,7 @@
   .project-content p {
     font-size: $font-size-smartphone-lg !important; 
     font-weight: $font-weight-light !important; // 300 per smartphone
-    line-height: 1.4 !important; // Line-height ridotto
+    line-height: 1.4 !important; 
     padding-left: $spacing-sm !important; 
     padding-right: $spacing-sm !important; 
   }
@@ -921,7 +942,7 @@
   // Tag progetti - dimensioni ridotte
   .project-tags .tag {
     font-weight: 400 !important; // 400 per smartphone (normale)
-    border-width: 0.75px !important; // Bordo proporzionale per smartphone
+    border-width: 0.75px !important; 
   }
   
   // Tag progetti - padding ridotto
@@ -938,7 +959,7 @@
   // Statistiche portfolio - layout e dimensioni
   .about-stats {
     flex-direction: row !important;
-    gap: $spacing-sm !important; // Gap ridotto per smartphone
+    gap: $spacing-sm !important; 
     
     > div h3 {
       font-size: $font-size-smartphone-lg !important; 
@@ -947,7 +968,7 @@
     > div p {
       padding-top: $spacing-sm !important;
       font-size: $font-size-smartphone-base !important; 
-      letter-spacing: 0.3px !important; // Letter-spacing ridotto
+      letter-spacing: 0.3px !important; 
     }
   }
   
@@ -975,8 +996,8 @@
   // Card portfolio smartphone - identiche alle card home (specificità massima)
   .portfolio .ultimi-progetti .projects-grid .project-card .project-content p {
     font-size: 1rem !important; 
-    font-weight: 300 !important; // Font-weight leggero come home
-    line-height: 1.6 !important; // Line-height ottimale come home
+    font-weight: 300 !important; 
+    line-height: 1.6 !important; 
     padding-left: 0.5rem !important; 
     padding-right: 0.5rem !important; 
   }
@@ -984,28 +1005,28 @@
   // Forza anche con selettore alternativo
   .portfolio .project-card .project-content p {
     font-size: 1rem !important; 
-    font-weight: 300 !important; // Font-weight leggero come home
-    line-height: 1.6 !important; // Line-height ottimale come home
+    font-weight: 300 !important; 
+    line-height: 1.6 !important; 
   }
   
   
 
   .portfolio .project-card .project-tags {
-    margin-top: $spacing-3xl !important; // Stesso valore di home
-    margin-bottom: $spacing-sm !important; // Stesso valore di home
-    padding-left: $spacing-sm !important; // Stesso padding di home
-    padding-right: $spacing-sm !important; // Stesso padding di home
+    margin-top: $spacing-3xl !important; 
+    margin-bottom: $spacing-sm !important; 
+    padding-left: $spacing-sm !important; 
+    padding-right: $spacing-sm !important; 
   }
   
   .portfolio .ultimi-progetti .projects-grid .project-card .project-tags .tag {
-    font-weight: 400 !important; // Font-weight normale per tag
-    border-width: 0.75px !important; // Bordo più sottile
+    font-weight: 400 !important; 
+    border-width: 0.75px !important; 
   }
   
   // CTA portfolio smartphone - identico a home
   .portfolio .contact-info p {
     font-size: 1rem !important; 
-    line-height: 1.6 !important; // Line-height ottimale (stesso di home)
+    line-height: 1.6 !important; 
     padding-bottom: 1rem !important; 
   }
   

@@ -1533,26 +1533,53 @@ a:active {
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1), background-color 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   transform-origin: center;
 }
-.nav-toggle:hover .bar {
-  background-color: #06b6d4;
+@media (min-width: 768px) {
+  .nav-toggle:hover .bar {
+    background-color: #06b6d4;
+  }
+  .nav-toggle:hover::before, .nav-toggle:hover::after {
+    background-color: #06b6d4;
+  }
 }
-.nav-toggle:hover::before, .nav-toggle:hover::after {
-  background-color: #06b6d4;
-}
-.nav-toggle.active .bar {
-  opacity: 0;
-}
-.nav-toggle.active::before {
-  transform: rotate(45deg);
-  opacity: 1;
-  transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav-toggle.active::after {
-  transform: rotate(-45deg);
-  opacity: 1;
-  transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+@media (min-width: 768px) {
+  .nav-toggle.active .bar {
+    opacity: 0;
+  }
+  .nav-toggle.active::before {
+    transform: rotate(45deg);
+    opacity: 1;
+    transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-toggle.active::after {
+    transform: rotate(-45deg);
+    opacity: 1;
+    transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
+@media (max-width: 480px) and (orientation: portrait) {
+  .nav-toggle .bar {
+    background-color: #F0F0F0 !important;
+  }
+  .nav-toggle::before, .nav-toggle::after {
+    background-color: #F0F0F0 !important;
+  }
+  .nav-toggle.active .bar {
+    opacity: 0 !important;
+  }
+  .nav-toggle.active::before {
+    transform: rotate(45deg) !important;
+    opacity: 1 !important;
+    background-color: #06b6d4 !important;
+    transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  .nav-toggle.active::after {
+    transform: rotate(-45deg) !important;
+    opacity: 1 !important;
+    background-color: #06b6d4 !important;
+    transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+}
 .about {
   padding: 6rem 0;
 }
@@ -1801,9 +1828,11 @@ a:active {
   padding-bottom: 20px;
   position: relative;
 }
-.ultimi-progetti .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+@media (min-width: 768px) {
+  .ultimi-progetti .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
 }
 .ultimi-progetti .project-image {
   position: relative;
@@ -1833,11 +1862,13 @@ a:active {
 .ultimi-progetti .project-image .project-overlay .btn:hover {
   transform: none;
 }
-.ultimi-progetti .project-image:hover img {
-  transform: scale(1.05);
-}
-.ultimi-progetti .project-image:hover .project-overlay {
-  opacity: 1;
+@media (min-width: 768px) {
+  .ultimi-progetti .project-image:hover img {
+    transform: scale(1.05);
+  }
+  .ultimi-progetti .project-image:hover .project-overlay {
+    opacity: 1;
+  }
 }
 .ultimi-progetti .project-content {
   padding: 2rem;
@@ -1921,6 +1952,47 @@ a:active {
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
+  .ultimi-progetti .container {
+    position: relative !important;
+    padding-top: 110px !important;
+    padding-bottom: 80px !important;
+  }
+  .ultimi-progetti .container.scroll-start {
+    padding-left: 1.5rem !important;
+    padding-right: 0 !important;
+  }
+  .ultimi-progetti .container.scroll-middle {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .ultimi-progetti .container.scroll-end {
+    padding-left: 0 !important;
+    padding-right: 1.5rem !important;
+  }
+  .ultimi-progetti .container .section-title {
+    position: absolute !important;
+    top: 0 !important;
+    left: 1.5rem !important;
+    right: 1.5rem !important;
+    transform: translateX(0) !important;
+    z-index: 10 !important;
+  }
+  .ultimi-progetti .container .section-subtitle {
+    position: absolute !important;
+    top: 30px !important;
+    left: 1.5rem !important;
+    right: 1.5rem !important;
+    transform: translateX(0) !important;
+    z-index: 10 !important;
+  }
+  .ultimi-progetti .container .projects-cta {
+    position: absolute !important;
+    bottom: 1.5rem !important;
+    left: 1.5rem !important;
+    right: 1.5rem !important;
+    transform: translateX(0) !important;
+    z-index: 10 !important;
+  }
   .section-subtitle {
     font-size: 1rem !important;
   }
@@ -1932,6 +2004,10 @@ a:active {
     margin-top: 0.25rem !important;
     margin-bottom: 1rem !important;
   }
+  .ultimi-progetti .projects-grid .project-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
   .ultimi-progetti .project-image {
     height: 160px !important;
   }
@@ -1940,6 +2016,12 @@ a:active {
        object-fit: contain !important;
     -o-object-position: center !important;
        object-position: center !important;
+  }
+  .ultimi-progetti .project-image:hover img {
+    transform: scale(1.05) !important;
+  }
+  .ultimi-progetti .project-image:hover .project-overlay {
+    opacity: 1 !important;
   }
   .ultimi-progetti .project-content h3 {
     font-size: 1.25rem !important;
@@ -2486,19 +2568,16 @@ a:active {
 .client-works-header .client-works-arrow {
   transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.client-works-header:hover {
-  border-right-color: #06b6d4;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-}
-.client-works-header:hover .client-works-arrow {
-  background-color: #06b6d4;
-  color: white;
-  box-shadow: 0 4px 16px rgba(42, 46, 52, 0.1);
-}
-.client-works-header:hover .client-works-arrow.active {
-  background-color: #06b6d4;
-  color: white;
-  box-shadow: 0 4px 16px rgba(42, 46, 52, 0.1);
+@media (min-width: 768px) {
+  .client-works-header:hover {
+    border-right-color: #06b6d4;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+  .client-works-header:hover .client-works-arrow {
+    background-color: #06b6d4;
+    color: white;
+    box-shadow: 0 4px 16px rgba(42, 46, 52, 0.1);
+  }
 }
 .client-works-header:active {
   border-right-color: transparent;
@@ -2569,13 +2648,15 @@ a:active {
   font-size: 1rem;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.client-works-header .client-works-arrow.active {
-  background-color: #fafafa;
-  color: #2A2E34;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-}
-.client-works-header .client-works-arrow.active i {
-  transform: rotate(-180deg);
+@media (min-width: 768px) {
+  .client-works-header .client-works-arrow.active {
+    background-color: #fafafa;
+    color: #2A2E34;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  }
+  .client-works-header .client-works-arrow.active i {
+    transform: rotate(-180deg);
+  }
 }
 @media (max-width: 399px) {
   .client-works-header {
@@ -2988,6 +3069,27 @@ a:active {
     gap: 1rem !important;
     padding: 1.5rem !important;
     min-height: auto !important;
+    border-right-color: transparent !important;
+  }
+  .client-works-header .client-works-arrow {
+    background-color: #fafafa !important;
+    color: #2A2E34 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+  }
+  .client-works-header .client-works-arrow i {
+    transform: rotate(0deg) !important;
+  }
+  .client-works-header.active {
+    border-right-color: #06b6d4 !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+  }
+  .client-works-header.active .client-works-arrow {
+    background-color: #06b6d4 !important;
+    color: white !important;
+    box-shadow: 0 4px 16px rgba(42, 46, 52, 0.1) !important;
+  }
+  .client-works-header.active .client-works-arrow i {
+    transform: rotate(-180deg) !important;
   }
   .client-works-header .client-works-logo {
     max-width: 100px !important;
@@ -3015,9 +3117,11 @@ a:active {
     height: 32px !important;
     margin: 0.5rem auto 0 auto !important;
     align-self: center !important;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   }
   .client-works-header .client-works-arrow i {
     font-size: 0.8125rem !important;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   }
   .projects-grid .project-card {
     flex: 0 0 280px !important;

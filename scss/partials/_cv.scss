@@ -102,7 +102,7 @@
       
       & {
         margin-bottom: $spacing-lg; 
-        color: $text-color; // Nero per contrasto con sfondo chiaro
+        color: $text-color; 
       }
       
       
@@ -113,7 +113,7 @@
     
     .hero-subtitle {
       font-size: $font-size-xl; 
-      color: $text-color; // Nero per contrasto con sfondo chiaro
+      color: $text-color; 
       margin-bottom: 1rem;
       font-weight: $font-weight-normal; // Ridotto per look più leggero
       @include fade-in-up;
@@ -123,7 +123,7 @@
     
     .hero-description {
       font-size: $font-size-lg; 
-      color: $text-color; // Nero per contrasto con sfondo chiaro
+      color: $text-color; 
       line-height: $line-height-relaxed;
       font-weight: $font-weight-light; // Font-weight leggero per descrizione
       max-width: 600px;
@@ -281,13 +281,13 @@
   }
   
   @include sm {
-    width: 210px; // Dimensione intermedia per SM
-    height: 210px; // Dimensione intermedia per SM
+    width: 210px; 
+    height: 210px;  
   }
   
   @include tablet {
     width: 260px;
-    height: 260px; // Altezza aumentata del blocco scritte
+    height: 260px; 
   }
   
   @include desktop {
@@ -458,33 +458,33 @@
   &:nth-child(3) {
     .social-link--homepage {
       color: #000000; // Nero per le icone social
-      width: auto; // Larghezza automatica per contenere icona + testo
-      height: auto; // Altezza automatica
-      min-width: auto; // Larghezza minima automatica
-      min-height: auto; // Altezza minima automatica
+      width: auto; 
+      height: auto; 
+      min-width: auto; 
+      min-height: auto; 
       padding: 8px; 
       display: flex;
       align-items: center; 
-      gap: $spacing-sm; // Gap tra icona e testo
-      transition: color 0.1s ease; // Transizione molto veloce
+      gap: $spacing-sm; 
+      transition: color 0.1s ease; 
       text-decoration: none;
       
       // Rimuove qualsiasi trasformazione/traslazione
         &:hover {
           color: $brand-accent; // Accent al hover
-          transform: none; // Nessuna traslazione
-          box-shadow: none; // Nessuna ombra
+          transform: none; 
+          box-shadow: none; 
           text-decoration: none;
         }
       
       i {
         color: inherit; // Eredita il colore dal link
-        transition: color 0.1s ease; // Transizione più veloce
+        transition: color 0.1s ease; 
       }
       
       .social-text {
         color: inherit; // Eredita il colore dal link
-        transition: color 0.1s ease; // Transizione più veloce
+        transition: color 0.1s ease; 
       }
     }
     
@@ -541,26 +541,26 @@
         display: flex;
         align-items: center;
         justify-content: center; 
-        transition: color 0.1s ease; // Transizione più veloce per sincronizzazione
+        transition: color 0.1s ease; 
         
         &:hover {
-          color: $brand-accent; // Brand accent al hover per mobile
-          transform: none; // Nessuna traslazione
-          box-shadow: none; // Nessuna ombra
+          color: $brand-accent;   
+          transform: none; 
+          box-shadow: none; 
         }
         
         i {
           text-align: center;
           color: inherit; // Eredita il colore dal link
-          transition: color 0.1s ease; // Transizione più veloce
-          line-height: 1; // Line-height uniforme
+          transition: color 0.1s ease; 
+          line-height: 1; 
           vertical-align: middle; 
-        font-size: 1.2rem; // Dimensione ridotta per allineamento orizzontale
-        width: 20px; // Larghezza ridotta per allineamento orizzontale
+        font-size: 1.2rem; 
+        width: 20px; 
         }
         
         .social-text {
-          display: none; // Nasconde il testo su mobile
+          display: none; 
         }
       }
     }
@@ -575,17 +575,17 @@
       width: auto;
       min-width: auto;
       i {
-        color: #000000; // Nero per l'icona posizione su mobile
-        transition: color 0.1s ease; // Stessa velocità delle altre icone
-        line-height: 1; // Line-height uniforme
+        color: #000000; 
+        transition: color 0.1s ease; 
+        line-height: 1; 
         vertical-align: middle; 
-        font-size: 1.2rem; // Stessa dimensione delle icone social per allineamento orizzontale
-        width: 20px; // Stessa larghezza delle icone social per allineamento orizzontale
+        font-size: 1.2rem; 
+        width: 20px; 
       }
       
       // Hover per l'icona posizione su mobile
       &:hover i {
-        color: $brand-accent; // Accent al hover
+        color: $brand-accent; 
       }
     }
     
@@ -794,7 +794,7 @@
     margin-bottom: 1rem;
     
     @include mobile {
-      font-size: 1.1rem; // Aggiunto per accessibilità mobile
+      font-size: 1.1rem; 
     }
   }
 }
@@ -813,10 +813,10 @@
   background-color: $card-color;
   color: $text-light;
   padding: 0.25rem 0.75rem;
-  border-radius: $border-radius-md; // Uniformato con il bottone PDF
-  font-size: 0.9rem; // Ridotto leggermente per tutte le risoluzioni
-  font-weight: $font-weight-normal; // Ridotto spessore testo per look più leggero
-  border: 0.5px solid $border-color; // Ridotto spessore bordo per look più delicato
+  border-radius: $border-radius-md; 
+  font-size: 0.9rem; 
+  font-weight: $font-weight-normal; 
+  border: 0.5px solid $border-color; 
   
   @include mobile {
     font-size: 1rem; 
@@ -851,10 +851,10 @@
   .language-name {
     font-weight: $font-weight-medium;
     text-align: left;
-    font-size: 1rem; // Dimensione standard uniformata
+    font-size: 1rem; 
     
     @include mobile {
-      font-size: 1rem; // Mantiene la dimensione standard su mobile
+      font-size: 1rem; 
     }
   }
   
@@ -868,13 +868,13 @@
     }
     
     span {
-      width: 10px; // Ridotto da 12px per desktop e tablet
+      width: 10px; 
       height: 10px;
       border-radius: 9999px;
       background-color: $text-light;
       
       @include mobile {
-        width: 8px; // Ridotto anche su mobile per proporzione
+        width: 8px; 
         height: 8px;
       }
       
@@ -886,11 +886,11 @@
   
   .language-proficiency {
     color: $text-light;
-    font-size: 1rem; // Dimensione standard uniformata
+    font-size: 1rem; 
     text-align: right;
     
     @include mobile {
-      font-size: 1rem; // Mantiene la dimensione standard su mobile
+      font-size: 1rem; 
     }
   }
 }
@@ -965,17 +965,17 @@
     display: flex;
     gap: $spacing-lg;
     align-items: stretch;
-    margin-bottom: 0; // Reset margin per controllo preciso
+    margin-bottom: 0; 
     
     
     @include mobile {
       flex-direction: row; // Bottoni affiancati anche su mobile
       gap: $spacing-md;
-      width: auto; // Larghezza automatica invece di 100%
+      width: auto; 
       
       .btn {
-        flex: none; // Larghezza naturale del contenuto
-        min-width: auto; // Larghezza minima naturale
+        flex: none; 
+        min-width: auto; 
       }
     }
   }
@@ -997,13 +997,8 @@
 
 // Spacing specifico per l'icona del bottone CV
 .cv .btn i {
-  margin-right: 0.75rem; // Gap maggiore tra icona e testo
+  margin-right: 0.75rem; 
 }
-
-// ========================================
-// ANIMAZIONI SPECIFICHE CV
-// ========================================
-// Le animazioni sono integrate nella regola principale .hero.cv-hero sopra
 
 // ========================================
 // REGOLE SMARTPHONE - OVERRIDE FINALE
@@ -1040,12 +1035,12 @@
   
   // Paragrafi CV smartphone - font-weight 300
   .cv-content p {
-    font-weight: 500 !important; // Font-weight leggero per smartphone
+    font-weight: 500 !important; 
   }
   
   // Skill CV smartphone - font-weight 300 e rimuovi hover
   .cv .skill-tag {
-    font-weight: 300 !important; // Font-weight leggero per smartphone
+    font-weight: 300 !important; 
     pointer-events: none !important; 
   }
   
@@ -1056,12 +1051,12 @@
   
   // Testo formazione ed esperienza professionale CV smartphone - font-weight 300
   .cv .cv-list li {
-    font-weight: 300 !important; // Font-weight leggero per smartphone
-    line-height: 1.6 !important; // Line-height ottimale per smartphone
+    font-weight: 300 !important; 
+    line-height: 1.6 !important; 
   }
   
   .cv .cv-company {
-    font-weight: 400 !important; // Font-weight leggero per smartphone
+    font-weight: 400 !important; 
     font-size: 0.875rem !important; 
     padding-top: 0.5rem !important; 
     padding-bottom: 1rem !important; 
@@ -1069,9 +1064,9 @@
   
   // Summary CV smartphone - font-weight 300 e font-size 1rem
   .cv .cv-summary-content p {
-    font-weight: 300 !important; // Font-weight leggero per smartphone
+    font-weight: 300 !important; 
     font-size: 1rem !important; 
-    line-height: 1.6 !important; // Line-height ottimale per smartphone
+    line-height: 1.6 !important; 
   }
   
   // Elemento summary CV smartphone - aumenta padding top e bottom
@@ -1085,7 +1080,7 @@
   .cv .contact-info p {
     font-size: 1rem !important; 
     font-weight: 300 !important;
-    line-height: 1.6 !important; // Line-height ottimale per smartphone
+    line-height: 1.6 !important; 
     padding-bottom: 1rem !important; 
   }
   
@@ -1102,7 +1097,7 @@
   // Paragrafi CTA CV - dimensioni e font-weight ridotti
   .cv .cta-actions p {
     font-size: $font-size-smartphone-lg !important; 
-    font-weight: 300 !important; // Font-weight leggero per smartphone
+    font-weight: 300 !important; 
   }
   
   // Bottoni CTA CV - padding e dimensioni

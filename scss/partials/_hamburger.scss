@@ -87,37 +87,81 @@
     
   }
 
-  // Hover effect per le barre normali (menu chiuso)
-  &:hover .bar {
-    background-color: $brand-accent; // Hover come i link navbar
-  }
+  // Hover effect per le barre normali (menu chiuso) - solo per desktop/tablet
+  @include md-up {
+    &:hover .bar {
+      background-color: $brand-accent; // Hover come i link navbar
+    }
 
-  // Hover effect per le barre X (::before e ::after)
-  &:hover::before,
-  &:hover::after {
-    background-color: $brand-accent; // Hover come i link navbar
+    // Hover effect per le barre X (::before e ::after)
+    &:hover::before,
+    &:hover::after {
+      background-color: $brand-accent; // Hover come i link navbar
+    }
   }
 
   // ========================================
-  // STATO ATTIVO (X VISIBILE)
+  // STATO ATTIVO (X VISIBILE) - solo per desktop/tablet
   // ========================================
-  &.active {
-    // Nasconde le 3 barre originali
+  @include md-up {
+    &.active {
+      // Nasconde le 3 barre originali
+      .bar {
+        opacity: 0;
+      }
+      
+      // Mostra la X perfettamente simmetrica
+      &::before {
+        transform: rotate(45deg);
+        opacity: 1;
+        transition-delay: $transition-fast;
+      }
+      
+      &::after {
+        transform: rotate(-45deg);
+        opacity: 1;
+        transition-delay: $transition-fast;
+      }
+    }
+  }
+}
+
+// ========================================
+// COMPORTAMENTO TOUCH-FRIENDLY PER SMARTPHONE
+// ========================================
+@include smartphone {
+  .nav-toggle {
+    // STATO INATTIVO (default) - barre normali, colore standard
     .bar {
-      opacity: 0;
+      background-color: $background-color !important; // Colore standard
     }
     
-    // Mostra la X perfettamente simmetrica
-    &::before {
-      transform: rotate(45deg);
-      opacity: 1;
-      transition-delay: $transition-fast;
-    }
-    
+    &::before,
     &::after {
-      transform: rotate(-45deg);
-      opacity: 1;
-      transition-delay: $transition-fast;
+      background-color: $background-color !important; // Colore standard per X
+    }
+    
+    // STATO ATTIVO - X visibile con colore brand accent
+    &.active {
+      // Nasconde le 3 barre originali
+      .bar {
+        opacity: 0 !important;
+      }
+      
+      // Mostra la X con colore brand accent
+      &::before {
+        transform: rotate(45deg) !important;
+        opacity: 1 !important;
+        background-color: $brand-accent !important; // X colorata
+        transition-delay: $transition-fast !important;
+      }
+      
+      &::after {
+        transform: rotate(-45deg) !important;
+        opacity: 1 !important;
+        background-color: $brand-accent !important; // X colorata
+        transition-delay: $transition-fast !important;
+      }
     }
   }
 }

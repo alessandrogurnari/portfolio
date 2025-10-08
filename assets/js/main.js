@@ -110,6 +110,11 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ========================================
+// GESTIONE SCROLL DINAMICO - ULTIMI PROGETTI
+// ========================================
+// Gestita da projects-scroll-manager.js
+
+// ========================================
 // SMOOTH SCROLLING
 // ========================================
 

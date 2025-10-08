@@ -11,8 +11,6 @@
   padding: $spacing-4xl 0;
   // Sfondo rimosso - ora eredita dal body
   
-  // .section-title gestito in _typography.scss
-  
   .section-subtitle {
     text-align: center;
     color: $text-light;
@@ -44,13 +42,13 @@
     @include md-down {
       @include horizontal-scroll;
       gap: $spacing-lg;
-      padding-bottom: $spacing-sm; // Spazio per le ombre
+      padding-bottom: $spacing-sm; 
       
       
       .project-card {
-        flex: 0 0 350px; // Larghezza fissa aumentata ulteriormente
-        min-width: 350px; // Larghezza minima aumentata ulteriormente
-        max-width: 380px; // Larghezza massima aumentata ulteriormente
+        flex: 0 0 350px; 
+        min-width: 350px;
+        max-width: 380px; 
         padding-bottom: 20px; 
         margin-top: $spacing-sm;
         margin-bottom: $spacing-lg; 
@@ -83,9 +81,12 @@
     padding-bottom: 20px; // Spazio maggiore per i tag posizionati assolutamente
     position: relative; // Per il posizionamento assoluto dei tag
     
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    // Hover effect solo per desktop/tablet (non smartphone)
+    @include md-up {
+      &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      }
     }
   }
   
@@ -123,13 +124,16 @@
       }
     }
     
-    &:hover {
-      img {
-        transform: scale(1.05);
-      }
-      
-      .project-overlay {
-        opacity: 1;
+    // Hover effect solo per desktop/tablet (non smartphone)
+    @include md-up {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+        
+        .project-overlay {
+          opacity: 1;
+        }
       }
     }
   }
@@ -211,6 +215,60 @@
 // su tutte le altre regole responsive
 
 @include smartphone {
+  // Container ultimi progetti - stati dinamici per scroll
+  .ultimi-progetti .container {
+    position: relative !important;
+    padding-top: $projects-title-spacing !important; // Spazio controllato tra scritte e card
+    padding-bottom: 80px !important; // Spazio per il bottone "Vedi tutti i progetti"
+    
+    // STATO INIZIALE - solo padding sinistro
+    &.scroll-start {
+      padding-left: $spacing-lg !important;
+      padding-right: 0 !important;
+    }
+    
+    // STATO SCROLL - nessun padding laterale
+    &.scroll-middle {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    
+    // STATO FINE - solo padding destro
+    &.scroll-end {
+      padding-left: 0 !important;
+      padding-right: $spacing-lg !important;
+    }
+    
+    // Mantieni SEMPRE ferme le scritte (indipendentemente dallo stato)
+    .section-title {
+      position: absolute !important;
+      top: 0 !important;
+      left: $spacing-lg !important;
+      right: $spacing-lg !important;
+      transform: translateX(0) !important;
+      z-index: 10 !important;
+    }
+    
+    .section-subtitle {
+      position: absolute !important;
+      top: $projects-subtitle-offset !important; // Posiziona il sottotitolo più in basso
+      left: $spacing-lg !important;
+      right: $spacing-lg !important;
+      transform: translateX(0) !important;
+      z-index: 10 !important;
+    }
+    
+    // Bottone "Vedi tutti i progetti" - mantieni fermo durante lo scroll
+    .projects-cta {
+      position: absolute !important;
+      bottom: $spacing-lg !important;
+      left: $spacing-lg !important;
+      right: $spacing-lg !important;
+      transform: translateX(0) !important;
+      z-index: 10 !important;
+    }
+  }
+  
   // Sottotitoli sezioni - dimensioni ridotte
   .section-subtitle {
     font-size: $font-size-smartphone-lg !important; 
@@ -222,8 +280,14 @@
     min-width: 280px !important; 
     max-width: 300px !important; 
     padding-bottom: 15px !important; 
-    margin-top: $spacing-xs !important; 
+    margin-top: $spacing-xs !important;
     margin-bottom: $spacing-md !important; 
+    
+    // Disabilita completamente gli effetti hover su smartphone
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
   }
   
   // Project images - ottimizzazione per smartphone
@@ -233,6 +297,18 @@
     img {
       object-fit: contain !important; // Mostra l'immagine completa senza tagli
       object-position: center !important; 
+    }
+    
+    // Mantieni l'effetto scale dell'immagine e l'overlay su smartphone
+    &:hover {
+      img {
+        transform: scale(1.05) !important; // Ripristina l'effetto zoom
+      }
+      
+      // Mantieni l'overlay visibile per mostrare il bottone PDF
+      .project-overlay {
+        opacity: 1 !important;
+      }
     }
   }
   

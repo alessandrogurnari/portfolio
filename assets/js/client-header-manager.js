@@ -234,6 +234,8 @@ class ClientHeaderManager {
                     const otherProjectsGrid = otherHeader.closest('.client-works-section').querySelector('.projects-grid');
                     
                     if (otherProjectsGrid.style.display === 'grid') {
+                        // Rimuovi stato attivo da header e freccia
+                        otherHeader.classList.remove('active');
                         otherArrow.classList.remove('active');
                         otherProjectsGrid.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
                         otherProjectsGrid.style.opacity = '0';
@@ -254,6 +256,8 @@ class ClientHeaderManager {
             
             // Gestisci header corrente
             if (isCurrentlyOpen) {
+                // Chiudi: rimuovi stato attivo da header e freccia
+                header.classList.remove('active');
                 arrow.classList.remove('active');
                 projectsGrid.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
                 projectsGrid.style.opacity = '0';
@@ -269,6 +273,8 @@ class ClientHeaderManager {
                     }, 300);
                 });
             } else {
+                // Apri: aggiungi stato attivo a header e freccia
+                header.classList.add('active');
                 arrow.classList.add('active');
                 projectsGrid.style.display = 'grid';
                 projectsGrid.style.opacity = '0';

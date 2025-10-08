@@ -63,6 +63,7 @@ $line-height-normal: 1.5;
 $line-height-relaxed: 1.75;
 
 // Spacing
+$spacing-xxs: 0.125rem;   
 $spacing-xs: 0.25rem;   
 $spacing-sm: 0.5rem;    
 $spacing-md: 1rem;      
@@ -131,6 +132,10 @@ $animation-delay-5: 0.5s;
 
 // Layout dimensions
 $navbar-height: 64px;  // Altezza fissa navbar per tutti i dispositivi
+
+// Distanza tra scritte e card nella sezione "Ultimi Progetti"
+$projects-title-spacing: 110px;  // Spazio tra titolo e card (ridotto)
+$projects-subtitle-offset: 30px;  // Offset del sottotitolo dal titolo
 
 // Z-index (solo quelli utilizzati)
 $z-sticky: 1020;
