@@ -87,8 +87,8 @@
     
   }
 
-  // Hover effect per le barre normali (menu chiuso) - solo per desktop/tablet
-  @include md-up {
+  // Hover effect per le barre normali (menu chiuso) - solo per desktop
+  @include lg-up {
     &:hover .bar {
       background-color: $brand-accent; // Hover come i link navbar
     }
@@ -101,9 +101,9 @@
   }
 
   // ========================================
-  // STATO ATTIVO (X VISIBILE) - per desktop/tablet
+  // STATO ATTIVO (X VISIBILE) - per desktop
   // ========================================
-  @include md-up {
+  @include lg-up {
     &.active {
       // Nasconde le 3 barre originali
       .bar {
@@ -129,33 +129,25 @@
   // STATO ATTIVO (X VISIBILE) - per mobile (400px-767px)
   // ========================================
   @media (min-width: 400px) and (max-width: 767px) {
-    // Hover effect per le barre normali (menu chiuso)
-    &:hover .bar {
-      background-color: $brand-accent; // Hover come i link navbar
-    }
-
-    // Hover effect per le barre X (::before e ::after)
-    &:hover::before,
-    &:hover::after {
-      background-color: $brand-accent; // Hover come i link navbar
-    }
-    
+    // Touch-friendly: solo stati attivo/non-attivo, nessun hover
     &.active {
       // Nasconde le 3 barre originali
       .bar {
         opacity: 0;
       }
       
-      // Mostra la X perfettamente simmetrica
+      // Mostra la X con brand-accent per differenziare lo stato attivo
       &::before {
         transform: rotate(45deg);
         opacity: 1;
+        background-color: $brand-accent;
         transition-delay: $transition-fast;
       }
       
       &::after {
         transform: rotate(-45deg);
         opacity: 1;
+        background-color: $brand-accent;
         transition-delay: $transition-fast;
       }
     }
@@ -171,16 +163,18 @@
         opacity: 0;
       }
       
-      // Mostra la X perfettamente simmetrica
+      // Mostra la X con brand-accent per differenziare lo stato attivo
       &::before {
         transform: rotate(45deg);
         opacity: 1;
+        background-color: $brand-accent;
         transition-delay: $transition-fast;
       }
       
       &::after {
         transform: rotate(-45deg);
         opacity: 1;
+        background-color: $brand-accent;
         transition-delay: $transition-fast;
       }
     }

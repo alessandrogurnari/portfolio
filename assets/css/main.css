@@ -1573,7 +1573,7 @@ a:active {
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1), background-color 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   transform-origin: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav-toggle:hover .bar {
     background-color: #06b6d4;
   }
@@ -1581,7 +1581,7 @@ a:active {
     background-color: #06b6d4;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav-toggle.active .bar {
     opacity: 0;
   }
@@ -1597,23 +1597,19 @@ a:active {
   }
 }
 @media (min-width: 400px) and (max-width: 767px) {
-  .nav-toggle:hover .bar {
-    background-color: #06b6d4;
-  }
-  .nav-toggle:hover::before, .nav-toggle:hover::after {
-    background-color: #06b6d4;
-  }
   .nav-toggle.active .bar {
     opacity: 0;
   }
   .nav-toggle.active::before {
     transform: rotate(45deg);
     opacity: 1;
+    background-color: #06b6d4;
     transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .nav-toggle.active::after {
     transform: rotate(-45deg);
     opacity: 1;
+    background-color: #06b6d4;
     transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
@@ -1624,11 +1620,13 @@ a:active {
   .nav-toggle.active::before {
     transform: rotate(45deg);
     opacity: 1;
+    background-color: #06b6d4;
     transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .nav-toggle.active::after {
     transform: rotate(-45deg);
     opacity: 1;
+    background-color: #06b6d4;
     transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
