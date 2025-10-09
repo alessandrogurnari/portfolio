@@ -101,9 +101,70 @@
   }
 
   // ========================================
-  // STATO ATTIVO (X VISIBILE) - solo per desktop/tablet
+  // STATO ATTIVO (X VISIBILE) - per desktop/tablet
   // ========================================
   @include md-up {
+    &.active {
+      // Nasconde le 3 barre originali
+      .bar {
+        opacity: 0;
+      }
+      
+      // Mostra la X perfettamente simmetrica
+      &::before {
+        transform: rotate(45deg);
+        opacity: 1;
+        transition-delay: $transition-fast;
+      }
+      
+      &::after {
+        transform: rotate(-45deg);
+        opacity: 1;
+        transition-delay: $transition-fast;
+      }
+    }
+  }
+  
+  // ========================================
+  // STATO ATTIVO (X VISIBILE) - per mobile (400px-767px)
+  // ========================================
+  @media (min-width: 400px) and (max-width: 767px) {
+    // Hover effect per le barre normali (menu chiuso)
+    &:hover .bar {
+      background-color: $brand-accent; // Hover come i link navbar
+    }
+
+    // Hover effect per le barre X (::before e ::after)
+    &:hover::before,
+    &:hover::after {
+      background-color: $brand-accent; // Hover come i link navbar
+    }
+    
+    &.active {
+      // Nasconde le 3 barre originali
+      .bar {
+        opacity: 0;
+      }
+      
+      // Mostra la X perfettamente simmetrica
+      &::before {
+        transform: rotate(45deg);
+        opacity: 1;
+        transition-delay: $transition-fast;
+      }
+      
+      &::after {
+        transform: rotate(-45deg);
+        opacity: 1;
+        transition-delay: $transition-fast;
+      }
+    }
+  }
+  
+  // ========================================
+  // STATO ATTIVO (X VISIBILE) - per tablet
+  // ========================================
+  @include tablet {
     &.active {
       // Nasconde le 3 barre originali
       .bar {

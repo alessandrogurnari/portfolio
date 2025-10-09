@@ -922,6 +922,11 @@
     font-size: $font-size-smartphone-base !important; 
   }
   
+  // Messaggi di errore specifici per campi
+  .form-control.is-invalid + .invalid-feedback {
+    font-size: $font-size-smartphone-base !important;
+  }
+  
   // Form text (contatore caratteri) - dimensioni ridotte
   .form-text {
     font-size: $font-size-smartphone-base !important; 
@@ -1018,8 +1023,8 @@
   .contact .col-md-10,
   .contact .col-lg-8,
   .contact .col-xl-7 {
-    padding-left: 0.25rem !important; 
-    padding-right: 0.25rem !important; 
+    padding-left: $spacing-sm !important; 
+    padding-right: $spacing-sm !important; 
   }
   
   // Card form smartphone - riduci padding laterale

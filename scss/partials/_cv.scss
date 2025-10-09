@@ -166,8 +166,8 @@
   }
   
   @include mobile {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: $spacing-lg;
+    padding-right: $spacing-lg;
   }
 }
 
@@ -765,7 +765,7 @@
     font-size: $font-size-lg; 
     
     @include mobile {
-      padding-left: 1.25rem;
+      padding-left: $spacing-sm;
       margin-bottom: 0.4rem;
       font-size: 1.1rem; 
       line-height: 1.4;

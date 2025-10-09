@@ -1596,6 +1596,42 @@ a:active {
     transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+@media (min-width: 400px) and (max-width: 767px) {
+  .nav-toggle:hover .bar {
+    background-color: #06b6d4;
+  }
+  .nav-toggle:hover::before, .nav-toggle:hover::after {
+    background-color: #06b6d4;
+  }
+  .nav-toggle.active .bar {
+    opacity: 0;
+  }
+  .nav-toggle.active::before {
+    transform: rotate(45deg);
+    opacity: 1;
+    transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-toggle.active::after {
+    transform: rotate(-45deg);
+    opacity: 1;
+    transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-toggle.active .bar {
+    opacity: 0;
+  }
+  .nav-toggle.active::before {
+    transform: rotate(45deg);
+    opacity: 1;
+    transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .nav-toggle.active::after {
+    transform: rotate(-45deg);
+    opacity: 1;
+    transition-delay: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
 
 @media (max-width: 480px) and (orientation: portrait) {
   .nav-toggle .bar {
@@ -4129,6 +4165,9 @@ a:active {
   .contact-form .valid-feedback {
     font-size: 0.875rem !important;
   }
+  .form-control.is-invalid + .invalid-feedback {
+    font-size: 0.875rem !important;
+  }
   .form-text {
     font-size: 0.875rem !important;
   }
@@ -4195,8 +4234,8 @@ a:active {
   .contact .col-md-10,
   .contact .col-lg-8,
   .contact .col-xl-7 {
-    padding-left: 0.25rem !important;
-    padding-right: 0.25rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
   .contact .card {
     margin-left: 0 !important;
@@ -4451,8 +4490,8 @@ a:active {
 }
 @media (max-width: 399px) {
   .cv-container {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 
@@ -5002,7 +5041,7 @@ a:active {
 }
 @media (max-width: 399px) {
   .cv-list li {
-    padding-left: 1.25rem;
+    padding-left: 0.5rem;
     margin-bottom: 0.4rem;
     font-size: 1.1rem;
     line-height: 1.4;
