@@ -57,8 +57,23 @@
     text-decoration: none;
     transition: color $transition-fast;
     
-    &:hover {
-      color: $brand-accent;
+    // ========================================
+    // HOVER EFFECT - Solo per desktop
+    // ========================================
+    @include lg-up {
+      &:hover {
+        color: $brand-accent;
+      }
+    }
+    
+    // ========================================
+    // STATI ATTIVI - Per dispositivi touch
+    // ========================================
+    @include md-down {
+      // Touch-friendly: solo stati attivo/non-attivo, nessun hover
+      &:active {
+        color: $brand-accent;
+      }
     }
   }
 }

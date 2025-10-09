@@ -81,6 +81,27 @@
       padding: $spacing-sm $spacing-md;
       font-size: $font-size-lg; 
     }
+    
+    // ========================================
+    // STATI TOUCH-FRIENDLY PER MOBILE (400px-767px)
+    // ========================================
+    // Disabilita hover su mobile
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+    
+    // Stato attivo (quando toccato) - Feedback visivo
+    &:active {
+      transform: scale(0.98) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    // Focus rimosso per design
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
   }
 }
 
@@ -263,18 +284,65 @@
     height: 32px;
     padding: $spacing-xs $spacing-xs;
     font-size: $font-size-xs;
+    
+    // Stati touch-friendly per bottoni navbar mobile
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+    
+    &:active {
+      transform: scale(0.95) !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+    }
+    
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
   }
   
   @include tablet {
     height: 34px;
     padding: $spacing-xs $spacing-sm;
     font-size: $font-size-sm;
+    
+    // Stati touch-friendly per bottoni navbar tablet
+    &:active {
+      transform: scale(0.97) !important;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
   }
   
   @include desktop {
     height: 36px;
     padding: $spacing-xs $spacing-sm;
     font-size: $font-size-sm;
+  }
+}
+
+// ========================================
+// REGOLE TABLET - TOUCH-FRIENDLY
+// ========================================
+@include tablet {
+  // Bottoni generali - Stati touch-friendly per tablet
+  .btn {
+    // Stato attivo (quando toccato) - Feedback visivo
+    &:active {
+      transform: scale(0.99) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    // Focus rimosso per design
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
   }
 }
 

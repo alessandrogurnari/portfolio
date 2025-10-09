@@ -738,6 +738,18 @@ html {
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
   }
+  .btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .btn:active {
+    transform: scale(0.98) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  }
+  .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }
 .home .hero .hero-buttons .btn.btn-primary:first-child {
   padding: 1.5rem 3rem;
@@ -953,12 +965,32 @@ html {
     padding: 0.25rem 0.25rem;
     font-size: 0.875rem;
   }
+  .navbar .btn:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .navbar .btn:active {
+    transform: scale(0.95) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  }
+  .navbar .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar .btn {
     height: 34px;
     padding: 0.25rem 0.5rem;
     font-size: 1rem;
+  }
+  .navbar .btn:active {
+    transform: scale(0.97) !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important;
+  }
+  .navbar .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
   }
 }
 @media (min-width: 1024px) {
@@ -969,6 +1001,16 @@ html {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btn:active {
+    transform: scale(0.99) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  }
+  .btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
 @media (max-width: 480px) and (orientation: portrait) {
   .home .cta-actions .btn {
     padding-left: 1.5rem !important;
@@ -1367,8 +1409,15 @@ a:active {
   text-decoration: none;
   transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-logo a:hover {
-  color: #06b6d4;
+@media (min-width: 1024px) {
+  .nav-logo a:hover {
+    color: #06b6d4;
+  }
+}
+@media (max-width: 1023px) {
+  .nav-logo a:active {
+    color: #06b6d4;
+  }
 }
 
 .nav-menu {
