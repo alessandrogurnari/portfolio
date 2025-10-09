@@ -688,6 +688,28 @@
   
 }
 }
+
+// ========================================
+// REGOLE DESKTOP PER SEZIONE ABOUT (PROCESSO DI LAVORO)
+// ========================================
+
+// Font-weight leggero per paragrafi e elementi strong sezione about su desktop
+@include desktop {
+  .portfolio .about p {
+    font-weight: 300;
+    font-size: 1.25rem;
+  }
+  
+  .portfolio .about p strong {
+    font-weight: 500;
+  }
+  
+  // Font-weight leggero per contenuto card progetti su desktop
+  .portfolio .project-content p {
+    font-weight: 300;
+  }
+}
+
 // ========================================
 // STATISTICHE PORTFOLIO
 // ========================================

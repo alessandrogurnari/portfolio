@@ -209,6 +209,22 @@
 }
 
 // ========================================
+// REGOLE DESKTOP PER CONTENUTO CARD
+// ========================================
+
+// Font-weight leggero per contenuto card progetti su desktop
+@include desktop {
+  .ultimi-progetti .project-content p {
+    font-weight: 300;
+  }
+  
+  // Font-size 20px per sottotitolo sezione ultimi progetti su desktop
+  .ultimi-progetti .section-subtitle {
+    font-size: 1.3rem; // Font-size 20px per desktop
+  }
+}
+
+// ========================================
 // REGOLE SMARTPHONE - OVERRIDE FINALE
 // ========================================
 // Le regole smartphone vengono applicate alla fine per avere la precedenza

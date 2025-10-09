@@ -366,3 +366,19 @@
     padding-top: 2rem !important; // Padding-top solo per il primo paragrafo su smartphone
   }
 }
+
+// DESKTOP (1024px+)
+// ========================================
+@include desktop {
+  // Testo sezione about - font-size 20px e font-weight 300 per desktop
+  .home .about p {
+    font-size: 1.25rem; // Font-size 20px per desktop
+    font-weight: 300; // Font-weight leggero per desktop
+    line-height: 1.6;
+  }
+  
+  // Testo contatti - font-size 20px per desktop
+  .home .contact-info p {
+    font-size: 1.25rem; // Font-size 20px per desktop
+  }
+}

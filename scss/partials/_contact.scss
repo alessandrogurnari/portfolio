@@ -58,6 +58,16 @@
   border-bottom: none;
   color: $text-color;
   
+  @include desktop {
+    font-size: 1.125rem; // Font-size 18px per desktop
+    font-weight: 300; // Font-weight leggero per desktop
+  }
+  
+  // Nascondi <br> su tutte le risoluzioni tranne smartphone
+  br {
+    display: none;
+  }
+  
   &:not(.collapsed) {
     background-color: $brand-accent;
     border-color: $brand-accent;
@@ -409,6 +419,31 @@
     border-radius: 12px;
     overflow: hidden;
   }
+  
+  // Font-weight leggero per le risposte FAQ
+  .accordion-body {
+    font-weight: 300;
+  }
+}
+
+// ========================================
+// FAQ RESPONSIVE - FONT-SIZE PER TABLET E MOBILE
+// ========================================
+
+// Font-size per domande FAQ su tablet
+@include tablet {
+  .faq-section .accordion-button {
+    font-size: 1.125rem !important; // Font-size 18px per tablet
+    font-weight: 300 !important; // Font-weight leggero per tablet
+  }
+}
+
+// Font-size per domande FAQ su mobile (tutti i dispositivi mobile)
+@include sm-down {
+  .faq-section .accordion-button {
+    font-size: 1.125rem !important; // Font-size 18px per mobile
+    font-weight: 300 !important; // Font-weight leggero per mobile
+  }
 }
 
 // ========================================
@@ -489,6 +524,7 @@
         font-size: $font-size-base; // Font normale per tablet
       }
     }
+    
     
     .social-links {
       .social-label {
@@ -886,7 +922,8 @@
 @include smartphone {
   // Accordion button - dimensioni ridotte
   .contattami .accordion-button {
-    font-size: $font-size-smartphone-base !important; 
+    font-size: 1rem !important; 
+    font-weight: 300 !important; // Font-weight leggero per smartphone
   }
   
   // Hero section - riduzione altezza
@@ -1051,8 +1088,13 @@
   
   // Domande FAQ smartphone - aumenta font-size
   .faq-section .accordion-button {
-    font-size: 1rem !important;
-    font-weight: 400 !important;
+    font-size: 1.125rem !important; // Font-size 18px per smartphone
+    font-weight: 300 !important; // Font-weight leggero per smartphone
+  }
+  
+  // Mostra <br> solo su smartphone
+  .contattami .accordion-button br {
+    display: inline !important;
   }
   
   // Form smartphone - riduci margini laterali per evitare schiacciamento

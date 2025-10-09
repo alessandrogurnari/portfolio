@@ -791,7 +791,12 @@
     padding-left: 1.5rem;
     margin-bottom: 0.5rem;
     line-height: $line-height-relaxed;
-    font-size: $font-size-lg; 
+    font-size: $font-size-lg;
+    
+    @include desktop {
+      font-size: 1.125rem; // Font-size 18px per desktop
+      font-weight: 300; // Font-weight leggero per desktop
+    } 
     
     @include mobile {
       padding-left: $spacing-sm;
@@ -848,7 +853,8 @@
   border: 0.5px solid $border-color; 
   
   @include desktop {
-    font-size: 1.1rem; // Font-size aumentato per desktop
+    font-size: 1rem ; // Font-size 18px per desktop
+    font-weight: 300; // Font-weight leggero per desktop
   }
   
   @include mobile {
@@ -960,6 +966,9 @@
     margin-right: auto;
     font-size: $font-size-base; 
     
+    @include desktop {
+      font-weight: 300; // Font-weight leggero per desktop
+    }
   }
   
   
@@ -1057,9 +1066,9 @@
     font-size: $font-size-lg;
   }
   
-  // Skill tags - font-size 16px per mobile
+  // Skill tags - font-size 18px per mobile
   .cv .skill-tag {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   
   // Testi sezione lingue - font-size 16px per mobile
@@ -1097,9 +1106,9 @@
     font-size: $font-size-lg;
   }
   
-  // Skill tags - font-size 16px per tablet
+  // Skill tags - font-size 18px per tablet
   .cv .skill-tag {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
   
   // Testi sezione lingue - font-size 16px per tablet
@@ -1120,6 +1129,11 @@
   .cv .cv-list li {
     font-size: 1.125rem;
     line-height: 1.6;
+    font-weight: 300;
+  }
+  
+  // Testo "versione pdf disponibile" CV tablet - font-weight 300
+  .cv .contact-info p {
     font-weight: 300;
   }
 }
@@ -1163,7 +1177,7 @@
   
   // Skill CV smartphone - font-weight 300 e rimuovi hover
   .cv .skill-tag {
-    font-size: 1rem !important; 
+    font-size: 1.125rem !important; 
     font-weight: 300 !important; 
     pointer-events: none !important; 
   }
@@ -1250,6 +1264,20 @@
   .cv .cv-list li {
     font-size: 1.125rem;
     line-height: 1.6;
+    font-weight: 300;
+  }
+  
+  // Testo "versione pdf disponibile" CV sm-down - font-weight 300
+  .cv .contact-info p {
+    font-weight: 300;
+  }
+}
+
+// MOBILE LARGE (576px - 767px)
+// ========================================
+@include sm {
+  // Testo "versione pdf disponibile" CV sm - font-weight 300
+  .cv .contact-info p {
     font-weight: 300;
   }
 }
