@@ -30,8 +30,8 @@ class ProjectsScrollManager {
             return;
         }
         
-        // Solo per smartphone
-        if (window.innerWidth > 480) {
+        // Solo per dispositivi touch (smartphone, mobile, tablet)
+        if (window.innerWidth > 1023) {
             return;
         }
         
@@ -50,7 +50,7 @@ class ProjectsScrollManager {
         
         // Gestisci resize
         window.addEventListener('resize', () => {
-            if (window.innerWidth <= 480) {
+            if (window.innerWidth <= 1023) {
                 this.updateScrollState();
             }
         });

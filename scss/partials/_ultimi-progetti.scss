@@ -214,7 +214,10 @@
 // Le regole smartphone vengono applicate alla fine per avere la precedenza
 // su tutte le altre regole responsive
 
-@include smartphone {
+// ========================================
+// SCROLL DINAMICO - SMARTPHONE, MOBILE E TABLET
+// ========================================
+@include md-down {
   // Container ultimi progetti - stati dinamici per scroll
   .ultimi-progetti .container {
     position: relative !important;
@@ -268,6 +271,9 @@
       z-index: 10 !important;
     }
   }
+}
+
+@include smartphone {
   
   // Sottotitoli sezioni - dimensioni ridotte
   .section-subtitle {

@@ -19,8 +19,8 @@ class ProjectsPortfolioScrollManager {
     }
 
     initialize() {
-        // Solo per smartphone
-        if (window.innerWidth > 480) return;
+        // Solo per dispositivi touch (smartphone, mobile, tablet)
+        if (window.innerWidth > 1023) return;
         
         setTimeout(() => {
             this.setupPortfolioListeners();
