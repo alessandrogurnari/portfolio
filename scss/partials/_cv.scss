@@ -748,8 +748,19 @@
   margin-bottom: 1rem;
   
   @include mobile {
-    font-size: 1.1rem; 
+    font-size: 1rem !important; 
     margin-bottom: 0.75rem;
+  }
+  @include sm-down {
+    font-size: 1rem !important; // Font-size 16px per tablet
+  }
+
+  @include md{
+    font-size: 1rem !important; // Font-size 16px per tablet
+  }
+
+  @include tablet {
+    font-size: 1rem !important; // Font-size 16px per tablet
   }
 }
 
@@ -1001,6 +1012,96 @@
 }
 
 // ========================================
+// ========================================
+// REGOLE RESPONSIVE - MOBILE E TABLET
+// ========================================
+
+// ========================================
+// MOBILE (max-width: 767px)
+// ========================================
+@include sm-down {
+  // Titoli hero - dimensioni ridotte per mobile
+  .hero.cv-hero .hero-text h1 {
+    font-size: $font-size-4xl;
+  }
+  
+  // Sottotitolo hero - dimensioni ridotte per mobile
+  .hero-subtitle {
+    font-size: $font-size-xl;
+  }
+  
+  // Descrizione hero - dimensioni ridotte per mobile
+  .hero.cv-hero .hero-description {
+    font-size: $font-size-lg;
+  }
+  
+  // Skill tags - font-size 16px per mobile
+  .cv .skill-tag {
+    font-size: 1rem;
+  }
+  
+  // Testi sezione lingue - font-size 16px per mobile
+  .cv .language-name {
+    font-size: 1rem;
+  }
+  
+  .cv .language-proficiency {
+    font-size: 1rem;
+  }
+
+  .cv .cv-list li {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+}
+
+// ========================================
+// TABLET (768px - 1023px)
+// ========================================
+@include md {
+  // Titoli hero - dimensioni ridotte per tablet
+  .hero.cv-hero .hero-text h1 {
+    font-size: $font-size-4xl;
+  }
+  
+  // Sottotitolo hero - dimensioni ridotte per tablet
+  .hero-subtitle {
+    font-size: $font-size-xl;
+  }
+  
+  // Descrizione hero - dimensioni ridotte per tablet
+  .hero.cv-hero .hero-description {
+    font-size: $font-size-lg;
+  }
+  
+  // Skill tags - font-size 16px per tablet
+  .cv .skill-tag {
+    font-size: 1rem;
+  }
+  
+  // Testi sezione lingue - font-size 16px per tablet
+  .cv .language-name {
+    font-size: 1rem;
+  }
+  
+  .cv .language-proficiency {
+    font-size: 1rem;
+  }
+  
+  // Titoli contatti - font-size ridotto per tablet
+  .contact-info h3 {
+    font-size: $font-size-2xl;
+  }
+  
+  // Testi cv-list - font-size 18px, line-height 1.6, font-weight 300 per tablet
+  .cv .cv-list li {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+}
+
 // REGOLE SMARTPHONE - OVERRIDE FINALE
 // ========================================
 // Le regole smartphone vengono applicate alla fine per avere la precedenza
@@ -1116,5 +1217,17 @@
     padding-left: $spacing-lg !important; 
     padding-right: $spacing-lg !important; 
     font-size: $font-size-smartphone-lg !important; 
+  }
+  
+  // Titoli contatti - font-size ridotto per mobile
+  .contact-info h3 {
+    font-size: $font-size-2xl;
+  }
+  
+  // Testi cv-list - font-size 18px, line-height 1.6, font-weight 300 per mobile
+  .cv .cv-list li {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 300;
   }
 }

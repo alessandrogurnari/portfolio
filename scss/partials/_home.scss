@@ -204,6 +204,99 @@
 }
 
 // ========================================
+// REGOLE RESPONSIVE - MOBILE E TABLET
+// ========================================
+
+// ========================================
+// MOBILE (max-width: 767px)
+// ========================================
+@include sm-down {
+  // Titoli hero - dimensioni ridotte per mobile
+  .hero-text h1 {
+    font-size: $font-size-4xl;
+  }
+  
+  // Sottotitolo hero - dimensioni ridotte per mobile
+  .hero-subtitle {
+    font-size: $font-size-xl;
+  }
+  
+  // Descrizione hero - dimensioni ridotte per mobile
+  .hero-description {
+    font-size: $font-size-lg;
+  }
+  
+  // Sezione about - padding ridotto per mobile
+  .home .about {
+    padding: $spacing-3xl $spacing-sm;
+  }
+  
+  // Testo sezione about - font-size 20px e font-weight 300 per mobile
+  .home .about p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  
+  // Primo paragrafo sezione about - padding-top per mobile
+  .home .about p:first-child {
+    padding-top: 2rem; // Padding-top solo per il primo paragrafo su mobile
+  }
+  
+  // Titoli sezioni - font-size ridotto per mobile
+  .section-title {
+    font-size: $font-size-2xl;
+  }
+  
+  // Titoli contatti - font-size ridotto per mobile
+  .contact-info h3 {
+    font-size: $font-size-2xl;
+  }
+}
+
+// ========================================
+// TABLET (768px - 1023px)
+// ========================================
+@include md {
+  // Titoli hero - dimensioni ridotte per tablet
+  .hero-text h1 {
+    font-size: $font-size-4xl;
+  }
+  
+  // Sottotitolo hero - dimensioni ridotte per tablet
+  .hero-subtitle {
+    font-size: $font-size-xl;
+  }
+  
+  // Descrizione hero - dimensioni ridotte per tablet
+  .hero-description {
+    font-size: $font-size-lg;
+  }
+  
+  // Testo sezione about - font-size lg per tablet
+  .home .about p {
+    font-size: $font-size-lg;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  
+  // Primo paragrafo sezione about - padding-top per tablet
+  .home .about p:first-child {
+    padding-top: 2rem; // Padding-top solo per il primo paragrafo su tablet
+  }
+  
+  // Titoli sezioni - font-size ridotto per tablet
+  .section-title {
+    font-size: $font-size-2xl;
+  }
+  
+  // Titoli contatti - font-size ridotto per tablet
+  .contact-info h3 {
+    font-size: $font-size-2xl;
+  }
+}
+
+// ========================================
 // REGOLE SMARTPHONE - OVERRIDE FINALE
 // ========================================
 // Le regole smartphone vengono applicate alla fine per avere la precedenza
@@ -266,5 +359,10 @@
   // Social label - dimensioni aumentate per smartphone
   .home .cta-actions .social-links .social-label {
     font-size: $font-size-smartphone-2xl !important; 
+  }
+  
+  // Primo paragrafo sezione about - padding-top per smartphone
+  .home .about p:first-child {
+    padding-top: 2rem !important; // Padding-top solo per il primo paragrafo su smartphone
   }
 }

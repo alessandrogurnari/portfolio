@@ -835,6 +835,48 @@
   }
 }
 
+
+// ========================================
+// MOBILE (max-width: 767px)
+// ========================================
+@include sm-down {
+  // Titoli hero - dimensioni ridotte per mobile
+  .hero.contact-hero .hero-text h1 {
+    font-size: $font-size-4xl;
+  }
+  .hero-subtitle {
+    font-size: $font-size-xl;
+  }
+  .hero.contact-hero .hero-description {
+    font-size: $font-size-lg;
+  }
+  
+  // Titoli FAQ - font-size ridotto per mobile
+  .faq-title {
+    font-size: $font-size-2xl;
+  }
+}
+
+// ========================================
+// TABLET (768px - 1023px)
+// ========================================
+@include md {
+  // Titoli hero - dimensioni ridotte per tablet
+  .hero.contact-hero .hero-text h1 {
+    font-size: $font-size-4xl;
+  }
+  .hero-subtitle {
+    font-size: $font-size-xl;
+  }
+  .hero.contact-hero .hero-description {
+    font-size: $font-size-lg;
+  }
+  
+  // Titoli FAQ - font-size ridotto per tablet
+  .faq-title {
+    font-size: $font-size-2xl;
+  }
+}
 // ========================================
 // REGOLE SMARTPHONE - OVERRIDE FINALE
 // ========================================

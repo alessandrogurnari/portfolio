@@ -834,6 +834,181 @@
   }
 }
 
+// ========================================
+// REGOLE RESPONSIVE - MOBILE E TABLET
+// ========================================
+
+// ========================================
+// MOBILE (max-width: 767px)
+// ========================================
+@include sm-down {
+  // Titoli hero - dimensioni ridotte per mobile
+  .hero.portfolio-hero .hero-text h1 {
+    font-size: $font-size-4xl;
+  }
+  
+  // Sottotitolo hero - dimensioni ridotte per mobile
+  .hero-subtitle {
+    font-size: $font-size-xl;
+  }
+  
+  // Descrizione hero - dimensioni ridotte per mobile
+  .hero.portfolio-hero .hero-description {
+    font-size: $font-size-lg;
+  }
+  
+  // Descrizioni progetti - font-weight 300 per mobile
+  .project-content p {
+    font-weight: 300;
+    line-height: 1.6 !important;
+  }
+  
+  // Header clienti - descrizioni font-weight 300 per mobile
+  .client-works-header .client-works-info p {
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  
+  // Header clienti - layout verticale per mobile (come smartphone)
+  .client-works-header {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: $spacing-md !important;
+    padding: $spacing-lg !important;
+    min-height: auto !important;
+  }
+  
+  // Titoli sezioni - font-size ridotto per mobile
+  .section-title {
+    font-size: $font-size-2xl;
+  }
+  
+  // Sottotitoli sezioni - font-size ridotto per mobile
+  .about-text h3 {
+    font-size: $font-size-xl;
+  }
+  
+  // Riduci spacing tra titolo sezione e primo elemento per mobile
+  .section-title {
+    margin-bottom: $spacing-lg;
+  }
+  
+  .about-text h3:first-child {
+    margin-top: 3rem;
+  }
+  
+  // Titoli contatti - font-size ridotto per mobile
+  .contact-info h3 {
+    font-size: $font-size-2xl;
+  }
+  
+  // Freccia header clienti - touch friendly per mobile
+  .client-works-header {
+    &:hover {
+      border-right-color: transparent !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+      
+      .client-works-arrow {
+        background-color: transparent !important;
+        color: #2A2E34 !important;
+        box-shadow: none !important;
+      }
+    }
+    
+    &.active {
+      border-right-color: $brand-accent !important;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+      
+      .client-works-arrow {
+        background-color: transparent !important;
+        color: $brand-accent !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+// ========================================
+// TABLET (768px - 1023px)
+// ========================================
+@include md {
+  // Titoli hero - dimensioni ridotte per tablet
+  .hero.portfolio-hero .hero-text h1 {
+    font-size: $font-size-4xl;
+  }
+  
+  // Sottotitolo hero - dimensioni ridotte per tablet
+  .hero-subtitle {
+    font-size: $font-size-xl;
+  }
+  
+  // Descrizione hero - dimensioni ridotte per tablet
+  .hero.portfolio-hero .hero-description {
+    font-size: $font-size-lg;
+  }
+  
+  // Descrizioni progetti - font-weight 300 per tablet
+  .project-content p {
+    font-weight: 300;
+    line-height: 1.6 !important;
+  }
+  
+  // Header clienti - descrizioni font-weight 300 per tablet
+  .client-works-header .client-works-info p {
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  
+  // Titoli sezioni - font-size ridotto per tablet
+  .section-title {
+    font-size: $font-size-2xl;
+  }
+  
+  // Sottotitoli sezioni - font-size ridotto per tablet
+  .about-text h3 {
+    font-size: $font-size-xl;
+  }
+  
+  // Riduci spacing tra titolo sezione e primo elemento per tablet
+  .section-title {
+    margin-bottom: $spacing-lg;
+  }
+  
+  .about-text h3:first-child {
+    margin-top: 3rem;
+  }
+  
+  // Titoli contatti - font-size ridotto per tablet
+  .contact-info h3 {
+    font-size: $font-size-2xl;
+  }
+  
+  // Freccia header clienti - touch friendly per tablet
+  .client-works-header {
+    &:hover {
+      border-right-color: transparent !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+      
+      .client-works-arrow {
+        background-color: transparent !important;
+        color: #2A2E34 !important;
+        box-shadow: none !important;
+      }
+    }
+    
+    &.active {
+      border-right-color: $brand-accent !important;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+      
+      .client-works-arrow {
+        background-color: transparent !important;
+        color: $brand-accent !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
 // REGOLE SMARTPHONE - OVERRIDE FINALE
 // ========================================
 // Le regole smartphone vengono applicate alla fine per avere la precedenza

@@ -2074,6 +2074,32 @@ a:active {
   }
 }
 
+@media (max-width: 767px) {
+  .ultimi-progetti .project-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .ultimi-progetti .project-image:hover img {
+    transform: none !important;
+  }
+  .ultimi-progetti .project-content p {
+    font-weight: 300;
+    line-height: 1.6 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ultimi-progetti .project-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .ultimi-progetti .project-image:hover img {
+    transform: none !important;
+  }
+  .ultimi-progetti .project-content p {
+    font-weight: 300;
+    line-height: 1.6 !important;
+  }
+}
 @media (max-width: 1023px) {
   .ultimi-progetti .container {
     position: relative !important;
@@ -2417,6 +2443,59 @@ a:active {
     font-size: 1.25rem;
   }
 }
+@media (max-width: 767px) {
+  .hero-text h1 {
+    font-size: 2.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero-description {
+    font-size: 1.25rem;
+  }
+  .home .about {
+    padding: 4rem 0.5rem;
+  }
+  .home .about p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  .home .about p:first-child {
+    padding-top: 2rem;
+  }
+  .section-title {
+    font-size: 1.875rem;
+  }
+  .contact-info h3 {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-text h1 {
+    font-size: 2.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero-description {
+    font-size: 1.25rem;
+  }
+  .home .about p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+  .home .about p:first-child {
+    padding-top: 2rem;
+  }
+  .section-title {
+    font-size: 1.875rem;
+  }
+  .contact-info h3 {
+    font-size: 1.875rem;
+  }
+}
 @media (max-width: 480px) and (orientation: portrait) {
   .hero {
     min-height: 90vh !important;
@@ -2458,6 +2537,9 @@ a:active {
   }
   .home .cta-actions .social-links .social-label {
     font-size: 1.25rem !important;
+  }
+  .home .about p:first-child {
+    padding-top: 2rem !important;
   }
 }
 .footer {
@@ -3202,6 +3284,117 @@ a:active {
     margin-left: -1.5rem !important;
     margin-right: 0 !important;
     width: calc(100% + 1.5rem) !important;
+  }
+}
+@media (max-width: 767px) {
+  .hero.portfolio-hero .hero-text h1 {
+    font-size: 2.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero.portfolio-hero .hero-description {
+    font-size: 1.25rem;
+  }
+  .project-content p {
+    font-weight: 300;
+    line-height: 1.6 !important;
+  }
+  .client-works-header .client-works-info p {
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  .client-works-header {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1rem !important;
+    padding: 1.5rem !important;
+    min-height: auto !important;
+  }
+  .section-title {
+    font-size: 1.875rem;
+  }
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+  .about-text h3:first-child {
+    margin-top: 3rem;
+  }
+  .contact-info h3 {
+    font-size: 1.875rem;
+  }
+  .client-works-header:hover {
+    border-right-color: transparent !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  }
+  .client-works-header:hover .client-works-arrow {
+    background-color: transparent !important;
+    color: #2A2E34 !important;
+    box-shadow: none !important;
+  }
+  .client-works-header.active {
+    border-right-color: #06b6d4 !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+  }
+  .client-works-header.active .client-works-arrow {
+    background-color: transparent !important;
+    color: #06b6d4 !important;
+    box-shadow: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero.portfolio-hero .hero-text h1 {
+    font-size: 2.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero.portfolio-hero .hero-description {
+    font-size: 1.25rem;
+  }
+  .project-content p {
+    font-weight: 300;
+    line-height: 1.6 !important;
+  }
+  .client-works-header .client-works-info p {
+    font-weight: 300;
+    line-height: 1.6;
+  }
+  .section-title {
+    font-size: 1.875rem;
+  }
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+  .about-text h3:first-child {
+    margin-top: 3rem;
+  }
+  .contact-info h3 {
+    font-size: 1.875rem;
+  }
+  .client-works-header:hover {
+    border-right-color: transparent !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  }
+  .client-works-header:hover .client-works-arrow {
+    background-color: transparent !important;
+    color: #2A2E34 !important;
+    box-shadow: none !important;
+  }
+  .client-works-header.active {
+    border-right-color: #06b6d4 !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+  }
+  .client-works-header.active .client-works-arrow {
+    background-color: transparent !important;
+    color: #06b6d4 !important;
+    box-shadow: none !important;
   }
 }
 @media (max-width: 480px) and (orientation: portrait) {
@@ -4198,6 +4391,34 @@ a:active {
   }
 }
 
+@media (max-width: 767px) {
+  .hero.contact-hero .hero-text h1 {
+    font-size: 2.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero.contact-hero .hero-description {
+    font-size: 1.25rem;
+  }
+  .faq-title {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero.contact-hero .hero-text h1 {
+    font-size: 2.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero.contact-hero .hero-description {
+    font-size: 1.25rem;
+  }
+  .faq-title {
+    font-size: 1.875rem;
+  }
+}
 @media (max-width: 480px) and (orientation: portrait) {
   .contattami .accordion-button {
     font-size: 0.875rem !important;
@@ -5113,8 +5334,23 @@ a:active {
 }
 @media (max-width: 399px) {
   .cv-company {
-    font-size: 1.1rem;
+    font-size: 1rem !important;
     margin-bottom: 0.75rem;
+  }
+}
+@media (max-width: 767px) {
+  .cv-company {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cv-company {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cv-company {
+    font-size: 1rem !important;
   }
 }
 
@@ -5358,6 +5594,59 @@ a:active {
   margin-right: 0.75rem;
 }
 
+@media (max-width: 767px) {
+  .hero.cv-hero .hero-text h1 {
+    font-size: 2.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero.cv-hero .hero-description {
+    font-size: 1.25rem;
+  }
+  .cv .skill-tag {
+    font-size: 1rem;
+  }
+  .cv .language-name {
+    font-size: 1rem;
+  }
+  .cv .language-proficiency {
+    font-size: 1rem;
+  }
+  .cv .cv-list li {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero.cv-hero .hero-text h1 {
+    font-size: 2.75rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  .hero.cv-hero .hero-description {
+    font-size: 1.25rem;
+  }
+  .cv .skill-tag {
+    font-size: 1rem;
+  }
+  .cv .language-name {
+    font-size: 1rem;
+  }
+  .cv .language-proficiency {
+    font-size: 1rem;
+  }
+  .contact-info h3 {
+    font-size: 1.875rem;
+  }
+  .cv .cv-list li {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+}
 @media (max-width: 480px) and (orientation: portrait) {
   .hero.cv-hero {
     min-height: 90vh !important;
@@ -5432,6 +5721,14 @@ a:active {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
     font-size: 1rem !important;
+  }
+  .contact-info h3 {
+    font-size: 1.875rem;
+  }
+  .cv .cv-list li {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    font-weight: 300;
   }
 }
 body {

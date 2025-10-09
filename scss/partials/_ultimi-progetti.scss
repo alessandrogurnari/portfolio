@@ -215,6 +215,64 @@
 // su tutte le altre regole responsive
 
 // ========================================
+// ========================================
+// REGOLE RESPONSIVE - MOBILE E TABLET
+// ========================================
+
+// ========================================
+// MOBILE (max-width: 767px)
+// ========================================
+@include sm-down {
+  // Disabilita effetti hover per touch friendly su mobile
+  .ultimi-progetti .project-card {
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+  
+  .ultimi-progetti .project-image {
+    &:hover {
+      img {
+        transform: none !important;
+      }
+    }
+  }
+  
+  // Descrizione progetti - font-weight 300 per mobile
+  .ultimi-progetti .project-content p {
+    font-weight: 300;
+    line-height: 1.6 !important;
+  }
+}
+
+// ========================================
+// TABLET (768px - 1023px)
+// ========================================
+@include md {
+  // Disabilita effetti hover per touch friendly su tablet
+  .ultimi-progetti .project-card {
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+  
+  .ultimi-progetti .project-image {
+    &:hover {
+      img {
+        transform: none !important;
+      }
+    }
+  }
+  
+  // Descrizione progetti - font-weight 300 per tablet
+  .ultimi-progetti .project-content p {
+    font-weight: 300;
+    line-height: 1.6 !important;
+  }
+}
+
 // SCROLL DINAMICO - SMARTPHONE, MOBILE E TABLET
 // ========================================
 @include md-down {
