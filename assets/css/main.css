@@ -5260,6 +5260,11 @@ a:active {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid #D0D0D0;
 }
+@media (min-width: 1024px) {
+  .cv-section h3.cv-section-title {
+    font-size: 1.4rem;
+  }
+}
 .cv-section h3.cv-section-title i {
   font-size: 1.125rem;
   color: #06b6d4;
@@ -5307,6 +5312,11 @@ a:active {
   color: #2A2E34;
   margin: 0;
 }
+@media (min-width: 1024px) {
+  .cv-item-header h4 {
+    font-size: 1.3rem;
+  }
+}
 @media (max-width: 399px) {
   .cv-item-header h4 {
     font-size: 1.1rem;
@@ -5331,6 +5341,11 @@ a:active {
   font-weight: 400;
   font-size: 1rem;
   margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .cv-company {
+    font-size: 1.1rem !important;
+  }
 }
 @media (max-width: 399px) {
   .cv-company {
@@ -5414,6 +5429,11 @@ a:active {
   font-size: 0.9rem;
   font-weight: 400;
   border: 0.5px solid #D0D0D0;
+}
+@media (min-width: 1024px) {
+  .skill-tags .skill-tag {
+    font-size: 1.1rem;
+  }
 }
 @media (max-width: 399px) {
   .skill-tags .skill-tag {
