@@ -1,103 +1,83 @@
 # Portfolio Alessandro Gurnari
 
-Ciao! 👋 Questo è il mio sito portfolio personale, dove mostro i miei progetti di UX/UI Design e le mie competenze. L'ho sviluppato da zero per avere il controllo completo sul design e sulle funzionalità.
+Portfolio professionale sviluppato per presentare progetti di UX/UI Design e competenze tecniche. Il sito è stato progettato e sviluppato da zero per garantire controllo completo sul design e sulle funzionalità.
 
-## 🎯 Cosa trovi qui
+## Panoramica
 
-Un portfolio responsive che racconta la mia storia professionale attraverso:
-- **Progetti UX/UI** con case study dettagliati
-- **Esperienza lavorativa** e competenze tecniche
-- **Form di contatto** per collaborazioni
-- **Design system** coerente e accessibile
+Portfolio responsive che presenta:
+- Progetti UX/UI con case study dettagliati
+- Esperienza professionale e competenze tecniche
+- Sistema di contatto integrato
+- Design system coerente e accessibile
 
-## 🚀 Caratteristiche principali
+## Caratteristiche tecniche
 
-### Design & UX
-- **Mobile-first** con breakpoints ottimizzati per dispositivi reali
-- **Touch-friendly** su smartphone con interazioni specifiche
-- **Accessibilità WCAG AAA** per un'esperienza inclusiva
-- **Performance ottimizzate** con hardware acceleration
+### Design e User Experience
+- Approccio mobile-first con breakpoints ottimizzati
+- Interazioni touch-friendly per dispositivi mobili
+- Conformità WCAG AAA per accessibilità
+- Performance ottimizzate con hardware acceleration
 
-### Architettura tecnica
-- **SCSS modulare** con 17 partials organizzati per funzionalità
-- **JavaScript ES6+** con classi e gestione eventi moderna
-- **Sistema di variabili** centralizzato per consistenza
-- **Mixins riutilizzabili** per breakpoints e componenti
+### Architettura
+- SCSS modulare con 17 partials organizzati per funzionalità
+- JavaScript ES6+ con architettura a classi
+- Sistema di variabili centralizzato
+- Mixins riutilizzabili per componenti comuni
 
 ### Funzionalità avanzate
-- **Portfolio dinamico** con sincronizzazione automatica dei progetti
-- **Scroll intelligente** con padding dinamico su smartphone (homepage e portfolio separati)
-- **Form di contatto** integrato con EmailJS
-- **Accordion interattivo** per organizzare i progetti per cliente
-- **Touch-friendly interactions** con stati attivi/inattivi ottimizzati
+- Portfolio dinamico con sincronizzazione automatica
+- Sistema di scroll intelligente con padding dinamico
+- Form di contatto integrato con EmailJS
+- Accordion interattivo per organizzazione progetti
+- Interazioni ottimizzate per dispositivi touch
 
-## 🛠️ Tecnologie utilizzate
+## Stack tecnologico
 
 - **Frontend**: HTML5, CSS3, Sass/SCSS, JavaScript ES6+
-- **Framework**: Bootstrap 5.3 (solo per componenti base)
-- **Fonts**: Inter (Google Fonts) + SignPainter per il logo
-- **Icons**: Font Awesome 6
-- **Email**: EmailJS per il form di contatto
-- **Build**: Sass compiler con watch mode
+- **Framework**: Bootstrap 5.3 (componenti base)
+- **Tipografia**: Inter (Google Fonts), SignPainter (logo)
+- **Icone**: Font Awesome 6
+- **Email**: EmailJS
+- **Build**: Sass compiler
 
-## 📁 Struttura del progetto
+## Struttura del progetto
 
 ```
-├── index.html              # Homepage con hero e ultimi progetti
-├── portfolio.html          # Portfolio completo con accordion
-├── cv.html                 # CV e competenze tecniche
-├── contattami.html         # Form di contatto e FAQ
+├── index.html              # Homepage
+├── portfolio.html          # Portfolio completo
+├── cv.html                 # Curriculum vitae
+├── contattami.html         # Form di contatto
 ├── assets/
-│   ├── css/                # CSS compilato (main.css)
+│   ├── css/                # CSS compilato
 │   ├── js/                 # JavaScript modulare
-│   │   ├── main.js         # Core functionality
-│   │   ├── client-header-manager.js  # Gestione accordion portfolio
-│   │   ├── projects-home-scroll-manager.js # Scroll dinamico homepage
-│   │   ├── projects-portfolio-scroll-manager.js # Scroll dinamico portfolio
-│   │   ├── contact.js      # Form di contatto
-│   │   └── projects-navigation.js    # Navigazione progetti
-│   ├── images/             # Immagini e icone
-│   └── projects/           # Portfolio progetti (PDF + copertine)
-├── scss/                   # Sass sorgente
+│   ├── images/             # Risorse grafiche
+│   └── projects/           # Portfolio progetti
+├── scss/                   # Codice sorgente Sass
 │   ├── main.scss          # Entry point
-│   └── partials/          # Moduli SCSS organizzati
-│       ├── _variables.scss    # Variabili e design system
-│       ├── _mixins.scss       # Mixins riutilizzabili
-│       ├── _foundation.scss   # Reset e base styles
-│       ├── _typography.scss   # Tipografia
-│       ├── _navbar.scss       # Navigazione
-│       ├── _home.scss         # Homepage
-│       ├── _portfolio.scss    # Portfolio
-│       ├── _ultimi-progetti.scss # Sezione progetti homepage
-│       ├── _cv.scss           # Pagina CV
-│       ├── _contact.scss      # Form contatto
-│       └── _footer.scss       # Footer
+│   └── partials/          # Moduli organizzati
 └── package.json
 ```
 
-## 🎨 Design System
+## Design System
 
-Ho creato un sistema di design coerente con:
-
-### Colori
+### Palette colori
 - **Primary**: #2A2E34 (testo principale)
-- **Brand Accent**: #06b6d4 (CTA e elementi attivi)
-- **Background**: #F0F0F0 (sfondo pagina)
-- **Surface**: #fafafa (card e contenitori)
+- **Brand Accent**: #06b6d4 (elementi attivi)
+- **Background**: #F0F0F0 (sfondo)
+- **Surface**: #fafafa (contenitori)
 
 ### Tipografia
-- **Font principale**: Inter (Google Fonts)
-- **Font logo**: SignPainter (personalizzato)
-- **Scale responsive**: Dimensioni specifiche per smartphone
+- **Font principale**: Inter
+- **Font logo**: SignPainter
+- **Scale responsive**: Dimensioni ottimizzate per dispositivo
 
-### Spacing
-- **Sistema modulare**: Da 0.125rem a 6rem
-- **Breakpoints**: Mobile-first con 6 breakpoints ottimizzati
-- **Container**: Max-width 1280px con padding responsive
+### Sistema di spacing
+- **Modulare**: Da 0.125rem a 6rem
+- **Breakpoints**: 6 livelli responsive
+- **Container**: Max-width 1280px
 
-## 📱 Responsive Design
+## Breakpoints responsive
 
-### Breakpoints
 - **XS**: 0px (Mobile extra small)
 - **SM**: 400px (Mobile)
 - **MD**: 768px (Tablet)
@@ -105,106 +85,92 @@ Ho creato un sistema di design coerente con:
 - **XL**: 1200px (Desktop)
 - **XXL**: 1400px+ (Desktop large)
 
-### Comportamenti specifici
-- **Smartphone**: Touch-friendly con interazioni ottimizzate
-- **Tablet**: Layout ibrido con hover effects
-- **Desktop**: Esperienza completa con animazioni
-
-## 🚀 Setup e sviluppo
+## Setup e sviluppo
 
 ### Prerequisiti
-- Node.js (per Sass compiler)
-- Editor di codice (VS Code consigliato)
+- Node.js
+- Editor di codice
 
 ### Installazione
 ```bash
-# Clona il repository
 git clone [URL_REPOSITORY]
 cd mio-sito-personale
-
-# Installa le dipendenze
 npm install
-
-# Compila il CSS
 npm run build:css
 ```
 
 ### Script disponibili
 ```bash
-# Compila CSS una volta
-npm run build:css
-
-# Watch mode per sviluppo (se configurato)
-npm run watch:css
+npm run build:css    # Compila CSS
+npm run watch:css    # Watch mode (se configurato)
 ```
 
-## 🎯 Funzionalità principali
+## Funzionalità principali
 
 ### Homepage
-- **Hero section** con CTA principale
-- **About** con competenze chiave
-- **Ultimi progetti** con scroll orizzontale su smartphone
-- **Call-to-action** per contatto
+- Hero section con call-to-action
+- Sezione about con competenze
+- Ultimi progetti con navigazione
+- Sistema di contatto
 
 ### Portfolio
-- **Accordion interattivo** per organizzare progetti per cliente
-- **Navigazione fluida** tra progetti
-- **Download PDF** per ogni progetto
-- **Tags** per categorizzazione
+- Accordion per organizzazione progetti
+- Navigazione fluida tra progetti
+- Download PDF per ogni progetto
+- Sistema di categorizzazione
 
 ### CV
-- **Esperienza professionale** cronologica
-- **Competenze tecniche** organizzate per categoria
-- **Formazione** e certificazioni
-- **Download PDF** del CV completo
+- Esperienza professionale cronologica
+- Competenze tecniche categorizzate
+- Formazione e certificazioni
+- Download PDF completo
 
 ### Contattami
-- **Form Bootstrap** con validazione
-- **Integrazione EmailJS** per invio email
-- **FAQ** per domande comuni
-- **Social links** e contatti
+- Form con validazione Bootstrap
+- Integrazione EmailJS
+- FAQ e informazioni
+- Link social e contatti
 
-## 🔧 Personalizzazione
+## Personalizzazione
 
 ### Variabili principali
-Modifica `scss/partials/_variables.scss` per:
+Modificare `scss/partials/_variables.scss` per:
 - Colori del brand
-- Font e dimensioni
+- Tipografia e dimensioni
 - Spacing e breakpoints
 - Transizioni e animazioni
 
-### Aggiungere progetti
-1. Aggiungi PDF e copertina in `assets/projects/[cliente]/`
+### Gestione progetti
+1. Aggiungere PDF e copertina in `assets/projects/[cliente]/`
 2. Il sistema rileva automaticamente i nuovi progetti
-3. Aggiorna la navigazione se necessario
+3. Aggiornare la navigazione se necessario
 
-## 📈 Performance
+## Performance e accessibilità
 
-- **CSS ottimizzato** con Sass compilation
-- **JavaScript modulare** con lazy loading
-- **Immagini ottimizzate** per web
-- **Font loading** ottimizzato
-- **Hardware acceleration** per animazioni
+### Ottimizzazioni
+- CSS compilato e ottimizzato
+- JavaScript modulare con lazy loading
+- Immagini ottimizzate per web
+- Font loading ottimizzato
+- Hardware acceleration per animazioni
 
-## 🎨 Accessibilità
+### Accessibilità
+- Conformità WCAG AAA
+- Contrast ratio ottimizzato
+- Navigazione da tastiera completa
+- Compatibilità screen reader
+- Indicatori di focus visibili
 
-- **WCAG AAA** compliance
-- **Contrast ratio** ottimizzato
-- **Keyboard navigation** completa
-- **Screen reader** friendly
-- **Focus indicators** visibili
+## Architettura tecnica
 
-## 📝 Note di sviluppo
-
-### Decisioni tecniche
-- **SCSS modulare**: Per mantenibilità e scalabilità
+### Decisioni progettuali
+- **SCSS modulare**: Manutenibilità e scalabilità
 - **Mobile-first**: Approccio responsive moderno
-- **JavaScript classi**: Per organizzazione del codice
+- **JavaScript a classi**: Organizzazione del codice
 - **Bootstrap selettivo**: Solo componenti necessari
 
-### Sfide risolte
-- **Scroll dinamico**: Padding variabile su smartphone
-- **Accordion touch-friendly**: Stati attivi/inattivi
+### Soluzioni implementate
+- **Scroll dinamico**: Padding variabile per smartphone
+- **Accordion touch-friendly**: Stati attivi ottimizzati
 - **Performance**: Ottimizzazione animazioni
 - **Cross-browser**: Compatibilità garantita
-
