@@ -322,9 +322,14 @@
     line-height: 1.2;
     
     @include mobile {
-      font-size: 2rem;
+      font-size: 2rem ; 
     }
-    
+
+    @include sm-down {
+      font-size: 2rem ; 
+      padding-bottom: 0.875rem;
+    }
+
     @include tablet {
       font-size: 2.2rem;
     }
@@ -337,7 +342,8 @@
     margin-bottom: 0;
     
     @include sm-down {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
+      padding-bottom: 1.2rem;
     }
     
     @include mobile {

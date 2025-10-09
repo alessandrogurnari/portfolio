@@ -4968,6 +4968,12 @@ a:active {
     font-size: 2rem;
   }
 }
+@media (max-width: 767px) {
+  .cv-info h1 {
+    font-size: 2rem;
+    padding-bottom: 0.875rem;
+  }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .cv-info h1 {
     font-size: 2.2rem;
@@ -4981,7 +4987,8 @@ a:active {
 }
 @media (max-width: 767px) {
   .cv-info h2 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    padding-bottom: 1.2rem;
   }
 }
 @media (max-width: 399px) {
