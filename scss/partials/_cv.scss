@@ -1014,7 +1014,7 @@
   
   // Titoli hero CV - dimensioni ridotte
   .hero.cv-hero .hero-text h1 {
-    font-size: $font-size-smartphone-4xl !important; 
+    font-size: $font-size-smartphone-5xl !important; 
   }
   
   // Sottotitolo hero CV - dimensioni ridotte
@@ -1040,6 +1040,7 @@
   
   // Skill CV smartphone - font-weight 300 e rimuovi hover
   .cv .skill-tag {
+    font-size: 1rem !important; 
     font-weight: 300 !important; 
     pointer-events: none !important; 
   }
@@ -1051,8 +1052,18 @@
   
   // Testo formazione ed esperienza professionale CV smartphone - font-weight 300
   .cv .cv-list li {
+    font-size: 1rem !important; 
     font-weight: 300 !important; 
     line-height: 1.6 !important; 
+  }
+  
+  // Sezione lingue CV smartphone - font-size 1rem
+  .cv .language-name {
+    font-size: 1rem !important; 
+  }
+  
+  .cv .language-proficiency {
+    font-size: 1rem !important; 
   }
   
   .cv .cv-company {

@@ -2422,7 +2422,9 @@ a:active {
     min-height: 90vh !important;
   }
   .hero-text h1 {
-    font-size: 1.75rem !important;
+    font-size: 2rem !important;
+    margin-left: -2rem !important;
+    margin-right: -2rem !important;
   }
   .hero-subtitle {
     font-size: 1.125rem !important;
@@ -3210,7 +3212,7 @@ a:active {
     min-height: 90vh !important;
   }
   .hero.portfolio-hero .hero-text h1 {
-    font-size: 1.75rem !important;
+    font-size: 2rem !important;
   }
   .hero.portfolio-hero .hero-subtitle {
     font-size: 1.125rem !important;
@@ -4204,7 +4206,7 @@ a:active {
     min-height: 90vh !important;
   }
   .hero.contact-hero .hero-text h1 {
-    font-size: 1.75rem !important;
+    font-size: 2rem !important;
   }
   .hero.contact-hero .hero-subtitle {
     font-size: 1.125rem !important;
@@ -5361,7 +5363,7 @@ a:active {
     min-height: 90vh !important;
   }
   .hero.cv-hero .hero-text h1 {
-    font-size: 1.75rem !important;
+    font-size: 2rem !important;
   }
   .hero.cv-hero .hero-subtitle {
     font-size: 1.125rem !important;
@@ -5376,6 +5378,7 @@ a:active {
     font-weight: 500 !important;
   }
   .cv .skill-tag {
+    font-size: 1rem !important;
     font-weight: 300 !important;
     pointer-events: none !important;
   }
@@ -5383,8 +5386,15 @@ a:active {
     padding-bottom: 0.25rem !important;
   }
   .cv .cv-list li {
+    font-size: 1rem !important;
     font-weight: 300 !important;
     line-height: 1.6 !important;
+  }
+  .cv .language-name {
+    font-size: 1rem !important;
+  }
+  .cv .language-proficiency {
+    font-size: 1rem !important;
   }
   .cv .cv-company {
     font-weight: 400 !important;

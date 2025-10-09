@@ -217,7 +217,9 @@
   
   // Titoli hero - dimensioni ridotte
   .hero-text h1 {
-    font-size: $font-size-smartphone-4xl !important; 
+    font-size: $font-size-smartphone-5xl !important; 
+    margin-left: -$spacing-xl !important;
+    margin-right: -$spacing-xl !important;
   }
   
   // Sottotitolo hero - dimensioni ridotte
