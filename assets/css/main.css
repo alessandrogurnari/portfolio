@@ -3168,6 +3168,12 @@ a:active {
   opacity: 1;
   pointer-events: auto;
 }
+@media (max-width: 1023px) {
+  .project-card .project-image .project-overlay.open .btn {
+    background-color: #06b6d4 !important;
+    color: #000 !important;
+  }
+}
 .project-card .project-image.touch-active img {
   transform: scale(1.05) !important;
   transition: transform 0.3s ease !important;
