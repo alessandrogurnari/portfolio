@@ -86,6 +86,15 @@
       &:hover {
         transform: translateY(-4px);
         box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+        
+        .project-image img {
+          transform: scale(1.05);
+        }
+        
+        .project-overlay {
+          opacity: 1;
+          pointer-events: auto; // Abilita i click su desktop quando overlay è visibile
+        }
       }
     }
   }
@@ -114,6 +123,7 @@
       align-items: center;
       justify-content: center;
       opacity: 0;
+      pointer-events: none; // Disabilita i click sui dispositivi touch
       transition: opacity $transition-normal;
       
       // Rimuove il transform in hover per i pulsanti PDF
@@ -124,16 +134,13 @@
       }
     }
     
-    // Hover effect solo per desktop/tablet (non smartphone)
-    @include md-up {
-      &:hover {
-        img {
-          transform: scale(1.05);
-        }
-        
-        .project-overlay {
-          opacity: 1;
-        }
+    // Hover effect rimosso da qui - sarà applicato alla .project-card
+    
+    // Effetto scale per le card attive sui dispositivi touch
+    &.touch-active {
+      img {
+        transform: scale(1.05) !important;
+        transition: transform 0.3s ease !important;
       }
     }
   }

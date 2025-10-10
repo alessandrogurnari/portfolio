@@ -115,8 +115,7 @@ table {
 .long-text {
   overflow-wrap: break-word;
   word-break: break-word;
-  -webkit-hyphens: auto;
-          hyphens: auto;
+  hyphens: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -580,6 +579,7 @@ html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s ease-out;
 }
@@ -632,6 +632,7 @@ html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background-color: #2A2E34;
   color: white;
@@ -672,6 +673,7 @@ html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   background-color: transparent;
   color: #2A2E34;
@@ -1051,8 +1053,7 @@ html {
     -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-         user-select: none !important;
+    user-select: none !important;
     outline: none !important;
     -webkit-focus-ring-color: transparent !important;
     font-size: 1.5rem !important;
@@ -1064,14 +1065,14 @@ a {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
 a:hover {
-  color: #131518;
+  color: rgb(19.2127659574, 21.0425531915, 23.7872340426);
 }
 a:focus {
   outline: none !important;
   box-shadow: none !important;
 }
 a:active {
-  color: black;
+  color: hsl(216, 10.6382978723%, -1.568627451%);
 }
 
 .nav-link {
@@ -1089,9 +1090,11 @@ a:active {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   -webkit-focus-ring-color: transparent;
   -moz-outline: none;
+  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 .nav-link:nth-child(1) {
@@ -1135,6 +1138,7 @@ a:active {
   -webkit-tap-highlight-color: transparent;
   -webkit-focus-ring-color: transparent;
   -moz-outline: none;
+  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
 .nav-link.active {
@@ -1163,10 +1167,6 @@ a:active {
     -webkit-focus-ring-color: transparent;
     -moz-outline: none;
   }
-  .nav-link::-moz-selection {
-    background: transparent;
-    color: inherit;
-  }
   .nav-link::selection, .nav-link::-moz-selection, .nav-link::-webkit-selection {
     background: transparent;
     color: inherit;
@@ -1176,12 +1176,14 @@ a:active {
     -webkit-tap-highlight-color: transparent;
     -webkit-focus-ring-color: transparent;
     -moz-outline: none;
+    -ms-touch-action: manipulation;
     touch-action: manipulation;
   }
   .nav-link[onclick], .nav-link[href] {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
@@ -1286,7 +1288,7 @@ a:active {
   color: #2A2E34;
 }
 .link-primary:hover {
-  color: #131518;
+  color: rgb(19.2127659574, 21.0425531915, 23.7872340426);
 }
 .link-secondary {
   color: #4A5568;
@@ -1298,7 +1300,7 @@ a:active {
   color: #9AA0A6;
 }
 .link-accent:hover {
-  color: #7f878e;
+  color: rgb(126.8894736842, 134.5, 142.1105263158);
 }
 .link-white {
   color: white;
@@ -1351,8 +1353,7 @@ a:active {
   right: 0;
   height: 64px;
   background-color: #1E2328;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid #D0D0D0;
   z-index: 1020;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.6, 1);
@@ -1437,8 +1438,7 @@ a:active {
     height: calc(100vh - 64px);
     width: 100vw;
     background-color: #1E2328;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1497,12 +1497,14 @@ a:active {
     -webkit-tap-highlight-color: transparent;
     -webkit-focus-ring-color: transparent;
     -moz-outline: none;
+    -ms-touch-action: manipulation;
     touch-action: manipulation;
   }
   .nav-menu .nav-link[onclick], .nav-menu .nav-link[href] {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
   }
@@ -1516,8 +1518,7 @@ a:active {
   .nav-menu {
     position: static;
     background: none;
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
+    backdrop-filter: none;
     border: none;
     box-shadow: none;
     transform: none;
@@ -1580,6 +1581,7 @@ a:active {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 @media (max-width: 1023px) {
@@ -1956,6 +1958,13 @@ a:active {
     transform: translateY(-4px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
   }
+  .ultimi-progetti .project-card:hover .project-image img {
+    transform: scale(1.05);
+  }
+  .ultimi-progetti .project-card:hover .project-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 .ultimi-progetti .project-image {
   position: relative;
@@ -1965,8 +1974,7 @@ a:active {
 .ultimi-progetti .project-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
 .ultimi-progetti .project-image .project-overlay {
@@ -1980,18 +1988,15 @@ a:active {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
 .ultimi-progetti .project-image .project-overlay .btn:hover {
   transform: none;
 }
-@media (min-width: 768px) {
-  .ultimi-progetti .project-image:hover img {
-    transform: scale(1.05);
-  }
-  .ultimi-progetti .project-image:hover .project-overlay {
-    opacity: 1;
-  }
+.ultimi-progetti .project-image.touch-active img {
+  transform: scale(1.05) !important;
+  transition: transform 0.3s ease !important;
 }
 .ultimi-progetti .project-content {
   padding: 2rem;
@@ -2171,10 +2176,8 @@ a:active {
     height: 160px !important;
   }
   .ultimi-progetti .project-image img {
-    -o-object-fit: contain !important;
-       object-fit: contain !important;
-    -o-object-position: center !important;
-       object-position: center !important;
+    object-fit: contain !important;
+    object-position: center !important;
   }
   .ultimi-progetti .project-image:hover img {
     transform: scale(1.05) !important;
@@ -2756,7 +2759,6 @@ a:active {
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.6, 1);
   flex-shrink: 0;
   white-space: nowrap;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   animation: none;
 }
@@ -2819,8 +2821,7 @@ a:active {
   width: auto;
   max-width: 120px;
   height: 80px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   border-radius: 0.5rem;
   background-color: #fafafa;
   padding: 1rem;
@@ -3088,10 +3089,6 @@ a:active {
   position: relative;
   padding-bottom: 20px;
 }
-.project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-}
 .project-card .project-image {
   position: relative;
   overflow: hidden;
@@ -3100,8 +3097,7 @@ a:active {
 .project-card .project-image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .project-card .project-image .project-overlay {
@@ -3115,6 +3111,7 @@ a:active {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1);
 }
 .project-card .project-image .project-overlay .btn {
@@ -3123,11 +3120,9 @@ a:active {
 .project-card .project-image .project-overlay .btn:hover {
   transform: none;
 }
-.project-card .project-image:hover img {
-  transform: scale(1.05);
-}
-.project-card .project-image:hover .project-overlay {
-  opacity: 1;
+.project-card .project-image.touch-active img {
+  transform: scale(1.05) !important;
+  transition: transform 0.3s ease !important;
 }
 .project-card .project-content {
   padding: 2rem;
@@ -3172,6 +3167,22 @@ a:active {
   font-weight: 500;
 }
 
+@media (min-width: 1024px) {
+  .project-card {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.6, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.6, 1) !important;
+  }
+  .project-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08) !important;
+  }
+  .project-card:hover .project-image img {
+    transform: scale(1.05) !important;
+  }
+  .project-card:hover .project-overlay {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
 @media (min-width: 1024px) {
   .portfolio .about p {
     font-weight: 300;
@@ -3538,10 +3549,8 @@ a:active {
     height: 160px !important;
   }
   .project-image img {
-    -o-object-fit: contain !important;
-       object-fit: contain !important;
-    -o-object-position: center !important;
-       object-position: center !important;
+    object-fit: contain !important;
+    object-position: center !important;
   }
   .project-content h4 {
     font-size: 1.25rem !important;
@@ -3596,8 +3605,7 @@ a:active {
     -webkit-tap-highlight-color: transparent !important;
     -webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-         user-select: none !important;
+    user-select: none !important;
   }
   .portfolio .ultimi-progetti .projects-grid .project-card .project-content p {
     font-size: 1rem !important;
@@ -3910,16 +3918,10 @@ a:active {
 .contact .form-control {
   background-color: #fafafa;
   color: #2A2E34;
-  border-color: #bbbbbb;
+  border-color: rgb(187.2, 187.2, 187.2);
   border-radius: 12px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.125rem;
-}
-.contact .form-control::-moz-placeholder {
-  font-size: 1.125rem;
-  color: #4A5568;
-  opacity: 0.8;
-  font-weight: 300;
 }
 .contact .form-control::placeholder {
   font-size: 1.125rem;
@@ -4120,7 +4122,6 @@ a:active {
   justify-content: center;
   text-align: center;
   white-space: nowrap;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   padding: 1rem 2rem;
   font-size: 1.125rem;
@@ -4260,7 +4261,6 @@ a:active {
 }
 .home .cta-actions .hero-buttons .btn {
   white-space: nowrap;
-  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 .home .cta-actions .social-links {
@@ -4417,7 +4417,6 @@ a:active {
 }
 .portfolio .cta-actions .hero-buttons .btn {
   white-space: nowrap;
-  min-width: -moz-fit-content;
   min-width: fit-content;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -4440,7 +4439,6 @@ a:active {
   }
   .portfolio .cta-actions .hero-buttons .btn {
     white-space: nowrap;
-    min-width: -moz-fit-content;
     min-width: fit-content;
   }
 }
@@ -4519,9 +4517,6 @@ a:active {
     font-size: 1rem !important;
   }
   .contact-form .form-control {
-    font-size: 0.875rem !important;
-  }
-  .contact-form .form-control::-moz-placeholder {
     font-size: 0.875rem !important;
   }
   .contact-form .form-control::placeholder {
@@ -4957,8 +4952,7 @@ a:active {
 .cv-photo {
   width: 180px;
   height: 180px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 .cv-photo, .cv-photo img {
@@ -4967,8 +4961,7 @@ a:active {
 .cv-photo .cv-photo-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media (max-width: 399px) {
   .cv-photo {
@@ -5844,20 +5837,26 @@ body {
 }
 
 * {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-perspective: 1000;
   perspective: 1000;
 }
 
 .animate-ready,
 .animate-in {
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 [class*=animation],
 [class*=fade],
 [class*=slide] {
+  -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -5953,4 +5952,4 @@ body {
     color: black !important;
     background: white !important;
   }
-}/*# sourceMappingURL=main.css.map */
+}
