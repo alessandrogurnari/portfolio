@@ -1341,9 +1341,9 @@
     margin-bottom: 1rem !important; 
   }
   
-  // Primo titolo del processo di lavoro senza margin-top
+  // Primo titolo del processo di lavoro con spazio maggiore dal titolo sezione
   .portfolio .about-text h3:first-child {
-    margin-top: 0 !important; // Rimuove margin-top dal primo titolo
+    margin-top: 3rem !important; // Aumenta spazio tra titolo sezione e primo punto
   }
   
   // Statistiche portfolio smartphone - aumenta font-size titoli

@@ -3690,7 +3690,7 @@ a:active {
     margin-bottom: 1rem !important;
   }
   .portfolio .about-text h3:first-child {
-    margin-top: 0 !important;
+    margin-top: 3rem !important;
   }
   .portfolio .about-stats > div h3 {
     font-size: 1.15rem !important;
@@ -4690,6 +4690,9 @@ a:active {
   }
   .contact .form-label {
     font-size: 1rem !important;
+  }
+  .faq-section {
+    padding-top: 6rem !important;
   }
 }
 .cv .hero-content {
@@ -5832,7 +5835,7 @@ a:active {
     font-weight: 500 !important;
   }
   .cv .skill-tag {
-    font-size: 1.125rem !important;
+    font-size: 1rem !important;
     font-weight: 300 !important;
     pointer-events: none !important;
   }
