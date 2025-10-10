@@ -624,10 +624,6 @@
       .btn {
         opacity: 1;
         pointer-events: auto; // abilitato al click
-        @include md-down {
-          background-color: $brand-accent !important;
-          color: #000 !important;
-        }
       }
     }
   }
