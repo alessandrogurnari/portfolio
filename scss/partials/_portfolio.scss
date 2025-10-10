@@ -1353,18 +1353,18 @@
   
   // Titolo sezione "Il mio processo di lavoro" portfolio smartphone - aggiungi margin-top
   .portfolio .section-title {
-    margin-top: 4rem !important; // Aggiunge margin-top al titolo della sezione
+    margin-top: 4rem !important; 
   }
   
   // APPROCCIO: Escludi titolo, sottotitolo e header dal container dinamico
   .portfolio .container {
 
-    // Padding fisso per titolo, sottotitolo e header (sempre $spacing-lg)
+    // Padding fisso per titolo, sottotitolo e header 
     .section-title,
     .section-subtitle,
     .client-works-header {
-      padding-left: $spacing-lg !important;
-      padding-right: $spacing-lg !important;
+      padding-left: $spacing-xs !important;
+      padding-right: $spacing-xs !important;
     }
     
     // APPROCCIO CON MARGIN NEGATIVO: Tre fasi di scroll

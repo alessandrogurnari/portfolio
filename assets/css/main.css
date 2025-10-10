@@ -3701,8 +3701,8 @@ a:active {
   .portfolio .container .section-title,
   .portfolio .container .section-subtitle,
   .portfolio .container .client-works-header {
-    padding-left: 1.5rem !important;
-    padding-right: 1.5rem !important;
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
   }
   .portfolio .container .client-works-section .projects-grid.scroll-start {
     margin-left: 0 !important;
