@@ -612,13 +612,18 @@
     justify-content: center;
     opacity: 0;
     pointer-events: none; // Disabilita i click sui dispositivi touch
-    transition: opacity $transition-normal;
+    transition: opacity 0.2s ease;
     
+    // Bottone PDF sfumabile
     .btn {
-      transition: all $transition-fast;
-      
-      &:hover {
-        transform: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      pointer-events: none; // disabilitato finché overlay non è visibile
+    }
+    &.open {
+      .btn {
+        opacity: 1;
+        pointer-events: auto; // abilitato al click
       }
     }
   }
@@ -1405,4 +1410,12 @@
     }
   }
   
+}
+
+// === Desktop hover: abilita click sul pulsante PDF ===
+@include desktop {
+  .project-card:hover .project-overlay .btn {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
 }

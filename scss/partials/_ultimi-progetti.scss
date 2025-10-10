@@ -118,13 +118,30 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba($primary-color, 0.9);
+      background: rgba(42, 46, 52, 0.9);
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
-      pointer-events: none; // Disabilita i click sui dispositivi touch
-      transition: opacity $transition-normal;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      .btn {
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        pointer-events: auto;
+      }
+      &.open {
+        .btn {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+      // Su desktop, mostra il bottone quando la card è in hover
+      @include desktop {
+        .project-card:hover & .btn {
+          opacity: 1 !important;
+        }
+      }
       
       // Rimuove il transform in hover per i pulsanti PDF
       .btn {
@@ -441,5 +458,35 @@
     padding-left: $spacing-lg !important; 
     padding-right: $spacing-lg !important; 
     font-size: $font-size-smartphone-lg !important; 
+  }
+}
+
+// Abilita i tap sull'overlay quando la card è attiva sui dispositivi touch
+.project-image.touch-active {
+  .project-overlay {
+    pointer-events: auto !important;
+  }
+}
+
+// Overlay aperto sui dispositivi touch
+.ultimi-progetti .project-image .project-overlay.open {
+  pointer-events: auto !important;
+}
+
+// === Desktop hover: mostra pulsante overlay ===
+@include desktop {
+  .ultimi-progetti {
+    .project-card:hover .project-overlay .btn {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+  }
+}
+
+// === Smartphone / Tablet: transizione overlay leggermente più lenta ===
+@include md-down {
+  .project-overlay {
+    transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    .btn { transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; }
   }
 }

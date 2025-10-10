@@ -111,3 +111,9 @@
 // ========================================
 .visible { visibility: visible; }
 .invisible { visibility: hidden; }
+
+// Pulsante premuto feedback
+.btn.pressed {
+  background-color: $brand-accent !important;
+  color: #000 !important;
+}

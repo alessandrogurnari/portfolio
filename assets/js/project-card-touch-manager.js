@@ -38,8 +38,38 @@ class ProjectCardTouchManager {
     }
 
     setupTouchListeners() {
-        // Gestisce i click sulle card dei progetti - LOGICA UNIFICATA
-        document.addEventListener('click', (e) => {
+        // Variabili per rilevare swipe vs tap
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let lastTouchWasScroll = false;
+
+        const moveThreshold = 10; // px
+
+        document.addEventListener('touchstart', (e) => {
+            const touch = e.touches[0];
+            touchStartX = touch.clientX;
+            touchStartY = touch.clientY;
+        }, { passive: true });
+
+        // Gestisce tap/click sulle card dei progetti (click = desktop/tap convertito, touchend = autentico tap mobile)
+        const handleTap = (e) => {
+            // Se touchend ma movimento oltre soglia => consideralo scroll, esci
+            if (e.type === 'touchend' && e.changedTouches && e.changedTouches[0]) {
+                const dx = Math.abs(e.changedTouches[0].clientX - touchStartX);
+                const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+                if (dx > moveThreshold || dy > moveThreshold) {
+                    lastTouchWasScroll = true; // segna che era scroll
+                    return;
+                }
+                lastTouchWasScroll = false;
+            }
+
+            // Se siamo in un evento click generato dopo uno scroll, ignoralo
+            if (e.type === 'click' && lastTouchWasScroll) {
+                lastTouchWasScroll = false;
+                return;
+            }
+
             // Cerca la card più vicina
             const projectCard = e.target.closest('.project-card');
             const pdfButton = e.target.closest('.project-overlay .btn');
@@ -85,6 +115,11 @@ class ProjectCardTouchManager {
                 this.showOverlay(projectCard);
                 return;
             }
+        };
+
+        // Ascolta sia click (alcuni browser mobile li generano) sia touchend (tap puro)
+        ['click', 'touchend'].forEach(evt => {
+            document.addEventListener(evt, handleTap, { passive: false });
         });
     }
 
@@ -99,8 +134,32 @@ class ProjectCardTouchManager {
         const image = projectCard.querySelector('.project-image img');
         
         if (overlay) {
+            overlay.classList.add('open');
             overlay.style.opacity = '1';
-            overlay.style.pointerEvents = 'auto';
+            overlay.style.visibility = 'visible';
+            overlay.style.setProperty('pointer-events', 'auto', 'important');
+
+            // Assicura che il pulsante PDF riceva i tap anche su mobile
+            const pdfBtn = overlay.querySelector('.btn');
+            if (pdfBtn) {
+                pdfBtn.style.pointerEvents = 'auto';
+            }
+
+            // Listener diretto sull'overlay per chiuderlo al tap
+            const closeOnTap = (ev) => {
+                // Se il tap è sul pulsante PDF, lascia gestire al listener principale
+                if (ev.target.closest('.project-overlay .btn')) {
+                    return;
+                }
+                ev.preventDefault();
+                ev.stopPropagation();
+                this.hideOverlay();
+            };
+            ['click', 'touchend'].forEach(evt => {
+                overlay.addEventListener(evt, closeOnTap, { once: true });
+            });
+            // Niente listener diretto: il click sull'overlay viene già gestito
+            // dal listener globale con priorità 2 (condizione overlay && !pdfButton)
             this.activeCard = projectCard;
             
             // Aggiungi una classe per identificare la card attiva
@@ -128,8 +187,20 @@ class ProjectCardTouchManager {
             const projectImage = this.activeCard.querySelector('.project-image');
             
             if (overlay) {
-                overlay.style.opacity = '0';
-                overlay.style.pointerEvents = 'none';
+                // Disabilita subito i click
+                overlay.style.setProperty('pointer-events', 'none', 'important');
+
+                // Rimuovi la classe touch-active dall'immagine PRIMA della transizione:
+                if (projectImage) {
+                    projectImage.classList.remove('touch-active');
+                }
+
+                // Rimuovi la classe open (che rende il bottone visibile) DOPO la transizione CSS
+                const transitionDuration = 200; // deve corrispondere a CSS
+                setTimeout(() => {
+                    overlay.classList.remove('open');
+                    overlay.style.visibility = 'hidden';
+                }, transitionDuration);
             }
             
             // Rimuovi l'effetto scale dall'immagine con transizione
@@ -146,14 +217,18 @@ class ProjectCardTouchManager {
             
             // Rimuovi la classe touch-active dalla card e dal project-image
             this.activeCard.classList.remove('touch-active');
-            if (projectImage) {
-                projectImage.classList.remove('touch-active');
-            }
+            // projectImage class già rimossa sopra
             this.activeCard = null;
         }
     }
 
     openPDF(pdfButton) {
+        // Feedback visivo veloce sul pulsante
+        if (pdfButton) {
+            pdfButton.classList.add('pressed');
+            setTimeout(() => pdfButton.classList.remove('pressed'), 150);
+        }
+
         const pdfLink = pdfButton.getAttribute('href');
         if (pdfLink && pdfLink !== '#') {
             // Metodo specifico per dispositivi mobile - forza l'apertura del PDF
@@ -170,22 +245,7 @@ class ProjectCardTouchManager {
                 iframe.src = pdfLink;
                 document.body.appendChild(iframe);
                 
-                // Aggiungi un messaggio informativo
-                const infoMsg = document.createElement('div');
-                infoMsg.innerHTML = 'PDF non visualizzabile in questo browser. Clicca "Apri PDF" per visualizzarlo.';
-                infoMsg.style.position = 'fixed';
-                infoMsg.style.top = '50%';
-                infoMsg.style.left = '50%';
-                infoMsg.style.transform = 'translate(-50%, -50%)';
-                infoMsg.style.zIndex = '10000';
-                infoMsg.style.padding = '20px';
-                infoMsg.style.backgroundColor = 'rgba(0,0,0,0.8)';
-                infoMsg.style.color = 'white';
-                infoMsg.style.borderRadius = '10px';
-                infoMsg.style.textAlign = 'center';
-                infoMsg.style.fontSize = '16px';
-                infoMsg.style.maxWidth = '300px';
-                document.body.appendChild(infoMsg);
+                // (Rimosso) Messaggio informativo non più necessario
                 
                 // Aggiungi un pulsante per chiudere
                 const closeBtn = document.createElement('button');
@@ -205,7 +265,6 @@ class ProjectCardTouchManager {
                 // Gestisci la chiusura
                 const closeViewer = () => {
                     document.body.removeChild(iframe);
-                    document.body.removeChild(infoMsg);
                     document.body.removeChild(closeBtn);
                 };
                 

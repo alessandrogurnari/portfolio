@@ -507,6 +507,11 @@ li {
   visibility: hidden;
 }
 
+.btn.pressed {
+  background-color: #06b6d4 !important;
+  color: #000 !important;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -1988,7 +1993,21 @@ a:active {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1);
+  transition: opacity 0.2s ease;
+}
+.ultimi-progetti .project-image .project-overlay .btn {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: auto;
+}
+.ultimi-progetti .project-image .project-overlay.open .btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (min-width: 1024px) {
+  .project-card:hover .ultimi-progetti .project-image .project-overlay .btn {
+    opacity: 1 !important;
+  }
 }
 .ultimi-progetti .project-image .project-overlay .btn:hover {
   transform: none;
@@ -2217,6 +2236,28 @@ a:active {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
     font-size: 1rem !important;
+  }
+}
+.project-image.touch-active .project-overlay {
+  pointer-events: auto !important;
+}
+
+.ultimi-progetti .project-image .project-overlay.open {
+  pointer-events: auto !important;
+}
+
+@media (min-width: 1024px) {
+  .ultimi-progetti .project-card:hover .project-overlay .btn {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+}
+@media (max-width: 1023px) {
+  .project-overlay {
+    transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  }
+  .project-overlay .btn {
+    transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   }
 }
 .hero {
@@ -3116,13 +3157,16 @@ a:active {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.6, 1);
+  transition: opacity 0.2s ease;
 }
 .project-card .project-image .project-overlay .btn {
-  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
 }
-.project-card .project-image .project-overlay .btn:hover {
-  transform: none;
+.project-card .project-image .project-overlay.open .btn {
+  opacity: 1;
+  pointer-events: auto;
 }
 .project-card .project-image.touch-active img {
   transform: scale(1.05) !important;
@@ -3686,6 +3730,12 @@ a:active {
   }
   .project-card:focus {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  }
+}
+@media (min-width: 1024px) {
+  .project-card:hover .project-overlay .btn {
+    opacity: 1 !important;
+    pointer-events: auto !important;
   }
 }
 .contattami .hero-content {
