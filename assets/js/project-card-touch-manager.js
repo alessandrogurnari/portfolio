@@ -86,9 +86,10 @@ class ProjectCardTouchManager {
 
             // Priorità 1: click sul pulsante PDF
             if (pdfButton) {
-                e.preventDefault();
-                e.stopPropagation();
-                this.openPDF(pdfButton);
+                // Lascia che il browser gestisca l'apertura del PDF (comportamento nativo,
+                // più affidabile su Safari iOS e altri browser mobile).
+                // Chiudiamo solo l'overlay per evitare che resti aperto se l'utente torna indietro.
+                this.hideOverlay();
                 return;
             }
 
